@@ -27,7 +27,7 @@ const rightAngledTrianglePatternFirstApproach = (n) => {
   }
 };
 
-rightAngledTrianglePatternFirstApproach(6);
+rightAngledTrianglePatternFirstApproach(5);
 
 // TODO: Right Angled Triangle Pattern Second Approach Solution
 const rightAngledTrianglePatternSecondApproach = (n) => {
