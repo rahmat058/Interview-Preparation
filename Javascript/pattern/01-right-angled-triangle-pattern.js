@@ -16,7 +16,7 @@
  * @param {number} n - Number of rows to print.
  */
 
-// Right Angled Triangle Pattern First Approach Solution
+// TODO: Right Angled Triangle Pattern First Approach Solution
 const rightAngledTrianglePatternFirstApproach = (n) => {
   for (let i = 1; i <= n; i++) {
     let row = '';
@@ -29,7 +29,7 @@ const rightAngledTrianglePatternFirstApproach = (n) => {
 
 rightAngledTrianglePatternFirstApproach(6);
 
-// Right Angled Triangle Pattern Second Approach Solution
+// TODO: Right Angled Triangle Pattern Second Approach Solution
 const rightAngledTrianglePatternSecondApproach = (n) => {
   for (let i = 1; i <= n; i++) {
     // build a single row of i stars and print it
