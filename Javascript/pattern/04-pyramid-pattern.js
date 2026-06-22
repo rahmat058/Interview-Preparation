@@ -16,7 +16,7 @@
  * @param {number} n - Number of rows to print.
  */
 
-const pyramidPattern = (n) => {
+const pyramidPatternFirstApproach = (n) => {
   for (let i = 1; i <= n; i++) {
     let row = '';
     // Print leading spaces
@@ -31,4 +31,14 @@ const pyramidPattern = (n) => {
   }
 };
 
-pyramidPattern(5);
+pyramidPatternFirstApproach(5);
+
+const pyramidPatternSecondApproach = (n) => {
+  for (let i = 1; i <= n; i++) {
+    // Create a string with (n - i) spaces followed by (2 * i - 1) stars
+    const row = ' '.repeat(n - i) + '*'.repeat(2 * i - 1);
+    console.log(row);
+  }
+};
+
+pyramidPatternSecondApproach(5);
