@@ -1,23 +1,23 @@
 /**
  * Author: Kazi Rahamatullah
- * Date: 2026-06-22
- * Description: Print a pyramid pattern of asterisks.
+ * Date: 2026-06-23
+ * Description: Print an inverted pyramid pattern of asterisks.
  *
  * Example output for n = 5:
- *            *
- *           ***
- *          *****
- *         *******
- *        *********
+ *           *********
+ *            *******
+ *             *****
+ *              ***
+ *               *
  */
 
 /**
- * Print a pyramid pattern of asterisks.
+ * Print an inverted pyramid pattern of asterisks.
  * @param {number} n - Number of rows to print.
  */
 
-const pyramidPatternFirstApproach = (n) => {
-  for (let i = 1; i <= n; i++) {
+const invertedPyramidPatternFirstApproach = (n) => {
+  for (let i = n; i >= 1; i--) {
     let row = '';
     // Print leading spaces
     for (let j = 1; j <= n - i; j++) {
@@ -31,14 +31,14 @@ const pyramidPatternFirstApproach = (n) => {
   }
 };
 
-pyramidPatternFirstApproach(5);
+invertedPyramidPatternFirstApproach(5);
 
-const pyramidPatternSecondApproach = (n) => {
-  for (let i = 1; i <= n; i++) {
+const invertedPyramidPatternSecondApproach = (n) => {
+  for (let i = n; i >= 1; i--) {
     // Create a string with (n - i) spaces followed by (2 * i - 1) stars
     const row = ' '.repeat(n - i) + '*'.repeat(2 * i - 1);
     console.log(row);
   }
 };
 
-pyramidPatternSecondApproach(5);
+invertedPyramidPatternSecondApproach(5);
