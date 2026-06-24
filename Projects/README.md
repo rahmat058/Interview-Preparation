@@ -15,7 +15,7 @@ Hands-on UI challenges for React interview preparation. Each project uses **Vite
 | 7   | Modal Manager        | Complete | [07-modal-manager](./07-modal-manager/)               |
 | 8   | Nested Comments      | Complete | [08-nested-comments](./08-nested-comments/)           |
 | 9   | Shopping Cart        | Complete | [09-shopping-cart](./09-shopping-cart/)               |
-| 10  | —                    | Planned  | —                                                     |
+| 10  | Toast Notifications  | Complete | [10-toast-notifications](./10-toast-notifications/)   |
 
 ## Shared Stack
 
