@@ -10,7 +10,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate:data": "node scripts/generate-search-index.mjs"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",

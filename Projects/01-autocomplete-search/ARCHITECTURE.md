@@ -35,29 +35,52 @@ QueryLens is a client-side autocomplete search demo designed for **interview mac
 
 ## Data Model
 
+Mock data lives in **`src/data/search-index.json`** (55 records) and mirrors a production DB export.
+
+### JSON file structure
+
+```json
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "collection": "search_index",
+    "count": 55,
+    "breakdown": { "product": 20, "city": 18, "user": 17 },
+    "lastUpdated": "2026-06-24T..."
+  },
+  "data": [
+    /* SearchIndexItem[] */
+  ]
+}
+```
+
+- **Loader:** `src/data/mockSearchIndex.ts` imports the JSON and exports `MOCK_SEARCH_INDEX`
+- **Regenerate:** `npm run generate:data` → `scripts/generate-search-index.mjs`
+
 Mock data mirrors a production `search_index` table. Each row is polymorphic by `entity_type`.
 
 ### `search_index` (conceptual schema)
 
-| Column | Type | Description |
-| ------ | ---- | ----------- |
-| `id` | `VARCHAR` PK | Prefixed UUID (`prd_`, `cty_`, `usr_`) |
-| `entity_type` | `ENUM` | `product` \| `city` \| `user` |
-| `title` | `VARCHAR` | Display name (indexed for full-text) |
-| `slug` | `VARCHAR` UNIQUE | URL-safe identifier |
-| `description` | `TEXT` | Longer searchable text |
-| `category` | `VARCHAR` | Grouping label |
-| `tags` | `TEXT[]` | Keyword array for matching |
-| `popularity_score` | `INT` | Ranking boost (0–100) |
-| `is_active` | `BOOLEAN` | Soft-delete flag |
-| `thumbnail_url` | `VARCHAR` NULL | Optional image |
-| `metadata` | `JSONB` | Entity-specific fields |
-| `created_at` | `TIMESTAMPTZ` | Record creation |
-| `updated_at` | `TIMESTAMPTZ` | Last index update |
+| Column             | Type             | Description                            |
+| ------------------ | ---------------- | -------------------------------------- |
+| `id`               | `VARCHAR` PK     | Prefixed UUID (`prd_`, `cty_`, `usr_`) |
+| `entity_type`      | `ENUM`           | `product` \| `city` \| `user`          |
+| `title`            | `VARCHAR`        | Display name (indexed for full-text)   |
+| `slug`             | `VARCHAR` UNIQUE | URL-safe identifier                    |
+| `description`      | `TEXT`           | Longer searchable text                 |
+| `category`         | `VARCHAR`        | Grouping label                         |
+| `tags`             | `TEXT[]`         | Keyword array for matching             |
+| `popularity_score` | `INT`            | Ranking boost (0–100)                  |
+| `is_active`        | `BOOLEAN`        | Soft-delete flag                       |
+| `thumbnail_url`    | `VARCHAR` NULL   | Optional image                         |
+| `metadata`         | `JSONB`          | Entity-specific fields                 |
+| `created_at`       | `TIMESTAMPTZ`    | Record creation                        |
+| `updated_at`       | `TIMESTAMPTZ`    | Last index update                      |
 
 ### Metadata by entity type
 
 **Product (`metadata`)**
+
 ```json
 {
   "sku": "SNY-XM5-BLK",
@@ -69,6 +92,7 @@ Mock data mirrors a production `search_index` table. Each row is polymorphic by 
 ```
 
 **City (`metadata`)**
+
 ```json
 {
   "countryCode": "US",
@@ -81,6 +105,7 @@ Mock data mirrors a production `search_index` table. Each row is polymorphic by 
 ```
 
 **User (`metadata`)**
+
 ```json
 {
   "email": "sarah.chen@querylens.io",
@@ -101,18 +126,20 @@ TypeScript definitions live in `src/lib/types/search.ts`.
 
 **Query parameters**
 
-| Param | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
-| `q` | string | required | Search query (min 2 chars client-side) |
-| `limit` | number | 8 | Max results per page |
-| `offset` | number | 0 | Pagination offset |
-| `entityType` | string | all | Filter: `product`, `city`, `user`, or omit |
+| Param        | Type   | Default  | Description                                |
+| ------------ | ------ | -------- | ------------------------------------------ |
+| `q`          | string | required | Search query (min 2 chars client-side)     |
+| `limit`      | number | 8        | Max results per page                       |
+| `offset`     | number | 0        | Pagination offset                          |
+| `entityType` | string | all      | Filter: `product`, `city`, `user`, or omit |
 
 **Response `200 OK`**
 
 ```json
 {
-  "data": [/* SearchIndexItem[] */],
+  "data": [
+    /* SearchIndexItem[] */
+  ],
   "meta": {
     "query": "sony",
     "total": 1,
@@ -125,6 +152,7 @@ TypeScript definitions live in `src/lib/types/search.ts`.
 ```
 
 **Mock behaviour**
+
 - Latency: 250–650ms random delay
 - Ranking: title prefix > title contains > tags > description + popularity boost
 - Only `isActive: true` rows returned
@@ -137,17 +165,17 @@ TypeScript definitions live in `src/lib/types/search.ts`.
 
 ### `search` slice
 
-| Field | Purpose |
-| ----- | ------- |
-| `query` | Live input value (immediate) |
-| `debouncedQuery` | Value after 300ms debounce (triggers fetch) |
-| `results` | Current suggestion list |
-| `meta` | API metadata (total, tookMs) |
-| `status` | `idle` \| `loading` \| `succeeded` \| `failed` |
-| `isDropdownOpen` | Panel visibility |
-| `highlightedIndex` | Keyboard focus index (-1 = none) |
-| `selectedItem` | User's chosen result |
-| `entityTypeFilter` | Client filter sent to API |
+| Field              | Purpose                                        |
+| ------------------ | ---------------------------------------------- |
+| `query`            | Live input value (immediate)                   |
+| `debouncedQuery`   | Value after 300ms debounce (triggers fetch)    |
+| `results`          | Current suggestion list                        |
+| `meta`             | API metadata (total, tookMs)                   |
+| `status`           | `idle` \| `loading` \| `succeeded` \| `failed` |
+| `isDropdownOpen`   | Panel visibility                               |
+| `highlightedIndex` | Keyboard focus index (-1 = none)               |
+| `selectedItem`     | User's chosen result                           |
+| `entityTypeFilter` | Client filter sent to API                      |
 
 ### Async thunk: `fetchSearchResults`
 
@@ -190,13 +218,13 @@ API returns        → results render with stagger animation, index 0 highlighte
 
 ### 2. Keyboard flow
 
-| Key | Action |
-| --- | ------ |
-| `↓` | Move highlight down (wraps) |
-| `↑` | Move highlight up (wraps) |
-| `Enter` | Select highlighted item |
-| `Esc` | Close dropdown, blur input |
-| `Tab` | Close dropdown |
+| Key     | Action                      |
+| ------- | --------------------------- |
+| `↓`     | Move highlight down (wraps) |
+| `↑`     | Move highlight up (wraps)   |
+| `Enter` | Select highlighted item     |
+| `Esc`   | Close dropdown, blur input  |
+| `Tab`   | Close dropdown              |
 
 ### 3. Selection flow
 
@@ -209,13 +237,13 @@ SelectedItemPanel animates in with full record details
 
 ## Performance Considerations
 
-| Concern | Solution |
-| ------- | -------- |
-| Excessive API calls | 300ms debounce |
-| Stale responses | AbortController via RTK thunk `signal` |
-| Re-renders | Redux selectors; memoize ranking server-side in production |
-| Large lists | Client limits to 8; production uses pagination + virtual list |
-| Bundle size | Tree-shake lucide icons; lazy-load Lottie if added later |
+| Concern             | Solution                                                      |
+| ------------------- | ------------------------------------------------------------- |
+| Excessive API calls | 300ms debounce                                                |
+| Stale responses     | AbortController via RTK thunk `signal`                        |
+| Re-renders          | Redux selectors; memoize ranking server-side in production    |
+| Large lists         | Client limits to 8; production uses pagination + virtual list |
+| Bundle size         | Tree-shake lucide icons; lazy-load Lottie if added later      |
 
 ### Production upgrades
 
@@ -228,24 +256,24 @@ SelectedItemPanel animates in with full record details
 
 ## Folder Conventions
 
-| Path | Responsibility |
-| ---- | -------------- |
-| `src/api/` | HTTP layer only — no UI imports |
-| `src/data/` | Mock seed data |
-| `src/lib/types/` | Shared contracts |
-| `src/lib/store/` | Redux store + slices |
-| `src/hooks/` | Reusable React hooks |
-| `src/components/search/` | Feature components |
-| `src/components/ui/` | Generic primitives |
+| Path                     | Responsibility                  |
+| ------------------------ | ------------------------------- |
+| `src/api/`               | HTTP layer only — no UI imports |
+| `src/data/`              | Mock seed data                  |
+| `src/lib/types/`         | Shared contracts                |
+| `src/lib/store/`         | Redux store + slices            |
+| `src/hooks/`             | Reusable React hooks            |
+| `src/components/search/` | Feature components              |
+| `src/components/ui/`     | Generic primitives              |
 
 ---
 
 ## Environment Variables
 
-| Variable | Default | Description |
-| -------- | ------- | ----------- |
-| `VITE_USE_MOCK_API` | `true` | Use in-memory mock service |
-| `VITE_API_BASE_URL` | `/api` | Backend base URL |
+| Variable            | Default | Description                |
+| ------------------- | ------- | -------------------------- |
+| `VITE_USE_MOCK_API` | `true`  | Use in-memory mock service |
+| `VITE_API_BASE_URL` | `/api`  | Backend base URL           |
 
 ---
 
@@ -279,11 +307,11 @@ CREATE INDEX idx_search_entity ON search_index (entity_type) WHERE is_active = t
 
 ## Testing Strategy (recommended additions)
 
-| Layer | Tool | What to test |
-| ----- | ---- | ------------ |
-| Unit | Vitest | `scoreItem`, debounce, reducers |
-| Component | RTL | keyboard nav, loading, empty states |
-| E2E | Playwright | full search → select flow |
+| Layer     | Tool       | What to test                        |
+| --------- | ---------- | ----------------------------------- |
+| Unit      | Vitest     | `scoreItem`, debounce, reducers     |
+| Component | RTL        | keyboard nav, loading, empty states |
+| E2E       | Playwright | full search → select flow           |
 
 ---
 
