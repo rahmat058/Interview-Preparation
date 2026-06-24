@@ -13,7 +13,7 @@ Hands-on UI challenges for React interview preparation. Each project uses **Vite
 | 5   | Data Table           | Complete | [05-data-table](./05-data-table/)                     |
 | 6   | Multi-Step Form      | Complete | [06-multi-step-form](./06-multi-step-form/)           |
 | 7   | Modal Manager        | Complete | [07-modal-manager](./07-modal-manager/)               |
-| 8   | —                    | Planned  | —                                                     |
+| 8   | Nested Comments      | Complete | [08-nested-comments](./08-nested-comments/)           |
 | 9   | —                    | Planned  | —                                                     |
 | 10  | —                    | Planned  | —                                                     |
 
