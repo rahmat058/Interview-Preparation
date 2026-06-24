@@ -4,26 +4,26 @@
 
 ## Features
 
-| Feature | Implementation |
-| -------- | --------------- |
-| **Pagination** | Server-style pages (10 per page) via `page` + `limit` params |
-| **Lazy loading** | `IntersectionObserver` sentinel triggers `loadMoreFeed` |
-| **Loading indicators** | Skeleton cards (initial), spinner (load more), header count |
-| **Error handling** | Full-page error + inline retry on failed load-more |
-| **Mock API** | 60 JSON posts with simulated 300–800ms latency |
-| **Animations** | Framer Motion card stagger + error/load-more transitions |
-| **Design** | Soft Glass Aurora palette (matches Project #1) |
+| Feature                | Implementation                                               |
+| ---------------------- | ------------------------------------------------------------ |
+| **Pagination**         | Server-style pages (10 per page) via `page` + `limit` params |
+| **Lazy loading**       | `IntersectionObserver` sentinel triggers `loadMoreFeed`      |
+| **Loading indicators** | Skeleton cards (initial), spinner (load more), header count  |
+| **Error handling**     | Full-page error + inline retry on failed load-more           |
+| **Mock API**           | 60 JSON posts with simulated 300–800ms latency               |
+| **Animations**         | Framer Motion card stagger + error/load-more transitions     |
+| **Design**             | Soft Glass Aurora palette (matches Project #1)               |
 
 ## Tech Stack
 
-| Layer | Technology |
-| ----- | ---------- |
-| Build | Vite 7 |
-| UI | React 19, TypeScript |
-| Styling | Tailwind CSS 4 |
-| State | Redux Toolkit + React-Redux |
-| Motion | Framer Motion |
-| Icons | lucide-react |
+| Layer   | Technology                  |
+| ------- | --------------------------- |
+| Build   | Vite 7                      |
+| UI      | React 19, TypeScript        |
+| Styling | Tailwind CSS 4              |
+| State   | Redux Toolkit + React-Redux |
+| Motion  | Framer Motion               |
+| Icons   | lucide-react                |
 
 ## Getting Started
 
@@ -39,12 +39,12 @@ Open [http://localhost:5173](http://localhost:5173) and scroll down to load more
 
 ## Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start dev server |
-| `npm run build` | Type-check + production build |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| Command                 | Description                           |
+| ----------------------- | ------------------------------------- |
+| `npm run dev`           | Start dev server                      |
+| `npm run build`         | Type-check + production build         |
+| `npm run preview`       | Preview production build              |
+| `npm run lint`          | Run ESLint                            |
 | `npm run generate:data` | Regenerate `src/data/feed-posts.json` |
 
 ## Project Structure
@@ -83,7 +83,7 @@ Set `VITE_SIMULATE_FEED_ERROR=true` in `.env` to simulate a network error on pag
 
 ## Documentation
 
-| File | Purpose |
-| ---- | ------- |
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | System design, data flow, API contract |
-| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A |
+| File                                               | Purpose                                |
+| -------------------------------------------------- | -------------------------------------- |
+| [ARCHITECTURE.md](./ARCHITECTURE.md)               | System design, data flow, API contract |
+| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                          |
