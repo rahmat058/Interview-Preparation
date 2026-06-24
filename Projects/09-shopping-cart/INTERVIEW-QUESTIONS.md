@@ -6,11 +6,11 @@
 
 ### Q1. Why use `itemsById` instead of an array?
 
-| Array | Normalized map |
-| ----- | -------------- |
-| O(n) find by productId | O(1) lookup |
+| Array                       | Normalized map                  |
+| --------------------------- | ------------------------------- |
+| O(n) find by productId      | O(1) lookup                     |
 | Duplicate product data risk | Single source in `productsById` |
-| Harder merge on add | Increment quantity in place |
+| Harder merge on add         | Increment quantity in place     |
 
 **Interview Answer:** "Key cart lines by `productId`. Catalog lives separately. Same pattern as Redux docs for relational data."
 
@@ -21,7 +21,7 @@
 **Nowhere in Redux state** — it's derived.
 
 ```typescript
-const pricing = useAppSelector(selectCartPricing)
+const pricing = useAppSelector(selectCartPricing);
 ```
 
 **Interview Answer:** "Store facts (items, promo). Derive totals with a pure function + memoized selector. Storing total causes sync bugs."
@@ -80,12 +80,12 @@ Memoizes output. If `itemsById` reference unchanged, skip recalculation — impo
 
 ### Q8. localStorage cart — pitfalls?
 
-| Pitfall | Fix |
-| ------- | --- |
-| Stale prices | Re-fetch catalog, recalc on load |
-| Invalid product ids | Prune on catalog load |
-| Over-stock qty | Clamp to `product.stock` |
-| Schema changes | Version key (`cartpulse-cart-v1`) |
+| Pitfall             | Fix                               |
+| ------------------- | --------------------------------- |
+| Stale prices        | Re-fetch catalog, recalc on load  |
+| Invalid product ids | Prune on catalog load             |
+| Over-stock qty      | Clamp to `product.stock`          |
+| Schema changes      | Version key (`cartpulse-cart-v1`) |
 
 ---
 
@@ -125,7 +125,7 @@ This project uses one `cart` slice with both for interview simplicity — mentio
 RTK + Immer allows:
 
 ```typescript
-state.itemsById[productId].quantity += 1
+state.itemsById[productId].quantity += 1;
 ```
 
 Under the hood it's immutable. Without Immer, spread at each level.
@@ -157,20 +157,20 @@ Common causes:
 
 ## Rapid Fire
 
-| Question | Short answer |
-| -------- | ------------ |
-| Single source of truth for price? | `productsById[id].price` |
-| Duplicate product in cart? | Same key → increment qty |
-| Free shipping threshold? | Derived in pricing fn |
-| Test pricing? | Pure function unit tests |
-| Context vs Redux for cart? | Redux for interview scale + DevTools |
+| Question                          | Short answer                         |
+| --------------------------------- | ------------------------------------ |
+| Single source of truth for price? | `productsById[id].price`             |
+| Duplicate product in cart?        | Same key → increment qty             |
+| Free shipping threshold?          | Derived in pricing fn                |
+| Test pricing?                     | Pure function unit tests             |
+| Context vs Redux for cart?        | Redux for interview scale + DevTools |
 
 ---
 
 ## Cross-Project Links
 
-| Project | Shared pattern |
-| ------- | -------------- |
-| #5 Data Table | Pure query pipeline, derived data |
-| #4 Kanban | Normalized `cardsById` map |
-| #6 Multi-Step Form | localStorage persistence |
+| Project            | Shared pattern                    |
+| ------------------ | --------------------------------- |
+| #5 Data Table      | Pure query pipeline, derived data |
+| #4 Kanban          | Normalized `cardsById` map        |
+| #6 Multi-Step Form | localStorage persistence          |

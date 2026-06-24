@@ -10,18 +10,18 @@ CartPulse demonstrates **normalized Redux state** for e-commerce carts — the p
 
 ```typescript
 interface CartState {
-  productsById: Record<string, Product>   // catalog (from API)
-  itemsById: Record<string, CartLineItem> // cart lines
-  promoCode: string | null
-  categoryFilter: ProductCategory
+  productsById: Record<string, Product>; // catalog (from API)
+  itemsById: Record<string, CartLineItem>; // cart lines
+  promoCode: string | null;
+  categoryFilter: ProductCategory;
 }
 ```
 
-| Slice | Source | Mutable by user? |
-| ----- | ------ | ---------------- |
-| `productsById` | Catalog API | No |
-| `itemsById` | User actions | Yes |
-| `promoCode` | User input | Yes |
+| Slice          | Source       | Mutable by user? |
+| -------------- | ------------ | ---------------- |
+| `productsById` | Catalog API  | No               |
+| `itemsById`    | User actions | Yes              |
+| `promoCode`    | User input   | Yes              |
 
 **Why normalized `itemsById`?**
 
@@ -34,14 +34,14 @@ interface CartState {
 
 ## Reducers
 
-| Action | Behavior |
-| ------ | -------- |
-| `addItem(productId)` | Insert qty 1 or increment, clamp to stock |
-| `removeItem(productId)` | Delete key from `itemsById` |
-| `setQuantity({ productId, quantity })` | Clamp 1..stock; qty ≤ 0 removes |
-| `incrementQuantity` / `decrementQuantity` | Stepper helpers |
-| `clearCart` | Reset items + promo |
-| `applyPromoCode` | Validate against `PROMO_CODES` map |
+| Action                                    | Behavior                                  |
+| ----------------------------------------- | ----------------------------------------- |
+| `addItem(productId)`                      | Insert qty 1 or increment, clamp to stock |
+| `removeItem(productId)`                   | Delete key from `itemsById`               |
+| `setQuantity({ productId, quantity })`    | Clamp 1..stock; qty ≤ 0 removes           |
+| `incrementQuantity` / `decrementQuantity` | Stepper helpers                           |
+| `clearCart`                               | Reset items + promo                       |
+| `applyPromoCode`                          | Validate against `PROMO_CODES` map        |
 
 All reducers use Immer via RTK — safe "mutation" syntax.
 
@@ -56,7 +56,7 @@ export const selectCartPricing = createSelector(
   [selectItemsById, selectProductsById, selectPromoCode],
   (itemsById, productsById, promoCode) =>
     calculateCartPricing({ itemsById, productsById, promoCode }),
-)
+);
 ```
 
 `createSelector` memoizes — recalculates only when inputs change.
@@ -115,10 +115,10 @@ Applied on: add, setQuantity, increment, catalog hydration.
 
 ## Mock API
 
-| Endpoint | File | Latency |
-| -------- | ---- | ------- |
-| `GET /products` | `cartApi.ts` | 300–600ms |
-| 12 products | `products.json` | 4 categories |
+| Endpoint        | File            | Latency      |
+| --------------- | --------------- | ------------ |
+| `GET /products` | `cartApi.ts`    | 300–600ms    |
+| 12 products     | `products.json` | 4 categories |
 
 Swap `fetchProducts` for real backend — cart logic unchanged.
 
