@@ -7,7 +7,7 @@ Hands-on UI challenges for React interview preparation. Each project uses **Vite
 | #   | Project             | Status   | Folder                                              |
 | --- | ------------------- | -------- | --------------------------------------------------- |
 | 1   | Autocomplete Search | Complete | [01-autocomplete-search](./01-autocomplete-search/) |
-| 2   | —                   | Planned  | —                                                   |
+| 2   | Infinite Scroll Feed | Complete | [02-infinite-scroll-feed](./02-infinite-scroll-feed/) |
 | 3   | —                   | Planned  | —                                                   |
 | 4   | —                   | Planned  | —                                                   |
 | 5   | —                   | Planned  | —                                                   |
