@@ -1,0 +1,785 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "collection": "file_system_tree",
+    "rootPath": "/react-interview-prep",
+    "totalNodes": 86,
+    "totalFolders": 22,
+    "totalFiles": 64,
+    "generatedAt": "2026-06-24T12:01:02.263Z"
+  },
+  "data": {
+    "id": "dir_086",
+    "name": "react-interview-prep",
+    "type": "folder",
+    "path": "/react-interview-prep",
+    "modifiedAt": "2026-06-23T05:11:00.000Z",
+    "children": [
+      {
+        "id": "dir_004",
+        "name": "public",
+        "type": "folder",
+        "path": "/react-interview-prep/public",
+        "modifiedAt": "2026-06-04T08:40:00.000Z",
+        "children": [
+          {
+            "id": "file_001",
+            "name": "vite.svg",
+            "type": "file",
+            "path": "/react-interview-prep/public/vite.svg",
+            "extension": "svg",
+            "sizeBytes": 2048,
+            "modifiedAt": "2026-05-25T10:30:00.000Z"
+          },
+          {
+            "id": "file_002",
+            "name": "favicon.ico",
+            "type": "file",
+            "path": "/react-interview-prep/public/favicon.ico",
+            "extension": "ico",
+            "sizeBytes": 4096,
+            "modifiedAt": "2026-05-10T09:15:00.000Z"
+          },
+          {
+            "id": "file_003",
+            "name": "robots.txt",
+            "type": "file",
+            "path": "/react-interview-prep/public/robots.txt",
+            "extension": "txt",
+            "sizeBytes": 1024,
+            "modifiedAt": "2026-04-25T08:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "id": "dir_064",
+        "name": "src",
+        "type": "folder",
+        "path": "/react-interview-prep/src",
+        "modifiedAt": "2026-06-22T06:22:00.000Z",
+        "children": [
+          {
+            "id": "file_005",
+            "name": "main.tsx",
+            "type": "file",
+            "path": "/react-interview-prep/src/main.tsx",
+            "extension": "tsx",
+            "sizeBytes": 1024,
+            "modifiedAt": "2026-06-22T06:22:00.000Z"
+          },
+          {
+            "id": "file_006",
+            "name": "App.tsx",
+            "type": "file",
+            "path": "/react-interview-prep/src/App.tsx",
+            "extension": "tsx",
+            "sizeBytes": 2048,
+            "modifiedAt": "2026-06-22T06:22:00.000Z"
+          },
+          {
+            "id": "file_007",
+            "name": "index.css",
+            "type": "file",
+            "path": "/react-interview-prep/src/index.css",
+            "extension": "css",
+            "sizeBytes": 3072,
+            "modifiedAt": "2026-06-19T09:55:00.000Z"
+          },
+          {
+            "id": "file_008",
+            "name": "vite-env.d.ts",
+            "type": "file",
+            "path": "/react-interview-prep/src/vite-env.d.ts",
+            "extension": "ts",
+            "sizeBytes": 1024,
+            "modifiedAt": "2026-06-14T06:50:00.000Z"
+          },
+          {
+            "id": "dir_012",
+            "name": "api",
+            "type": "folder",
+            "path": "/react-interview-prep/src/api",
+            "modifiedAt": "2026-06-20T08:44:00.000Z",
+            "children": [
+              {
+                "id": "file_009",
+                "name": "searchApi.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/api/searchApi.ts",
+                "extension": "ts",
+                "sizeBytes": 4096,
+                "modifiedAt": "2026-06-21T07:33:00.000Z"
+              },
+              {
+                "id": "file_010",
+                "name": "feedApi.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/api/feedApi.ts",
+                "extension": "ts",
+                "sizeBytes": 5120,
+                "modifiedAt": "2026-06-20T08:44:00.000Z"
+              },
+              {
+                "id": "file_011",
+                "name": "explorerApi.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/api/explorerApi.ts",
+                "extension": "ts",
+                "sizeBytes": 6144,
+                "modifiedAt": "2026-06-23T05:11:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "dir_035",
+            "name": "components",
+            "type": "folder",
+            "path": "/react-interview-prep/src/components",
+            "modifiedAt": "2026-06-21T07:33:00.000Z",
+            "children": [
+              {
+                "id": "dir_017",
+                "name": "search",
+                "type": "folder",
+                "path": "/react-interview-prep/src/components/search",
+                "modifiedAt": "2026-06-18T10:06:00.000Z",
+                "children": [
+                  {
+                    "id": "file_013",
+                    "name": "AutocompleteSearch.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/search/AutocompleteSearch.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 8192,
+                    "modifiedAt": "2026-06-18T10:06:00.000Z"
+                  },
+                  {
+                    "id": "file_014",
+                    "name": "SearchDropdown.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/search/SearchDropdown.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 5120,
+                    "modifiedAt": "2026-06-18T10:06:00.000Z"
+                  },
+                  {
+                    "id": "file_015",
+                    "name": "SearchResultItem.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/search/SearchResultItem.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-17T11:17:00.000Z"
+                  },
+                  {
+                    "id": "file_016",
+                    "name": "EntityTypeFilter.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/search/EntityTypeFilter.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 4096,
+                    "modifiedAt": "2026-06-16T04:28:00.000Z"
+                  }
+                ]
+              },
+              {
+                "id": "dir_022",
+                "name": "feed",
+                "type": "folder",
+                "path": "/react-interview-prep/src/components/feed",
+                "modifiedAt": "2026-06-19T09:55:00.000Z",
+                "children": [
+                  {
+                    "id": "file_018",
+                    "name": "FeedList.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/feed/FeedList.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 6144,
+                    "modifiedAt": "2026-06-19T09:55:00.000Z"
+                  },
+                  {
+                    "id": "file_019",
+                    "name": "FeedCard.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/feed/FeedCard.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 4096,
+                    "modifiedAt": "2026-06-19T09:55:00.000Z"
+                  },
+                  {
+                    "id": "file_020",
+                    "name": "FeedSkeleton.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/feed/FeedSkeleton.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-15T05:39:00.000Z"
+                  },
+                  {
+                    "id": "file_021",
+                    "name": "FeedLoadMore.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/feed/FeedLoadMore.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 2048,
+                    "modifiedAt": "2026-06-15T05:39:00.000Z"
+                  }
+                ]
+              },
+              {
+                "id": "dir_029",
+                "name": "explorer",
+                "type": "folder",
+                "path": "/react-interview-prep/src/components/explorer",
+                "modifiedAt": "2026-06-23T05:11:00.000Z",
+                "children": [
+                  {
+                    "id": "file_023",
+                    "name": "FileTree.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/FileTree.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 4096,
+                    "modifiedAt": "2026-06-23T05:11:00.000Z"
+                  },
+                  {
+                    "id": "file_024",
+                    "name": "TreeNode.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/TreeNode.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 5120,
+                    "modifiedAt": "2026-06-23T05:11:00.000Z"
+                  },
+                  {
+                    "id": "file_025",
+                    "name": "TreeRow.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/TreeRow.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 4096,
+                    "modifiedAt": "2026-06-23T05:11:00.000Z"
+                  },
+                  {
+                    "id": "file_026",
+                    "name": "FileIcon.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/FileIcon.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-22T06:22:00.000Z"
+                  },
+                  {
+                    "id": "file_027",
+                    "name": "FileDetailPanel.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/FileDetailPanel.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 6144,
+                    "modifiedAt": "2026-06-22T06:22:00.000Z"
+                  },
+                  {
+                    "id": "file_028",
+                    "name": "ExplorerToolbar.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/explorer/ExplorerToolbar.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 4096,
+                    "modifiedAt": "2026-06-22T06:22:00.000Z"
+                  }
+                ]
+              },
+              {
+                "id": "dir_032",
+                "name": "layout",
+                "type": "folder",
+                "path": "/react-interview-prep/src/components/layout",
+                "modifiedAt": "2026-06-12T08:12:00.000Z",
+                "children": [
+                  {
+                    "id": "file_030",
+                    "name": "Header.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/layout/Header.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 2048,
+                    "modifiedAt": "2026-06-12T08:12:00.000Z"
+                  },
+                  {
+                    "id": "file_031",
+                    "name": "Footer.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/layout/Footer.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 2048,
+                    "modifiedAt": "2026-06-12T08:12:00.000Z"
+                  }
+                ]
+              },
+              {
+                "id": "dir_034",
+                "name": "ui",
+                "type": "folder",
+                "path": "/react-interview-prep/src/components/ui",
+                "modifiedAt": "2026-06-09T11:45:00.000Z",
+                "children": [
+                  {
+                    "id": "file_033",
+                    "name": "Button.tsx",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/components/ui/Button.tsx",
+                    "extension": "tsx",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-09T11:45:00.000Z"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dir_042",
+            "name": "data",
+            "type": "folder",
+            "path": "/react-interview-prep/src/data",
+            "modifiedAt": "2026-06-21T07:33:00.000Z",
+            "children": [
+              {
+                "id": "file_036",
+                "name": "search-index.json",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/search-index.json",
+                "extension": "json",
+                "sizeBytes": 49152,
+                "modifiedAt": "2026-06-20T08:44:00.000Z"
+              },
+              {
+                "id": "file_037",
+                "name": "feed-posts.json",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/feed-posts.json",
+                "extension": "json",
+                "sizeBytes": 32768,
+                "modifiedAt": "2026-06-19T09:55:00.000Z"
+              },
+              {
+                "id": "file_038",
+                "name": "file-tree.json",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/file-tree.json",
+                "extension": "json",
+                "sizeBytes": 28672,
+                "modifiedAt": "2026-06-23T05:11:00.000Z"
+              },
+              {
+                "id": "file_039",
+                "name": "mockSearchIndex.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/mockSearchIndex.ts",
+                "extension": "ts",
+                "sizeBytes": 2048,
+                "modifiedAt": "2026-06-20T08:44:00.000Z"
+              },
+              {
+                "id": "file_040",
+                "name": "mockFeedPosts.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/mockFeedPosts.ts",
+                "extension": "ts",
+                "sizeBytes": 2048,
+                "modifiedAt": "2026-06-19T09:55:00.000Z"
+              },
+              {
+                "id": "file_041",
+                "name": "mockFileTree.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/data/mockFileTree.ts",
+                "extension": "ts",
+                "sizeBytes": 2048,
+                "modifiedAt": "2026-06-23T05:11:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "dir_047",
+            "name": "hooks",
+            "type": "folder",
+            "path": "/react-interview-prep/src/hooks",
+            "modifiedAt": "2026-06-19T09:55:00.000Z",
+            "children": [
+              {
+                "id": "file_043",
+                "name": "useDebouncedSearch.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/hooks/useDebouncedSearch.ts",
+                "extension": "ts",
+                "sizeBytes": 3072,
+                "modifiedAt": "2026-06-17T11:17:00.000Z"
+              },
+              {
+                "id": "file_044",
+                "name": "useInfiniteScroll.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/hooks/useInfiniteScroll.ts",
+                "extension": "ts",
+                "sizeBytes": 4096,
+                "modifiedAt": "2026-06-19T09:55:00.000Z"
+              },
+              {
+                "id": "file_045",
+                "name": "useTreeKeyboardNav.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/hooks/useTreeKeyboardNav.ts",
+                "extension": "ts",
+                "sizeBytes": 5120,
+                "modifiedAt": "2026-06-23T05:11:00.000Z"
+              },
+              {
+                "id": "file_046",
+                "name": "useClickOutside.ts",
+                "type": "file",
+                "path": "/react-interview-prep/src/hooks/useClickOutside.ts",
+                "extension": "ts",
+                "sizeBytes": 2048,
+                "modifiedAt": "2026-06-14T06:50:00.000Z"
+              }
+            ]
+          },
+          {
+            "id": "dir_063",
+            "name": "lib",
+            "type": "folder",
+            "path": "/react-interview-prep/src/lib",
+            "modifiedAt": "2026-06-16T04:28:00.000Z",
+            "children": [
+              {
+                "id": "dir_054",
+                "name": "store",
+                "type": "folder",
+                "path": "/react-interview-prep/src/lib/store",
+                "modifiedAt": "2026-06-16T04:28:00.000Z",
+                "children": [
+                  {
+                    "id": "file_048",
+                    "name": "index.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/store/index.ts",
+                    "extension": "ts",
+                    "sizeBytes": 1024,
+                    "modifiedAt": "2026-06-16T04:28:00.000Z"
+                  },
+                  {
+                    "id": "file_049",
+                    "name": "hooks.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/store/hooks.ts",
+                    "extension": "ts",
+                    "sizeBytes": 1024,
+                    "modifiedAt": "2026-06-16T04:28:00.000Z"
+                  },
+                  {
+                    "id": "dir_053",
+                    "name": "slices",
+                    "type": "folder",
+                    "path": "/react-interview-prep/src/lib/store/slices",
+                    "modifiedAt": "2026-06-18T10:06:00.000Z",
+                    "children": [
+                      {
+                        "id": "file_050",
+                        "name": "searchSlice.ts",
+                        "type": "file",
+                        "path": "/react-interview-prep/src/lib/store/slices/searchSlice.ts",
+                        "extension": "ts",
+                        "sizeBytes": 6144,
+                        "modifiedAt": "2026-06-18T10:06:00.000Z"
+                      },
+                      {
+                        "id": "file_051",
+                        "name": "feedSlice.ts",
+                        "type": "file",
+                        "path": "/react-interview-prep/src/lib/store/slices/feedSlice.ts",
+                        "extension": "ts",
+                        "sizeBytes": 5120,
+                        "modifiedAt": "2026-06-19T09:55:00.000Z"
+                      },
+                      {
+                        "id": "file_052",
+                        "name": "explorerSlice.ts",
+                        "type": "file",
+                        "path": "/react-interview-prep/src/lib/store/slices/explorerSlice.ts",
+                        "extension": "ts",
+                        "sizeBytes": 7168,
+                        "modifiedAt": "2026-06-23T05:11:00.000Z"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "dir_058",
+                "name": "types",
+                "type": "folder",
+                "path": "/react-interview-prep/src/lib/types",
+                "modifiedAt": "2026-06-15T05:39:00.000Z",
+                "children": [
+                  {
+                    "id": "file_055",
+                    "name": "search.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/types/search.ts",
+                    "extension": "ts",
+                    "sizeBytes": 2048,
+                    "modifiedAt": "2026-06-15T05:39:00.000Z"
+                  },
+                  {
+                    "id": "file_056",
+                    "name": "feed.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/types/feed.ts",
+                    "extension": "ts",
+                    "sizeBytes": 2048,
+                    "modifiedAt": "2026-06-16T04:28:00.000Z"
+                  },
+                  {
+                    "id": "file_057",
+                    "name": "explorer.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/types/explorer.ts",
+                    "extension": "ts",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-23T05:11:00.000Z"
+                  }
+                ]
+              },
+              {
+                "id": "dir_062",
+                "name": "utils",
+                "type": "folder",
+                "path": "/react-interview-prep/src/lib/utils",
+                "modifiedAt": "2026-06-13T07:01:00.000Z",
+                "children": [
+                  {
+                    "id": "file_059",
+                    "name": "cn.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/utils/cn.ts",
+                    "extension": "ts",
+                    "sizeBytes": 1024,
+                    "modifiedAt": "2026-06-04T08:40:00.000Z"
+                  },
+                  {
+                    "id": "file_060",
+                    "name": "treeHelpers.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/utils/treeHelpers.ts",
+                    "extension": "ts",
+                    "sizeBytes": 5120,
+                    "modifiedAt": "2026-06-23T05:11:00.000Z"
+                  },
+                  {
+                    "id": "file_061",
+                    "name": "entityHelpers.ts",
+                    "type": "file",
+                    "path": "/react-interview-prep/src/lib/utils/entityHelpers.ts",
+                    "extension": "ts",
+                    "sizeBytes": 3072,
+                    "modifiedAt": "2026-06-13T07:01:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dir_068",
+        "name": "scripts",
+        "type": "folder",
+        "path": "/react-interview-prep/scripts",
+        "modifiedAt": "2026-06-21T07:33:00.000Z",
+        "children": [
+          {
+            "id": "file_065",
+            "name": "generate-search-index.mjs",
+            "type": "file",
+            "path": "/react-interview-prep/scripts/generate-search-index.mjs",
+            "extension": "mjs",
+            "sizeBytes": 6144,
+            "modifiedAt": "2026-06-20T08:44:00.000Z"
+          },
+          {
+            "id": "file_066",
+            "name": "generate-feed-posts.mjs",
+            "type": "file",
+            "path": "/react-interview-prep/scripts/generate-feed-posts.mjs",
+            "extension": "mjs",
+            "sizeBytes": 5120,
+            "modifiedAt": "2026-06-19T09:55:00.000Z"
+          },
+          {
+            "id": "file_067",
+            "name": "generate-file-tree.mjs",
+            "type": "file",
+            "path": "/react-interview-prep/scripts/generate-file-tree.mjs",
+            "extension": "mjs",
+            "sizeBytes": 7168,
+            "modifiedAt": "2026-06-23T05:11:00.000Z"
+          }
+        ]
+      },
+      {
+        "id": "dir_075",
+        "name": "docs",
+        "type": "folder",
+        "path": "/react-interview-prep/docs",
+        "modifiedAt": "2026-06-21T07:33:00.000Z",
+        "children": [
+          {
+            "id": "file_069",
+            "name": "ARCHITECTURE.md",
+            "type": "file",
+            "path": "/react-interview-prep/docs/ARCHITECTURE.md",
+            "extension": "md",
+            "sizeBytes": 12288,
+            "modifiedAt": "2026-06-22T06:22:00.000Z"
+          },
+          {
+            "id": "file_070",
+            "name": "INTERVIEW-QUESTIONS.md",
+            "type": "file",
+            "path": "/react-interview-prep/docs/INTERVIEW-QUESTIONS.md",
+            "extension": "md",
+            "sizeBytes": 8192,
+            "modifiedAt": "2026-06-22T06:22:00.000Z"
+          },
+          {
+            "id": "file_071",
+            "name": "README.md",
+            "type": "file",
+            "path": "/react-interview-prep/docs/README.md",
+            "extension": "md",
+            "sizeBytes": 4096,
+            "modifiedAt": "2026-06-21T07:33:00.000Z"
+          },
+          {
+            "id": "dir_074",
+            "name": "diagrams",
+            "type": "folder",
+            "path": "/react-interview-prep/docs/diagrams",
+            "modifiedAt": "2026-06-14T06:50:00.000Z",
+            "children": [
+              {
+                "id": "file_072",
+                "name": "tree-recursion.svg",
+                "type": "file",
+                "path": "/react-interview-prep/docs/diagrams/tree-recursion.svg",
+                "extension": "svg",
+                "sizeBytes": 6144,
+                "modifiedAt": "2026-06-14T06:50:00.000Z"
+              },
+              {
+                "id": "file_073",
+                "name": "data-flow.png",
+                "type": "file",
+                "path": "/react-interview-prep/docs/diagrams/data-flow.png",
+                "extension": "png",
+                "sizeBytes": 122880,
+                "modifiedAt": "2026-06-14T06:50:00.000Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dir_079",
+        "name": ".github",
+        "type": "folder",
+        "path": "/react-interview-prep/.github",
+        "modifiedAt": "2026-06-10T10:34:00.000Z",
+        "children": [
+          {
+            "id": "dir_078",
+            "name": "workflows",
+            "type": "folder",
+            "path": "/react-interview-prep/.github/workflows",
+            "modifiedAt": "2026-06-10T10:34:00.000Z",
+            "children": [
+              {
+                "id": "file_076",
+                "name": "ci.yml",
+                "type": "file",
+                "path": "/react-interview-prep/.github/workflows/ci.yml",
+                "extension": "yml",
+                "sizeBytes": 2048,
+                "modifiedAt": "2026-06-10T10:34:00.000Z"
+              },
+              {
+                "id": "file_077",
+                "name": "deploy.yml",
+                "type": "file",
+                "path": "/react-interview-prep/.github/workflows/deploy.yml",
+                "extension": "yml",
+                "sizeBytes": 3072,
+                "modifiedAt": "2026-06-10T10:34:00.000Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "file_080",
+        "name": "package.json",
+        "type": "file",
+        "path": "/react-interview-prep/package.json",
+        "extension": "json",
+        "sizeBytes": 2048,
+        "modifiedAt": "2026-06-23T05:11:00.000Z"
+      },
+      {
+        "id": "file_081",
+        "name": "tsconfig.json",
+        "type": "file",
+        "path": "/react-interview-prep/tsconfig.json",
+        "extension": "json",
+        "sizeBytes": 1024,
+        "modifiedAt": "2026-06-16T04:28:00.000Z"
+      },
+      {
+        "id": "file_082",
+        "name": "vite.config.ts",
+        "type": "file",
+        "path": "/react-interview-prep/vite.config.ts",
+        "extension": "ts",
+        "sizeBytes": 1024,
+        "modifiedAt": "2026-06-16T04:28:00.000Z"
+      },
+      {
+        "id": "file_083",
+        "name": "eslint.config.js",
+        "type": "file",
+        "path": "/react-interview-prep/eslint.config.js",
+        "extension": "js",
+        "sizeBytes": 1024,
+        "modifiedAt": "2026-06-14T06:50:00.000Z"
+      },
+      {
+        "id": "file_084",
+        "name": ".gitignore",
+        "type": "file",
+        "path": "/react-interview-prep/.gitignore",
+        "extension": "gitignore",
+        "sizeBytes": 1024,
+        "modifiedAt": "2026-06-04T08:40:00.000Z"
+      },
+      {
+        "id": "file_085",
+        "name": ".env.example",
+        "type": "file",
+        "path": "/react-interview-prep/.env.example",
+        "extension": "example",
+        "sizeBytes": 1024,
+        "modifiedAt": "2026-06-09T11:45:00.000Z"
+      }
+    ]
+  }
+}
