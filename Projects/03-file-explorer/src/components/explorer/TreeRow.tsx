@@ -54,7 +54,7 @@ export function TreeRow({
       onClick={handleClick}
       style={{ paddingLeft: `${depth * INDENT_PX + 8}px` }}
       className={cn(
-        'group flex w-full items-center gap-1.5 rounded-lg py-1.5 pr-2 text-left text-sm transition-colors',
+        'group flex w-full items-center gap-1.5 rounded-lg py-1.5 pr-2 text-left text-sm transition-colors outline-none focus:outline-none focus-visible:outline-none',
         isSelected
           ? 'bg-emerald-100/80 text-emerald-900'
           : 'text-slate-700 hover:bg-white/70 hover:text-emerald-800',
