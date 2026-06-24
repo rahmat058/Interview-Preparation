@@ -17,11 +17,11 @@
 
 ### Q2. Why not put all form state in Redux?
 
-| Redux for fields      | RHF for fields        |
-| --------------------- | --------------------- |
-| Dispatch per keystroke| register handles it   |
-| Manual error mapping  | errors object built-in|
-| Boilerplate           | Less code             |
+| Redux for fields       | RHF for fields         |
+| ---------------------- | ---------------------- |
+| Dispatch per keystroke | register handles it    |
+| Manual error mapping   | errors object built-in |
+| Boilerplate            | Less code              |
 
 **Interview Answer:** "Redux for wizard step index and submit status. RHF for field values — best of both."
 
@@ -30,7 +30,7 @@
 ### Q3. How do you validate only the current step?
 
 ```typescript
-await trigger(['firstName', 'email', 'phone'])  // step 1 fields only
+await trigger(["firstName", "email", "phone"]); // step 1 fields only
 ```
 
 Map steps to fields in `STEP_FIELD_MAP`.
@@ -59,7 +59,7 @@ Map steps to fields in `STEP_FIELD_MAP`.
 ### Q6. How handle optional fields (LinkedIn)?
 
 ```typescript
-z.string().refine(val => val === '' || isValidUrl(val))
+z.string().refine((val) => val === "" || isValidUrl(val));
 ```
 
 Empty string allowed; non-empty must be URL.
@@ -108,10 +108,10 @@ Not Redux entire store — only what's needed to resume.
 
 ### Q11. localStorage vs sessionStorage?
 
-| localStorage | sessionStorage |
-| ------------ | -------------- |
-| Survives tab close | Tab session only |
-| Good for drafts | Good for sensitive forms |
+| localStorage       | sessionStorage           |
+| ------------------ | ------------------------ |
+| Survives tab close | Tab session only         |
+| Good for drafts    | Good for sensitive forms |
 
 ---
 
@@ -151,11 +151,91 @@ Map API field errors to `setError('email', { message: '...' })` from RHF.
 
 ### Q17. react-hook-form vs Formik?
 
-| RHF           | Formik        |
-| ------------- | ------------- |
-| Less re-renders | More re-renders |
+| RHF                  | Formik              |
+| -------------------- | ------------------- |
+| Less re-renders      | More re-renders     |
 | Uncontrolled default | Controlled tendency |
-| Smaller bundle | Larger |
+| Smaller bundle       | Larger              |
+
+---
+
+## What Interviewers Actually Look For
+
+Not perfect UI. Interviewers evaluate **how you think under constraints**.
+
+| Criteria                  | What to demonstrate in **FormFlow**                | Example from this project                        |
+| ------------------------- | -------------------------------------------------- | ------------------------------------------------ |
+| **Component structure**   | RHF owns values; Redux owns wizard meta            | `FormProvider` + `StepPersonal` — step isolation |
+| **State management**      | Validate only current step on Next                 | `trigger(stepFields)` — not whole form           |
+| **Code readability**      | Zod schemas colocated; clear step map              | `WIZARD_STEPS` + `STEP_COMPONENTS` arrays        |
+| **Edge cases**            | Refresh mid-wizard, invalid draft, back navigation | localStorage restore; merge with defaults        |
+| **Performance awareness** | Don't re-validate all fields every keystroke       | RHF uncontrolled inputs; `mode: 'onTouched'`     |
+
+**Strong signal:** You explain split: "RHF = form values, Redux = navigation — avoids duplicating fields in Redux."
+
+---
+
+## Senior-Level Variations
+
+Interviewers often add mid-interview. How to extend **FormFlow**:
+
+### Virtualization
+
+**Ask:** "Step with 500 checkbox options."
+
+Virtualize long option lists — rare in wizards but shows awareness. Multi-step itself is a UX substitute for one giant form.
+
+**Interview Answer:** "Wizards already chunk UX — one step at a time. If a single step has hundreds of options, virtualize that list. The step index in Redux stays the navigation source of truth."
+
+**Example:** Step 3: pick from **500 countries** → virtual checkbox list shows ~12 rows → Redux `currentStep` still drives navigation.
+
+---
+
+### Optimistic updates
+
+**Ask:** "Submit feels slow."
+
+Show success step immediately; roll back if API fails with error banner on review step. Or optimistic "Submitting…" with disable double-submit.
+
+**Interview Answer:** "Advance to success step on submit click with `isSubmitting` guard against double-post. If API fails, step back to review with an error banner — user data is still in RHF."
+
+**Example:** Click **Submit** → Success step shows instantly → API returns 500 → user lands back on **Review** with red banner, all fields still filled.
+
+---
+
+### Undo functionality
+
+**Ask:** "User clicked Clear draft by mistake."
+
+Confirm modal, or toast Undo restoring `localStorage` snapshot from ref before clear.
+
+**Interview Answer:** "Snapshot `localStorage` draft to a ref before clear, then toast Undo that writes it back. Cheaper than confirm modal for power users; confirm for destructive in production."
+
+**Example:** **Clear draft** wipes name + email → toast **Undo** → `localStorage` draft restored, form fields repopulated instantly.
+
+---
+
+### Accessibility support
+
+**Ask:** "Wizard works with keyboard + screen reader."
+
+Focus first field on step change (`useEffect` + `focus()`). `aria-current="step"` on progress. Announce step title via `aria-live` on navigation.
+
+**Interview Answer:** "On step change, focus the first invalid or first field. Progress uses `aria-current=step`. Live region announces 'Step 2 of 4: Shipping' so screen reader users know context without hunting headings."
+
+**Example:** Click **Next** → focus jumps to first shipping field → screen reader: **"Step 2 of 4: Shipping"**.
+
+---
+
+### Performance constraints
+
+**Ask:** "Large form lags on every keystroke."
+
+RHF avoids full-form re-render. Split steps so only active step mounts heavy fields. Lazy-load step components with `React.lazy`.
+
+**Interview Answer:** "RHF registers only mounted fields — lazy-load step components so 40 fields on step 4 don't re-render when step 1 types. `trigger(stepFields)` on Next keeps validation scoped."
+
+**Example:** Type email on **Step 1** → **Step 4**'s 40 fields aren't even mounted → zero re-renders from unrelated steps.
 
 ---
 

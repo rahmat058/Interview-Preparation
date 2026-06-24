@@ -14,9 +14,9 @@ A file tree is **self-similar**: every folder contains items that look identical
 
 ### Q2. What is the base case vs recursive case?
 
-| Case       | Condition                    | Renders                    |
-| ---------- | ---------------------------- | -------------------------- |
-| **Base**   | `type === 'file'`            | `TreeRow` only             |
+| Case          | Condition                       | Renders                       |
+| ------------- | ------------------------------- | ----------------------------- |
+| **Base**      | `type === 'file'`               | `TreeRow` only                |
 | **Recursive** | `type === 'folder' && expanded` | `TreeRow` + child `TreeNode`s |
 
 **Interview Answer:** "Files stop recursion. Folders continue only when expanded — collapsed folders don't mount child components."
@@ -26,10 +26,12 @@ A file tree is **self-similar**: every folder contains items that look identical
 ### Q3. Should expand/collapse state live in the tree data or separately?
 
 **In tree data (bad for interviews at scale):**
+
 - Mutates server payload
 - Hard to reset UI without refetch
 
 **Separate `expandedPaths` map (this project):**
+
 - Immutable tree from API
 - Easy expand all / collapse all
 - Clear separation: data vs UI state
@@ -42,9 +44,9 @@ A file tree is **self-similar**: every folder contains items that look identical
 
 ### Q4. Why split `TreeNode` and `TreeRow`?
 
-| Component  | Role                                      |
-| ---------- | ----------------------------------------- |
-| `TreeNode` | Recursion, expand logic, Redux dispatch   |
+| Component  | Role                                       |
+| ---------- | ------------------------------------------ |
+| `TreeNode` | Recursion, expand logic, Redux dispatch    |
 | `TreeRow`  | Presentation: indent, icon, chevron, click |
 
 **Interview Answer:** "Container/presenter split. `TreeRow` is easy to test and style. `TreeNode` owns the recursive structure — interviewers often ask you to whiteboard exactly this split."
@@ -69,8 +71,8 @@ Minimal recursive props:
 
 ```ts
 interface TreeNodeProps {
-  node: FileSystemNode
-  depth: number
+  node: FileSystemNode;
+  depth: number;
 }
 ```
 
@@ -116,10 +118,10 @@ Everything else (expanded, selected, handlers) can come from Redux or context.
 
 ### Q10. Eager load vs lazy load children?
 
-| Strategy    | Pros                          | Cons                        |
-| ----------- | ----------------------------- | --------------------------- |
-| **Eager**   | Simple recursion, offline OK  | Slow initial load for huge repos |
-| **Lazy**    | Fast first paint              | Loading spinners per folder, complex state |
+| Strategy  | Pros                         | Cons                                       |
+| --------- | ---------------------------- | ------------------------------------------ |
+| **Eager** | Simple recursion, offline OK | Slow initial load for huge repos           |
+| **Lazy**  | Fast first paint             | Loading spinners per folder, complex state |
 
 **Interview Answer:** "This project eager-loads 86 nodes. Production file explorers lazy-fetch `GET /children?path=` on first expand and cache in Redux."
 
@@ -129,11 +131,11 @@ Everything else (expanded, selected, handlers) can come from Redux or context.
 
 ```ts
 interface FileSystemNode {
-  id: string
-  name: string
-  type: 'folder' | 'file'
-  path: string
-  children?: FileSystemNode[]  // folders only
+  id: string;
+  name: string;
+  type: "folder" | "file";
+  path: string;
+  children?: FileSystemNode[]; // folders only
 }
 ```
 
@@ -205,13 +207,93 @@ Build **visible flat list** from tree + `expandedPaths`:
 
 ### Q17. Compare this to a flat list + `parentId` model
 
-| Nested JSON       | Flat + parentId        |
-| ----------------- | ---------------------- |
-| Natural recursion | Build tree in selector |
-| Easy mock         | DB-normalized          |
-| Hard to patch one node | Easy PATCH by id   |
+| Nested JSON            | Flat + parentId        |
+| ---------------------- | ---------------------- |
+| Natural recursion      | Build tree in selector |
+| Easy mock              | DB-normalized          |
+| Hard to patch one node | Easy PATCH by id       |
 
 **Interview Answer:** "APIs often return flat lists with `parentId`; use a `buildTree(flat)` utility once, then same recursive `TreeNode` renders it."
+
+---
+
+## What Interviewers Actually Look For
+
+Not perfect UI. Interviewers evaluate **how you think under constraints**.
+
+| Criteria                  | What to demonstrate in **TreeScope**                | Example from this project                               |
+| ------------------------- | --------------------------------------------------- | ------------------------------------------------------- |
+| **Component structure**   | Recursion container vs presentational row           | `TreeNode` recurses; `TreeRow` renders one line         |
+| **State management**      | UI state separate from API tree                     | `expandedPaths` map — not mutating `file-tree.json`     |
+| **Code readability**      | Base case obvious in recursive component            | `folder && expanded && children.map(TreeNode)`          |
+| **Edge cases**            | Empty folders, filter with no matches, deep nesting | Filter hides non-matches; keyboard on visible flat list |
+| **Performance awareness** | Don't mount collapsed children                      | Children render only when `isExpanded`                  |
+
+**Strong signal:** You whiteboard base case vs recursive case without looking at code.
+
+---
+
+## Senior-Level Variations
+
+Interviewers often add mid-interview. How to extend **TreeScope**:
+
+### Virtualization
+
+**Ask:** "10,000 files in one folder."
+
+Flatten visible nodes to a list → `@tanstack/react-virtual`. Recursion becomes a **data problem** (`buildVisibleList(tree, expandedPaths)`), not 10k mounted `TreeNode`s.
+
+**Interview Answer:** "I'd compute a flat visible list from the tree + expanded state, then virtualize that list. Same data model — different render strategy. Recursion moves from JSX to a DFS utility."
+
+**Example:** Expand `node_modules/` with 8,000 files → flat list renders **20 visible rows**, not 8,000 `TreeNode`s.
+
+---
+
+### Optimistic updates
+
+**Ask:** "Rename file inline."
+
+Update label in Redux immediately; revert on API failure. Keep `path` as stable id or use immutable path remap.
+
+**Interview Answer:** "Optimistic rename in Redux, PATCH in background. Use stable `id` as key — if path changes, remap in one immutable tree walk or refetch subtree on failure."
+
+**Example:** Rename `App.tsx` → `Main.tsx` in UI instantly → PATCH returns 404 → label reverts to `App.tsx`.
+
+---
+
+### Undo functionality
+
+**Ask:** "User collapsed entire tree by mistake."
+
+`Expand all` / `Collapse all` with undo toast, or maintain `expandedPaths` history stack (last 3 states).
+
+**Interview Answer:** "Snapshot `expandedPaths` before collapse-all, offer Undo toast to restore. Cheap — it's just a Record clone, not re-fetching the tree."
+
+**Example:** **Collapse All** closes 12 folders → toast **Undo** → same 12 folders re-expand instantly, no API call.
+
+---
+
+### Accessibility support
+
+**Ask:** "Full tree semantics."
+
+`role="tree"`, `role="treeitem"`, `aria-expanded` on folders. This project uses button rows + arrow keys — upgrade to ARIA tree pattern for audit compliance.
+
+**Interview Answer:** "Upgrade to `role=tree` / `treeitem` with `aria-expanded` on folders. Arrow keys map to spec: Right expands, Left collapses. Current roving-focus on buttons is a valid stepping stone."
+
+**Example:** Focus `src/` folder → press **→** to expand, **←** to collapse — matches WAI-ARIA tree keyboard spec.
+
+---
+
+### Performance constraints
+
+**Ask:** "Expand all on 5k nodes freezes UI."
+
+Batch expand in `requestIdleCallback` chunks, or expand one level at a time. Memo `TreeRow` with `React.memo`.
+
+**Interview Answer:** "Expand-all on huge trees blocks the main thread — batch updates per frame with `requestIdleCallback` or expand one level at a time. Memo `TreeRow` so unrelated parent re-renders don't recurse unnecessarily."
+
+**Example:** **Expand All** on 5,000 nodes → expand **200 nodes per animation frame** → UI stays responsive instead of freezing 3 seconds.
 
 ---
 

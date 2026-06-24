@@ -6,12 +6,12 @@
 
 ### Q1. Why use @dnd-kit over react-beautiful-dnd?
 
-| @dnd-kit              | react-beautiful-dnd        |
-| --------------------- | -------------------------- |
-| Actively maintained   | Deprecated by Atlassian    |
-| Modular packages      | Monolithic                 |
-| React 18/19 compatible| Strict mode issues         |
-| Built-in keyboard a11y| Good but unmaintained      |
+| @dnd-kit               | react-beautiful-dnd     |
+| ---------------------- | ----------------------- |
+| Actively maintained    | Deprecated by Atlassian |
+| Modular packages       | Monolithic              |
+| React 18/19 compatible | Strict mode issues      |
+| Built-in keyboard a11y | Good but unmaintained   |
 
 **Interview Answer:** "@dnd-kit is the modern standard — modular, maintained, and works with current React. hello-pangea/dnd is a valid fork of rbd if the team already uses that API."
 
@@ -19,11 +19,11 @@
 
 ### Q2. How does drag-and-drop kanban differ from a sortable list?
 
-| Sortable list     | Kanban board                    |
-| ----------------- | ------------------------------- |
-| Single container  | Multiple columns (containers)   |
-| Reorder only      | Reorder + move between columns  |
-| One SortableContext | One per column + droppable  |
+| Sortable list       | Kanban board                   |
+| ------------------- | ------------------------------ |
+| Single container    | Multiple columns (containers)  |
+| Reorder only        | Reorder + move between columns |
+| One SortableContext | One per column + droppable     |
 
 **Interview Answer:** "Kanban is multi-container sortable. Each column is a SortableContext AND a droppable zone. Cards move within and across columns."
 
@@ -85,7 +85,9 @@ Wraps a list of sortable items. Provides shared context for `useSortable` hooks 
 
 ```tsx
 <SortableContext items={column.cardIds} strategy={verticalListSortingStrategy}>
-  {cards.map(card => <KanbanCard key={card.id} card={card} />)}
+  {cards.map((card) => (
+    <KanbanCard key={card.id} card={card} />
+  ))}
 </SortableContext>
 ```
 
@@ -140,7 +142,7 @@ Keep a history stack of board snapshots or inverse move actions:
 In `applyMoveCard`, before insert:
 
 ```typescript
-if (destColumn.id === 'col_progress' && destColumn.cardIds.length >= 3) return
+if (destColumn.id === "col_progress" && destColumn.cardIds.length >= 3) return;
 ```
 
 Show toast if blocked.
@@ -169,13 +171,93 @@ Yes — `KeyboardSensor` + `sortableKeyboardCoordinates`.
 
 ### Q15. Redux vs Zustand for kanban?
 
-| Redux Toolkit        | Zustand              |
-| -------------------- | -------------------- |
-| DevTools, middleware | Lighter boilerplate  |
+| Redux Toolkit        | Zustand                |
+| -------------------- | ---------------------- |
+| DevTools, middleware | Lighter boilerplate    |
 | Interview standard   | Fine for side projects |
-| Time-travel undo     | Manual history       |
+| Time-travel undo     | Manual history         |
 
 **Interview Answer:** "Redux for interview demos — shows you know normalized state and reducers. Zustand is fine if the team prefers it."
+
+---
+
+## What Interviewers Actually Look For
+
+Not perfect UI. Interviewers evaluate **how you think under constraints**.
+
+| Criteria                  | What to demonstrate in **FlowBoard**                   | Example from this project                           |
+| ------------------------- | ------------------------------------------------------ | --------------------------------------------------- |
+| **Component structure**   | Board → column → card; DnD hook isolated               | `useKanbanDragDrop` owns drag logic                 |
+| **State management**      | Normalized `cardsById` + column `cardIds`              | Single `moveCard` reducer — no duplicated card data |
+| **Code readability**      | `applyMoveCard` handles same/cross column              | One function, two code paths clearly named          |
+| **Edge cases**            | Drop on empty column, drag to same index, invalid over | `resolveDropColumnId`, early return if same index   |
+| **Performance awareness** | O(1) card lookup; DragOverlay not full re-render       | `cardsById[cardId]` — not find in array             |
+
+**Strong signal:** You draw normalized state on whiteboard before touching @dnd-kit.
+
+---
+
+## Senior-Level Variations
+
+Interviewers often add mid-interview. How to extend **FlowBoard**:
+
+### Virtualization
+
+**Ask:** "Column has 200 cards."
+
+Virtualize card list per column with `@dnd-kit` + virtual list integration — measure item height, drag still works with sortable virtual items.
+
+**Interview Answer:** "Use `@tanstack/react-virtual` inside each column with fixed or measured card height. @dnd-kit supports virtual sortables — drag overlay stays the same. Normalized state unchanged."
+
+**Example:** **Done** column has 200 cards → only **~10 card DOM nodes** exist → drag overlay still previews the full card on drop.
+
+---
+
+### Optimistic updates
+
+**Ask:** "Move card before API confirms."
+
+Apply `moveCard` on `dragEnd` immediately (already local). Production: PATCH in background, revert on 409 conflict.
+
+**Interview Answer:** "This project already moves optimistically in Redux on drop. Production adds PATCH async — on 409 conflict, revert with inverse `moveCard` and show error toast."
+
+**Example:** Drop **"Fix login bug"** into **Review** → card moves instantly → PATCH returns 409 → card snaps back to **Todo** + error toast.
+
+---
+
+### Undo functionality
+
+**Ask:** "Undo last drag."
+
+Store `{ cardId, fromCol, fromIndex, toCol, toIndex }` in ref; `Cmd+Z` or toast Undo dispatches inverse `moveCard`.
+
+**Interview Answer:** "Keep last move payload in a ref. Undo dispatches the reverse move — same reducer, swapped source/destination. Toast gives non-power-users a visible affordance."
+
+**Example:** Drag card from **Todo index 2** → **Done** → toast **Undo** → inverse `moveCard` puts it back at **Todo index 2**.
+
+---
+
+### Accessibility support
+
+**Ask:** "Keyboard-only reorder."
+
+@dnd-kit KeyboardSensor (partially used). Announce moves: `aria-live` "Card X moved to In Progress". Focus card after drop.
+
+**Interview Answer:** "Enable KeyboardSensor, focus the dropped card after dragEnd, announce column change via `aria-live`. Provide non-drag alternative: 'Move to…' menu for accessibility compliance."
+
+**Example:** Keyboard user picks card, presses **Space**, arrows to **In Progress** → live region: **"Fix login bug moved to In Progress"**.
+
+---
+
+### Performance constraints
+
+**Ask:** "dragOver fires 60 times/sec."
+
+Throttle `handleDragOver` cross-column updates, or only commit on `dragEnd` for same-column (this project updates on dragOver for cross-column — mention trade-off).
+
+**Interview Answer:** "Cross-column preview needs dragOver updates but I'd throttle to rAF or only update when `over` column changes. Same-column reorder can wait until dragEnd to reduce reducer churn."
+
+**Example:** Drag across 3 columns → reducer fires only when `over.id` **changes column**, not all 60 dragOver events per second.
 
 ---
 

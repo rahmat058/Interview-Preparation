@@ -23,6 +23,7 @@ Questions commonly asked when you present this project in a React machine-coding
 **Theory:** When request B finishes after request A, you must not show A's results for query B.
 
 **Solutions:**
+
 1. **AbortController** — cancel in-flight request (used via RTK `signal`)
 2. **Request ID** — ignore responses whose ID doesn't match latest
 3. **React Query / SWR** — built-in deduplication
@@ -36,6 +37,7 @@ Questions commonly asked when you present this project in a React machine-coding
 ### Q3. Explain controlled vs uncontrolled inputs.
 
 **Theory:**
+
 - **Controlled:** React state is the single source of truth (`value` + `onChange`)
 - **Uncontrolled:** DOM holds state (`ref` + `defaultValue`)
 
@@ -51,12 +53,12 @@ Questions commonly asked when you present this project in a React machine-coding
 
 **Recommended split:**
 
-| Component | Responsibility |
-| --------- | -------------- |
+| Component            | Responsibility                      |
+| -------------------- | ----------------------------------- |
 | `AutocompleteSearch` | Combobox wrapper, keyboard handlers |
-| `SearchDropdown` | Panel, loading/empty/error |
-| `SearchResultItem` | Single row, highlight match |
-| `useDebouncedSearch` | Side effect: debounce + fetch |
+| `SearchDropdown`     | Panel, loading/empty/error          |
+| `SearchResultItem`   | Single row, highlight match         |
+| `useDebouncedSearch` | Side effect: debounce + fetch       |
 
 **Interview Answer:** "Container handles keyboard and ARIA; dropdown handles states; items are presentational — easy to test in isolation."
 
@@ -64,12 +66,12 @@ Questions commonly asked when you present this project in a React machine-coding
 
 ### Q5. What ARIA roles does an autocomplete need?
 
-| Element | Role / Attribute |
-| ------- | ---------------- |
-| Input wrapper | `role="combobox"` `aria-expanded` `aria-haspopup="listbox"` |
-| Input | `aria-autocomplete="list"` `aria-controls` `aria-activedescendant` |
-| Dropdown list | `role="listbox"` |
-| Each option | `role="option"` `aria-selected` |
+| Element       | Role / Attribute                                                   |
+| ------------- | ------------------------------------------------------------------ |
+| Input wrapper | `role="combobox"` `aria-expanded` `aria-haspopup="listbox"`        |
+| Input         | `aria-autocomplete="list"` `aria-controls` `aria-activedescendant` |
+| Dropdown list | `role="listbox"`                                                   |
+| Each option   | `role="option"` `aria-selected`                                    |
 
 **Interview Answer:** "Combobox + listbox pattern per WAI-ARIA — `activedescendant` tracks keyboard highlight without moving DOM focus."
 
@@ -77,12 +79,12 @@ Questions commonly asked when you present this project in a React machine-coding
 
 ### Q6. How do you implement keyboard navigation?
 
-| Key | Handler |
-| --- | ------- |
-| ArrowDown | `highlightedIndex++` (wrap) |
-| ArrowUp | `highlightedIndex--` (wrap) |
-| Enter | Select item at `highlightedIndex` |
-| Escape | Close dropdown |
+| Key       | Handler                           |
+| --------- | --------------------------------- |
+| ArrowDown | `highlightedIndex++` (wrap)       |
+| ArrowUp   | `highlightedIndex--` (wrap)       |
+| Enter     | Select item at `highlightedIndex` |
+| Escape    | Close dropdown                    |
 
 **Gotcha:** Call `e.preventDefault()` on arrows so cursor doesn't jump in input.
 
@@ -94,11 +96,11 @@ Questions commonly asked when you present this project in a React machine-coding
 
 ### Q7. Redux vs useState for autocomplete?
 
-| useState/useReducer | Redux |
-| ------------------- | ----- |
-| Single component | Shared across app |
-| Simpler | DevTools, middleware |
-| Less boilerplate | Interview signal |
+| useState/useReducer | Redux                |
+| ------------------- | -------------------- |
+| Single component    | Shared across app    |
+| Simpler             | DevTools, middleware |
+| Less boilerplate    | Interview signal     |
 
 **Interview Answer:** "For one input, local state is fine. Redux here demonstrates production patterns and keeps API status debuggable."
 
@@ -106,11 +108,11 @@ Questions commonly asked when you present this project in a React machine-coding
 
 ### Q8. What goes in Redux vs local state?
 
-| Redux | Local |
-| ----- | ----- |
-| `query`, `results`, `status` | — |
-| `highlightedIndex` | Could be local |
-| `selectedItem` | If only parent needs it |
+| Redux                        | Local                   |
+| ---------------------------- | ----------------------- |
+| `query`, `results`, `status` | —                       |
+| `highlightedIndex`           | Could be local          |
+| `selectedItem`               | If only parent needs it |
 
 **Interview Answer:** "Server-derived data and user intent (query, selection) in Redux; ephemeral UI like hover could stay local."
 
@@ -132,10 +134,10 @@ Questions commonly asked when you present this project in a React machine-coding
 
 ### Q10. What is the difference between debounce and throttle?
 
-| | Debounce | Throttle |
-|---|----------|----------|
-| Fires | After pause | At most once per interval |
-| Use case | Search input | Scroll, resize |
+|          | Debounce     | Throttle                  |
+| -------- | ------------ | ------------------------- |
+| Fires    | After pause  | At most once per interval |
+| Use case | Search input | Scroll, resize            |
 
 **Interview Answer:** "Debounce waits for typing to stop; throttle fires on a fixed schedule — search uses debounce."
 
@@ -146,6 +148,7 @@ Questions commonly asked when you present this project in a React machine-coding
 ### Q11. How is mock data structured for real DB migration?
 
 Each `SearchIndexItem` maps 1:1 to a `search_index` row:
+
 - Prefixed IDs (`prd_`, `cty_`, `usr_`)
 - `entityType` → `entity_type` ENUM
 - `metadata` JSONB for polymorphic fields
@@ -159,6 +162,7 @@ Each `SearchIndexItem` maps 1:1 to a `search_index` row:
 ### Q12. How would you implement the backend search?
 
 **Options:**
+
 1. **PostgreSQL** — `to_tsvector` + `ts_rank`
 2. **Elasticsearch** — inverted index, fuzzy match
 3. **Algolia / Typesense** — managed search SaaS
@@ -211,12 +215,12 @@ Each `SearchIndexItem` maps 1:1 to a `search_index` row:
 
 ```typescript
 // Vitest — reducer
-expect(searchReducer(state, setQuery('sony')).query).toBe('sony')
+expect(searchReducer(state, setQuery("sony")).query).toBe("sony");
 
 // RTL — keyboard
-fireEvent.keyDown(input, { key: 'ArrowDown' })
-fireEvent.keyDown(input, { key: 'Enter' })
-expect(screen.getByText('Selected result')).toBeInTheDocument()
+fireEvent.keyDown(input, { key: "ArrowDown" });
+fireEvent.keyDown(input, { key: "Enter" });
+expect(screen.getByText("Selected result")).toBeInTheDocument();
 ```
 
 **Interview Answer:** "Unit test reducers and debounce; integration test keyboard + selection with Testing Library."
@@ -225,13 +229,101 @@ expect(screen.getByText('Selected result')).toBeInTheDocument()
 
 ### Q17. Trade-offs of Framer Motion here?
 
-| Pros | Cons |
-| ---- | ---- |
-| Declarative animations | Bundle size (~30kb) |
+| Pros                       | Cons                      |
+| -------------------------- | ------------------------- |
+| Declarative animations     | Bundle size (~30kb)       |
 | `AnimatePresence` for exit | Overkill for tiny widgets |
-| Stagger children | CSS can do simple fades |
+| Stagger children           | CSS can do simple fades   |
 
 **Interview Answer:** "Framer Motion for dropdown enter/exit and list stagger — for production at scale, consider CSS for simple cases."
+
+---
+
+## What Interviewers Actually Look For
+
+Not perfect UI. Interviewers evaluate **how you think under constraints**.
+
+| Criteria                  | What to demonstrate in **QueryLens**                    | Example from this project                            |
+| ------------------------- | ------------------------------------------------------- | ---------------------------------------------------- |
+| **Component structure**   | Combobox + list split; container vs presentational      | `AutocompleteSearch` vs `SearchResultItem`           |
+| **State management**      | Async thunk + abort; debounced vs raw query             | `fetchSearchResults` aborts when query changes       |
+| **Code readability**      | Debounce hook reusable; clear naming                    | `useDebouncedSearch(300)` — single responsibility    |
+| **Edge cases**            | Stale responses, empty query, min length, rapid typing  | AbortController + `query.length < 2` guard           |
+| **Performance awareness** | Debounce, limit rendered results, avoid re-render storm | Only search on `debouncedQuery`, not every keystroke |
+
+**Strong signal:** You mention race conditions before the interviewer does.
+
+---
+
+## Senior-Level Variations
+
+Interviewers often add mid-interview. How to extend **QueryLens**:
+
+### Virtualization
+
+**Ask:** "Index returns 2,000 matches."
+
+Cap API at 50 results **and** virtualize dropdown with `@tanstack/react-virtual` — render ~10 DOM nodes regardless of total.
+
+**Interview Answer:** "I'd cap server results and virtualize the dropdown list so only visible rows mount. Search logic stays the same — virtualization is a render-layer fix."
+
+**Example:** Search `"react"` → API returns 50 matches → dropdown mounts **~8 `<li>` nodes** at a time, not 50.
+
+---
+
+### Optimistic updates
+
+**Ask:** "Show selection immediately while detail panel loads."
+
+Set `selectedItem` from list data instantly; fetch full record in background and merge.
+
+**Interview Answer:** "List items already have enough for the panel — dispatch `setSelectedItem` immediately, then merge API fields when the detail fetch resolves. Roll back selection if fetch fails."
+
+**Example:** Click **John Smith** in results → side panel shows name + email instantly → full bio appears 200ms later when detail API returns.
+
+---
+
+### Undo functionality
+
+**Ask:** "User cleared search accidentally."
+
+`Cmd+Z` restores last query from ref, or toast: "Search cleared — Undo".
+
+**Interview Answer:** "Keep `lastQuery` in a ref before clear. Either restore on Undo toast or keyboard shortcut — no need to re-fetch if results are still cached in Redux."
+
+**Example:** User clears `"typescript hooks"` → toast **"Search cleared — Undo"** → Undo restores query + cached results without a new API call.
+
+---
+
+### Accessibility support
+
+**Ask:** "Make it WCAG compliant."
+
+WAI-ARIA combobox pattern (partially implemented): `aria-activedescendant`, `aria-expanded`, active option `aria-selected`. Test with VoiceOver — arrow keys must move focus _and_ highlight.
+
+**Interview Answer:** "Follow the WAI-ARIA combobox pattern: input has `role=combobox`, list `role=listbox`, options `role=option`. Keyboard and screen reader must stay in sync — test with VoiceOver, not just visual highlight."
+
+**Example:** Press ↓ three times → VoiceOver reads **option 3** — blue highlight and spoken label always match.
+
+---
+
+### Performance constraints
+
+**Ask:** "Debounce too slow for power users."
+
+Adaptive debounce: 150ms after first char, 300ms after pause. Or cancel debounce on Enter — search immediately.
+
+**Interview Answer:** "I'd shorten debounce after the first character or flush immediately on Enter. Wrap `SearchResultItem` in `React.memo` with stable `onSelect` from `useCallback` to avoid re-rendering the full list every keystroke."
+
+**Example:** Type `"react"` quickly → one search fires on pause at `"react"`, not on `"r"`, `"re"`, `"rea"`, `"reac"`.
+
+**Ask:** "Re-render entire list every keystroke?"
+
+`React.memo(SearchResultItem)` with stable `onSelect` via `useCallback`.
+
+**Interview Answer:** "Memo list items and stabilize callbacks — highlight index changes should only re-render the previously active and newly active rows if props are compared narrowly."
+
+**Example:** Highlight moves row 2 → row 3 → only those **two** `SearchResultItem` components re-render, not all 50.
 
 ---
 
@@ -250,10 +342,10 @@ expect(screen.getByText('Selected result')).toBeInTheDocument()
 
 ## One-Liner Answers (rapid fire)
 
-| Question | Answer |
-| -------- | ------ |
-| Min query length? | 2 chars — avoids noisy single-letter queries |
-| Debounce delay? | 300ms — balance responsiveness vs API load |
-| Why Redux? | Demonstrates global state + DevTools; swappable with useReducer |
-| Ranking? | Prefix > contains > tags > popularity |
-| Accessibility? | WAI-ARIA combobox pattern + keyboard parity |
+| Question          | Answer                                                          |
+| ----------------- | --------------------------------------------------------------- |
+| Min query length? | 2 chars — avoids noisy single-letter queries                    |
+| Debounce delay?   | 300ms — balance responsiveness vs API load                      |
+| Why Redux?        | Demonstrates global state + DevTools; swappable with useReducer |
+| Ranking?          | Prefix > contains > tags > popularity                           |
+| Accessibility?    | WAI-ARIA combobox pattern + keyboard parity                     |

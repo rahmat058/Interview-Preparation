@@ -167,6 +167,123 @@ Common causes:
 
 ---
 
+## What Interviewers Actually Look For
+
+Not perfect UI. Interviewers evaluate **how you think under constraints**.
+
+| Criteria                  | What to demonstrate in **CartPulse**                  | Example from this project                                         |
+| ------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| **Component structure**   | Catalog vs cart split; presentational line items      | `ProductCard` dispatches; `CartLineItem` receives props only      |
+| **State management**      | Normalized cart; derived totals never stored          | `itemsById` + `selectCartPricing` — not `total` in Redux          |
+| **Code readability**      | Pure pricing function testable without React          | `calculateCartPricing()` in `cartPricing.ts`                      |
+| **Edge cases**            | Stock limits, stale localStorage, invalid product ids | `clampQuantity`, prune on catalog load, qty 0 removes line        |
+| **Performance awareness** | Memoized selectors; no recalc on filter change        | `createSelector` skips pricing when only `categoryFilter` changes |
+
+**Strong signal:** You explain _why_ totals are derived and walk through a stock-clamp edge case without being asked.
+
+---
+
+## Senior-Level Variations
+
+Interviewers often add mid-interview. How to extend **CartPulse**:
+
+### Virtualization
+
+**Ask:** "Catalog has 5,000 SKUs."
+
+Use `@tanstack/react-virtual` on `ProductGrid` — only render visible rows. Cart panel stays small (no virtualization needed).
+
+```typescript
+// Pseudocode
+const virtualizer = useVirtualizer({
+  count: products.length,
+  estimateSize: () => 180,
+});
+```
+
+**Interview Answer:** "Virtualize `ProductGrid` — cart panel is O(items) and stays small. Normalized `itemsById` unchanged; only catalog render strategy changes."
+
+**Example:** 5,000 products in grid → **~8 product cards** in DOM; cart with 4 items needs no virtualization at all.
+
+---
+
+### Optimistic updates
+
+**Ask:** "Add to cart should feel instant before stock API confirms."
+
+```typescript
+dispatch(addItem(productId)); // immediate
+try {
+  await reserveStock(productId);
+} catch {
+  dispatch(removeItem(productId));
+  toast.error("Out of stock");
+}
+```
+
+**Interview Answer:** "Dispatch `addItem` immediately — qty clamp runs in reducer. Reserve stock async; on 409, remove line and toast error. User sees cart update before network round-trip."
+
+**Example:** Click **Add Sony headphones** → cart shows qty **1** instantly → stock API returns 409 → item removed + **"Out of stock"** toast.
+
+---
+
+### Undo functionality
+
+**Ask:** "User accidentally removed an item."
+
+Keep last removed line in ref for 5 seconds; show toast with Undo:
+
+```typescript
+toast.custom({
+  title: "Removed Sony headphones",
+  action: { label: "Undo", onClick: () => dispatch(addItemWithQty(saved)) },
+});
+```
+
+This project removes immediately — mention undo as production follow-up.
+
+**Interview Answer:** "Snapshot `{ productId, quantity }` in a ref before `removeItem`, toast Undo calls `addItemWithQty`. Five-second window — same pattern as Gmail undo send."
+
+**Example:** Remove Sony headphones (qty 2) → toast **Undo** → `addItemWithQty({ id, qty: 2 })` within 5s restores exact line.
+
+---
+
+### Accessibility support
+
+**Ask:** "Screen reader should announce cart changes."
+
+Add `aria-live="polite"` region in `CartPanel`:
+
+```tsx
+<div aria-live="polite" className="sr-only">
+  {itemCount} items, total {formatCurrency(pricing.total)}
+</div>
+```
+
+Quantity steppers already need `aria-label` (implemented on +/- buttons).
+
+**Interview Answer:** "Polite live region reads item count and total from `selectCartPricing` — updates when qty changes. Stepper buttons already have `aria-label`; add live region for aggregate announcements."
+
+**Example:** Change qty **2 → 3** → live region announces: **"3 items, total $147.50"** without reading every line item.
+
+---
+
+### Performance constraints
+
+**Ask:** "Recalc on every keystroke in qty input?"
+
+Debounce `setQuantity` on direct input, or only commit on blur. Keep `createSelector` for pricing — never store `subtotal` in state.
+
+**Ask:** "100 line items in cart?"
+
+Virtualize `CartPanel` list; pricing loop is O(n) — acceptable until ~500 lines, then server-side cart.
+
+**Interview Answer:** "Commit qty on blur or debounce 300ms — reducer still clamps to stock. `createSelector` memoizes pricing; never store totals in Redux. Virtualize cart list only above ~100 lines."
+
+**Example:** Type `"12"` in qty input → commits on **blur** (not every keystroke) → `selectCartPricing` recalcs once, not 2 times for `"1"` and `"12"`.
+
+---
+
 ## Cross-Project Links
 
 | Project            | Shared pattern                    |
