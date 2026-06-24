@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #3** — VS Code–style nested file tree with recursive components, expand/collapse, keyboard navigation, and a detail panel.
 
+![TreeScope — File Explorer](../Projects-Images/03-file-explorer.png)
+
 ## Features
 
 | Feature                | Implementation                                              |

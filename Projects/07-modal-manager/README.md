@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #7** — stackable dialog system with **nested modals**, **Escape key handling**, **focus trap**, and **accessibility** primitives.
 
+![LayerForge — Modal Manager](../Projects-Images/07-modal-manager.png)
+
 ## Features
 
 | Feature | Implementation |

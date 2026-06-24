@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #6** — onboarding wizard with **react-hook-form**, **Zod** validation, progress tracking, and **localStorage** persistence.
 
+![FormFlow — Multi-Step Form](../Projects-Images/06-multi-step-form.png)
+
 ## Features
 
 | Feature               | Implementation                                      |

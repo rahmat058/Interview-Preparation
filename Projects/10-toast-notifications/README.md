@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #10** — toast queue with **auto-dismiss timers**, **pause-on-hover**, and a **`useToast()` hook** for component communication.
 
+![ToastForge — Toast Notifications](../Projects-Images/10-toast-notifications.png)
+
 ## Features
 
 | Feature | Implementation |

@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #2** — paginated social feed with Intersection Observer lazy loading, Redux state, loading skeletons, and error retry.
 
+![FlowFeed — Infinite Scroll Feed](../Projects-Images/02-infinite-scroll-feed.png)
+
 ## Features
 
 | Feature                | Implementation                                               |

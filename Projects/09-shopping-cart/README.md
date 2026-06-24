@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #9** — e-commerce cart with **add/remove**, **quantity updates**, and a **pure pricing pipeline** via Redux selectors.
 
+![CartPulse — Shopping Cart](../Projects-Images/09-shoping-cart.png)
+
 ## Features
 
 | Feature               | Implementation                                     |

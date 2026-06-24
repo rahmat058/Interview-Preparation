@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #5** — sortable, filterable, searchable employee table with server-style pagination and a pure query pipeline.
 
+![GridLens — Data Table](../Projects-Images/05-data-table.png)
+
 ## Features
 
 | Feature         | Implementation                                           |

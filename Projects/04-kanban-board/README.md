@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #4** — Jira/Trello-style kanban with **@dnd-kit** drag-and-drop, normalized Redux state, and cross-column reordering.
 
+![FlowBoard — Kanban Board](../Projects-Images/04-kanban-board.png)
+
 ## Features
 
 | Feature              | Implementation                                              |

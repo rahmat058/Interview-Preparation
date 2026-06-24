@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #1** — debounced autocomplete with mock API, keyboard navigation, Redux state, and glassmorphism UI.
 
+![QueryLens — Autocomplete Search](../Projects-Images/01-autocomplete-search.png)
+
 ## Features
 
 | Feature                 | Implementation                                                 |

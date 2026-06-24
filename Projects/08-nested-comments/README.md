@@ -2,6 +2,8 @@
 
 **React Machine Coding Project #8** — Reddit-style comment threads with **recursive rendering**, **inline replies**, and **expand/collapse**.
 
+![ThreadNest — Nested Comments](../Projects-Images/08-nested-comments.png)
+
 ## Features
 
 | Feature | Implementation |
