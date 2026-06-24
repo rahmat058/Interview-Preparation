@@ -8,8 +8,8 @@ Hands-on UI challenges for React interview preparation. Each project uses **Vite
 | --- | -------------------- | -------- | ----------------------------------------------------- |
 | 1   | Autocomplete Search  | Complete | [01-autocomplete-search](./01-autocomplete-search/)   |
 | 2   | Infinite Scroll Feed | Complete | [02-infinite-scroll-feed](./02-infinite-scroll-feed/) |
-| 3   | File Explorer        | Complete | [03-file-explorer](./03-file-explorer/)             |
-| 4   | —                    | Planned  | —                                                     |
+| 3   | File Explorer        | Complete | [03-file-explorer](./03-file-explorer/)               |
+| 4   | Kanban Board         | Complete | [04-kanban-board](./04-kanban-board/)                 |
 | 5   | —                    | Planned  | —                                                     |
 | 6   | —                    | Planned  | —                                                     |
 | 7   | —                    | Planned  | —                                                     |

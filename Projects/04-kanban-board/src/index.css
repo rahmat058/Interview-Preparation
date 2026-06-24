@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #faf5ff;
+  --foreground: #1e293b;
+  --gradient-start: #8b5cf6;
+  --gradient-mid: #d946ef;
+  --gradient-end: #6366f1;
+  --font-roboto: 'Roboto', system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto);
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+@layer components {
+  .app-bg {
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.16) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 100% 40%, rgba(217, 70, 239, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 45% at 0% 85%, rgba(99, 102, 241, 0.14) 0%, transparent 50%),
+      linear-gradient(180deg, #ffffff 0%, #faf5ff 45%, #fdf4ff 100%);
+    isolation: isolate;
+    min-height: 100vh;
+  }
+
+  .app-bg::before {
+    position: fixed;
+    z-index: -1;
+    filter: blur(80px);
+    inset: 0;
+    background: #ffffff;
+    background-image: radial-gradient(circle at top center, rgba(167, 139, 250, 0.18), transparent 65%);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    content: '';
+  }
+
+  .glass-card {
+    backdrop-filter: blur(16px);
+    box-shadow:
+      0 4px 24px rgba(139, 92, 246, 0.07),
+      0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.78);
+  }
+}
+
+@layer utilities {
+  .kanban-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 246, 0.35) transparent;
+  }
+}
