@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "collection": "kanban_board",
+    "boardId": "board_sprint_01",
+    "boardTitle": "Sprint 24 — React Machine Coding",
+    "columnCount": 4,
+    "cardCount": 24,
+    "generatedAt": "2026-06-24T12:42:08.905Z"
+  },
+  "data": {
+    "columns": [
+      {
+        "id": "col_backlog",
+        "title": "Backlog",
+        "accent": "slate",
+        "cardIds": [
+          "card_001",
+          "card_002",
+          "card_003",
+          "card_004",
+          "card_005",
+          "card_006"
+        ]
+      },
+      {
+        "id": "col_todo",
+        "title": "To Do",
+        "accent": "violet",
+        "cardIds": [
+          "card_007",
+          "card_008",
+          "card_009",
+          "card_010",
+          "card_011",
+          "card_012"
+        ]
+      },
+      {
+        "id": "col_progress",
+        "title": "In Progress",
+        "accent": "fuchsia",
+        "cardIds": [
+          "card_013",
+          "card_014",
+          "card_015",
+          "card_016",
+          "card_017",
+          "card_018"
+        ]
+      },
+      {
+        "id": "col_done",
+        "title": "Done",
+        "accent": "emerald",
+        "cardIds": [
+          "card_019",
+          "card_020",
+          "card_021",
+          "card_022",
+          "card_023",
+          "card_024"
+        ]
+      }
+    ],
+    "cardsById": {
+      "card_001": {
+        "id": "card_001",
+        "columnId": "col_backlog",
+        "title": "Implement drag-and-drop between columns",
+        "description": "Sprint task #1 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_01",
+        "assigneeName": "Sarah Chen",
+        "assigneeColor": "#8b5cf6",
+        "labels": [
+          "frontend"
+        ],
+        "storyPoints": 1,
+        "createdAt": "2026-05-25T12:42:08.901Z",
+        "updatedAt": "2026-06-24T12:42:08.905Z"
+      },
+      "card_002": {
+        "id": "card_002",
+        "columnId": "col_backlog",
+        "title": "Add Redux state for card reordering",
+        "description": "Sprint task #2 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_02",
+        "assigneeName": "Marcus Johnson",
+        "assigneeColor": "#d946ef",
+        "labels": [
+          "backend",
+          "feature"
+        ],
+        "storyPoints": 2,
+        "createdAt": "2026-05-26T12:42:08.905Z",
+        "updatedAt": "2026-06-23T12:42:08.905Z"
+      },
+      "card_003": {
+        "id": "card_003",
+        "columnId": "col_backlog",
+        "title": "Design glass-card column layout",
+        "description": "Sprint task #3 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_03",
+        "assigneeName": "Priya Sharma",
+        "assigneeColor": "#6366f1",
+        "labels": [
+          "design"
+        ],
+        "storyPoints": 3,
+        "createdAt": "2026-05-27T12:42:08.905Z",
+        "updatedAt": "2026-06-22T12:42:08.905Z"
+      },
+      "card_004": {
+        "id": "card_004",
+        "columnId": "col_backlog",
+        "title": "Write ARCHITECTURE.md for kanban flow",
+        "description": "Sprint task #4 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_04",
+        "assigneeName": "Alex Rivera",
+        "assigneeColor": "#ec4899",
+        "labels": [
+          "bug",
+          "devops"
+        ],
+        "storyPoints": 4,
+        "createdAt": "2026-05-28T12:42:08.905Z",
+        "updatedAt": "2026-06-21T12:42:08.905Z"
+      },
+      "card_005": {
+        "id": "card_005",
+        "columnId": "col_backlog",
+        "title": "Fix keyboard sensor for accessibility",
+        "description": "Sprint task #5 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_05",
+        "assigneeName": "Emily Watson",
+        "assigneeColor": "#a855f7",
+        "labels": [
+          "feature"
+        ],
+        "storyPoints": 5,
+        "createdAt": "2026-05-29T12:42:08.905Z",
+        "updatedAt": "2026-06-20T12:42:08.905Z"
+      },
+      "card_006": {
+        "id": "card_006",
+        "columnId": "col_backlog",
+        "title": "Add priority badges to task cards",
+        "description": "Sprint task #6 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_01",
+        "assigneeName": "Sarah Chen",
+        "assigneeColor": "#8b5cf6",
+        "labels": [
+          "docs",
+          "frontend"
+        ],
+        "storyPoints": 1,
+        "createdAt": "2026-05-30T12:42:08.905Z",
+        "updatedAt": "2026-06-19T12:42:08.905Z"
+      },
+      "card_007": {
+        "id": "card_007",
+        "columnId": "col_todo",
+        "title": "Create mock API with 400ms latency",
+        "description": "Sprint task #7 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_02",
+        "assigneeName": "Marcus Johnson",
+        "assigneeColor": "#d946ef",
+        "labels": [
+          "devops"
+        ],
+        "storyPoints": 2,
+        "createdAt": "2026-05-31T12:42:08.905Z",
+        "updatedAt": "2026-06-18T12:42:08.905Z"
+      },
+      "card_008": {
+        "id": "card_008",
+        "columnId": "col_todo",
+        "title": "Build card detail hover states",
+        "description": "Sprint task #8 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_03",
+        "assigneeName": "Priya Sharma",
+        "assigneeColor": "#6366f1",
+        "labels": [
+          "qa",
+          "design"
+        ],
+        "storyPoints": 3,
+        "createdAt": "2026-06-01T12:42:08.905Z",
+        "updatedAt": "2026-06-17T12:42:08.905Z"
+      },
+      "card_009": {
+        "id": "card_009",
+        "columnId": "col_todo",
+        "title": "Optimize re-renders during drag",
+        "description": "Sprint task #9 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_04",
+        "assigneeName": "Alex Rivera",
+        "assigneeColor": "#ec4899",
+        "labels": [
+          "frontend"
+        ],
+        "storyPoints": 4,
+        "createdAt": "2026-06-02T12:42:08.905Z",
+        "updatedAt": "2026-06-16T12:42:08.905Z"
+      },
+      "card_010": {
+        "id": "card_010",
+        "columnId": "col_todo",
+        "title": "Add column card count in header",
+        "description": "Sprint task #10 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_05",
+        "assigneeName": "Emily Watson",
+        "assigneeColor": "#a855f7",
+        "labels": [
+          "backend",
+          "feature"
+        ],
+        "storyPoints": 5,
+        "createdAt": "2026-06-03T12:42:08.905Z",
+        "updatedAt": "2026-06-15T12:42:08.905Z"
+      },
+      "card_011": {
+        "id": "card_011",
+        "columnId": "col_todo",
+        "title": "Implement optimistic moveCard reducer",
+        "description": "Sprint task #11 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_01",
+        "assigneeName": "Sarah Chen",
+        "assigneeColor": "#8b5cf6",
+        "labels": [
+          "design"
+        ],
+        "storyPoints": 1,
+        "createdAt": "2026-06-04T12:42:08.905Z",
+        "updatedAt": "2026-06-24T12:42:08.905Z"
+      },
+      "card_012": {
+        "id": "card_012",
+        "columnId": "col_todo",
+        "title": "Add Framer Motion card entrance",
+        "description": "Sprint task #12 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_02",
+        "assigneeName": "Marcus Johnson",
+        "assigneeColor": "#d946ef",
+        "labels": [
+          "bug",
+          "devops"
+        ],
+        "storyPoints": 2,
+        "createdAt": "2026-06-05T12:42:08.905Z",
+        "updatedAt": "2026-06-23T12:42:08.905Z"
+      },
+      "card_013": {
+        "id": "card_013",
+        "columnId": "col_progress",
+        "title": "Write 15+ interview Q&A entries",
+        "description": "Sprint task #13 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_03",
+        "assigneeName": "Priya Sharma",
+        "assigneeColor": "#6366f1",
+        "labels": [
+          "feature"
+        ],
+        "storyPoints": 3,
+        "createdAt": "2026-06-06T12:42:08.905Z",
+        "updatedAt": "2026-06-22T12:42:08.905Z"
+      },
+      "card_014": {
+        "id": "card_014",
+        "columnId": "col_progress",
+        "title": "Support cross-column drop zones",
+        "description": "Sprint task #14 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_04",
+        "assigneeName": "Alex Rivera",
+        "assigneeColor": "#ec4899",
+        "labels": [
+          "docs",
+          "frontend"
+        ],
+        "storyPoints": 4,
+        "createdAt": "2026-06-07T12:42:08.905Z",
+        "updatedAt": "2026-06-21T12:42:08.905Z"
+      },
+      "card_015": {
+        "id": "card_015",
+        "columnId": "col_progress",
+        "title": "Add assignee avatars on cards",
+        "description": "Sprint task #15 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_05",
+        "assigneeName": "Emily Watson",
+        "assigneeColor": "#a855f7",
+        "labels": [
+          "devops"
+        ],
+        "storyPoints": 5,
+        "createdAt": "2026-06-08T12:42:08.905Z",
+        "updatedAt": "2026-06-20T12:42:08.905Z"
+      },
+      "card_016": {
+        "id": "card_016",
+        "columnId": "col_progress",
+        "title": "Generate seed data script",
+        "description": "Sprint task #16 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_01",
+        "assigneeName": "Sarah Chen",
+        "assigneeColor": "#8b5cf6",
+        "labels": [
+          "qa",
+          "design"
+        ],
+        "storyPoints": 1,
+        "createdAt": "2026-06-09T12:42:08.905Z",
+        "updatedAt": "2026-06-19T12:42:08.905Z"
+      },
+      "card_017": {
+        "id": "card_017",
+        "columnId": "col_progress",
+        "title": "Add loading skeleton for board",
+        "description": "Sprint task #17 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_02",
+        "assigneeName": "Marcus Johnson",
+        "assigneeColor": "#d946ef",
+        "labels": [
+          "frontend"
+        ],
+        "storyPoints": 2,
+        "createdAt": "2026-06-10T12:42:08.905Z",
+        "updatedAt": "2026-06-18T12:42:08.905Z"
+      },
+      "card_018": {
+        "id": "card_018",
+        "columnId": "col_progress",
+        "title": "Handle empty column drop target",
+        "description": "Sprint task #18 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_03",
+        "assigneeName": "Priya Sharma",
+        "assigneeColor": "#6366f1",
+        "labels": [
+          "backend",
+          "feature"
+        ],
+        "storyPoints": 3,
+        "createdAt": "2026-06-11T12:42:08.905Z",
+        "updatedAt": "2026-06-17T12:42:08.905Z"
+      },
+      "card_019": {
+        "id": "card_019",
+        "columnId": "col_done",
+        "title": "Persist board state to localStorage",
+        "description": "Sprint task #19 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_04",
+        "assigneeName": "Alex Rivera",
+        "assigneeColor": "#ec4899",
+        "labels": [
+          "design"
+        ],
+        "storyPoints": 4,
+        "createdAt": "2026-06-12T12:42:08.905Z",
+        "updatedAt": "2026-06-16T12:42:08.905Z"
+      },
+      "card_020": {
+        "id": "card_020",
+        "columnId": "col_done",
+        "title": "Add undo for card moves",
+        "description": "Sprint task #20 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_05",
+        "assigneeName": "Emily Watson",
+        "assigneeColor": "#a855f7",
+        "labels": [
+          "bug",
+          "devops"
+        ],
+        "storyPoints": 5,
+        "createdAt": "2026-06-13T12:42:08.905Z",
+        "updatedAt": "2026-06-15T12:42:08.905Z"
+      },
+      "card_021": {
+        "id": "card_021",
+        "columnId": "col_done",
+        "title": "Write unit tests for moveCard",
+        "description": "Sprint task #21 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_01",
+        "assigneeName": "Sarah Chen",
+        "assigneeColor": "#8b5cf6",
+        "labels": [
+          "feature"
+        ],
+        "storyPoints": 1,
+        "createdAt": "2026-06-14T12:42:08.905Z",
+        "updatedAt": "2026-06-24T12:42:08.905Z"
+      },
+      "card_022": {
+        "id": "card_022",
+        "columnId": "col_done",
+        "title": "Add filter by assignee",
+        "description": "Sprint task #22 — practice complex Redux updates when moving cards between columns.",
+        "priority": "low",
+        "assigneeId": "usr_02",
+        "assigneeName": "Marcus Johnson",
+        "assigneeColor": "#d946ef",
+        "labels": [
+          "docs",
+          "frontend"
+        ],
+        "storyPoints": 2,
+        "createdAt": "2026-06-15T12:42:08.905Z",
+        "updatedAt": "2026-06-23T12:42:08.905Z"
+      },
+      "card_023": {
+        "id": "card_023",
+        "columnId": "col_done",
+        "title": "Mobile responsive horizontal scroll",
+        "description": "Sprint task #23 — practice complex Redux updates when moving cards between columns.",
+        "priority": "medium",
+        "assigneeId": "usr_03",
+        "assigneeName": "Priya Sharma",
+        "assigneeColor": "#6366f1",
+        "labels": [
+          "devops"
+        ],
+        "storyPoints": 3,
+        "createdAt": "2026-06-16T12:42:08.905Z",
+        "updatedAt": "2026-06-22T12:42:08.905Z"
+      },
+      "card_024": {
+        "id": "card_024",
+        "columnId": "col_done",
+        "title": "Add card creation form",
+        "description": "Sprint task #24 — practice complex Redux updates when moving cards between columns.",
+        "priority": "high",
+        "assigneeId": "usr_04",
+        "assigneeName": "Alex Rivera",
+        "assigneeColor": "#ec4899",
+        "labels": [
+          "qa",
+          "design"
+        ],
+        "storyPoints": 4,
+        "createdAt": "2026-06-17T12:42:08.905Z",
+        "updatedAt": "2026-06-21T12:42:08.905Z"
+      }
+    }
+  }
+}
