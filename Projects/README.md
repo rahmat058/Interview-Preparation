@@ -4,18 +4,18 @@ Hands-on UI challenges for React interview preparation. Each project uses **Vite
 
 ## Projects
 
-| #   | Project             | Status   | Folder                                              |
-| --- | ------------------- | -------- | --------------------------------------------------- |
-| 1   | Autocomplete Search | Complete | [01-autocomplete-search](./01-autocomplete-search/) |
-| 2   | —                   | Planned  | —                                                   |
-| 3   | —                   | Planned  | —                                                   |
-| 4   | —                   | Planned  | —                                                   |
-| 5   | —                   | Planned  | —                                                   |
-| 6   | —                   | Planned  | —                                                   |
-| 7   | —                   | Planned  | —                                                   |
-| 8   | —                   | Planned  | —                                                   |
-| 9   | —                   | Planned  | —                                                   |
-| 10  | —                   | Planned  | —                                                   |
+| #   | Project              | Status   | Folder                                                |
+| --- | -------------------- | -------- | ----------------------------------------------------- |
+| 1   | Autocomplete Search  | Complete | [01-autocomplete-search](./01-autocomplete-search/)   |
+| 2   | Infinite Scroll Feed | Complete | [02-infinite-scroll-feed](./02-infinite-scroll-feed/) |
+| 3   | —                    | Planned  | —                                                     |
+| 4   | —                    | Planned  | —                                                     |
+| 5   | —                    | Planned  | —                                                     |
+| 6   | —                    | Planned  | —                                                     |
+| 7   | —                    | Planned  | —                                                     |
+| 8   | —                    | Planned  | —                                                     |
+| 9   | —                    | Planned  | —                                                     |
+| 10  | —                    | Planned  | —                                                     |
 
 ## Shared Stack
 
