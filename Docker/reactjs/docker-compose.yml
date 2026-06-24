@@ -1,0 +1,21 @@
+# React (Vite) — build any React SPA and serve on port 3000
+# Build context: repository root (Interview-Preparation/)
+
+services:
+  react-app:
+    container_name: react-app
+    build:
+      context: ../..
+      dockerfile: Docker/reactjs/Dockerfile
+      args:
+        APP_PATH: ${APP_PATH:-Projects/01-autocomplete-search}
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:5000}
+    ports:
+      - "${REACT_PORT:-3000}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s

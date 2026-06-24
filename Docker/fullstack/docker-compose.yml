@@ -1,0 +1,50 @@
+# Fullstack — Frontend + Backend (single root compose)
+# Run from: Docker/fullstack/
+
+services:
+  backend:
+    container_name: fullstack-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACKEND_PORT:-5000}:5000"
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+    restart: unless-stopped
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5000/api/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    container_name: fullstack-frontend
+    build:
+      context: ../..
+      dockerfile: Docker/fullstack/frontend/Dockerfile
+      args:
+        FRONTEND_APP_PATH: ${FRONTEND_APP_PATH:-Projects/01-autocomplete-search}
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api}
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 15s
+
+networks:
+  app-network:
+    driver: bridge

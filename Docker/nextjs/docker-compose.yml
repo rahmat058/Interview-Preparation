@@ -1,0 +1,24 @@
+# Next.js — SSR/SSG app on port 3002
+# Set APP_PATH to your Next.js project (relative to repo root)
+# Requires next.config: output: 'standalone'
+
+services:
+  next-app:
+    container_name: next-app
+    build:
+      context: ../..
+      dockerfile: Docker/nextjs/Dockerfile
+      args:
+        APP_PATH: ${APP_PATH:?Set APP_PATH to your Next.js app path}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:5000}
+    ports:
+      - "${NEXT_PORT:-3002}:3000"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 20s

@@ -1,0 +1,21 @@
+# Vue (Vite) — build any Vue SPA and serve on port 3001
+# Build context: repository root
+
+services:
+  vue-app:
+    container_name: vue-app
+    build:
+      context: ../..
+      dockerfile: Docker/vuejs/Dockerfile
+      args:
+        APP_PATH: ${APP_PATH:?Set APP_PATH to your Vue app path, e.g. path/to/vue-app}
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:5000}
+    ports:
+      - "${VUE_PORT:-3001}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s

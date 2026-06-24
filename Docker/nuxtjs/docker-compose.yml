@@ -1,0 +1,23 @@
+# Nuxt 3 — SSR app on port 3003
+# Set APP_PATH to your Nuxt project (relative to repo root)
+
+services:
+  nuxt-app:
+    container_name: nuxt-app
+    build:
+      context: ../..
+      dockerfile: Docker/nuxtjs/Dockerfile
+      args:
+        APP_PATH: ${APP_PATH:?Set APP_PATH to your Nuxt app path}
+        NUXT_PUBLIC_API_URL: ${NUXT_PUBLIC_API_URL:-http://localhost:5000}
+    ports:
+      - "${NUXT_PORT:-3003}:3000"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 20s
