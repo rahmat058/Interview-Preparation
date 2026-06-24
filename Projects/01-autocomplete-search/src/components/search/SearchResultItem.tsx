@@ -1,17 +1,17 @@
-import { motion } from 'framer-motion'
-import type { SearchIndexItem } from '@/lib/types/search'
-import { highlightMatch } from '@/lib/utils/helpers'
-import { cn } from '@/lib/utils/cn'
-import { EntityBadge, EntityIcon } from './EntityBadge'
-import { getEntitySubtitle } from '@/lib/utils/entityHelpers'
+import { motion } from "framer-motion";
+import type { SearchIndexItem } from "@/lib/types/search";
+import { highlightMatch } from "@/lib/utils/helpers";
+import { cn } from "@/lib/utils/cn";
+import { EntityBadge, EntityIcon } from "./EntityBadge";
+import { getEntitySubtitle } from "@/lib/utils/entityHelpers";
 
 interface SearchResultItemProps {
-  item: SearchIndexItem
-  query: string
-  isHighlighted: boolean
-  index: number
-  onSelect: (item: SearchIndexItem) => void
-  onHover: (index: number) => void
+  item: SearchIndexItem;
+  query: string;
+  isHighlighted: boolean;
+  index: number;
+  onSelect: (item: SearchIndexItem) => void;
+  onHover: (index: number) => void;
 }
 
 export function SearchResultItem({
@@ -22,7 +22,7 @@ export function SearchResultItem({
   onSelect,
   onHover,
 }: SearchResultItemProps) {
-  const titleParts = highlightMatch(item.title, query)
+  const titleParts = highlightMatch(item.title, query);
 
   return (
     <motion.li
@@ -34,15 +34,17 @@ export function SearchResultItem({
       transition={{ delay: index * 0.04, duration: 0.2 }}
       onMouseEnter={() => onHover(index)}
       onMouseDown={(e) => e.preventDefault()}
-      onClick={() => onSelect(item)}>
+      onClick={() => onSelect(item)}
+    >
       <button
         type="button"
         className={cn(
-          'flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-200',
+          "flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-200",
           isHighlighted
-            ? 'bg-gradient-to-r from-indigo-50 to-violet-50 shadow-sm ring-1 ring-indigo-200/60'
-            : 'hover:bg-white/80',
-        )}>
+            ? "bg-linear-to-r from-indigo-50 to-violet-50 shadow-sm ring-1 ring-indigo-200/60"
+            : "hover:bg-white/80",
+        )}
+      >
         <EntityIcon entityType={item.entityType} />
 
         <div className="min-w-0 flex-1">
@@ -50,7 +52,10 @@ export function SearchResultItem({
             <p className="truncate font-medium text-slate-800">
               {titleParts.map((part, i) =>
                 part.match ? (
-                  <mark key={i} className="rounded bg-indigo-200/60 px-0.5 text-indigo-900">
+                  <mark
+                    key={i}
+                    className="rounded bg-indigo-200/60 px-0.5 text-indigo-900"
+                  >
                     {part.text}
                   </mark>
                 ) : (
@@ -68,5 +73,5 @@ export function SearchResultItem({
         <span className="shrink-0 text-xs text-slate-400">{item.category}</span>
       </button>
     </motion.li>
-  )
+  );
 }
