@@ -20,6 +20,7 @@ Diagrams for several components live in [`../Advanced Topic Images/`](../Advance
 | 01  | [system-design-fundamentals.md](./01-system-design-fundamentals.md) | What is SD, scalability, reliability, availability, performance              |
 | 02  | [core-components.md](./02-core-components.md)                       | Client, app server, database, cache, load balancer, queue, external services |
 | 03  | [design-process.md](./03-design-process.md)                         | Requirements, HLA, trade-offs, security, monitoring & scaling                |
+| 04  | [file-upload-system-design.md](./04-file-upload-system-design.md)   | Dropbox-style upload — chunking, pause/resume, retry (KPMG Round 3)          |
 
 ---
 
@@ -75,6 +76,7 @@ Most people make it look complicated. It isn't — you just need the fundamental
 | Microservices            | [Advanced Topic Images/Microservice.png](../Advanced%20Topic%20Images/Microservice.png)                                                                              |
 | Frontend architecture    | [React/10-frontend-concepts-checklist.md](../React/10-frontend-concepts-checklist.md)                                                                                |
 | Senior real-world topics | [React/20-senior-frontend-real-world-interview.md](../React/20-senior-frontend-real-world-interview.md)                                                              |
+| KPMG file upload round   | [React/23-kpmg-frontend-interview.md](../React/23-kpmg-frontend-interview.md) · [Javascript/kpmg-round-1](../Javascript/kpmg-round-1-vanilla-javascript-interview.md) |
 
 ---
 
