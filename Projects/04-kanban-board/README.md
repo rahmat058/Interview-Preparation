@@ -4,17 +4,19 @@
 
 ![FlowBoard — Kanban Board](../Projects-Images/04-kanban-board.png)
 
+**[🔗 Live Demo](https://kanban-board-red-eight.vercel.app/)**
+
 ## Features
 
-| Feature              | Implementation                                              |
-| -------------------- | ----------------------------------------------------------- |
-| **Drag & Drop**      | [@dnd-kit/core](https://dndkit.com/) + sortable             |
-| **Reordering**       | Within-column + cross-column via `moveCard` reducer         |
-| **State management** | Normalized `columns[]` + `cardsById` in Redux Toolkit       |
-| **Complex updates**  | Single `applyMoveCard` handles same/different column moves  |
-| **Accessibility**    | Keyboard sensor + drag handle                               |
-| **Mock API**         | 24 cards across 4 columns with simulated latency            |
-| **Design**           | Royal Plum palette (violet → fuchsia → indigo)              |
+| Feature              | Implementation                                             |
+| -------------------- | ---------------------------------------------------------- |
+| **Drag & Drop**      | [@dnd-kit/core](https://dndkit.com/) + sortable            |
+| **Reordering**       | Within-column + cross-column via `moveCard` reducer        |
+| **State management** | Normalized `columns[]` + `cardsById` in Redux Toolkit      |
+| **Complex updates**  | Single `applyMoveCard` handles same/different column moves |
+| **Accessibility**    | Keyboard sensor + drag handle                              |
+| **Mock API**         | 24 cards across 4 columns with simulated latency           |
+| **Design**           | Royal Plum palette (violet → fuchsia → indigo)             |
 
 ## Tech Stack
 
@@ -42,21 +44,21 @@ Open [http://localhost:5173](http://localhost:5173) and drag cards between colum
 
 ## Scripts
 
-| Command                 | Description                            |
-| ----------------------- | -------------------------------------- |
-| `npm run dev`           | Start dev server                       |
-| `npm run build`         | Type-check + production build          |
-| `npm run preview`       | Preview production build               |
-| `npm run lint`          | Run ESLint                             |
+| Command                 | Description                             |
+| ----------------------- | --------------------------------------- |
+| `npm run dev`           | Start dev server                        |
+| `npm run build`         | Type-check + production build           |
+| `npm run preview`       | Preview production build                |
+| `npm run lint`          | Run ESLint                              |
 | `npm run generate:data` | Regenerate `src/data/kanban-board.json` |
 
 ## Why @dnd-kit?
 
-| Library              | Status        | Notes                          |
-| -------------------- | ------------- | ------------------------------ |
-| **@dnd-kit**         | ✅ Active     | Modern, a11y, React 19 friendly |
-| react-beautiful-dnd  | ❌ Deprecated | Atlassian unmaintained         |
-| @hello-pangea/dnd    | ✅ Maintained | Fork of rbd, also valid choice |
+| Library             | Status        | Notes                           |
+| ------------------- | ------------- | ------------------------------- |
+| **@dnd-kit**        | ✅ Active     | Modern, a11y, React 19 friendly |
+| react-beautiful-dnd | ❌ Deprecated | Atlassian unmaintained          |
+| @hello-pangea/dnd   | ✅ Maintained | Fork of rbd, also valid choice  |
 
 We use **@dnd-kit** — the most popular actively maintained option for React DnD in 2024–2026.
 

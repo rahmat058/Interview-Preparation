@@ -4,6 +4,8 @@
 
 ![CartPulse — Shopping Cart](../Projects-Images/09-shoping-cart.png)
 
+**[🔗 Live Demo](https://shopping-cart-mocha-five.vercel.app/)**
+
 ## Features
 
 | Feature               | Implementation                                     |

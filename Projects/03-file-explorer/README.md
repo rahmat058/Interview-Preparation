@@ -4,19 +4,21 @@
 
 ![TreeScope — File Explorer](../Projects-Images/03-file-explorer.png)
 
+**[🔗 Live Demo](https://file-explorer-eight-nu.vercel.app/)**
+
 ## Features
 
-| Feature                | Implementation                                              |
-| ---------------------- | ----------------------------------------------------------- |
-| **Nested folders**     | Deep tree from JSON mock data (86 nodes, 22 folders)        |
-| **Expand / collapse**  | Per-folder toggle + Expand All / Collapse All toolbar       |
-| **Recursive components** | `TreeNode` renders itself for each child when expanded   |
-| **Selection**          | Click row → detail panel with path, size, modified date     |
-| **Filter**             | Client-side tree filter preserves matching branches         |
-| **Keyboard nav**       | ↑↓ navigate, → expand, ← collapse, Enter/Space toggle       |
-| **Loading / error**    | Skeleton loader + retry on failed fetch                     |
-| **Mock API**           | JSON tree with simulated 400–800ms latency                  |
-| **Design**             | Forest Mint palette (emerald → teal → sky)                    |
+| Feature                  | Implementation                                          |
+| ------------------------ | ------------------------------------------------------- |
+| **Nested folders**       | Deep tree from JSON mock data (86 nodes, 22 folders)    |
+| **Expand / collapse**    | Per-folder toggle + Expand All / Collapse All toolbar   |
+| **Recursive components** | `TreeNode` renders itself for each child when expanded  |
+| **Selection**            | Click row → detail panel with path, size, modified date |
+| **Filter**               | Client-side tree filter preserves matching branches     |
+| **Keyboard nav**         | ↑↓ navigate, → expand, ← collapse, Enter/Space toggle   |
+| **Loading / error**      | Skeleton loader + retry on failed fetch                 |
+| **Mock API**             | JSON tree with simulated 400–800ms latency              |
+| **Design**               | Forest Mint palette (emerald → teal → sky)              |
 
 ## Tech Stack
 
@@ -43,13 +45,13 @@ Open [http://localhost:5173](http://localhost:5173) and explore the nested proje
 
 ## Scripts
 
-| Command                 | Description                           |
-| ----------------------- | ------------------------------------- |
-| `npm run dev`           | Start dev server                      |
-| `npm run build`         | Type-check + production build         |
-| `npm run preview`       | Preview production build              |
-| `npm run lint`          | Run ESLint                            |
-| `npm run generate:data` | Regenerate `src/data/file-tree.json`  |
+| Command                 | Description                          |
+| ----------------------- | ------------------------------------ |
+| `npm run dev`           | Start dev server                     |
+| `npm run build`         | Type-check + production build        |
+| `npm run preview`       | Preview production build             |
+| `npm run lint`          | Run ESLint                           |
+| `npm run generate:data` | Regenerate `src/data/file-tree.json` |
 
 ## Project Structure
 
@@ -106,7 +108,7 @@ Set `VITE_SIMULATE_EXPLORER_ERROR=true` in `.env` to simulate a network error on
 
 ## Documentation
 
-| File                                               | Purpose                                |
-| -------------------------------------------------- | -------------------------------------- |
-| [ARCHITECTURE.md](./ARCHITECTURE.md)               | System design, recursion, data flow    |
-| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                          |
+| File                                               | Purpose                             |
+| -------------------------------------------------- | ----------------------------------- |
+| [ARCHITECTURE.md](./ARCHITECTURE.md)               | System design, recursion, data flow |
+| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                       |

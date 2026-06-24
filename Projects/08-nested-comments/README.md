@@ -4,29 +4,31 @@
 
 ![ThreadNest — Nested Comments](../Projects-Images/08-nested-comments.png)
 
+**[🔗 Live Demo](https://nested-comments-eta.vercel.app/)**
+
 ## Features
 
-| Feature | Implementation |
-| ------- | -------------- |
-| **Recursive rendering** | `CommentNode` maps `replies` → `<CommentNode />` |
-| **Replies** | Inline form + `addReplyToTree()` immutable insert |
-| **Expand / collapse** | Per-thread `expandedIds` in Redux |
-| **Collapsed preview** | Reddit-style author + excerpt when collapsed |
-| **Sort** | Top-level Top / New toggle |
-| **Toolbar** | Expand all / Collapse all |
-| **Tree utilities** | `buildCommentTree`, `findCommentById`, `countDescendants` |
-| **Mock API** | 20+ nested comments, up to 4 levels deep |
-| **Design** | Ember Coral palette (orange → rust → rose) |
+| Feature                 | Implementation                                            |
+| ----------------------- | --------------------------------------------------------- |
+| **Recursive rendering** | `CommentNode` maps `replies` → `<CommentNode />`          |
+| **Replies**             | Inline form + `addReplyToTree()` immutable insert         |
+| **Expand / collapse**   | Per-thread `expandedIds` in Redux                         |
+| **Collapsed preview**   | Reddit-style author + excerpt when collapsed              |
+| **Sort**                | Top-level Top / New toggle                                |
+| **Toolbar**             | Expand all / Collapse all                                 |
+| **Tree utilities**      | `buildCommentTree`, `findCommentById`, `countDescendants` |
+| **Mock API**            | 20+ nested comments, up to 4 levels deep                  |
+| **Design**              | Ember Coral palette (orange → rust → rose)                |
 
 ## Tech Stack
 
-| Layer | Technology |
-| ----- | ---------- |
-| Build | Vite 7 |
-| UI | React 19, TypeScript |
-| State | Redux Toolkit |
-| Motion | Framer Motion |
-| Icons | lucide-react |
+| Layer  | Technology           |
+| ------ | -------------------- |
+| Build  | Vite 7               |
+| UI     | React 19, TypeScript |
+| State  | Redux Toolkit        |
+| Motion | Framer Motion        |
+| Icons  | lucide-react         |
 
 ## Getting Started
 
@@ -43,12 +45,12 @@ Open [http://localhost:5173](http://localhost:5173) — expand threads, post a r
 
 ## Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start dev server |
-| `npm run build` | Type-check + production build |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| Command                 | Description                         |
+| ----------------------- | ----------------------------------- |
+| `npm run dev`           | Start dev server                    |
+| `npm run build`         | Type-check + production build       |
+| `npm run preview`       | Preview production build            |
+| `npm run lint`          | Run ESLint                          |
 | `npm run generate:data` | Regenerate `src/data/comments.json` |
 
 ## Component Architecture (Interview Focus)
@@ -65,13 +67,13 @@ CommentThread
 
 ## Tree Utilities
 
-| Function | Purpose |
-| -------- | ------- |
-| `buildCommentTree(flat)` | Flat DB rows → nested tree |
-| `addReplyToTree(threads, parentId, reply)` | Immutable insert |
-| `findCommentById(threads, id)` | O(n) lookup for interviews |
-| `countDescendants(comment)` | Total reply count |
-| `buildDefaultExpanded(threads, 2)` | Auto-expand first 2 levels |
+| Function                                   | Purpose                    |
+| ------------------------------------------ | -------------------------- |
+| `buildCommentTree(flat)`                   | Flat DB rows → nested tree |
+| `addReplyToTree(threads, parentId, reply)` | Immutable insert           |
+| `findCommentById(threads, id)`             | O(n) lookup for interviews |
+| `countDescendants(comment)`                | Total reply count          |
+| `buildDefaultExpanded(threads, 2)`         | Auto-expand first 2 levels |
 
 ## Docs
 

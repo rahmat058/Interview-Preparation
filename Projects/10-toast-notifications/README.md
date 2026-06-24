@@ -4,28 +4,30 @@
 
 ![ToastForge — Toast Notifications](../Projects-Images/10-toast-notifications.png)
 
+**[🔗 Live Demo](https://toast-notifications-xi.vercel.app/)**
+
 ## Features
 
-| Feature | Implementation |
-| ------- | -------------- |
-| **Queue management** | `visible[]` + `pending[]`, max 3 on screen |
-| **Auto-dismiss** | Per-toast `setTimeout` in `useAutoDismiss` |
-| **Multiple notifications** | Stacked viewport via portal |
-| **Pause on hover** | Timer + CSS progress bar pause together |
-| **Manual dismiss** | Close button + Dismiss all |
-| **Persistent toasts** | `duration: 0` skips timer |
-| **Component API** | `useToast()` → `success`, `error`, `warning`, `info` |
-| **Event log** | enqueue, promote, auto-dismiss, pause, resume |
-| **Design** | Signal Indigo palette (indigo → violet → purple) |
+| Feature                    | Implementation                                       |
+| -------------------------- | ---------------------------------------------------- |
+| **Queue management**       | `visible[]` + `pending[]`, max 3 on screen           |
+| **Auto-dismiss**           | Per-toast `setTimeout` in `useAutoDismiss`           |
+| **Multiple notifications** | Stacked viewport via portal                          |
+| **Pause on hover**         | Timer + CSS progress bar pause together              |
+| **Manual dismiss**         | Close button + Dismiss all                           |
+| **Persistent toasts**      | `duration: 0` skips timer                            |
+| **Component API**          | `useToast()` → `success`, `error`, `warning`, `info` |
+| **Event log**              | enqueue, promote, auto-dismiss, pause, resume        |
+| **Design**                 | Signal Indigo palette (indigo → violet → purple)     |
 
 ## Tech Stack
 
-| Layer | Technology |
-| ----- | ---------- |
-| Build | Vite 7 |
-| UI | React 19, TypeScript |
-| State | Redux Toolkit |
-| Motion | Framer Motion + CSS keyframes |
+| Layer   | Technology                          |
+| ------- | ----------------------------------- |
+| Build   | Vite 7                              |
+| UI      | React 19, TypeScript                |
+| State   | Redux Toolkit                       |
+| Motion  | Framer Motion + CSS keyframes       |
 | Portals | `createPortal` → top-right viewport |
 
 ## Getting Started
@@ -42,12 +44,12 @@ Open [http://localhost:5173](http://localhost:5173) — click **Spam queue (6)**
 
 ## Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start dev server |
-| `npm run build` | Type-check + production build |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| Command           | Description                   |
+| ----------------- | ----------------------------- |
+| `npm run dev`     | Start dev server              |
+| `npm run build`   | Type-check + production build |
+| `npm run preview` | Preview production build      |
+| `npm run lint`    | Run ESLint                    |
 
 ## Architecture (Interview Focus)
 
@@ -65,11 +67,11 @@ ToastHost / ToastViewport (portal)
 
 ## Queue Rules
 
-| Rule | Value |
-| ---- | ----- |
-| Max visible | 3 |
-| On dismiss | Promote oldest pending toast |
-| Persistent | `duration: 0` |
+| Rule        | Value                        |
+| ----------- | ---------------------------- |
+| Max visible | 3                            |
+| On dismiss  | Promote oldest pending toast |
+| Persistent  | `duration: 0`                |
 
 ## Docs
 

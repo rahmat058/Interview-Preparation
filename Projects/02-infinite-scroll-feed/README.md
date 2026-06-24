@@ -4,6 +4,8 @@
 
 ![FlowFeed — Infinite Scroll Feed](../Projects-Images/02-infinite-scroll-feed.png)
 
+**[🔗 Live Demo](https://infinite-scroll-feed-eosin.vercel.app/)**
+
 ## Features
 
 | Feature                | Implementation                                               |

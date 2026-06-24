@@ -4,6 +4,8 @@
 
 ![QueryLens — Autocomplete Search](../Projects-Images/01-autocomplete-search.png)
 
+**[🔗 Live Demo](https://autocomplete-search-one.vercel.app/)**
+
 ## Features
 
 | Feature                 | Implementation                                                 |

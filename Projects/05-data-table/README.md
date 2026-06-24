@@ -4,18 +4,20 @@
 
 ![GridLens — Data Table](../Projects-Images/05-data-table.png)
 
+**[🔗 Live Demo](https://data-table-xi-ten.vercel.app/)**
+
 ## Features
 
-| Feature         | Implementation                                           |
-| --------------- | -------------------------------------------------------- |
-| **Sorting**     | Click column headers — asc/desc toggle with `aria-sort`  |
-| **Filtering**   | Department, role, status, location dropdowns           |
-| **Search**      | 300ms debounced global search across key fields          |
-| **Pagination**  | Page nav + page size (10 / 25 / 50)                      |
-| **Data pipeline** | `search → filter → sort → paginate` in `tableQuery.ts` |
-| **Mock API**    | 80 employee records, simulated 350–700ms latency         |
-| **Extras**      | Empty state, loading overlay, clear-all, row count       |
-| **Design**      | Ocean Steel palette (slate → blue → cyan)                |
+| Feature           | Implementation                                          |
+| ----------------- | ------------------------------------------------------- |
+| **Sorting**       | Click column headers — asc/desc toggle with `aria-sort` |
+| **Filtering**     | Department, role, status, location dropdowns            |
+| **Search**        | 300ms debounced global search across key fields         |
+| **Pagination**    | Page nav + page size (10 / 25 / 50)                     |
+| **Data pipeline** | `search → filter → sort → paginate` in `tableQuery.ts`  |
+| **Mock API**      | 80 employee records, simulated 350–700ms latency        |
+| **Extras**        | Empty state, loading overlay, clear-all, row count      |
+| **Design**        | Ocean Steel palette (slate → blue → cyan)               |
 
 ## Tech Stack
 
@@ -96,7 +98,7 @@ Redux holds `query` params; `loadTableData` thunk sends them to the mock API whi
 
 ## Documentation
 
-| File                                               | Purpose                                |
-| -------------------------------------------------- | -------------------------------------- |
-| [ARCHITECTURE.md](./ARCHITECTURE.md)               | Query pipeline, state design, API      |
-| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                          |
+| File                                               | Purpose                           |
+| -------------------------------------------------- | --------------------------------- |
+| [ARCHITECTURE.md](./ARCHITECTURE.md)               | Query pipeline, state design, API |
+| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                     |

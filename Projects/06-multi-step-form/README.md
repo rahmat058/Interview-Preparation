@@ -4,6 +4,8 @@
 
 ![FormFlow — Multi-Step Form](../Projects-Images/06-multi-step-form.png)
 
+**[🔗 Live Demo](https://multi-step-form-sigma-three.vercel.app/)**
+
 ## Features
 
 | Feature               | Implementation                                      |
@@ -15,18 +17,18 @@
 | **Step validation**   | `trigger()` only current step fields on Next        |
 | **Review step**       | Read-only summary before submit                     |
 | **Mock API**          | Simulated POST with 800–1400ms latency              |
-| **Design**            | Sunrise Gold palette (amber → orange → rose)         |
+| **Design**            | Sunrise Gold palette (amber → orange → rose)        |
 
 ## Tech Stack
 
-| Layer      | Technology                    |
-| ---------- | ----------------------------- |
-| Build      | Vite 7                        |
-| UI         | React 19, TypeScript          |
+| Layer      | Technology                            |
+| ---------- | ------------------------------------- |
+| Build      | Vite 7                                |
+| UI         | React 19, TypeScript                  |
 | Forms      | react-hook-form + @hookform/resolvers |
-| Validation | Zod                           |
-| State      | Redux Toolkit (wizard meta)   |
-| Motion     | Framer Motion                 |
+| Validation | Zod                                   |
+| State      | Redux Toolkit (wizard meta)           |
+| Motion     | Framer Motion                         |
 
 ## Getting Started
 
@@ -51,12 +53,12 @@ Open [http://localhost:5173](http://localhost:5173) — fill step 1, refresh the
 
 ## Wizard Steps
 
-| Step | Title        | Fields                                      |
-| ---- | ------------ | ------------------------------------------- |
-| 1    | Personal     | firstName, lastName, email, phone           |
+| Step | Title        | Fields                                       |
+| ---- | ------------ | -------------------------------------------- |
+| 1    | Personal     | firstName, lastName, email, phone            |
 | 2    | Professional | company, jobTitle, experienceYears, linkedIn |
-| 3    | Preferences  | plan, timezone, newsletter, smsAlerts       |
-| 4    | Review       | Summary + Submit                            |
+| 3    | Preferences  | plan, timezone, newsletter, smsAlerts        |
+| 4    | Review       | Summary + Submit                             |
 
 ## Form Architecture (Interview Focus)
 
@@ -88,7 +90,7 @@ Cleared on successful submit or "Clear saved draft".
 
 ## Documentation
 
-| File                                               | Purpose                          |
-| -------------------------------------------------- | -------------------------------- |
+| File                                               | Purpose                              |
+| -------------------------------------------------- | ------------------------------------ |
 | [ARCHITECTURE.md](./ARCHITECTURE.md)               | Form design, validation, persistence |
-| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                    |
+| [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md) | Interview Q&A                        |
