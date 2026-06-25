@@ -2,6 +2,7 @@ import { useAppDispatch, useAppSelector } from '@/lib/store/hooks'
 import { setCategoryFilter } from '@/lib/store/slices/cartSlice'
 import { selectCategoryCounts } from '@/lib/store/selectors/cartSelectors'
 import type { ProductCategory } from '@/lib/types/cart'
+import { FilterCheckbox } from '@/components/ui/FilterCheckbox'
 import { cn } from '@/lib/utils/cn'
 
 const CATEGORIES: { id: ProductCategory; label: string }[] = [
@@ -13,37 +14,34 @@ const CATEGORIES: { id: ProductCategory; label: string }[] = [
 ]
 
 interface CategoryFilterProps {
-  variant?: 'pills' | 'list'
+  variant?: 'pills' | 'cards'
 }
 
-export function CategoryFilter({ variant = 'pills' }: CategoryFilterProps) {
+export function CategoryFilter({ variant = 'cards' }: CategoryFilterProps) {
   const dispatch = useAppDispatch()
   const active = useAppSelector((state) => state.cart.categoryFilter)
   const counts = useAppSelector(selectCategoryCounts)
 
-  if (variant === 'list') {
+  if (variant === 'cards') {
     return (
-      <div className="space-y-1">
+      <div className="space-y-2">
         {CATEGORIES.map(({ id, label }) => (
-          <label
+          <FilterCheckbox
             key={id}
-            className={cn(
-              'flex cursor-pointer items-center justify-between rounded-lg px-2 py-2 transition-colors hover:bg-teal-50/60',
-              active === id && 'bg-teal-50',
-            )}
-          >
-            <span className="flex items-center gap-2.5 text-sm text-slate-700">
-              <input
-                type="radio"
-                name="category"
-                checked={active === id}
-                onChange={() => dispatch(setCategoryFilter(id))}
-                className="h-4 w-4 border-teal-300 text-teal-600 focus:ring-teal-500"
-              />
-              {label}
-            </span>
-            <span className="text-xs text-slate-400 tabular-nums">{counts[id]}</span>
-          </label>
+            id={`category-${id}`}
+            label={label}
+            meta={String(counts[id])}
+            checked={active === id}
+            onChange={(checked) => {
+              if (checked) {
+                dispatch(setCategoryFilter(id))
+                return
+              }
+              if (active === id && id !== 'all') {
+                dispatch(setCategoryFilter('all'))
+              }
+            }}
+          />
         ))}
       </div>
     )

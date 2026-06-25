@@ -9,6 +9,7 @@ interface FilterCheckboxProps {
   onChange: (checked: boolean) => void
   icon?: LucideIcon
   description?: string
+  meta?: string
 }
 
 export function FilterCheckbox({
@@ -18,6 +19,7 @@ export function FilterCheckbox({
   onChange,
   icon: Icon,
   description,
+  meta,
 }: FilterCheckboxProps) {
   return (
     <label
@@ -50,23 +52,28 @@ export function FilterCheckbox({
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="flex items-center gap-1.5">
-          {Icon && (
-            <Icon
-              className={cn(
-                'h-3.5 w-3.5 shrink-0',
-                checked ? 'text-teal-600' : 'text-slate-400 group-hover:text-teal-500',
-              )}
-            />
-          )}
-          <span
-            className={cn(
-              'text-sm font-medium',
-              checked ? 'text-teal-800' : 'text-slate-700',
+        <span className="flex items-center justify-between gap-2">
+          <span className="flex min-w-0 items-center gap-1.5">
+            {Icon && (
+              <Icon
+                className={cn(
+                  'h-3.5 w-3.5 shrink-0',
+                  checked ? 'text-teal-600' : 'text-slate-400 group-hover:text-teal-500',
+                )}
+              />
             )}
-          >
-            {label}
+            <span
+              className={cn(
+                'text-sm font-medium',
+                checked ? 'text-teal-800' : 'text-slate-700',
+              )}
+            >
+              {label}
+            </span>
           </span>
+          {meta && (
+            <span className="shrink-0 text-xs text-slate-400 tabular-nums">{meta}</span>
+          )}
         </span>
         {description && (
           <span className="mt-0.5 block text-[11px] text-slate-400">{description}</span>

@@ -79,7 +79,7 @@ export function ShopApp() {
           >
             <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <h3 className="text-sm font-semibold text-slate-800">Catalog</h3>
-              <CategoryFilter />
+              <CategoryFilter variant="pills" />
             </div>
             <ProductGrid />
           </section>
