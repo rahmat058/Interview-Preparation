@@ -1,0 +1,13 @@
+{
+  "meta": { "currency": "USD", "totalProducts": 8 },
+  "data": [
+    { "id": "p1", "name": "Wireless Headphones", "category": "electronics", "price": 149.99, "rating": 4.8, "stock": 12, "emoji": "🎧" },
+    { "id": "p2", "name": "Mechanical Keyboard", "category": "electronics", "price": 89.99, "rating": 4.6, "stock": 20, "emoji": "⌨️" },
+    { "id": "p3", "name": "JavaScript Patterns", "category": "books", "price": 34.99, "rating": 4.7, "stock": 30, "emoji": "📘" },
+    { "id": "p4", "name": "System Design Guide", "category": "books", "price": 44.99, "rating": 4.9, "stock": 15, "emoji": "📗" },
+    { "id": "p5", "name": "Ceramic Mug Set", "category": "home", "price": 28.5, "rating": 4.4, "stock": 25, "emoji": "☕" },
+    { "id": "p6", "name": "Linen Throw", "category": "home", "price": 59, "rating": 4.3, "stock": 10, "emoji": "🛋️" },
+    { "id": "p7", "name": "Merino Tee", "category": "fashion", "price": 68, "rating": 4.5, "stock": 18, "emoji": "👕" },
+    { "id": "p8", "name": "Running Shoes", "category": "fashion", "price": 119.99, "rating": 4.7, "stock": 8, "emoji": "👟" }
+  ]
+}

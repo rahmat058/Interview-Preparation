@@ -1,0 +1,136 @@
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0.625rem 1rem;
+  transition: background var(--motion-fast), border-color var(--motion-fast),
+    box-shadow var(--motion-fast), transform var(--motion-fast);
+}
+
+.ui-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.ui-btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.ui-btn--primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.ui-btn--secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.ui-btn--secondary:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.ui-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-modal::backdrop {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.ui-modal {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  max-width: min(28rem, calc(100vw - 2rem));
+  box-shadow: var(--shadow-md);
+}
+
+.ui-modal__panel {
+  padding: var(--space-6);
+}
+
+.ui-modal__title {
+  margin: 0 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.ui-modal__body {
+  margin: 0 0 var(--space-4);
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+}
+
+.ui-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.ui-toast-host {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: min(22rem, calc(100vw - 2rem));
+  pointer-events: none;
+}
+
+.ui-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  animation: toast-in var(--motion-base);
+}
+
+.ui-toast--success {
+  border-left: 4px solid var(--color-primary);
+}
+
+.ui-toast--error {
+  border-left: 4px solid var(--color-danger);
+}
+
+.ui-toast__message {
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+.ui-toast__close {
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1;
+  padding: 0;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
