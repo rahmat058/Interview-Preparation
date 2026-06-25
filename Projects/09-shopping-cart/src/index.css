@@ -63,4 +63,73 @@ button:not(:disabled) {
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.78);
   }
+
+  .dual-range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2rem;
+    margin: 0;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  .dual-range-input:focus {
+    outline: none;
+  }
+
+  .dual-range-input::-webkit-slider-runnable-track {
+    height: 0.25rem;
+    background: transparent;
+  }
+
+  .dual-range-input::-moz-range-track {
+    height: 0.25rem;
+    background: transparent;
+  }
+
+  .dual-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: -0.5rem;
+    border: 3px solid #14b8a6;
+    border-radius: 50%;
+    background: radial-gradient(circle, #14b8a6 0%, #14b8a6 32%, #ffffff 33%, #ffffff 68%, #14b8a6 69%);
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 2px 6px rgba(20, 184, 166, 0.35);
+    cursor: grab;
+    pointer-events: all;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .dual-range-input:active::-webkit-slider-thumb {
+    cursor: grabbing;
+    transform: scale(1.08);
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 3px 10px rgba(20, 184, 166, 0.45);
+  }
+
+  .dual-range-input::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 3px solid #14b8a6;
+    border-radius: 50%;
+    background: radial-gradient(circle, #14b8a6 0%, #14b8a6 32%, #ffffff 33%, #ffffff 68%, #14b8a6 69%);
+    box-shadow:
+      0 0 0 2px #ffffff,
+      0 2px 6px rgba(20, 184, 166, 0.35);
+    cursor: grab;
+    pointer-events: all;
+  }
+
+  .dual-range-input--min {
+    z-index: 3;
+  }
+
+  .dual-range-input--max {
+    z-index: 4;
+  }
 }

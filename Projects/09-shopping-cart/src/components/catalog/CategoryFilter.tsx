@@ -12,10 +12,42 @@ const CATEGORIES: { id: ProductCategory; label: string }[] = [
   { id: 'fashion', label: 'Fashion' },
 ]
 
-export function CategoryFilter() {
+interface CategoryFilterProps {
+  variant?: 'pills' | 'list'
+}
+
+export function CategoryFilter({ variant = 'pills' }: CategoryFilterProps) {
   const dispatch = useAppDispatch()
   const active = useAppSelector((state) => state.cart.categoryFilter)
   const counts = useAppSelector(selectCategoryCounts)
+
+  if (variant === 'list') {
+    return (
+      <div className="space-y-1">
+        {CATEGORIES.map(({ id, label }) => (
+          <label
+            key={id}
+            className={cn(
+              'flex cursor-pointer items-center justify-between rounded-lg px-2 py-2 transition-colors hover:bg-teal-50/60',
+              active === id && 'bg-teal-50',
+            )}
+          >
+            <span className="flex items-center gap-2.5 text-sm text-slate-700">
+              <input
+                type="radio"
+                name="category"
+                checked={active === id}
+                onChange={() => dispatch(setCategoryFilter(id))}
+                className="h-4 w-4 border-teal-300 text-teal-600 focus:ring-teal-500"
+              />
+              {label}
+            </span>
+            <span className="text-xs text-slate-400 tabular-nums">{counts[id]}</span>
+          </label>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-wrap gap-2">

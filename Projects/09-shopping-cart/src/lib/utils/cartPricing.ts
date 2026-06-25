@@ -91,6 +91,7 @@ export function calculateCartPricing(input: PricingInput): CartPricing {
   }
 }
 
-export function getCartQuantity(itemsById: CartItemsById, productId: string): number {
-  return itemsById[productId]?.quantity ?? 0
+export function getCartQuantity(itemsById: CartItemsById, productId: string, variantId?: string): number {
+  const lineKey = variantId ? `${productId}:${variantId}` : productId
+  return itemsById[lineKey]?.quantity ?? 0
 }

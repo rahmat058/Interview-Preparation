@@ -6,24 +6,37 @@ import {
   removeItem,
   setQuantity,
 } from '@/lib/store/slices/cartSlice'
+import { getProductDisplayEmoji, getProductStock } from '@/lib/types/cart'
 import { formatCurrency, getLineTotal } from '@/lib/utils/cartPricing'
-import type { Product } from '@/lib/types/cart'
+import type { Product, ProductVariant } from '@/lib/types/cart'
 
 interface CartLineItemProps {
+  lineKey: string
   productId: string
+  variantId?: string
   quantity: number
   product: Product
+  variant?: ProductVariant
 }
 
-export function CartLineItem({ productId, quantity, product }: CartLineItemProps) {
+export function CartLineItem({
+  lineKey,
+  productId,
+  variantId,
+  quantity,
+  product,
+  variant,
+}: CartLineItemProps) {
   const dispatch = useAppDispatch()
   const lineTotal = getLineTotal(product, quantity)
-  const atMax = quantity >= product.stock
+  const stock = getProductStock(product, variantId)
+  const atMax = quantity >= stock
+  const emoji = getProductDisplayEmoji(product, variantId)
 
   return (
     <li className="flex gap-3 border-b border-teal-100/80 py-4 last:border-0">
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-xl">
-        {product.emoji}
+        {emoji}
       </div>
 
       <div className="min-w-0 flex-1">
@@ -31,12 +44,13 @@ export function CartLineItem({ productId, quantity, product }: CartLineItemProps
           <div>
             <h4 className="text-sm font-semibold text-slate-800">{product.name}</h4>
             <p className="text-xs text-slate-400">
-              {formatCurrency(product.price)} each · {product.stock} available
+              {formatCurrency(product.price)} each
+              {variant ? ` · ${variant.color}` : ''} · {stock} available
             </p>
           </div>
           <button
             type="button"
-            onClick={() => dispatch(removeItem(productId))}
+            onClick={() => dispatch(removeItem(lineKey))}
             className="rounded-lg p-1.5 text-slate-400 transition-colors hover:bg-rose-50 hover:text-rose-500"
             aria-label={`Remove ${product.name}`}
           >
@@ -48,7 +62,7 @@ export function CartLineItem({ productId, quantity, product }: CartLineItemProps
           <div className="flex items-center rounded-lg border border-teal-200 bg-white">
             <button
               type="button"
-              onClick={() => dispatch(decrementQuantity(productId))}
+              onClick={() => dispatch(decrementQuantity(lineKey))}
               className="rounded-l-lg px-2.5 py-1.5 text-teal-700 hover:bg-teal-50"
               aria-label="Decrease quantity"
             >
@@ -57,12 +71,14 @@ export function CartLineItem({ productId, quantity, product }: CartLineItemProps
             <input
               type="number"
               min={1}
-              max={product.stock}
+              max={stock}
               value={quantity}
               onChange={(event) =>
                 dispatch(
                   setQuantity({
+                    lineKey,
                     productId,
+                    variantId,
                     quantity: Number(event.target.value),
                   }),
                 )
@@ -72,7 +88,7 @@ export function CartLineItem({ productId, quantity, product }: CartLineItemProps
             />
             <button
               type="button"
-              onClick={() => dispatch(incrementQuantity(productId))}
+              onClick={() => dispatch(incrementQuantity(lineKey))}
               disabled={atMax}
               className="rounded-r-lg px-2.5 py-1.5 text-teal-700 hover:bg-teal-50 disabled:opacity-40"
               aria-label="Increase quantity"

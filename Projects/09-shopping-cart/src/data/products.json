@@ -1,14 +1,9 @@
 {
   "meta": {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "collection": "products",
     "totalProducts": 12,
-    "categories": [
-      "electronics",
-      "books",
-      "home",
-      "fashion"
-    ],
+    "categories": ["electronics", "books", "home", "fashion"],
     "currency": "USD",
     "generatedAt": "2026-06-24T15:49:48.694Z"
   },
@@ -18,10 +13,27 @@
       "name": "Sony WH-1000XM5 Headphones",
       "category": "electronics",
       "price": 349.99,
-      "stock": 12,
+      "stock": 20,
       "rating": 4.8,
       "emoji": "🎧",
-      "description": "Industry-leading noise cancellation with 30-hour battery."
+      "description": "Industry-leading noise cancellation with 30-hour battery. Premium over-ear design with multipoint Bluetooth and adaptive sound control.",
+      "defaultVariantId": "prd_001_black",
+      "variants": [
+        {
+          "id": "prd_001_black",
+          "color": "Midnight Black",
+          "hex": "#1a1a1a",
+          "stock": 12,
+          "emoji": "🎧"
+        },
+        {
+          "id": "prd_001_silver",
+          "color": "Platinum Silver",
+          "hex": "#c0c0c0",
+          "stock": 8,
+          "emoji": "🎧"
+        }
+      ]
     },
     {
       "id": "prd_002",
@@ -78,10 +90,34 @@
       "name": "Linen Throw Blanket",
       "category": "home",
       "price": 59,
-      "stock": 15,
+      "stock": 36,
       "rating": 4.3,
       "emoji": "🛋️",
-      "description": "Breathable stonewashed linen — sage green."
+      "description": "Breathable stonewashed linen throw — perfect for couches and reading nooks.",
+      "defaultVariantId": "prd_007_sage",
+      "variants": [
+        {
+          "id": "prd_007_sage",
+          "color": "Sage Green",
+          "hex": "#87a878",
+          "stock": 15,
+          "emoji": "🛋️"
+        },
+        {
+          "id": "prd_007_sand",
+          "color": "Warm Sand",
+          "hex": "#d4c4a8",
+          "stock": 12,
+          "emoji": "🛋️"
+        },
+        {
+          "id": "prd_007_charcoal",
+          "color": "Charcoal",
+          "hex": "#4a4a4a",
+          "stock": 9,
+          "emoji": "🛋️"
+        }
+      ]
     },
     {
       "id": "prd_008",
@@ -98,30 +134,102 @@
       "name": "Merino Wool Tee",
       "category": "fashion",
       "price": 68,
-      "stock": 20,
+      "stock": 45,
       "rating": 4.6,
       "emoji": "👕",
-      "description": "Odor-resistant base layer — charcoal heather."
+      "description": "Odor-resistant merino base layer — lightweight, breathable, and ideal for travel.",
+      "defaultVariantId": "prd_009_charcoal",
+      "variants": [
+        {
+          "id": "prd_009_charcoal",
+          "color": "Charcoal Heather",
+          "hex": "#3d3d3d",
+          "stock": 20,
+          "emoji": "👕"
+        },
+        {
+          "id": "prd_009_navy",
+          "color": "Deep Navy",
+          "hex": "#1e3a5f",
+          "stock": 15,
+          "emoji": "👕"
+        },
+        {
+          "id": "prd_009_cream",
+          "color": "Natural Cream",
+          "hex": "#f5f0e6",
+          "stock": 10,
+          "emoji": "👕"
+        }
+      ]
     },
     {
       "id": "prd_010",
       "name": "Everyday Crossbody Bag",
       "category": "fashion",
       "price": 79.99,
-      "stock": 14,
+      "stock": 35,
       "rating": 4.4,
       "emoji": "👜",
-      "description": "Water-resistant nylon with padded laptop sleeve."
+      "description": "Water-resistant nylon crossbody with padded laptop sleeve and hidden back pocket.",
+      "defaultVariantId": "prd_010_black",
+      "variants": [
+        {
+          "id": "prd_010_black",
+          "color": "Onyx Black",
+          "hex": "#1c1c1c",
+          "stock": 14,
+          "emoji": "👜"
+        },
+        {
+          "id": "prd_010_olive",
+          "color": "Forest Olive",
+          "hex": "#556b2f",
+          "stock": 11,
+          "emoji": "👜"
+        },
+        {
+          "id": "prd_010_rust",
+          "color": "Terracotta Rust",
+          "hex": "#b55233",
+          "stock": 10,
+          "emoji": "👜"
+        }
+      ]
     },
     {
       "id": "prd_011",
       "name": "Running Shoes — Glide 5",
       "category": "fashion",
       "price": 119.99,
-      "stock": 10,
+      "stock": 30,
       "rating": 4.7,
       "emoji": "👟",
-      "description": "Lightweight daily trainer with responsive foam."
+      "description": "Lightweight daily trainer with responsive foam and breathable mesh upper.",
+      "defaultVariantId": "prd_011_white",
+      "variants": [
+        {
+          "id": "prd_011_white",
+          "color": "Cloud White",
+          "hex": "#f8f8f8",
+          "stock": 10,
+          "emoji": "👟"
+        },
+        {
+          "id": "prd_011_black",
+          "color": "Jet Black",
+          "hex": "#111111",
+          "stock": 12,
+          "emoji": "👟"
+        },
+        {
+          "id": "prd_011_blue",
+          "color": "Ocean Blue",
+          "hex": "#2563eb",
+          "stock": 8,
+          "emoji": "👟"
+        }
+      ]
     },
     {
       "id": "prd_012",
