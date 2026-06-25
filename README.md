@@ -171,18 +171,19 @@ Interview-Preparation/
 
 ## How to Use This Repo
 
-| Goal                          | Where to go                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Practice live coding          | [Projects/](./Projects/) — run app, explain code without reading                                                 |
-| Prove framework fundamentals  | [Projects/vanilla-js/](./Projects/vanilla-js/) — store, DOM, performance without React                           |
-| JS core: HOF, arrays, objects | [Javascript/vanila-js/](./Javascript/vanila-js/) — implement `map`/`reduce`, immutability, grouping              |
-| State management deep dive    | [Projects/09-shopping-cart/](./Projects/09-shopping-cart/)                                                       |
-| Data table + CRUD             | React [05-data-table](./Projects/05-data-table/) · Vanilla [04-data-table](./Projects/vanilla-js/04-data-table/) |
-| CSS / layout interview        | [css/01-senior-mid-level-css-interview-questions.md](./css/01-senior-mid-level-css-interview-questions.md)       |
-| Quick React theory refresh    | [React/12-react-top-30-interview-qa.md](./React/12-react-top-30-interview-qa.md)                                 |
-| Full-stack / backend          | [MERN/](./MERN/) + [Docker/fullstack/](./Docker/fullstack/)                                                      |
-| System design round           | [System Design/](./System%20Design/) + diagram PNGs                                                              |
-| Company-specific prep         | [React/](./React/) — KPMG, Blinkit, Capgemini, etc.                                                              |
+| Goal                          | Where to go                                                                                                                          |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Practice live coding          | [Projects/](./Projects/) — run app, explain code without reading                                                                     |
+| Prove framework fundamentals  | [Projects/vanilla-js/](./Projects/vanilla-js/) — store, DOM, performance without React                                               |
+| JS core: HOF, arrays, objects | [Javascript/vanila-js/](./Javascript/vanila-js/) — implement `map`/`reduce`, immutability, grouping                                  |
+| JS coding & DSA (Top 30)      | [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](./Javascript/vanila-js/08-top-30-javascript-interview-problems.md) |
+| State management deep dive    | [Projects/09-shopping-cart/](./Projects/09-shopping-cart/)                                                                           |
+| Data table + CRUD             | React [05-data-table](./Projects/05-data-table/) · Vanilla [04-data-table](./Projects/vanilla-js/04-data-table/)                     |
+| CSS / layout interview        | [css/01-senior-mid-level-css-interview-questions.md](./css/01-senior-mid-level-css-interview-questions.md)                           |
+| Quick React theory refresh    | [React/12-react-top-30-interview-qa.md](./React/12-react-top-30-interview-qa.md)                                                     |
+| Full-stack / backend          | [MERN/](./MERN/) + [Docker/fullstack/](./Docker/fullstack/)                                                                          |
+| System design round           | [System Design/](./System%20Design/) + diagram PNGs                                                                                  |
+| Company-specific prep         | [React/](./React/) — KPMG, Blinkit, Capgemini, etc.                                                                                  |
 
 ---
 
@@ -217,8 +218,9 @@ Each `INTERVIEW-QUESTIONS.md` includes:
 - [Projects/09-shopping-cart/INTERVIEW-QUESTIONS.md](./Projects/09-shopping-cart/INTERVIEW-QUESTIONS.md) — richest Redux Q&A
 - [css/01-senior-mid-level-css-interview-questions.md](./css/01-senior-mid-level-css-interview-questions.md) — 26 CSS topics with examples
 - [Javascript/vanila-js/README.md](./Javascript/vanila-js/README.md) — HOF, arrays, strings, objects, built-ins
-- [Javascript/vanila-js/06-shallow-deep-copy-closures-hoisting-memoize.md](./Javascript/vanila-js/06-shallow-deep-copy-closures-hoisting-memoize.md) — copy, memoize, hoisting, closures
-- [Javascript/vanila-js/INTERVIEW-QUESTIONS.md](./Javascript/vanila-js/INTERVIEW-QUESTIONS.md) — 55 JS core & built-in Q&A
+- [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](./Javascript/vanila-js/08-top-30-javascript-interview-problems.md) — 30 common coding problems
+- [Javascript/vanila-js/07-sorting-stack-queue.md](./Javascript/vanila-js/07-sorting-stack-queue.md) — sorting, stack, queue
+- [Javascript/vanila-js/INTERVIEW-QUESTIONS.md](./Javascript/vanila-js/INTERVIEW-QUESTIONS.md) — 63 JS interview Q&A
 - [Docker/README.md](./Docker/README.md) — Docker interview + templates
 - [MERN/README.md](./MERN/README.md) — full-stack MERN Q&A
 - [System Design/README.md](./System%20Design/README.md) — system design path

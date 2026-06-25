@@ -2,7 +2,7 @@
 
 Practice answers aloud. Each question includes an **Interview Answer** and **Example**.
 
-**Deep dives:** [HOF](./01-higher-order-functions.md) · [Arrays](./02-arrays-core-functions.md) · [Strings](./03-strings-core-functions.md) · [Objects](./04-objects-core-functions.md) · [Built-ins](./05-built-in-functions-reference.md) · [Copy · Closures · Hoisting](./06-shallow-deep-copy-closures-hoisting-memoize.md)
+**Deep dives:** [HOF](./01-higher-order-functions.md) · [Arrays](./02-arrays-core-functions.md) · [Strings](./03-strings-core-functions.md) · [Objects](./04-objects-core-functions.md) · [Built-ins](./05-built-in-functions-reference.md) · [Copy · Closures](./06-shallow-deep-copy-closures-hoisting-memoize.md) · [Sort · Stack · Queue](./07-sorting-stack-queue.md) · [Top 30 Problems](./08-top-30-javascript-interview-problems.md)
 
 ---
 
@@ -607,6 +607,62 @@ console.log(a.get(), b.get()); // 2, 0
 
 ---
 
+## Coding & DSA (live rounds)
+
+Full solutions: [08-top-30-javascript-interview-problems.md](./08-top-30-javascript-interview-problems.md) · [07-sorting-stack-queue.md](./07-sorting-stack-queue.md)
+
+### Q56. Valid parentheses — approach?
+
+**Interview Answer:**
+
+> Use a stack. Push opening brackets; on closing, pop and check match. End with empty stack. O(n) time and space.
+
+### Q57. Merge two sorted arrays?
+
+**Interview Answer:**
+
+> Two pointers, push smaller value, advance pointer, concat remainder. O(n + m).
+
+### Q58. Binary search — when usable?
+
+**Interview Answer:**
+
+> Sorted array only. Halve search space each step — O(log n). Template: `left`, `right`, `mid`, compare, shrink range.
+
+### Q59. Debounce vs throttle — one line each?
+
+|              | When                       |
+| ------------ | -------------------------- |
+| **Debounce** | After user stops (search)  |
+| **Throttle** | Once per interval (scroll) |
+
+### Q60. Two Sum — brute force vs optimal?
+
+**Interview Answer:**
+
+> Brute: nested loops O(n²). Optimal: hash map of `value → index`, for each `x` check if `target - x` exists — O(n).
+
+### Q61. Sorting algorithms — which to know?
+
+**Interview Answer:**
+
+> Production: `Array.sort` with comparator. Explain: merge sort O(n log n) stable; quick sort average O(n log n); bubble/selection O(n²) for teaching only.
+
+### Q62. Stack vs queue — one use case each?
+
+|           | Use case                     |
+| --------- | ---------------------------- |
+| **Stack** | Undo, parentheses, DFS       |
+| **Queue** | Task queue, BFS, print order |
+
+### Q63. Longest substring without repeating characters?
+
+**Interview Answer:**
+
+> Sliding window + `Map` of last index. Move `start` when duplicate inside window. O(n).
+
+---
+
 ## What Interviewers Look For
 
 | Criteria         | Strong signal                                               |
@@ -632,6 +688,7 @@ console.log(a.get(), b.get()); // 2, 0
 8. `Object.entries` + `fromEntries` round trip
 9. `Promise.all` vs `allSettled`
 10. `Array.isArray`, `Array.from` traps
+11. Valid parentheses + Two Sum from [Top 30](./08-top-30-javascript-interview-problems.md)
 
 ---
 
@@ -645,3 +702,5 @@ console.log(a.get(), b.get()); // 2, 0
 | Cart normalization        | `Projects/09-shopping-cart`                                                                              |
 | Type coercion traps       | [KPMG Round 1](./kpmg-round-1-vanilla-javascript-interview.md)                                           |
 | Copy / closure / hoisting | [06-shallow-deep-copy-closures-hoisting-memoize.md](./06-shallow-deep-copy-closures-hoisting-memoize.md) |
+| Top 30 coding problems    | [08-top-30-javascript-interview-problems.md](./08-top-30-javascript-interview-problems.md)               |
+| Sort / stack / queue      | [07-sorting-stack-queue.md](./07-sorting-stack-queue.md)                                                 |
