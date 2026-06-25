@@ -10,11 +10,12 @@ Plain **HTML + CSS + JavaScript** projects that mirror the skills in senior Reac
 | State architecture & rationale    | [02-catalog-spa](./02-catalog-spa/)                   | Custom store (pub/sub), localStorage, unidirectional data flow |
 | API integration & async state     | [02-catalog-spa](./02-catalog-spa/)                   | Fetch layer, loading/error/empty, abort signals                |
 | Performance & render optimization | [03-performance-patterns](./03-performance-patterns/) | Virtual list, debounce, lazy images, `performance.mark`        |
+| CRUD & data tables                | [04-data-table](./04-data-table/)                     | Full CRUD, sort/filter/search, pagination, localStorage        |
 | Accessibility                     | [01-ui-component-kit](./01-ui-component-kit/)         | Modal focus trap, ARIA, keyboard support                       |
 | Testing (unit/component)          | All projects                                          | Vitest + happy-dom                                             |
 | Build tooling (Vite)              | All projects                                          | ESM, code-splitting via dynamic `import()`                     |
 | SEO & metadata                    | [02-catalog-spa](./02-catalog-spa/)                   | `document.title`, meta tags, JSON-LD on route change           |
-| CSS layout & responsive UI        | All projects                                          | Grid, flex; Tailwind CSS v4 on catalog-spa & performance-patterns |
+| CSS layout & responsive UI        | All projects                                          | Grid, flex; Tailwind CSS v4 on projects 02–04                  |
 
 ## Projects
 
@@ -23,13 +24,14 @@ Plain **HTML + CSS + JavaScript** projects that mirror the skills in senior Reac
 | 1   | `01-ui-component-kit`     | Production-style UI primitives (Button, Modal, Toast) |
 | 2   | `02-catalog-spa`          | Mini e-commerce catalog — store, hash router, cart    |
 | 3   | `03-performance-patterns` | 10k-row virtual scroll + debounced search lab         |
+| 4   | `04-data-table`           | Employee table — full CRUD, filters, pagination       |
 
 ## Quick start
 
 Each project is standalone:
 
 ```bash
-cd Projects/vanilla-js/01-ui-component-kit   # or 02-catalog-spa, 03-performance-patterns
+cd Projects/vanilla-js/01-ui-component-kit   # or 02-catalog-spa, 03-performance-patterns, 04-data-table
 npm install
 npm run dev
 ```

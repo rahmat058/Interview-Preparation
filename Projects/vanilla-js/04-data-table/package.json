@@ -1,0 +1,19 @@
+{
+  "name": "vanilla-data-table",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "happy-dom": "^20.0.11",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.16"
+  }
+}
