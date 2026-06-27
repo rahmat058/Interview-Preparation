@@ -17,6 +17,8 @@
 | **CSS interviews**          | Mid/senior layout, specificity, Tailwind, performance, a11y              | [css/](./css/)                                                       |
 | **OOP (JavaScript)**        | Prototypes, classes, inheritance, encapsulation, design patterns         | [oop/](./oop/)                                                       |
 | **MERN stack**              | MongoDB, Express, React, Node, JWT, deployment                           | [MERN/](./MERN/)                                                     |
+| **Next.js 16**              | App Router, Cache Components, proxy, Turbopack — senior/mid (4–5+ YOE)   | [NEXT/](./NEXT/)                                                     |
+| **At a Glance**             | One-file React, Next.js, JS coding summaries (no duplicate Qs)           | [At-a-glance/](./At-a-glance/)                                       |
 | **Docker**                  | Interview Q&A + Dockerfile / Compose for React, Vue, Next, Nuxt, Node    | [Docker/](./Docker/)                                                 |
 | **JavaScript**              | Vanilla JS rounds, HOF/array/string/object core, LeetCode helpers        | [Javascript/](./Javascript/) · [vanila-js/](./Javascript/vanila-js/) |
 | **System design**           | Scalability, core components, design process, file upload case           | [System Design/](./System%20Design/)                                 |
@@ -160,7 +162,9 @@ Interview-Preparation/
 │   └── vanilla-js/             ← 4 vanilla JS apps
 ├── css/                        ← Mid/senior CSS interview Q&A
 ├── oop/                        ← JavaScript OOP, prototypes, classes, patterns
-├── React/                      ← React / Next.js interview guides
+├── React/                      ← React interview guides (+ scenario-based Next.js)
+├── NEXT/                       ← Next.js 16 senior/mid interview guides
+├── At-a-glance/                ← One-file React, Next.js, JS coding summaries
 ├── Vue/                        ← Vue / Nuxt interview guides
 ├── MERN/                       ← MongoDB, Express, Node, full-stack
 ├── Docker/                     ← Docker Q&A + compose templates
@@ -173,20 +177,23 @@ Interview-Preparation/
 
 ## How to Use This Repo
 
-| Goal                          | Where to go                                                                                                                                                                                                                |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Practice live coding          | [Projects/](./Projects/) — run app, explain code without reading                                                                                                                                                           |
-| Prove framework fundamentals  | [Projects/vanilla-js/](./Projects/vanilla-js/) — store, DOM, performance without React                                                                                                                                     |
-| JS core: HOF, arrays, objects | [Javascript/vanila-js/](./Javascript/vanila-js/) — implement `map`/`reduce`, immutability, grouping                                                                                                                        |
-| JS coding & DSA (Top 30)      | [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](./Javascript/vanila-js/08-top-30-javascript-interview-problems.md)                                                                                       |
-| State management deep dive    | [Projects/09-shopping-cart/](./Projects/09-shopping-cart/)                                                                                                                                                                 |
-| Data table + CRUD             | React [05-data-table](./Projects/05-data-table/) · Vanilla [04-data-table](./Projects/vanilla-js/04-data-table/)                                                                                                           |
-| CSS / layout interview        | [css/01-senior-mid-level-css-interview-questions.md](./css/01-senior-mid-level-css-interview-questions.md)                                                                                                                 |
-| JavaScript OOP                | [oop/01-javascript-oop-interview-guide.md](./oop/01-javascript-oop-interview-guide.md) · [02 class vs function problems](./oop/02-class-vs-function-oop-problems.md) · [INTERVIEW-QUESTIONS](./oop/INTERVIEW-QUESTIONS.md) |
-| Quick React theory refresh    | [React/12-react-top-30-interview-qa.md](./React/12-react-top-30-interview-qa.md)                                                                                                                                           |
-| Full-stack / backend          | [MERN/](./MERN/) + [Docker/fullstack/](./Docker/fullstack/)                                                                                                                                                                |
-| System design round           | [System Design/](./System%20Design/) + diagram PNGs                                                                                                                                                                        |
-| Company-specific prep         | [React/](./React/) — KPMG, Blinkit, Capgemini, etc.                                                                                                                                                                        |
+| Goal                          | Where to go                                                                                                                                                                                                                                                          |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Practice live coding          | [Projects/](./Projects/) — run app, explain code without reading                                                                                                                                                                                                     |
+| Prove framework fundamentals  | [Projects/vanilla-js/](./Projects/vanilla-js/) — store, DOM, performance without React                                                                                                                                                                               |
+| 30 min cram before interview  | [At-a-glance/react-at-a-glance.md](./At-a-glance/react-at-a-glance.md) · [At-a-glance/nextjs-at-a-glance.md](./At-a-glance/nextjs-at-a-glance.md) · [At-a-glance/javascript-coding-problems-at-a-glance.md](./At-a-glance/javascript-coding-problems-at-a-glance.md) |
+| JS core: HOF, arrays, objects | [Javascript/vanila-js/](./Javascript/vanila-js/) — implement `map`/`reduce`, immutability, grouping                                                                                                                                                                  |
+| JS live coding (HOF round)    | [At-a-glance/javascript-coding-problems-at-a-glance.md](./At-a-glance/javascript-coding-problems-at-a-glance.md)                                                                                                                                                     |
+| JS coding & DSA (Top 30)      | [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](./Javascript/vanila-js/08-top-30-javascript-interview-problems.md)                                                                                                                                 |
+| State management deep dive    | [Projects/09-shopping-cart/](./Projects/09-shopping-cart/)                                                                                                                                                                                                           |
+| Data table + CRUD             | React [05-data-table](./Projects/05-data-table/) · Vanilla [04-data-table](./Projects/vanilla-js/04-data-table/)                                                                                                                                                     |
+| CSS / layout interview        | [css/01-senior-mid-level-css-interview-questions.md](./css/01-senior-mid-level-css-interview-questions.md)                                                                                                                                                           |
+| JavaScript OOP                | [oop/01-javascript-oop-interview-guide.md](./oop/01-javascript-oop-interview-guide.md) · [At-a-glance/oop-at-a-glance.md](./At-a-glance/oop-at-a-glance.md) · [INTERVIEW-QUESTIONS](./oop/INTERVIEW-QUESTIONS.md)                                                    |
+| Quick React theory refresh    | [React/12-react-top-30-interview-qa.md](./React/12-react-top-30-interview-qa.md)                                                                                                                                                                                     |
+| Next.js 16 senior round       | [NEXT/08-nextjs-top-30-interview-qa.md](./NEXT/08-nextjs-top-30-interview-qa.md) · [NEXT/02-nextjs-16-cache-components-interview.md](./NEXT/02-nextjs-16-cache-components-interview.md)                                                                              |
+| Full-stack / backend          | [MERN/](./MERN/) + [Docker/fullstack/](./Docker/fullstack/)                                                                                                                                                                                                          |
+| System design round           | [System Design/](./System%20Design/) + diagram PNGs                                                                                                                                                                                                                  |
+| Company-specific prep         | [React/](./React/) — KPMG, Blinkit, Capgemini, etc.                                                                                                                                                                                                                  |
 
 ---
 
@@ -227,6 +234,12 @@ Each `INTERVIEW-QUESTIONS.md` includes:
 - [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](./Javascript/vanila-js/08-top-30-javascript-interview-problems.md) — 30 common coding problems
 - [Javascript/vanila-js/07-sorting-stack-queue.md](./Javascript/vanila-js/07-sorting-stack-queue.md) — sorting, stack, queue
 - [Javascript/vanila-js/INTERVIEW-QUESTIONS.md](./Javascript/vanila-js/INTERVIEW-QUESTIONS.md) — 63 JS interview Q&A
+- [At-a-glance/README.md](./At-a-glance/README.md) — one-file React, Next.js, JS coding summaries
+- [At-a-glance/oop-at-a-glance.md](./At-a-glance/oop-at-a-glance.md) — four pillars: encapsulation, abstraction, inheritance, polymorphism
+- [At-a-glance/javascript-coding-problems-at-a-glance.md](./At-a-glance/javascript-coding-problems-at-a-glance.md) — closure, debounce, throttle, curry, flatten
+- [NEXT/README.md](./NEXT/README.md) — Next.js 16 interview guides (8 files)
+- [NEXT/01-senior-mid-level-nextjs-16-interview-guide.md](./NEXT/01-senior-mid-level-nextjs-16-interview-guide.md) — 20 core senior/mid topics
+- [NEXT/02-nextjs-16-cache-components-interview.md](./NEXT/02-nextjs-16-cache-components-interview.md) — `"use cache"`, PPR, invalidation
 - [Docker/README.md](./Docker/README.md) — Docker interview + templates
 - [MERN/README.md](./MERN/README.md) — full-stack MERN Q&A
 - [System Design/README.md](./System%20Design/README.md) — system design path
