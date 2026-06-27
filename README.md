@@ -235,6 +235,7 @@ Each `INTERVIEW-QUESTIONS.md` includes:
 - [Javascript/vanila-js/07-sorting-stack-queue.md](./Javascript/vanila-js/07-sorting-stack-queue.md) — sorting, stack, queue
 - [Javascript/vanila-js/INTERVIEW-QUESTIONS.md](./Javascript/vanila-js/INTERVIEW-QUESTIONS.md) — 63 JS interview Q&A
 - [At-a-glance/README.md](./At-a-glance/README.md) — one-file React, Next.js, JS coding summaries
+- [At-a-glance/full-stack-flowchart-at-a-glance.md](./At-a-glance/full-stack-flowchart-at-a-glance.md) — HTML, Node, React, Next.js, Redux/RTK flowcharts
 - [At-a-glance/oop-at-a-glance.md](./At-a-glance/oop-at-a-glance.md) — four pillars: encapsulation, abstraction, inheritance, polymorphism
 - [At-a-glance/javascript-coding-problems-at-a-glance.md](./At-a-glance/javascript-coding-problems-at-a-glance.md) — closure, debounce, throttle, curry, flatten
 - [NEXT/README.md](./NEXT/README.md) — Next.js 16 interview guides (8 files)

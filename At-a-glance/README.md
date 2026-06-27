@@ -14,6 +14,7 @@ Each file is designed to **skim in 15–30 minutes** before an interview.
 | [nextjs-at-a-glance.md](./nextjs-at-a-glance.md)                                         | All 8 NEXT guides              | ~32 unique Next.js 16 topics                                        |
 | [javascript-coding-problems-at-a-glance.md](./javascript-coding-problems-at-a-glance.md) | JS guides + live-coding rounds | Closure, debounce, throttle, Promise, copy, flatten, memoize, curry |
 | [oop-at-a-glance.md](./oop-at-a-glance.md)                                               | [OOP/](../OOP/) guides         | Four pillars with class + function examples                         |
+| [full-stack-flowchart-at-a-glance.md](./full-stack-flowchart-at-a-glance.md)             | Architecture guides + Projects | HTML → Node → React → Next → Redux/RTK flowcharts end-to-end        |
 
 ---
 
@@ -25,6 +26,7 @@ Each file is designed to **skim in 15–30 minutes** before an interview.
 | 30 min before Next.js round | `nextjs-at-a-glance.md`                                                                                              |
 | Live coding / HOF round     | `javascript-coding-problems-at-a-glance.md`                                                                          |
 | OOP four pillars round      | `oop-at-a-glance.md`                                                                                                 |
+| Explain the full stack      | `full-stack-flowchart-at-a-glance.md`                                                                                |
 | Deep dive after glance      | Full folder ([React](../React/), [NEXT](../NEXT/), [OOP](../OOP/), [Javascript/vanila-js](../Javascript/vanila-js/)) |
 
 ---
