@@ -502,7 +502,36 @@ const flat = [...flatGen([1, [2, [3]]])]; // [1, 2, 3]
 
 **What it is:** Cache function results by arguments — same inputs → skip recompute.
 
-### Manual
+### Manual — simple object cache (interview classic)
+
+Uses a **closure** to hold `cache` and returns a function that checks before computing.
+
+```javascript
+const memoizeAddition = () => {
+  let cache = {};
+  return (value) => {
+    if (value in cache) {
+      console.log("Fetching from cache");
+      return cache[value]; // bracket notation — numeric keys (e.g. 20) are not valid identifiers, so cache.20 is invalid
+    } else {
+      console.log("Calculating result");
+      let result = value + 20;
+      cache[value] = result;
+      return result;
+    }
+  };
+};
+
+const addition = memoizeAddition();
+console.log(addition(20)); // Calculating result → 40
+console.log(addition(20)); // Fetching from cache → 40
+```
+
+**Why `cache[value]` not `cache.value`?** Property names that start with a number (or are numeric keys) are not valid JavaScript identifiers — always use **bracket notation** for dynamic or numeric keys.
+
+---
+
+### Manual — generic `Map` version
 
 ```javascript
 function memoize(fn) {
