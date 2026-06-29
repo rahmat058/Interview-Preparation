@@ -15,40 +15,42 @@ Problems that appear repeatedly in **frontend**, **React**, and **vanilla JS** r
 
 ## Quick index
 
-| #   | Problem                          | Difficulty |
-| --- | -------------------------------- | ---------- |
-| 1   | Two Sum                          | 🟢 ⭐      |
-| 2   | Reverse string / array           | 🟢 ⭐      |
-| 3   | Palindrome check                 | 🟢 ⭐      |
-| 4   | FizzBuzz                         | 🟢         |
-| 5   | Remove duplicates                | 🟢 ⭐      |
-| 6   | Find max / min                   | 🟢         |
-| 7   | Anagram check                    | 🟢 ⭐      |
-| 8   | Character / word frequency       | 🟢 ⭐      |
-| 9   | Valid parentheses                | 🟢 ⭐      |
-| 10  | Merge two sorted arrays          | 🟢 ⭐      |
-| 11  | Binary search                    | 🟢 ⭐      |
-| 12  | Flatten array                    | 🟡 ⭐      |
-| 13  | Chunk array                      | 🟢         |
-| 14  | Debounce                         | 🟡 ⭐      |
-| 15  | Throttle                         | 🟡 ⭐      |
-| 16  | Implement `map`                  | 🟡 ⭐      |
-| 17  | Implement `filter`               | 🟡         |
-| 18  | Implement `reduce`               | 🟡 ⭐      |
-| 19  | Deep clone                       | 🟡 ⭐      |
-| 20  | Memoize                          | 🟡 ⭐      |
-| 21  | Curry                            | 🟡         |
-| 22  | Flatten object                   | 🟡         |
-| 23  | Group by key                     | 🟢 ⭐      |
-| 24  | Pick / omit                      | 🟢         |
-| 25  | Capitalize words                 | 🟢         |
-| 26  | Longest substring without repeat | 🟡 ⭐      |
-| 27  | Promise.all polyfill             | 🟡 ⭐      |
-| 28  | Sleep / delay                    | 🟢         |
-| 29  | LRU cache (simplified)           | 🟡         |
-| 30  | Event emitter                    | 🟡 ⭐      |
+| #   | Problem                                  | Difficulty |
+| --- | ---------------------------------------- | ---------- |
+| 1   | [Two Sum](#p1)                           | 🟢 ⭐      |
+| 2   | [Reverse string / array](#p2)            | 🟢 ⭐      |
+| 3   | [Palindrome check](#p3)                  | 🟢 ⭐      |
+| 4   | [FizzBuzz](#p4)                          | 🟢         |
+| 5   | [Remove duplicates](#p5)                 | 🟢 ⭐      |
+| 6   | [Find max / min](#p6)                    | 🟢         |
+| 7   | [Anagram check](#p7)                     | 🟢 ⭐      |
+| 8   | [Character / word frequency](#p8)        | 🟢 ⭐      |
+| 9   | [Valid parentheses](#p9)                 | 🟢 ⭐      |
+| 10  | [Merge two sorted arrays](#p10)          | 🟢 ⭐      |
+| 11  | [Binary search](#p11)                    | 🟢 ⭐      |
+| 12  | [Flatten array](#p12)                    | 🟡 ⭐      |
+| 13  | [Chunk array](#p13)                      | 🟢         |
+| 14  | [Debounce](#p14)                         | 🟡 ⭐      |
+| 15  | [Throttle](#p15)                         | 🟡 ⭐      |
+| 16  | [Implement `map`](#p16)                  | 🟡 ⭐      |
+| 17  | [Implement `filter`](#p17)               | 🟡         |
+| 18  | [Implement `reduce`](#p18)               | 🟡 ⭐      |
+| 19  | [Deep clone](#p19)                       | 🟡 ⭐      |
+| 20  | [Memoize](#p20)                          | 🟡 ⭐      |
+| 21  | [Curry](#p21)                            | 🟡         |
+| 22  | [Flatten object](#p22)                   | 🟡         |
+| 23  | [Group by key](#p23)                     | 🟢 ⭐      |
+| 24  | [Pick / omit](#p24)                      | 🟢         |
+| 25  | [Capitalize words](#p25)                 | 🟢         |
+| 26  | [Longest substring without repeat](#p26) | 🟡 ⭐      |
+| 27  | [Promise.all polyfill](#p27)             | 🟡 ⭐      |
+| 28  | [Sleep / delay](#p28)                    | 🟢         |
+| 29  | [LRU cache (simplified)](#p29)           | 🟡         |
+| 30  | [Event emitter](#p30)                    | 🟡 ⭐      |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Two Sum ⭐
 
@@ -74,6 +76,8 @@ function twoSum(nums, target) {
 **Time:** O(n) · **Space:** O(n)
 
 ---
+
+<a id="p2"></a>
 
 ## 2. Reverse string / array ⭐
 
@@ -101,6 +105,8 @@ function reverseArray(arr) {
 ```
 
 ---
+
+<a id="p3"></a>
 
 ## 3. Palindrome check ⭐
 
@@ -131,6 +137,8 @@ function isPalindromeFast(s) {
 
 ---
 
+<a id="p4"></a>
+
 ## 4. FizzBuzz
 
 **Description:** 1 to n: multiples of 3 → "Fizz", 5 → "Buzz", both → "FizzBuzz", else number.
@@ -150,6 +158,8 @@ function fizzBuzz(n) {
 
 ---
 
+<a id="p5"></a>
+
 ## 5. Remove duplicates ⭐
 
 **Description:** Return array with unique values (primitives or by key).
@@ -168,6 +178,8 @@ const uniqueById = (arr) => [
 
 ---
 
+<a id="p6"></a>
+
 ## 6. Find max / min
 
 ```javascript
@@ -179,6 +191,8 @@ const maxReduce = (arr) => arr.reduce((m, n) => (n > m ? n : m), -Infinity);
 ```
 
 ---
+
+<a id="p7"></a>
 
 ## 7. Anagram check ⭐
 
@@ -209,6 +223,8 @@ function isAnagramFast(a, b) {
 
 ---
 
+<a id="p8"></a>
+
 ## 8. Character / word frequency ⭐
 
 ```javascript
@@ -230,6 +246,8 @@ function wordFrequency(sentence) {
 
 ---
 
+<a id="p9"></a>
+
 ## 9. Valid parentheses ⭐
 
 **Description:** Check balanced `()[]{}`.
@@ -242,6 +260,8 @@ See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5-
 
 ---
 
+<a id="p10"></a>
+
 ## 10. Merge two sorted arrays ⭐
 
 ```javascript
@@ -251,6 +271,8 @@ See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5-
 See [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p1--merge-two-sorted-arrays)
 
 ---
+
+<a id="p11"></a>
 
 ## 11. Binary search ⭐
 
@@ -278,6 +300,8 @@ function binarySearch(nums, target) {
 
 ---
 
+<a id="p12"></a>
+
 ## 12. Flatten array ⭐
 
 **Description:** Nested array → single depth or full flat.
@@ -300,6 +324,8 @@ function flatten(arr) {
 
 ---
 
+<a id="p13"></a>
+
 ## 13. Chunk array
 
 **Description:** Split array into groups of size n.
@@ -318,6 +344,8 @@ function chunk(arr, size) {
 
 ---
 
+<a id="p14"></a>
+
 ## 14. Debounce ⭐
 
 **Description:** Delay execution until user stops triggering (search input).
@@ -335,6 +363,8 @@ function debounce(fn, wait) {
 See [01-higher-order-functions.md](./01-higher-order-functions.md)
 
 ---
+
+<a id="p15"></a>
 
 ## 15. Throttle ⭐
 
@@ -355,6 +385,8 @@ function throttle(fn, limit) {
 
 ---
 
+<a id="p16"></a>
+
 ## 16. Implement `map` ⭐
 
 ```javascript
@@ -369,6 +401,8 @@ function myMap(arr, fn) {
 
 ---
 
+<a id="p17"></a>
+
 ## 17. Implement `filter`
 
 ```javascript
@@ -382,6 +416,8 @@ function myFilter(arr, predicate) {
 ```
 
 ---
+
+<a id="p18"></a>
 
 ## 18. Implement `reduce` ⭐
 
@@ -402,6 +438,8 @@ function myReduce(arr, reducer, initial) {
 ```
 
 ---
+
+<a id="p19"></a>
 
 ## 19. Deep clone ⭐
 
@@ -433,6 +471,8 @@ function deepClone(value, seen = new WeakMap()) {
 
 ---
 
+<a id="p20"></a>
+
 ## 20. Memoize ⭐
 
 ```javascript
@@ -449,6 +489,8 @@ function memoize(fn) {
 ```
 
 ---
+
+<a id="p21"></a>
 
 ## 21. Curry
 
@@ -467,6 +509,8 @@ add(1)(2)(3); // 6
 ```
 
 ---
+
+<a id="p22"></a>
 
 ## 22. Flatten object
 
@@ -487,6 +531,8 @@ function flattenObject(obj, prefix = '', out = {}) {
 ```
 
 ---
+
+<a id="p23"></a>
 
 ## 23. Group by key ⭐
 
@@ -511,6 +557,8 @@ function groupBy(arr, key) {
 
 ---
 
+<a id="p24"></a>
+
 ## 24. Pick / omit
 
 ```javascript
@@ -525,6 +573,8 @@ const omit = (obj, keys) => {
 
 ---
 
+<a id="p25"></a>
+
 ## 25. Capitalize words
 
 ```javascript
@@ -535,6 +585,8 @@ function capitalizeWords(s) {
 ```
 
 ---
+
+<a id="p26"></a>
 
 ## 26. Longest substring without repeating chars ⭐
 
@@ -565,6 +617,8 @@ function lengthOfLongestSubstring(s) {
 
 ---
 
+<a id="p27"></a>
+
 ## 27. Promise.all polyfill ⭐
 
 **Description:** Resolve when all promises resolve; reject on first rejection.
@@ -587,6 +641,8 @@ function promiseAll(promises) {
 
 ---
 
+<a id="p28"></a>
+
 ## 28. Sleep / delay
 
 ```javascript
@@ -600,6 +656,8 @@ async function demo() {
 ```
 
 ---
+
+<a id="p29"></a>
 
 ## 29. LRU cache (simplified)
 
@@ -632,6 +690,8 @@ class LRUCache {
 ```
 
 ---
+
+<a id="p30"></a>
 
 ## 30. Event emitter ⭐
 
