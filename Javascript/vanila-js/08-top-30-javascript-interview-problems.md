@@ -13,40 +13,42 @@ Problems that appear repeatedly in **frontend**, **React**, and **vanilla JS** r
 
 ---
 
+<a id="quick-index"></a>
+
 ## Quick index
 
-| #   | Problem                                  | Difficulty |
-| --- | ---------------------------------------- | ---------- |
-| 1   | [Two Sum](#p1)                           | 🟢 ⭐      |
-| 2   | [Reverse string / array](#p2)            | 🟢 ⭐      |
-| 3   | [Palindrome check](#p3)                  | 🟢 ⭐      |
-| 4   | [FizzBuzz](#p4)                          | 🟢         |
-| 5   | [Remove duplicates](#p5)                 | 🟢 ⭐      |
-| 6   | [Find max / min](#p6)                    | 🟢         |
-| 7   | [Anagram check](#p7)                     | 🟢 ⭐      |
-| 8   | [Character / word frequency](#p8)        | 🟢 ⭐      |
-| 9   | [Valid parentheses](#p9)                 | 🟢 ⭐      |
-| 10  | [Merge two sorted arrays](#p10)          | 🟢 ⭐      |
-| 11  | [Binary search](#p11)                    | 🟢 ⭐      |
-| 12  | [Flatten array](#p12)                    | 🟡 ⭐      |
-| 13  | [Chunk array](#p13)                      | 🟢         |
-| 14  | [Debounce](#p14)                         | 🟡 ⭐      |
-| 15  | [Throttle](#p15)                         | 🟡 ⭐      |
-| 16  | [Implement `map`](#p16)                  | 🟡 ⭐      |
-| 17  | [Implement `filter`](#p17)               | 🟡         |
-| 18  | [Implement `reduce`](#p18)               | 🟡 ⭐      |
-| 19  | [Deep clone](#p19)                       | 🟡 ⭐      |
-| 20  | [Memoize](#p20)                          | 🟡 ⭐      |
-| 21  | [Curry](#p21)                            | 🟡         |
-| 22  | [Flatten object](#p22)                   | 🟡         |
-| 23  | [Group by key](#p23)                     | 🟢 ⭐      |
-| 24  | [Pick / omit](#p24)                      | 🟢         |
-| 25  | [Capitalize words](#p25)                 | 🟢         |
-| 26  | [Longest substring without repeat](#p26) | 🟡 ⭐      |
-| 27  | [Promise.all polyfill](#p27)             | 🟡 ⭐      |
-| 28  | [Sleep / delay](#p28)                    | 🟢         |
-| 29  | [LRU cache (simplified)](#p29)           | 🟡         |
-| 30  | [Event emitter](#p30)                    | 🟡 ⭐      |
+| #                        | Problem                                  | Difficulty |
+| ------------------------ | ---------------------------------------- | ---------- |
+| <span id="i1"></span>1   | [Two Sum](#p1)                           | 🟢 ⭐      |
+| <span id="i2"></span>2   | [Reverse string / array](#p2)            | 🟢 ⭐      |
+| <span id="i3"></span>3   | [Palindrome check](#p3)                  | 🟢 ⭐      |
+| <span id="i4"></span>4   | [FizzBuzz](#p4)                          | 🟢         |
+| <span id="i5"></span>5   | [Remove duplicates](#p5)                 | 🟢 ⭐      |
+| <span id="i6"></span>6   | [Find max / min](#p6)                    | 🟢         |
+| <span id="i7"></span>7   | [Anagram check](#p7)                     | 🟢 ⭐      |
+| <span id="i8"></span>8   | [Character / word frequency](#p8)        | 🟢 ⭐      |
+| <span id="i9"></span>9   | [Valid parentheses](#p9)                 | 🟢 ⭐      |
+| <span id="i10"></span>10 | [Merge two sorted arrays](#p10)          | 🟢 ⭐      |
+| <span id="i11"></span>11 | [Binary search](#p11)                    | 🟢 ⭐      |
+| <span id="i12"></span>12 | [Flatten array](#p12)                    | 🟡 ⭐      |
+| <span id="i13"></span>13 | [Chunk array](#p13)                      | 🟢         |
+| <span id="i14"></span>14 | [Debounce](#p14)                         | 🟡 ⭐      |
+| <span id="i15"></span>15 | [Throttle](#p15)                         | 🟡 ⭐      |
+| <span id="i16"></span>16 | [Implement `map`](#p16)                  | 🟡 ⭐      |
+| <span id="i17"></span>17 | [Implement `filter`](#p17)               | 🟡         |
+| <span id="i18"></span>18 | [Implement `reduce`](#p18)               | 🟡 ⭐      |
+| <span id="i19"></span>19 | [Deep clone](#p19)                       | 🟡 ⭐      |
+| <span id="i20"></span>20 | [Memoize](#p20)                          | 🟡 ⭐      |
+| <span id="i21"></span>21 | [Curry](#p21)                            | 🟡         |
+| <span id="i22"></span>22 | [Flatten object](#p22)                   | 🟡         |
+| <span id="i23"></span>23 | [Group by key](#p23)                     | 🟢 ⭐      |
+| <span id="i24"></span>24 | [Pick / omit](#p24)                      | 🟢         |
+| <span id="i25"></span>25 | [Capitalize words](#p25)                 | 🟢         |
+| <span id="i26"></span>26 | [Longest substring without repeat](#p26) | 🟡 ⭐      |
+| <span id="i27"></span>27 | [Promise.all polyfill](#p27)             | 🟡 ⭐      |
+| <span id="i28"></span>28 | [Sleep / delay](#p28)                    | 🟢         |
+| <span id="i29"></span>29 | [LRU cache (simplified)](#p29)           | 🟡         |
+| <span id="i30"></span>30 | [Event emitter](#p30)                    | 🟡 ⭐      |
 
 ---
 
@@ -75,7 +77,7 @@ function twoSum(nums, target) {
 
 **Time:** O(n) · **Space:** O(n)
 
----
+<p><a href="#i1">Back to index</a></p>
 
 <a id="p2"></a>
 
@@ -104,7 +106,7 @@ function reverseArray(arr) {
 }
 ```
 
----
+<p><a href="#i2">Back to index</a></p>
 
 <a id="p3"></a>
 
@@ -135,7 +137,7 @@ function isPalindromeFast(s) {
 }
 ```
 
----
+<p><a href="#i3">Back to index</a></p>
 
 <a id="p4"></a>
 
@@ -156,7 +158,7 @@ function fizzBuzz(n) {
 }
 ```
 
----
+<p><a href="#i4">Back to index</a></p>
 
 <a id="p5"></a>
 
@@ -176,7 +178,7 @@ const uniqueById = (arr) => [
 ];
 ```
 
----
+<p><a href="#i5">Back to index</a></p>
 
 <a id="p6"></a>
 
@@ -190,7 +192,7 @@ const min = (arr) => Math.min(...arr);
 const maxReduce = (arr) => arr.reduce((m, n) => (n > m ? n : m), -Infinity);
 ```
 
----
+<p><a href="#i6">Back to index</a></p>
 
 <a id="p7"></a>
 
@@ -221,7 +223,7 @@ function isAnagramFast(a, b) {
 }
 ```
 
----
+<p><a href="#i7">Back to index</a></p>
 
 <a id="p8"></a>
 
@@ -244,13 +246,13 @@ function wordFrequency(sentence) {
 }
 ```
 
----
+<p><a href="#i8">Back to index</a></p>
 
 <a id="p9"></a>
 
 ## 9. Valid parentheses ⭐
 
-**Description:** Check balanced `()[]{}`.
+**Description:** Check balanced `()[]{}.`
 
 ```javascript
 // '{[()]}' → true
@@ -258,7 +260,7 @@ function wordFrequency(sentence) {
 
 See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5--valid-parentheses--most-common)
 
----
+<p><a href="#i9">Back to index</a></p>
 
 <a id="p10"></a>
 
@@ -270,7 +272,7 @@ See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5-
 
 See [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p1--merge-two-sorted-arrays)
 
----
+<p><a href="#i10">Back to index</a></p>
 
 <a id="p11"></a>
 
@@ -298,7 +300,7 @@ function binarySearch(nums, target) {
 
 **Time:** O(log n)
 
----
+<p><a href="#i11">Back to index</a></p>
 
 <a id="p12"></a>
 
@@ -322,7 +324,7 @@ function flatten(arr) {
 [1, [2, [3]]].flat(Infinity);
 ```
 
----
+<p><a href="#i12">Back to index</a></p>
 
 <a id="p13"></a>
 
@@ -342,7 +344,7 @@ function chunk(arr, size) {
 }
 ```
 
----
+<p><a href="#i13">Back to index</a></p>
 
 <a id="p14"></a>
 
@@ -362,7 +364,7 @@ function debounce(fn, wait) {
 
 See [01-higher-order-functions.md](./01-higher-order-functions.md)
 
----
+<p><a href="#i14">Back to index</a></p>
 
 <a id="p15"></a>
 
@@ -383,7 +385,7 @@ function throttle(fn, limit) {
 }
 ```
 
----
+<p><a href="#i15">Back to index</a></p>
 
 <a id="p16"></a>
 
@@ -399,7 +401,7 @@ function myMap(arr, fn) {
 }
 ```
 
----
+<p><a href="#i16">Back to index</a></p>
 
 <a id="p17"></a>
 
@@ -415,7 +417,7 @@ function myFilter(arr, predicate) {
 }
 ```
 
----
+<p><a href="#i17">Back to index</a></p>
 
 <a id="p18"></a>
 
@@ -437,7 +439,7 @@ function myReduce(arr, reducer, initial) {
 }
 ```
 
----
+<p><a href="#i18">Back to index</a></p>
 
 <a id="p19"></a>
 
@@ -469,7 +471,7 @@ function deepClone(value, seen = new WeakMap()) {
 // Modern: structuredClone(obj)
 ```
 
----
+<p><a href="#i19">Back to index</a></p>
 
 <a id="p20"></a>
 
@@ -488,7 +490,7 @@ function memoize(fn) {
 }
 ```
 
----
+<p><a href="#i20">Back to index</a></p>
 
 <a id="p21"></a>
 
@@ -508,7 +510,7 @@ const add = curry((a, b, c) => a + b + c);
 add(1)(2)(3); // 6
 ```
 
----
+<p><a href="#i21">Back to index</a></p>
 
 <a id="p22"></a>
 
@@ -530,7 +532,7 @@ function flattenObject(obj, prefix = '', out = {}) {
 }
 ```
 
----
+<p><a href="#i22">Back to index</a></p>
 
 <a id="p23"></a>
 
@@ -555,7 +557,7 @@ function groupBy(arr, key) {
 // ES2024: Object.groupBy(arr, (item) => item.dept)
 ```
 
----
+<p><a href="#i23">Back to index</a></p>
 
 <a id="p24"></a>
 
@@ -571,7 +573,7 @@ const omit = (obj, keys) => {
 };
 ```
 
----
+<p><a href="#i24">Back to index</a></p>
 
 <a id="p25"></a>
 
@@ -584,7 +586,7 @@ function capitalizeWords(s) {
 // 'hello world' → 'Hello World'
 ```
 
----
+<p><a href="#i25">Back to index</a></p>
 
 <a id="p26"></a>
 
@@ -613,9 +615,7 @@ function lengthOfLongestSubstring(s) {
 }
 ```
 
-**Repo:** [KPMG sliding window](./kpmg-round-1-vanilla-javascript-interview.md)
-
----
+<p><a href="#i26">Back to index</a></p>
 
 <a id="p27"></a>
 
@@ -639,7 +639,7 @@ function promiseAll(promises) {
 }
 ```
 
----
+<p><a href="#i27">Back to index</a></p>
 
 <a id="p28"></a>
 
@@ -655,7 +655,7 @@ async function demo() {
 }
 ```
 
----
+<p><a href="#i28">Back to index</a></p>
 
 <a id="p29"></a>
 
@@ -689,7 +689,7 @@ class LRUCache {
 }
 ```
 
----
+<p><a href="#i29">Back to index</a></p>
 
 <a id="p30"></a>
 
@@ -730,6 +730,8 @@ bus.emit('cart:update', 3);
 ```
 
 **Tie-in:** Same pattern as `createStore` subscribe in `vanilla-js/02-catalog-spa`.
+
+<p><a href="#i30">Back to index</a></p>
 
 ---
 
