@@ -11,30 +11,36 @@ The most important JavaScript topics every frontend developer should know — co
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [var, let & const](#1-var-let--const)
-2. [Data Types](#2-data-types)
-3. [Hoisting](#3-hoisting)
-4. [Scope & Scope Chain](#4-scope--scope-chain)
-5. [this Keyword](#5-this-keyword)
-6. [Closures](#6-closures)
-7. [Prototype & Inheritance](#7-prototype--inheritance)
-8. [Event Loop](#8-event-loop)
-9. [Promises](#9-promises)
-10. [Async/Await](#10-asyncawait)
-11. [Arrow Functions](#11-arrow-functions)
-12. [Destructuring](#12-destructuring)
-13. [Spread & Rest Operators](#13-spread--rest-operators)
-14. [Map, Filter & Reduce](#14-map-filter--reduce)
-15. [Object Methods](#15-object-methods)
-16. [Type Coercion](#16-type-coercion)
-17. [Debounce vs Throttle](#17-debounce-vs-throttle)
-18. [Memory Management](#18-memory-management)
-19. [Common JavaScript Gotchas](#19-common-javascript-gotchas)
-20. [Best Practices](#20-best-practices)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [var, let & const](#p1) |
+| <span id="i2"></span>2 | [Data Types](#p2) |
+| <span id="i3"></span>3 | [Hoisting](#p3) |
+| <span id="i4"></span>4 | [Scope & Scope Chain](#p4) |
+| <span id="i5"></span>5 | [this Keyword](#p5) |
+| <span id="i6"></span>6 | [Closures](#p6) |
+| <span id="i7"></span>7 | [Prototype & Inheritance](#p7) |
+| <span id="i8"></span>8 | [Event Loop](#p8) |
+| <span id="i9"></span>9 | [Promises](#p9) |
+| <span id="i10"></span>10 | [Async/Await](#p10) |
+| <span id="i11"></span>11 | [Arrow Functions](#p11) |
+| <span id="i12"></span>12 | [Destructuring](#p12) |
+| <span id="i13"></span>13 | [Spread & Rest Operators](#p13) |
+| <span id="i14"></span>14 | [Map, Filter & Reduce](#p14) |
+| <span id="i15"></span>15 | [Object Methods](#p15) |
+| <span id="i16"></span>16 | [Type Coercion](#p16) |
+| <span id="i17"></span>17 | [Debounce vs Throttle](#p17) |
+| <span id="i18"></span>18 | [Memory Management](#p18) |
+| <span id="i19"></span>19 | [Common JavaScript Gotchas](#p19) |
+| <span id="i20"></span>20 | [Best Practices](#p20) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. var, let & const
 
@@ -88,6 +94,11 @@ for (let j = 0; j < 3; j++) {
 **Rule:** Use `const` by default → `let` when reassignment is needed → avoid `var`.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Data Types
 
@@ -158,6 +169,11 @@ const user = {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Hoisting
 
 ### Theory
@@ -215,6 +231,11 @@ function app() {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Scope & Scope Chain
 
@@ -282,6 +303,11 @@ export function getOrders() {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. this Keyword
 
@@ -353,6 +379,11 @@ class Counter extends React.Component {
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Closures
 
@@ -430,6 +461,11 @@ const expensiveFilter = memoize((products, category) =>
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Prototype & Inheritance
 
 ### Theory
@@ -505,6 +541,11 @@ order.hasOwnProperty("getTotal"); // false (on prototype)
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Event Loop
 
 ### Theory
@@ -557,6 +598,11 @@ function handleLargeDataset(data) {
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Promises
 
@@ -630,6 +676,11 @@ function promiseAll(promises) {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Async/Await
 
 ### Theory
@@ -699,6 +750,11 @@ console.log("D");
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Arrow Functions
 
 ### Theory
@@ -764,6 +820,11 @@ const obj = {
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Destructuring
 
@@ -835,6 +896,11 @@ const {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Spread & Rest Operators
 
 ### Theory
@@ -898,6 +964,11 @@ console.log(state.user.name); // "Rahul" — nested object is shared!
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Map, Filter & Reduce
 
@@ -980,6 +1051,11 @@ function ProductList({ products }) {
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. Object Methods
 
 ### Theory
@@ -1057,6 +1133,11 @@ const payload = Object.fromEntries(
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Type Coercion
 
 ### Theory
@@ -1125,6 +1206,11 @@ function getQuantity(input) {
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Debounce vs Throttle
 
 ### Theory
@@ -1189,6 +1275,11 @@ const handlePay = throttle(() => processPayment(), 2000);
 | API rate limiting             | Throttle |
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ## 18. Memory Management
 
@@ -1257,6 +1348,11 @@ function attachMetadata(element, data) {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Common JavaScript Gotchas
 
@@ -1357,6 +1453,11 @@ Number.isNaN("hello"); // false
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. Best Practices
 
@@ -1483,3 +1584,6 @@ function sortByPriceAscending(products) {
 ---
 
 _Master these 20 concepts and you cover the majority of JavaScript questions in frontend interviews. Practice explaining each with a real example from your projects — that's what interviewers remember._
+
+
+<p><a href="#i20">Back to index</a></p>

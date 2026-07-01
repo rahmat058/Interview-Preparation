@@ -13,21 +13,27 @@ Assumed stack: **Next.js 14/15**, **App Router**, **React Server Components**, *
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Slow page — multiple API fetches](#1-a-nextjs-page-is-loading-slowly-because-it-fetches-data-from-multiple-apis-how-would-you-optimize-the-page-performance)
-2. [Stock market data — SSR vs SSG vs CSR](#2-you-need-to-display-frequently-changing-stock-market-data-on-a-page-would-you-use-ssr-ssg-or-csr-why)
-3. [Large JavaScript bundle](#3-your-nextjs-application-has-a-large-javascript-bundle-size-affecting-performance-how-would-you-reduce-it)
-4. [Server-side caching](#4-you-need-to-implement-server-side-caching-to-reduce-api-calls-how-would-you-approach-it)
-5. [10,000 blog posts](#5-your-application-has-10000-blog-posts-how-would-you-generate-and-serve-these-pages-efficiently)
-6. [Heavy chart library — lazy load](#6-a-page-contains-a-heavy-chart-library-that-is-only-needed-after-user-interaction-how-would-you-optimize-the-loading-strategy)
-7. [Large file upload to cloud storage](#7-you-need-to-upload-large-files-from-the-frontend-to-a-cloud-storage-service-how-would-you-implement-the-flow-in-nextjs)
-8. [High-volume API routes](#8-your-api-routes-are-receiving-a-high-volume-of-requests-how-would-you-improve-scalability-and-performance)
-9. [Migrating React SPA to Next.js](#9-you-are-migrating-a-react-spa-to-nextjs-what-challenges-would-you-expect-and-how-would-you-handle-them)
-10. [A/B testing](#10-how-would-you-implement-ab-testing-in-a-nextjs-application)
-11. [Quick Revision Cheat Sheet](#11-quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Slow page — multiple API fetches](#p1) |
+| <span id="i2"></span>2 | [Stock market data — SSR vs SSG vs CSR](#p2) |
+| <span id="i3"></span>3 | [Large JavaScript bundle](#p3) |
+| <span id="i4"></span>4 | [Server-side caching](#p4) |
+| <span id="i5"></span>5 | [10,000 blog posts](#p5) |
+| <span id="i6"></span>6 | [Heavy chart library — lazy load](#p6) |
+| <span id="i7"></span>7 | [Large file upload to cloud storage](#p7) |
+| <span id="i8"></span>8 | [High-volume API routes](#p8) |
+| <span id="i9"></span>9 | [Migrating React SPA to Next.js](#p9) |
+| <span id="i10"></span>10 | [A/B testing](#p10) |
+| <span id="i11"></span>11 | [Quick Revision Cheat Sheet](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. A Next.js page is loading slowly because it fetches data from multiple APIs. How would you optimize the page performance?
 
@@ -141,6 +147,11 @@ export async function AnalyticsPage() {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. You need to display frequently changing stock market data on a page. Would you use SSR, SSG, or CSR? Why?
 
 ### Description
@@ -240,6 +251,11 @@ export function LiveTicker({ initialQuotes }) {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Your Next.js application has a large JavaScript bundle size affecting performance. How would you reduce it?
 
 ### Description
@@ -320,6 +336,11 @@ ANALYZE=true npm run build
 > I'd analyze the bundle with `@next/bundle-analyzer`, push data fetching and non-interactive UI to Server Components, dynamically import heavy client libraries, enable `optimizePackageImports`, and replace or defer dependencies that don't need to be in the critical path.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. You need to implement server-side caching to reduce API calls. How would you approach it?
 
@@ -410,6 +431,11 @@ export async function GET(req: Request) {
 > I'd use Next.js Data Cache with `revalidate` and cache tags for shared data, `no-store` only for user-specific or real-time data, and add Redis at the Route Handler layer when upstream rate limits or cross-instance consistency require it — with webhooks calling `revalidateTag` on content updates.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Your application has 10,000 blog posts. How would you generate and serve these pages efficiently?
 
@@ -513,6 +539,11 @@ export async function POST(req: Request) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. A page contains a heavy chart library that is only needed after user interaction. How would you optimize the loading strategy?
 
 ### Description
@@ -610,6 +641,11 @@ export default function SalesChart({ data }) {
 > I'd keep data fetching in a Server Component, load the chart library with `next/dynamic` and `ssr: false`, and defer the import until the user clicks — so the heavy dependency never hits the initial bundle.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. You need to upload large files from the frontend to a cloud storage service. How would you implement the flow in Next.js?
 
@@ -718,6 +754,11 @@ export function FileUploader() {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Your API routes are receiving a high volume of requests. How would you improve scalability and performance?
 
 ### Description
@@ -817,6 +858,11 @@ export async function POST(req: Request) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. You are migrating a React SPA to Next.js. What challenges would you expect and how would you handle them?
 
 ### Description
@@ -908,6 +954,11 @@ export default async function ProductPage({
 > I'd migrate incrementally: file-based routes instead of react-router, move data fetching to Server Components, wrap browser-only code in `'use client'` or dynamic imports, handle auth in middleware with cookies, and fix hydration mismatches by not rendering client-only values on the server.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. How would you implement A/B testing in a Next.js application?
 
@@ -1025,6 +1076,11 @@ export default async function PricingPage() {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Quick Revision Cheat Sheet
 
 | #   | Scenario                   | Core answer                                                                  |
@@ -1047,3 +1103,6 @@ export default async function PricingPage() {
 - [10-frontend-concepts-checklist.md](./10-frontend-concepts-checklist.md) — CSR vs SSR vs SSG vs ISR
 - [06-react-best-practices-project-guide.md](./06-react-best-practices-project-guide.md) — code splitting, performance
 - [20-senior-frontend-real-world-interview.md](./20-senior-frontend-real-world-interview.md) — production engineering topics
+
+
+<p><a href="#i11">Back to index</a></p>

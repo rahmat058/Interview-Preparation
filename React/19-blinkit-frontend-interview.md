@@ -14,24 +14,37 @@ Questions from a **Blinkit SDE-1 Frontend Engineer** interview — **3 rounds**:
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Round 1 — Core Web Concepts
-1. [CORS](#1-cors)
-2. [WebSockets](#2-websockets)
-3. [Long Polling vs WebSockets](#3-long-polling-vs-websockets)
-4. [Browser Storage](#4-browser-storage)
-5. [Event Loop — Microtasks vs Macrotasks](#5-event-loop--microtasks-vs-macrotasks)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [CORS](#p1) |
+| <span id="i2"></span>2 | [WebSockets](#p2) |
+| <span id="i3"></span>3 | [Long Polling vs WebSockets](#p3) |
+| <span id="i4"></span>4 | [Browser Storage](#p4) |
+| <span id="i5"></span>5 | [Event Loop — Microtasks vs Macrotasks](#p5) |
 
 ### Round 2 — React Machine Coding
-6. [Grid Toggle Component](#6-grid-toggle-component)
+
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Grid Toggle Component](#p6) |
 
 ### Round 3 — Culture Fit
-7. [Culture Fit & Behavioral Questions](#7-culture-fit--behavioral-questions)
+
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Culture Fit & Behavioral Questions](#p7) |
 
 ---
-
 # Round 1 — Core Web Concepts
+
+<a id="p1"></a>
 
 ## 1. CORS
 
@@ -99,6 +112,11 @@ app.use(cors({
 | Why credentials need special header? | `Access-Control-Allow-Credentials: true` + specific origin (not `*`) |
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. WebSockets
 
@@ -179,6 +197,11 @@ function connectWithRetry(url, { maxRetries = 5, baseDelay = 1000 } = {}) {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Long Polling vs WebSockets
 
 ### Theory
@@ -238,6 +261,11 @@ ws.onmessage = (e) => {
 | Legacy API / CDN compatibility | Long polling fallback |
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Browser Storage
 
@@ -319,6 +347,11 @@ localStorage.setItem("jwt", token);
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Event Loop — Microtasks vs Macrotasks
 
@@ -403,6 +436,11 @@ console.log("B");
 ---
 
 # Round 2 — React Machine Coding
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Grid Toggle Component
 
@@ -702,6 +740,11 @@ function useGridFlat(rows, cols) {
 
 # Round 3 — Culture Fit
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Culture Fit & Behavioral Questions
 
 ### Theory
@@ -807,3 +850,6 @@ Shows genuine interest:
 ---
 
 *Blinkit SDE-1 interviews reward engineers who understand browsers and real-time systems — not just component syntax. Master Round 1 concepts and you'll stand out.*
+
+
+<p><a href="#i7">Back to index</a></p>

@@ -24,20 +24,26 @@ Practice: cover the manual version, then mention the built-in.
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Closure](#1-closure)
-2. [Debounce](#2-debounce)
-3. [Throttle](#3-throttle)
-4. [Promise utilities](#4-promise-utilities)
-5. [Shallow copy](#5-shallow-copy)
-6. [Deep copy](#6-deep-copy)
-7. [Flatten array](#7-flatten-array)
-8. [Memoize](#8-memoize)
-9. [Curry](#9-curry)
-10. [Quick comparison table](#10-quick-comparison-table)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Closure](#p1) |
+| <span id="i2"></span>2 | [Debounce](#p2) |
+| <span id="i3"></span>3 | [Throttle](#p3) |
+| <span id="i4"></span>4 | [Promise utilities](#p4) |
+| <span id="i5"></span>5 | [Shallow copy](#p5) |
+| <span id="i6"></span>6 | [Deep copy](#p6) |
+| <span id="i7"></span>7 | [Flatten array](#p7) |
+| <span id="i8"></span>8 | [Memoize](#p8) |
+| <span id="i9"></span>9 | [Curry](#p9) |
+| <span id="i10"></span>10 | [Quick comparison table](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Closure
 
@@ -88,6 +94,11 @@ double(5); // 10
 > A closure is a function plus its lexical environment. I use it for encapsulation and patterns like debounce where the timer variable must persist between calls.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Debounce
 
@@ -152,6 +163,11 @@ function useDebouncedValue(value, delay) {
 > Debounce delays execution until events pause — 300ms after last keystroke for search. Implemented with `setTimeout` + `clearTimeout` in a closure.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Throttle
 
@@ -240,6 +256,11 @@ function onScrollRAF(fn) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Promise utilities
 
 **What they test:** Async flow, `Promise` constructor, `all` / `race` / `allSettled`.
@@ -315,6 +336,11 @@ async function retry(fn, retries = 3, delayMs = 500) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Shallow copy
 
 **What it is:** New container; **nested objects still shared**.
@@ -370,6 +396,11 @@ const nextState = {
 > Spread and `Object.assign` copy top level only. For React state I shallow-copy each level on the path that changes — not full deep clone.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Deep copy
 
@@ -440,6 +471,11 @@ import { produce } from "immer"; // immutable updates without manual clone
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Flatten array
 
 **What it is:** `[1, [2, [3]]]` → `[1, 2, 3]`.
@@ -497,6 +533,11 @@ const flat = [...flatGen([1, [2, [3]]])]; // [1, 2, 3]
 > `flat(Infinity)` in production when allowed. In interviews I write recursive `reduce` + `concat`, or iterative stack if they want no recursion.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Memoize
 
@@ -592,6 +633,11 @@ const selectTotal = createSelector([(state) => state.items], (items) =>
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Curry
 
 **What it is:** Transform `f(a, b, c)` into `f(a)(b)(c)` — partial application one arg at a time.
@@ -647,6 +693,11 @@ const double = multiply(2);
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Quick comparison table
 
 | Problem          | One line                         | Built-in / shortcut             |
@@ -680,3 +731,6 @@ const double = multiply(2);
 ---
 
 _More problems: [Javascript/vanila-js/08-top-30-javascript-interview-problems.md](../Javascript/vanila-js/08-top-30-javascript-interview-problems.md) · [Javascript/vanila-js/06-shallow-deep-copy-closures-hoisting-memoize.md](../Javascript/vanila-js/06-shallow-deep-copy-closures-hoisting-memoize.md)_
+
+
+<p><a href="#i10">Back to index</a></p>

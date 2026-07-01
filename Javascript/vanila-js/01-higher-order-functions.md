@@ -16,24 +16,30 @@ Most modern JavaScript interviews expect you to **use** and **implement** HOFs c
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What makes a function "higher-order"?](#1-what-makes-a-function-higher-order)
-2. [Callbacks vs HOFs](#2-callbacks-vs-hofs)
-3. [Implement `map` from scratch](#3-implement-map-from-scratch)
-4. [Implement `filter` from scratch](#4-implement-filter-from-scratch)
-5. [Implement `reduce` from scratch](#5-implement-reduce-from-scratch)
-6. [Chaining: the data pipeline pattern](#6-chaining-the-data-pipeline-pattern)
-7. [`forEach` vs `map` — interview trap](#7-foreach-vs-map--interview-trap)
-8. [`some`, `every`, `find`, `findIndex`](#8-some-every-find-findindex)
-9. [Composition: `compose` and `pipe`](#9-composition-compose-and-pipe)
-10. [Currying and partial application](#10-currying-and-partial-application)
-11. [Debounce and throttle (HOF classics)](#11-debounce-and-throttle-hof-classics)
-12. [Once, memoize, retry](#12-once-memoize-retry)
-13. [Array methods as HOFs on objects](#13-array-methods-as-hofs-on-objects)
-14. [Senior follow-ups](#14-senior-follow-ups)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What makes a function "higher-order"?](#p1) |
+| <span id="i2"></span>2 | [Callbacks vs HOFs](#p2) |
+| <span id="i3"></span>3 | [Implement `map` from scratch](#p3) |
+| <span id="i4"></span>4 | [Implement `filter` from scratch](#p4) |
+| <span id="i5"></span>5 | [Implement `reduce` from scratch](#p5) |
+| <span id="i6"></span>6 | [Chaining: the data pipeline pattern](#p6) |
+| <span id="i7"></span>7 | [`forEach` vs `map` — interview trap](#p7) |
+| <span id="i8"></span>8 | [`some`, `every`, `find`, `findIndex`](#p8) |
+| <span id="i9"></span>9 | [Composition: `compose` and `pipe`](#p9) |
+| <span id="i10"></span>10 | [Currying and partial application](#p10) |
+| <span id="i11"></span>11 | [Debounce and throttle (HOF classics)](#p11) |
+| <span id="i12"></span>12 | [Once, memoize, retry](#p12) |
+| <span id="i13"></span>13 | [Array methods as HOFs on objects](#p13) |
+| <span id="i14"></span>14 | [Senior follow-ups](#p14) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What makes a function "higher-order"?
 
@@ -60,6 +66,11 @@ double(5); // 10
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Callbacks vs HOFs
 
 | Term         | Meaning                                                      |
@@ -76,6 +87,11 @@ double(5); // 10
 **Senior point:** Callbacks enable **inversion of control** — the HOF controls _when_ and _how often_ your function runs (loop, event, retry).
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Implement `map` from scratch
 
@@ -115,6 +131,11 @@ function myMap(array, callback, thisArg) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Implement `filter` from scratch
 
 ```javascript
@@ -143,6 +164,11 @@ const active = employees.filter((e) => e.status === 'active');
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Implement `reduce` from scratch
 
@@ -234,6 +260,11 @@ const byId = products.reduce((map, p) => {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Chaining: the data pipeline pattern
 
 Same pattern as `tableQuery.js` in this repo: **search → filter → sort → paginate**.
@@ -258,6 +289,11 @@ function pipeline(rows, ...fns) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. `forEach` vs `map` — interview trap
 
 ```javascript
@@ -279,6 +315,11 @@ const doubled = [1, 2, 3].forEach((n) => n * 2); // undefined
 | `reduce`  | Any single value   | Aggregate / build structure |
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. `some`, `every`, `find`, `findIndex`
 
@@ -308,6 +349,11 @@ function myFind(array, predicate) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Composition: `compose` and `pipe`
 
 Combine small pure functions into one.
@@ -336,6 +382,11 @@ toSlug('  Hello World  '); // "hello-world"
 > `pipe` reads left-to-right like a data pipeline; `compose` is right-to-left like math notation. I use composition to keep functions small and testable.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Currying and partial application
 
@@ -374,6 +425,11 @@ const activeUsers = users.filter(byProp('status', 'active'));
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Debounce and throttle (HOF classics)
 
@@ -428,6 +484,11 @@ const onScroll = throttle(() => paintVirtualList(), 16);
 | **Throttle** | On interval | Scroll, mousemove, drag  |
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Once, memoize, retry
 
@@ -493,6 +554,11 @@ function retry(fn, attempts = 3, delayMs = 500) {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Array methods as HOFs on objects
 
 ```javascript
@@ -512,6 +578,11 @@ const curved2 = Object.keys(scores).reduce((acc, key) => {
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Senior follow-ups
 
@@ -579,3 +650,6 @@ const results = await Promise.all(ids.map((id) => fetch(`/api/${id}`)));
 - [2634-filter-elements-from-array.js](../leetcode/2634-filter-elements-from-array.js)
 - [2635-apply-transform-over-each-element-in-array.js](../leetcode/2635-apply-transform-over-each-element-in-array.js)
 - [2665-counter-two.js](../leetcode/2665-counter-two.js)
+
+
+<p><a href="#i14">Back to index</a></p>

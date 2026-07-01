@@ -14,23 +14,29 @@ format: "Flowchart + Explanation"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Big picture — all technologies together](#1-big-picture--all-technologies-together)
-2. [From scratch — project setup flow](#2-from-scratch--project-setup-flow)
-3. [HTML — where everything starts](#3-html--where-everything-starts)
-4. [Node.js — two roles in the stack](#4-nodejs--two-roles-in-the-stack)
-5. [React SPA — full request-to-paint flow](#5-react-spa--full-request-to-paint-flow)
-6. [React render cycle (inside the browser)](#6-react-render-cycle-inside-the-browser)
-7. [Next.js — how it extends React](#7-nextjs--how-it-extends-react)
-8. [Redux (classic) — data flow](#8-redux-classic--data-flow)
-9. [Redux Toolkit (RTK) — simplified flow](#9-redux-toolkit-rtk--simplified-flow)
-10. [End-to-end: user clicks "Add to Cart"](#10-end-to-end-user-clicks-add-to-cart)
-11. [React SPA vs Next.js — side by side](#11-react-spa-vs-nextjs--side-by-side)
-12. [Production deploy flow](#12-production-deploy-flow)
-13. [Interview answer — explain the stack in 60 seconds](#13-interview-answer--explain-the-stack-in-60-seconds)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Big picture — all technologies together](#p1) |
+| <span id="i2"></span>2 | [From scratch — project setup flow](#p2) |
+| <span id="i3"></span>3 | [HTML — where everything starts](#p3) |
+| <span id="i4"></span>4 | [Node.js — two roles in the stack](#p4) |
+| <span id="i5"></span>5 | [React SPA — full request-to-paint flow](#p5) |
+| <span id="i6"></span>6 | [React render cycle (inside the browser)](#p6) |
+| <span id="i7"></span>7 | [Next.js — how it extends React](#p7) |
+| <span id="i8"></span>8 | [Redux (classic) — data flow](#p8) |
+| <span id="i9"></span>9 | [Redux Toolkit (RTK) — simplified flow](#p9) |
+| <span id="i10"></span>10 | [End-to-end: user clicks "Add to Cart"](#p10) |
+| <span id="i11"></span>11 | [React SPA vs Next.js — side by side](#p11) |
+| <span id="i12"></span>12 | [Production deploy flow](#p12) |
+| <span id="i13"></span>13 | [Interview answer — explain the stack in 60 seconds](#p13) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Big picture — all technologies together
 
@@ -87,6 +93,11 @@ flowchart TB
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. From scratch — project setup flow
 
 ```mermaid
@@ -140,6 +151,11 @@ flowchart TD
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. HTML — where everything starts
 
 ```mermaid
@@ -186,6 +202,11 @@ flowchart LR
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Node.js — two roles in the stack
 
 ```mermaid
@@ -229,6 +250,11 @@ flowchart TB
 **Interview line:** Node runs JavaScript on the server — both your **build tools** (Vite, Next) and your **API** (Express) depend on it.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. React SPA — full request-to-paint flow
 
@@ -277,6 +303,11 @@ createRoot(document.getElementById('root')!).render(
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. React render cycle (inside the browser)
 
 ```mermaid
@@ -303,6 +334,11 @@ flowchart TD
 | **Effects** | Side effects after paint (`useEffect`) |
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Next.js — how it extends React
 
@@ -344,6 +380,11 @@ Next.js         = React + file routing + SSR/RSC + API layer + deploy
 **Interview line:** Next.js is React with a server — routes are files, data can fetch before HTML ships, and mutations can use Server Actions instead of a separate REST layer.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Redux (classic) — data flow
 
@@ -393,6 +434,11 @@ const store = createStore(cartReducer);
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Redux Toolkit (RTK) — simplified flow
 
@@ -446,6 +492,11 @@ Component
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. End-to-end: user clicks "Add to Cart"
 
 Full flow across **HTML → React → RTK → API → DOM**:
@@ -497,6 +548,11 @@ const count = useSelector(selectCartCount)  // → re-render when count changes
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. React SPA vs Next.js — side by side
 
 ```mermaid
@@ -529,6 +585,11 @@ flowchart TB
 | Deploy | `dist/` → Nginx | Vercel / `standalone` Docker |
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Production deploy flow
 
@@ -574,6 +635,11 @@ cd Docker/fullstack && docker compose up --build
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Interview answer — explain the stack in 60 seconds
 
 > **HTML** is the document shell with a root div. **Node.js** runs the dev server, build tools, and optionally an Express API. **React** mounts into that root, builds a component tree, and updates the DOM through a virtual DOM diff. When client state is shared across many components — like a cart — I use **Redux Toolkit**: components dispatch actions, slices update the store with Immer, and selectors feed data back to the UI. **Next.js** is the full-stack layer on top of React — file-based routes, server components that fetch before HTML ships, and Server Actions for mutations. In this repo's Projects I use Vite + React + RTK; for production full-stack I'd reach for Next.js or React + Express with the same RTK patterns on the client.
@@ -603,3 +669,6 @@ React SPA path: Request → index.html → JS bundle → RTK → API → render
 ---
 
 *Related: [Projects/09-shopping-cart/ARCHITECTURE.md](../Projects/09-shopping-cart/ARCHITECTURE.md) · [react-at-a-glance.md](./react-at-a-glance.md) · [nextjs-at-a-glance.md](./nextjs-at-a-glance.md) · [Docker/fullstack/](../Docker/fullstack/)*
+
+
+<p><a href="#i13">Back to index</a></p>

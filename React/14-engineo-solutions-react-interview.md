@@ -12,32 +12,42 @@ Questions from a **Senior React Developer** interview at Engineo Solutions Pvt. 
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### 1st Round
-1. [Tell me about your key skills](#1-tell-me-about-your-key-skills)
-2. [Why did you choose React?](#2-why-did-you-choose-react)
-3. [Your role in the last project](#3-what-was-your-role-in-your-last-project)
-4. [Authentication in React](#4-how-do-you-implement-authentication-in-react)
-5. [Session Storage vs Local Storage](#5-session-storage-vs-local-storage)
-6. [How do you use Context API?](#6-how-do-you-use-context-api)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Tell me about your key skills](#p1) |
+| <span id="i2"></span>2 | [Why did you choose React?](#p2) |
+| <span id="i3"></span>3 | [Your role in the last project](#p3) |
+| <span id="i4"></span>4 | [Authentication in React](#p4) |
+| <span id="i5"></span>5 | [Session Storage vs Local Storage](#p5) |
+| <span id="i6"></span>6 | [How do you use Context API?](#p6) |
 
 ### 2nd Round
-7. [Authenticate React application (deep dive)](#7-how-do-you-authenticate-your-react-application)
-8. [New features in latest React versions](#8-new-features-in-latest-react-versions)
-9. [How does addEventListener work?](#9-how-does-addeventlistener-work)
-10. [useLayoutEffect](#10-uselayouteffect-hook)
-11. [Debouncing and Throttling](#11-debouncing-and-throttling)
-12. [JavaScript Event Loop](#12-javascript-event-loop)
-13. [useState hook](#13-usestate-hook)
-14. [useEffect hook](#14-useeffect-hook)
-15. [What is Redux?](#15-what-is-redux)
-16. [Optimize Redux performance](#16-optimize-redux-application-performance)
-17. [Lazy Loading](#17-lazy-loading)
+
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Authenticate React application (deep dive)](#p7) |
+| <span id="i8"></span>8 | [New features in latest React versions](#p8) |
+| <span id="i9"></span>9 | [How does addEventListener work?](#p9) |
+| <span id="i10"></span>10 | [useLayoutEffect](#p10) |
+| <span id="i11"></span>11 | [Debouncing and Throttling](#p11) |
+| <span id="i12"></span>12 | [JavaScript Event Loop](#p12) |
+| <span id="i13"></span>13 | [useState hook](#p13) |
+| <span id="i14"></span>14 | [useEffect hook](#p14) |
+| <span id="i15"></span>15 | [What is Redux?](#p15) |
+| <span id="i16"></span>16 | [Optimize Redux performance](#p16) |
+| <span id="i17"></span>17 | [Lazy Loading](#p17) |
 
 ---
-
 # 1st Round
+
+<a id="p1"></a>
 
 ## 1. Tell me about your key skills
 
@@ -72,6 +82,11 @@ Use the **T-shaped model**: deep in React/JS frontend, broad in related areas (A
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Why did you choose React?
 
 ### Theory
@@ -100,6 +115,11 @@ Interviewers want **genuine reasoning** — not "because it's popular." Connect 
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What was your role in your last project?
 
 ### Theory
@@ -126,6 +146,11 @@ Use **STAR method** — Situation, Task, Action, Result. For senior roles, empha
 > **Result:** Module shipped on time, zero P0 bugs in first month, dashboard LCP improved 74%, junior devs promoted within a year.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. How do you implement authentication in React?
 
@@ -241,6 +266,11 @@ api.interceptors.response.use(
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Session Storage vs Local Storage
 
 ### Theory
@@ -302,6 +332,11 @@ function useSessionStorage<T>(key: string, initial: T) {
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. How do you use Context API?
 
@@ -368,6 +403,11 @@ const { data: users } = useQuery({ queryKey: ["users"], queryFn: fetchUsers });
 
 # 2nd Round
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. How do you authenticate your React application?
 
 ### Theory
@@ -415,6 +455,11 @@ function RequireRole({ role, children }: { role: string; children: React.ReactNo
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. New features in latest React versions
 
@@ -490,6 +535,11 @@ function TodoList({ todos, addTodo }) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. How does addEventListener work?
 
 ### Theory
@@ -559,6 +609,11 @@ document.getElementById("menu").addEventListener("click", (e) => {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. useLayoutEffect Hook
 
 ### Theory
@@ -615,6 +670,11 @@ useLayoutEffect(() => {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Debouncing and Throttling
 
 ### Theory
@@ -661,6 +721,11 @@ const debouncedSearch = useMemo(
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. JavaScript Event Loop
 
 ### Theory
@@ -682,6 +747,11 @@ console.log("2");
 ```
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. useState Hook
 
@@ -719,6 +789,11 @@ function OrderForm() {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. useEffect Hook
 
 ### Theory
@@ -753,6 +828,11 @@ function UserDashboard({ userId }: { userId: string }) {
 ```
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. What is Redux?
 
@@ -803,6 +883,11 @@ function Profile() {
 ```
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ## 16. Optimize Redux application performance
 
@@ -867,6 +952,11 @@ injectReducer("reports", reportsReducer);
 ```
 
 ---
+
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
 
 ## 17. Lazy Loading
 
@@ -937,3 +1027,6 @@ function App() {
 ---
 
 *Engineo tests senior breadth — auth, Redux, hooks, and JS fundamentals in one interview. Prepare short confident answers with one example each.*
+
+
+<p><a href="#i17">Back to index</a></p>

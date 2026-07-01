@@ -14,20 +14,27 @@ Questions from a **Senior React Developer** interview at **Encora** — **1st ro
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### 1st Round — Coding & Fundamentals
-1. [Auto Increment/Decrement Counter](#1-auto-incrementdecrement-counter)
-2. [Custom useFetch Hook](#2-custom-usefetch-hook)
-3. [Join/Merge Objects from Object List](#3-joinmerge-objects-from-object-list)
-4. [useDeferredValue Hook](#4-usedeferredvalue-hook)
-5. [Context API](#5-context-api)
-6. [Why Do We Use Custom Hooks?](#6-why-do-we-use-custom-hooks)
-7. [Debouncing](#7-debouncing)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Auto Increment/Decrement Counter](#p1) |
+| <span id="i2"></span>2 | [Custom useFetch Hook](#p2) |
+| <span id="i3"></span>3 | [Join/Merge Objects from Object List](#p3) |
+| <span id="i4"></span>4 | [useDeferredValue Hook](#p4) |
+| <span id="i5"></span>5 | [Context API](#p5) |
+| <span id="i6"></span>6 | [Why Do We Use Custom Hooks?](#p6) |
+| <span id="i7"></span>7 | [Debouncing](#p7) |
 
 ---
-
 # 1st Round — Coding & Fundamentals
+
+<a id="p1"></a>
 
 ## 1. Auto Increment/Decrement Counter
 
@@ -129,6 +136,11 @@ function Counter() {
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Custom useFetch Hook
 
@@ -283,6 +295,11 @@ Mention that in production you'd use **TanStack Query** for caching, deduplicati
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Join/Merge Objects from Object List
 
 ### Theory
@@ -405,6 +422,11 @@ function MergedConfig({ configSources }) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. useDeferredValue Hook
 
 ### Theory
@@ -481,6 +503,11 @@ const handleChange = (e) => {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Context API
 
@@ -563,6 +590,11 @@ Split contexts by update frequency — `ThemeContext` separate from `UserContext
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Why Do We Use Custom Hooks?
 
 ### Theory
@@ -626,6 +658,11 @@ function SettingsPage() {
 - Same **Rules of Hooks** — top level only, no conditions
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Debouncing
 
@@ -768,3 +805,6 @@ const debouncedSave = useDebouncedCallback((text) => saveToApi(text), 500);
 ---
 
 *Encora's 1st round balances hands-on React coding with modern hook knowledge — practice building counters and hooks from scratch without copy-paste templates.*
+
+
+<p><a href="#i7">Back to index</a></p>

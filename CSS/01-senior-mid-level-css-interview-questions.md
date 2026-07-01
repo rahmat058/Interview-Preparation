@@ -23,61 +23,81 @@ Practical CSS questions for **mid-level** and **senior frontend** roles. Each se
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Fundamentals
 
-1. [Box Model & `box-sizing`](#1-box-model--box-sizing)
-2. [Specificity & Cascade](#2-specificity--cascade)
-3. [`display: none` vs `visibility: hidden` vs `opacity`](#3-display-none-vs-visibility-hidden-vs-opacity)
-4. [Positioning: static, relative, absolute, fixed, sticky](#4-positioning-static-relative-absolute-fixed-sticky)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Box Model & `box-sizing`](#p1) |
+| <span id="i2"></span>2 | [Specificity & Cascade](#p2) |
+| <span id="i3"></span>3 | [`display: none` vs `visibility: hidden` vs `opacity`](#p3) |
+| <span id="i4"></span>4 | [Positioning: static, relative, absolute, fixed, sticky](#p4) |
 
 ### Layout Systems
 
-5. [Flexbox vs Grid — when to use which](#5-flexbox-vs-grid--when-to-use-which)
-6. [Centering an element (5 approaches)](#6-centering-an-element-5-approaches)
-7. [Holy Grail / sidebar layouts](#7-holy-grail--sidebar-layouts)
-8. [Container Queries vs Media Queries](#8-container-queries-vs-media-queries)
+| # | Section |
+| --- | --- |
+| <span id="i5"></span>5 | [Flexbox vs Grid — when to use which](#p5) |
+| <span id="i6"></span>6 | [Centering an element (5 approaches)](#p6) |
+| <span id="i7"></span>7 | [Holy Grail / sidebar layouts](#p7) |
+| <span id="i8"></span>8 | [Container Queries vs Media Queries](#p8) |
 
 ### Responsive & Modern CSS
 
-9. [Mobile-first vs Desktop-first](#9-mobile-first-vs-desktop-first)
-10. [CSS Custom Properties (variables)](#10-css-custom-properties-variables)
-11. [`clamp()` for fluid typography](#11-clamp-for-fluid-typography)
-12. [Logical properties (`margin-inline`, `padding-block`)](#12-logical-properties-margin-inline-padding-block)
+| # | Section |
+| --- | --- |
+| <span id="i9"></span>9 | [Mobile-first vs Desktop-first](#p9) |
+| <span id="i10"></span>10 | [CSS Custom Properties (variables)](#p10) |
+| <span id="i11"></span>11 | [`clamp()` for fluid typography](#p11) |
+| <span id="i12"></span>12 | [Logical properties (`margin-inline`, `padding-block`)](#p12) |
 
 ### Architecture & Maintainability
 
-13. [BEM naming convention](#13-bem-naming-convention)
-14. [CSS Modules vs global CSS vs Tailwind](#14-css-modules-vs-global-css-vs-tailwind)
-15. [`:is()`, `:where()`, `:has()`](#15-is-where-has)
+| # | Section |
+| --- | --- |
+| <span id="i13"></span>13 | [BEM naming convention](#p13) |
+| <span id="i14"></span>14 | [CSS Modules vs global CSS vs Tailwind](#p14) |
+| <span id="i15"></span>15 | [`:is()`, `:where()`, `:has()`](#p15) |
 
 ### Animations & UX
 
-16. [Transition vs Animation](#16-transition-vs-animation)
-17. [`transform` vs animating `top`/`left`](#17-transform-vs-animating-topleft)
-18. [`prefers-reduced-motion`](#18-prefers-reduced-motion)
+| # | Section |
+| --- | --- |
+| <span id="i16"></span>16 | [Transition vs Animation](#p16) |
+| <span id="i17"></span>17 | [`transform` vs animating `top`/`left`](#p17) |
+| <span id="i18"></span>18 | [`prefers-reduced-motion`](#p18) |
 
 ### Performance & Debugging
 
-19. [Critical CSS & render-blocking](#19-critical-css--render-blocking)
-20. [Layout thrashing / forced reflow](#20-layout-thrashing--forced-reflow)
-21. [Stacking context & `z-index`](#21-stacking-context--z-index)
+| # | Section |
+| --- | --- |
+| <span id="i19"></span>19 | [Critical CSS & render-blocking](#p19) |
+| <span id="i20"></span>20 | [Layout thrashing / forced reflow](#p20) |
+| <span id="i21"></span>21 | [Stacking context & `z-index`](#p21) |
 
 ### Accessibility
 
-22. [Focus styles & `:focus-visible`](#22-focus-styles--focus-visible)
-23. [Color contrast & not relying on color alone](#23-color-contrast--not-relying-on-color-alone)
+| # | Section |
+| --- | --- |
+| <span id="i22"></span>22 | [Focus styles & `:focus-visible`](#p22) |
+| <span id="i23"></span>23 | [Color contrast & not relying on color alone](#p23) |
 
 ### Senior Scenario Questions
 
-24. [Design system tokens in CSS](#24-design-system-tokens-in-css)
-25. [How would you migrate from CSS3 to Tailwind v4?](#25-how-would-you-migrate-from-css3-to-tailwind-v4)
-26. [Cross-browser issues you've debugged](#26-cross-browser-issues-youve-debugged)
+| # | Section |
+| --- | --- |
+| <span id="i24"></span>24 | [Design system tokens in CSS](#p24) |
+| <span id="i25"></span>25 | [How would you migrate from CSS3 to Tailwind v4?](#p25) |
+| <span id="i26"></span>26 | [Cross-browser issues you've debugged](#p26) |
 
 ---
-
 ## Fundamentals
+
+<a id="p1"></a>
 
 ### 1. Box Model & `box-sizing`
 
@@ -127,6 +147,11 @@ Flex items default to `min-width: auto`, which prevents shrinking below content 
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ### 2. Specificity & Cascade
 
 **What they test:** Why styles don't apply and how you debug conflicts.
@@ -170,6 +195,11 @@ button.primary.active {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ### 3. `display: none` vs `visibility: hidden` vs `opacity`
 
 | Property             | In layout?           | Clickable?                          | Screen readers? |
@@ -201,6 +231,11 @@ button.primary.active {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ### 4. Positioning: static, relative, absolute, fixed, sticky
 
@@ -244,6 +279,11 @@ button.primary.active {
 
 ## Layout Systems
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ### 5. Flexbox vs Grid — when to use which
 
 | Flexbox                             | Grid                                   |
@@ -280,6 +320,11 @@ button.primary.active {
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ### 6. Centering an element (5 approaches)
 
@@ -339,6 +384,11 @@ dialog {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ### 7. Holy Grail / sidebar layouts
 
 **One-line answer:**
@@ -387,6 +437,11 @@ dialog {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ### 8. Container Queries vs Media Queries
 
 **One-line answer:**
@@ -414,6 +469,11 @@ dialog {
 ---
 
 ## Responsive & Modern CSS
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ### 9. Mobile-first vs Desktop-first
 
@@ -443,6 +503,11 @@ dialog {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ### 10. CSS Custom Properties (variables)
 
@@ -483,6 +548,11 @@ dialog {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ### 11. `clamp()` for fluid typography
 
 **One-line answer:**
@@ -501,6 +571,11 @@ h1 {
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ### 12. Logical properties (`margin-inline`, `padding-block`)
 
@@ -527,6 +602,11 @@ h1 {
 ---
 
 ## Architecture & Maintainability
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ### 13. BEM naming convention
 
@@ -557,6 +637,11 @@ h1 {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ### 14. CSS Modules vs global CSS vs Tailwind
 
 | Approach        | Pros                             | Cons                                     |
@@ -577,6 +662,11 @@ const inputClass =
 ```
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ### 15. `:is()`, `:where()`, `:has()`
 
@@ -605,6 +695,11 @@ const inputClass =
 ---
 
 ## Animations & UX
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ### 16. Transition vs Animation
 
@@ -638,6 +733,11 @@ const inputClass =
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ### 17. `transform` vs animating `top`/`left`
 
 **One-line answer:**
@@ -666,6 +766,11 @@ const inputClass =
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ### 18. `prefers-reduced-motion`
 
 **One-line answer:**
@@ -688,6 +793,11 @@ const inputClass =
 
 ## Performance & Debugging
 
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
+
 ### 19. Critical CSS & render-blocking
 
 **One-line answer:**
@@ -704,6 +814,11 @@ const inputClass =
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ### 20. Layout thrashing / forced reflow
 
@@ -725,6 +840,11 @@ elements.forEach((el, i) => {
 ```
 
 ---
+
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
 
 ### 21. Stacking context & `z-index`
 
@@ -757,6 +877,11 @@ elements.forEach((el, i) => {
 
 ## Accessibility
 
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
+
 ### 22. Focus styles & `:focus-visible`
 
 **One-line answer:**
@@ -774,6 +899,11 @@ elements.forEach((el, i) => {
 ```
 
 ---
+
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
 
 ### 23. Color contrast & not relying on color alone
 
@@ -798,6 +928,11 @@ elements.forEach((el, i) => {
 ---
 
 ## Senior Scenario Questions
+
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
 
 ### 24. Design system tokens in CSS
 
@@ -827,6 +962,11 @@ Products override semantics, not every component:
 
 ---
 
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
+
 ### 25. How would you migrate from CSS3 to Tailwind v4?
 
 **Real example** (from `vanilla-js/02-catalog-spa` migration):
@@ -850,6 +990,11 @@ const inputClass = "w-full rounded-xl border border-slate-200 …";
 ```
 
 ---
+
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
 
 ### 26. Cross-browser issues you've debugged
 
@@ -911,3 +1056,6 @@ const inputClass = "w-full rounded-xl border border-slate-200 …";
 1. **Mid-level:** Box model → Flexbox → Grid → responsive → specificity
 2. **Senior:** Stacking contexts → performance → architecture (tokens, Tailwind vs modules) → a11y → container queries
 3. **Practice:** Rebuild one layout from this repo without Tailwind, then explain why you'd choose utilities
+
+
+<p><a href="#i26">Back to index</a></p>

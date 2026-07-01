@@ -14,25 +14,31 @@ End-to-end Vue 3 interview preparation covering **fundamentals → Composition A
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Vue.js?](#1-what-is-vuejs)
-2. [Vue 2 vs Vue 3](#2-vue-2-vs-vue-3)
-3. [Options API vs Composition API](#3-options-api-vs-composition-api)
-4. [Template Syntax & Directives](#4-template-syntax--directives)
-5. [Components — Props, Emits, Slots](#5-components--propss-emits-slots)
-6. [Reactivity System](#6-reactivity-system)
-7. [Computed vs Watch vs watchEffect](#7-computed-vs-watch-vs-watcheffect)
-8. [Lifecycle Hooks](#8-lifecycle-hooks)
-9. [Provide / Inject](#9-provide--inject)
-10. [Pinia State Management](#10-pinia-state-management)
-11. [Vue Router](#11-vue-router)
-12. [Composables (Custom Hooks)](#12-composables-custom-hooks)
-13. [Performance Optimization](#13-performance-optimization)
-14. [Nuxt.js & SSR](#14-nuxtjs--ssr)
-15. [Vue vs React](#15-vue-vs-react)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Vue.js?](#p1) |
+| <span id="i2"></span>2 | [Vue 2 vs Vue 3](#p2) |
+| <span id="i3"></span>3 | [Options API vs Composition API](#p3) |
+| <span id="i4"></span>4 | [Template Syntax & Directives](#p4) |
+| <span id="i5"></span>5 | [Components — Props, Emits, Slots](#p5) |
+| <span id="i6"></span>6 | [Reactivity System](#p6) |
+| <span id="i7"></span>7 | [Computed vs Watch vs watchEffect](#p7) |
+| <span id="i8"></span>8 | [Lifecycle Hooks](#p8) |
+| <span id="i9"></span>9 | [Provide / Inject](#p9) |
+| <span id="i10"></span>10 | [Pinia State Management](#p10) |
+| <span id="i11"></span>11 | [Vue Router](#p11) |
+| <span id="i12"></span>12 | [Composables (Custom Hooks)](#p12) |
+| <span id="i13"></span>13 | [Performance Optimization](#p13) |
+| <span id="i14"></span>14 | [Nuxt.js & SSR](#p14) |
+| <span id="i15"></span>15 | [Vue vs React](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Vue.js?
 
@@ -70,6 +76,11 @@ const increment = () => count.value++;
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Vue 2 vs Vue 3
 
 ### Theory
@@ -89,6 +100,11 @@ const increment = () => count.value++;
 > Vue 3 uses Proxy reactivity — tracks dynamic property add/delete, supports arrays natively, and enables Composition API with better TypeScript and tree-shaking.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Options API vs Composition API
 
@@ -137,6 +153,11 @@ const increment = () => count.value++;
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Template Syntax & Directives
 
 ### Theory
@@ -159,6 +180,11 @@ const increment = () => count.value++;
 > v-if for conditional mount/unmount, v-show for frequent toggles. v-model is syntactic sugar for :value + @update:modelValue. Always use :key with v-for.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Components — Props, Emits, Slots
 
@@ -201,6 +227,11 @@ const emit = defineEmits(["edit", "delete"]);
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Reactivity System
 
 ### Theory
@@ -239,6 +270,11 @@ name.value = "Priya";
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Computed vs Watch vs watchEffect
 
@@ -282,6 +318,11 @@ watchEffect(() => {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Lifecycle Hooks
 
 ### Theory
@@ -302,6 +343,11 @@ watchEffect(() => {
 > onMounted for DOM access and API calls. onUnmounted for cleanup — timers, listeners, WebSocket close. setup() replaces beforeCreate/created.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Provide / Inject
 
@@ -334,6 +380,11 @@ export function useTheme() {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Pinia State Management
 
@@ -390,6 +441,11 @@ export const useUserStore = defineStore("user", () => {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Vue Router
 
 ### Theory
@@ -434,6 +490,11 @@ router.beforeEach((to, from, next) => {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. Composables (Custom Hooks)
 
 ### Theory
@@ -475,6 +536,11 @@ export function useFetch(url) {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Performance Optimization
 
 ### Theory
@@ -494,6 +560,11 @@ export function useFetch(url) {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. Nuxt.js & SSR
 
 ### Theory
@@ -507,6 +578,11 @@ Rendering: `useFetch`, `useAsyncData` for SSR-safe data fetching.
 > Nuxt provides SSR, SSG, and file-based routing for Vue. useFetch runs on server and hydrates on client — better SEO than pure SPA.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Vue vs React
 
@@ -542,3 +618,6 @@ Rendering: `useFetch`, `useAsyncData` for SSR-safe data fetching.
 ---
 
 _Master Vue 3 Composition API + Pinia + Vue Router and you'll handle 90% of Vue interviews._
+
+
+<p><a href="#i15">Back to index</a></p>

@@ -11,30 +11,36 @@ Whether you're a beginner or an experienced React developer, these concepts make
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Keep components small and reusable](#1-keep-components-small-and-reusable)
-2. [Lift state up only when required](#2-lift-state-up-only-when-required)
-3. [Use custom hooks to avoid duplicate logic](#3-use-custom-hooks-to-avoid-duplicate-logic)
-4. [Never mutate state directly](#4-never-mutate-state-directly)
-5. [Use unique keys while rendering lists](#5-use-unique-keys-while-rendering-lists)
-6. [Understand when components re-render](#6-understand-when-components-re-render)
-7. [Use useMemo and useCallback only when necessary](#7-use-usememo-and-usecallback-only-when-necessary)
-8. [Optimize API calls and handle loading/error states](#8-optimize-api-calls-and-handle-loadingerror-states-properly)
-9. [Use React.lazy() and code splitting](#9-use-reactlazy-and-code-splitting-for-better-performance)
-10. [Keep business logic separate from UI](#10-keep-business-logic-separate-from-ui-components)
-11. [Follow a proper folder structure](#11-follow-a-proper-folder-structure)
-12. [Use Error Boundaries](#12-use-error-boundaries-to-handle-unexpected-ui-crashes)
-13. [Avoid unnecessary prop drilling](#13-avoid-unnecessary-prop-drilling)
-14. [Clean up subscriptions in useEffect](#14-clean-up-subscriptions-timers-and-event-listeners-inside-useeffect)
-15. [Write unit tests for critical functionality](#15-write-unit-tests-for-critical-functionality)
-16. [Focus on accessibility](#16-focus-on-accessibility)
-17. [Implement responsive design from the beginning](#17-implement-responsive-design-from-the-beginning)
-18. [Use environment variables](#18-use-environment-variables-for-configuration-values)
-19. [Keep dependencies updated](#19-keep-dependencies-updated-and-remove-unused-packages)
-20. [Measure performance](#20-measure-performance-using-react-devtools-and-lighthouse)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Keep components small and reusable](#p1) |
+| <span id="i2"></span>2 | [Lift state up only when required](#p2) |
+| <span id="i3"></span>3 | [Use custom hooks to avoid duplicate logic](#p3) |
+| <span id="i4"></span>4 | [Never mutate state directly](#p4) |
+| <span id="i5"></span>5 | [Use unique keys while rendering lists](#p5) |
+| <span id="i6"></span>6 | [Understand when components re-render](#p6) |
+| <span id="i7"></span>7 | [Use useMemo and useCallback only when necessary](#p7) |
+| <span id="i8"></span>8 | [Optimize API calls and handle loading/error states](#p8) |
+| <span id="i9"></span>9 | [Use React.lazy() and code splitting](#p9) |
+| <span id="i10"></span>10 | [Keep business logic separate from UI](#p10) |
+| <span id="i11"></span>11 | [Follow a proper folder structure](#p11) |
+| <span id="i12"></span>12 | [Use Error Boundaries](#p12) |
+| <span id="i13"></span>13 | [Avoid unnecessary prop drilling](#p13) |
+| <span id="i14"></span>14 | [Clean up subscriptions in useEffect](#p14) |
+| <span id="i15"></span>15 | [Write unit tests for critical functionality](#p15) |
+| <span id="i16"></span>16 | [Focus on accessibility](#p16) |
+| <span id="i17"></span>17 | [Implement responsive design from the beginning](#p17) |
+| <span id="i18"></span>18 | [Use environment variables](#p18) |
+| <span id="i19"></span>19 | [Keep dependencies updated](#p19) |
+| <span id="i20"></span>20 | [Measure performance](#p20) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Keep components small and reusable
 
@@ -103,6 +109,11 @@ function OrderCard({ order }) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Lift state up only when required
 
 ### Theory
@@ -153,6 +164,11 @@ function Dashboard() {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Use custom hooks to avoid duplicate logic
 
@@ -229,6 +245,11 @@ function SearchPage() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Never mutate state directly
 
 ### Theory
@@ -295,6 +316,11 @@ const cartSlice = createSlice({
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Use unique keys while rendering lists
 
 ### Theory
@@ -336,6 +362,11 @@ function TodoList({ todos, onDelete }) {
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Understand when components re-render
 
@@ -399,6 +430,11 @@ function DebugRender({ name }) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Use useMemo and useCallback only when necessary
 
 ### Theory
@@ -448,6 +484,11 @@ function Greeting({ name }) {
 **Rule:** Profile first with React DevTools Profiler → identify slow renders → then add memoization.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Optimize API calls and handle loading/error states properly
 
@@ -518,6 +559,11 @@ function useFetch<T>(url: string) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Use React.lazy() and code splitting for better performance
 
 ### Theory
@@ -585,6 +631,11 @@ function BlogEditor() {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Keep business logic separate from UI components
 
@@ -663,6 +714,11 @@ function CheckoutSummary() {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Follow a proper folder structure
 
 ### Theory
@@ -727,6 +783,11 @@ src/
 - Each feature exports a public API via `index.ts`
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Use Error Boundaries to handle unexpected UI crashes
 
@@ -806,6 +867,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Avoid unnecessary prop drilling
 
 ### Theory
@@ -867,6 +933,11 @@ function DeepNestedButton() {
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Clean up subscriptions, timers, and event listeners inside useEffect
 
@@ -931,6 +1002,11 @@ function LiveOrderTracker({ orderId }) {
 | `subscribe()` (RxJS, store)  | `unsubscribe()`                  |
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Write unit tests for critical functionality
 
@@ -1011,6 +1087,11 @@ describe("LoginForm", () => {
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Focus on accessibility
 
 ### Theory
@@ -1081,6 +1162,11 @@ npx playwright test --grep a11y
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Implement responsive design from the beginning
 
 ### Theory
@@ -1148,6 +1234,11 @@ function ProductPage() {
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ## 18. Use environment variables for configuration values
 
 ### Theory
@@ -1204,6 +1295,11 @@ const apiClient = axios.create({ baseURL: env.apiUrl });
 - ❌ `VITE_STRIPE_SECRET_KEY`, `VITE_DB_PASSWORD` (secrets belong on server only)
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Keep dependencies updated and remove unused packages
 
@@ -1268,6 +1364,11 @@ npm test                      # verify nothing broke
 | Dependabot / Renovate in CI               | Automated         |
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. Measure performance using React DevTools and Lighthouse
 
@@ -1389,3 +1490,6 @@ onCLS(sendToAnalytics);
 ---
 
 _These 20 practices form the foundation of production-grade React development. Apply them from day one of a project — retrofitting is always harder than building right._
+
+
+<p><a href="#i20">Back to index</a></p>

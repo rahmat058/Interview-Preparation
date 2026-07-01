@@ -9,20 +9,26 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [var, let and const](#1-what-is-the-difference-between-var-let-and-const)
-2. [Closures](#2-what-are-closures-in-javascript)
-3. [Hoisting](#3-what-is-hoisting-in-javascript)
-4. [this keyword](#4-what-is-the-this-keyword)
-5. [== vs ===](#5-what-is-the-difference-between--and-)
-6. [Promises](#6-what-are-promises)
-7. [async/await](#7-what-is-asyncawait)
-8. [Event delegation](#8-what-is-event-delegation)
-9. [Debounce and throttle](#9-what-is-debounce-and-throttle)
-10. [Deep copy vs shallow copy](#10-what-is-deep-copy-and-shallow-copy)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [var, let and const](#p1) |
+| <span id="i2"></span>2 | [Closures](#p2) |
+| <span id="i3"></span>3 | [Hoisting](#p3) |
+| <span id="i4"></span>4 | [this keyword](#p4) |
+| <span id="i5"></span>5 | [== vs ===](#p5) |
+| <span id="i6"></span>6 | [Promises](#p6) |
+| <span id="i7"></span>7 | [async/await](#p7) |
+| <span id="i8"></span>8 | [Event delegation](#p8) |
+| <span id="i9"></span>9 | [Debounce and throttle](#p9) |
+| <span id="i10"></span>10 | [Deep copy vs shallow copy](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is the difference between var, let and const?
 
@@ -55,6 +61,11 @@ user.name = "Amit"; // OK — mutate object
 > Use `const` by default, `let` when reassigning, avoid `var` — block scope and TDZ prevent loop and scope bugs.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What are closures in JavaScript?
 
@@ -92,6 +103,11 @@ const api = createApiClient("http://localhost:5000/api");
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is hoisting in JavaScript?
 
 ### Theory
@@ -115,6 +131,11 @@ let x = 10;
 > Hoisting moves declarations to the top of scope — `var` is undefined until assigned; `let`/`const` throw in TDZ until their line runs.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. What is the this keyword?
 
@@ -146,6 +167,11 @@ bound(); // "MERN"
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What is the difference between == and ===?
 
 ### Real Example
@@ -162,6 +188,11 @@ console.log(null == undefined); // true
 > `===` compares without coercion — always prefer it; `==` coerces types and causes subtle bugs.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What are promises?
 
@@ -193,6 +224,11 @@ Promise.all([fetch("/api/a"), fetch("/api/b")]).then(([a, b]) =>
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is async/await?
 
 ### Theory
@@ -221,6 +257,11 @@ async function loadDashboard() {
 > `async/await` writes asynchronous code synchronously — use `try/catch` for errors and `Promise.all` for parallel MERN API calls.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What is event delegation?
 
@@ -251,6 +292,11 @@ document.querySelector("#product-list").addEventListener("click", (e) => {
 > Event delegation listens on a parent and uses bubbling to handle child events — efficient for dynamic MERN lists without per-item listeners.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. What is debounce and throttle?
 
@@ -292,6 +338,11 @@ function throttle(fn, limit) {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. What is deep copy and shallow copy?
 
 ### Theory
@@ -324,3 +375,6 @@ console.log(original.nested.b); // 99 — unchanged
 ---
 
 **Deep dive:** [Javascript/kpmg-round-1-vanilla-javascript-interview.md](../Javascript/kpmg-round-1-vanilla-javascript-interview.md) · [React/07-javascript-interview-concepts-cheat-sheet.md](../React/07-javascript-interview-concepts-cheat-sheet.md)
+
+
+<p><a href="#i10">Back to index</a></p>

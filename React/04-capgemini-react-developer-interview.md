@@ -12,21 +12,27 @@ This round focuses on **practical understanding** of React, TypeScript, and Java
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is React and why is it efficient?](#1-what-is-react-and-why-is-it-efficient)
-2. [How does React work internally?](#2-how-does-react-work-internally)
-3. [Most challenging task in your project](#3-what-is-the-most-challenging-task-you-handled-in-your-project)
-4. [Is JavaScript tightly or loosely coupled?](#4-is-javascript-tightly-coupled-or-loosely-coupled)
-5. [Why do we use TypeScript?](#5-why-do-we-use-typescript)
-6. [extends in TypeScript — type vs interface](#6-how-does-extends-work-in-typescript-and-what-is-the-difference-between-type-and-interface)
-7. [How does Redux work — installation to usage](#7-how-does-redux-work-from-installation-to-usage-in-a-project)
-8. [Redux Toolkit vs TanStack Query](#8-have-you-used-redux-toolkit-rtk-or-tanstack-query)
-9. [Difference between bind and apply](#9-what-is-the-difference-between-bind-and-apply-in-javascript)
-10. [useCallback and useMemo in real projects](#10-what-has-been-your-experience-with-usecallback-and-usememo-in-real-projects)
-11. [Role of the dependency array in useEffect](#11-what-is-the-role-of-the-dependency-array-in-useeffect)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is React and why is it efficient?](#p1) |
+| <span id="i2"></span>2 | [How does React work internally?](#p2) |
+| <span id="i3"></span>3 | [Most challenging task in your project](#p3) |
+| <span id="i4"></span>4 | [Is JavaScript tightly or loosely coupled?](#p4) |
+| <span id="i5"></span>5 | [Why do we use TypeScript?](#p5) |
+| <span id="i6"></span>6 | [extends in TypeScript — type vs interface](#p6) |
+| <span id="i7"></span>7 | [How does Redux work — installation to usage](#p7) |
+| <span id="i8"></span>8 | [Redux Toolkit vs TanStack Query](#p8) |
+| <span id="i9"></span>9 | [Difference between bind and apply](#p9) |
+| <span id="i10"></span>10 | [useCallback and useMemo in real projects](#p10) |
+| <span id="i11"></span>11 | [Role of the dependency array in useEffect](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is React and why is it efficient?
 
@@ -81,6 +87,11 @@ function OrderTracker({ orderId }) {
 > React is a component-based UI library. You declare UI as a function of state. It's efficient because of Virtual DOM diffing, batched updates, and the Fiber engine that prioritizes user interactions over background rendering.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. How does React work internally?
 
@@ -161,6 +172,11 @@ function SearchPage() {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is the most challenging task you handled in your project?
 
 ### Theory
@@ -204,6 +220,11 @@ Capgemini values **practical experience**, so anchor your answer in real technic
 Pick a story where you can naturally mention **React, TypeScript, or Redux** — Capgemini's focus areas. Have 2–3 stories ready and choose based on the conversation flow.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Is JavaScript tightly coupled or loosely coupled?
 
@@ -278,6 +299,11 @@ function CheckoutPage() {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Why do we use TypeScript?
 
 ### Theory
@@ -339,6 +365,11 @@ async function fetchRestaurants(city: string): Promise<Restaurant[]> {
 > TypeScript adds static types to JavaScript. It catches errors at build time, improves IDE support, and makes large React codebases maintainable. In my projects, it's especially valuable for API response types, Redux state shapes, and component prop contracts.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. How does `extends` work in TypeScript and what is the difference between `type` and `interface`?
 
@@ -446,6 +477,11 @@ interface RestaurantListResponse extends PaginatedResponse<Restaurant> {
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. How does Redux work, from installation to usage in a project?
 
@@ -643,6 +679,11 @@ store.dispatch(addItem({ id: 1, name: "Biryani" }));
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Have you used Redux Toolkit (RTK) or TanStack Query?
 
 ### Theory
@@ -729,6 +770,11 @@ function PlaceOrderButton({ cartItems }) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What is the difference between `bind` and `apply` in JavaScript?
 
 ### Theory
@@ -807,6 +853,11 @@ boundGreet("!"); // "Hello, Amit!" — called later, partial args
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What has been your experience with useCallback and useMemo in real projects?
 
@@ -902,6 +953,11 @@ function UserGreeting({ name }) {
 > But I don't use them everywhere. For simple components with cheap computations, they add complexity without benefit. My rule: profile first, optimize second.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What is the role of the dependency array in useEffect?
 
@@ -1037,3 +1093,6 @@ Use cleanup for: timers, subscriptions, event listeners, WebSockets, AbortContro
 ---
 
 _Capgemini interviews reward practical depth. Practice explaining concepts using examples from your own projects — that's what separates a strong candidate from someone who only knows definitions._
+
+
+<p><a href="#i11">Back to index</a></p>

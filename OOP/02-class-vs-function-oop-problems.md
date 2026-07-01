@@ -67,6 +67,8 @@ class Employee extends Person {
 shapes.forEach((s) => console.log(s.area())); // Circle vs Rectangle
 ```
 
+<a id="p1"></a>
+
 ### 1. Encapsulation — description, why, pros & cons
 
 **What it is:** Bundling data with the methods that operate on it, and **hiding** internal details so outside code cannot corrupt state directly.
@@ -98,6 +100,11 @@ account.withdraw(200); // rejected inside withdraw() — balance stays valid
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ### 2. Abstraction — description, why, pros & cons
 
 **What it is:** Showing a **simple interface** while hiding implementation complexity. Callers care _what_ happens, not _how_.
@@ -128,6 +135,11 @@ bus.emit("click", data);
 **Interview one-liner:** _"Abstraction lets `totalArea(shapes)` work without knowing if each shape is Circle or Rectangle."_
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ### 3. Inheritance — description, why, pros & cons
 
@@ -168,6 +180,11 @@ class Employee extends Person {
 **Interview one-liner:** _"Inheritance shares behavior up a chain; I use it for true is-a, otherwise composition."_
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ### 4. Polymorphism — description, why, pros & cons
 
@@ -211,28 +228,31 @@ shapes.forEach((s) => (sum += s.area())); // Circle, Rectangle, Triangle — no 
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-0. [Four pillars — where they appear](#four-pillars--where-they-appear)
-   - [Encapsulation — description, why, pros & cons](#1-encapsulation--description-why-pros--cons)
-   - [Abstraction — description, why, pros & cons](#2-abstraction--description-why-pros--cons)
-   - [Inheritance — description, why, pros & cons](#3-inheritance--description-why-pros--cons)
-   - [Polymorphism — description, why, pros & cons](#4-polymorphism--description-why-pros--cons)
-   - [Function vs class — overall pros & cons](#function-based-vs-class-based--overall-pros--cons)
-1. [Bank account (encapsulation)](#1-bank-account-encapsulation)
-2. [Counter (private state)](#2-counter-private-state)
-3. [Person → Employee (inheritance)](#3-person--employee-inheritance)
-4. [Shapes — area polymorphism](#4-shapes--area-polymorphism)
-5. [Stack data structure](#5-stack-data-structure)
-6. [Vehicle factory](#6-vehicle-factory)
-7. [Event emitter (observer)](#7-event-emitter-observer)
-8. [Singleton app config](#8-singleton-app-config)
-9. [Todo list manager](#9-todo-list-manager)
-10. [Payment strategy](#10-payment-strategy)
-11. [Library book lending](#11-library-book-lending)
-12. [Compare both styles — interview summary](#12-compare-both-styles--interview-summary)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i0"></span>0 | [Four pillars — where they appear](#p0) |
+| <span id="i1"></span>1 | [Bank account (encapsulation)](#p1) |
+| <span id="i2"></span>2 | [Counter (private state)](#p2) |
+| <span id="i3"></span>3 | [Person → Employee (inheritance)](#p3) |
+| <span id="i4"></span>4 | [Shapes — area polymorphism](#p4) |
+| <span id="i5"></span>5 | [Stack data structure](#p5) |
+| <span id="i6"></span>6 | [Vehicle factory](#p6) |
+| <span id="i7"></span>7 | [Event emitter (observer)](#p7) |
+| <span id="i8"></span>8 | [Singleton app config](#p8) |
+| <span id="i9"></span>9 | [Todo list manager](#p9) |
+| <span id="i10"></span>10 | [Payment strategy](#p10) |
+| <span id="i11"></span>11 | [Library book lending](#p11) |
+| <span id="i12"></span>12 | [Compare both styles — interview summary](#p12) |
 
 ---
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p1"></a>
 
 ## 1. Bank account (encapsulation)
 
@@ -326,6 +346,11 @@ Banking is the classic encapsulation example: balance must never go negative or 
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Counter (private state)
 
 | Pillar            | Where in this problem                                       |
@@ -409,6 +434,11 @@ Counters appear in pagination, retry limits, and UI steppers — each screen nee
 | **Pick when** | Hooks-style state (`useCounter` pattern)          | Domain entity in class-based codebase                      |
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Person → Employee (inheritance)
 
@@ -503,6 +533,11 @@ When types share identity (`name`) and behavior (`introduce`) but specialize (Em
 **Caution:** If `Employee` only _has_ a `department` but isn't really a `Person`, use composition instead: `{ person, department }`.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Shapes — area polymorphism
 
@@ -614,6 +649,11 @@ function totalArea(shapes) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Stack data structure
 
 | Pillar            | Where in this problem                                             |
@@ -702,6 +742,11 @@ A raw array allows `arr.unshift()` or `arr[0] = x` — breaking LIFO. A stack **
 | **Pick when** | Algorithm internals, interview closures    | DSA class library, OOP design                     |
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Vehicle factory
 
@@ -830,6 +875,11 @@ Callers shouldn't know whether they're getting a `Car` or `Truck` — only that 
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Event emitter (observer)
 
 | Pillar            | Where in this problem                                                     |
@@ -924,6 +974,11 @@ function updateCart(count) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Singleton app config
 
 | Pillar            | Where in this problem                                         |
@@ -1008,6 +1063,11 @@ App theme, API base URL, and feature flags should be **one source of truth** —
 **When NOT to use singleton:** Anything that should be **per-request** (user session) or **per-test** — use factory or DI instead.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Todo list manager
 
@@ -1106,6 +1166,11 @@ Todo apps are a standard CRUD interview task — tests encapsulation (private li
 | **Pick when** | Functional components, module state                   | OOP domain layer                                   |
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Payment strategy
 
@@ -1215,6 +1280,11 @@ pay(amount, provider) {
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Library book lending
 
@@ -1328,6 +1398,11 @@ Libraries (and inventory systems) need **business rules** in one place: can't le
 **Composition note:** `Library` **has** books; `Book` doesn't extend `Library` — prefer has-a over is-a here.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Compare both styles — interview summary
 
@@ -1444,3 +1519,6 @@ class MyType {
 - [01-javascript-oop-interview-guide.md](./01-javascript-oop-interview-guide.md)
 - [INTERVIEW-QUESTIONS.md](./INTERVIEW-QUESTIONS.md)
 - [Javascript/vanila-js/08-top-30 #30 EventEmitter](../Javascript/vanila-js/08-top-30-javascript-interview-problems.md)
+
+
+<p><a href="#i12">Back to index</a></p>

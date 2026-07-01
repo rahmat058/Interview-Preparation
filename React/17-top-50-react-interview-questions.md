@@ -16,85 +16,125 @@ Every question includes **Theory**, **Pros & Cons** (where useful), a **One-Line
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Pattern 1 — React Fundamentals & JSX (1–5)
-1. [What is React?](#1-what-is-react)
-2. [What is JSX?](#2-what-is-jsx)
-3. [JSX vs HTML — Key Differences](#3-jsx-vs-html--key-differences)
-4. [React Fragments](#4-react-fragments)
-5. [Synthetic Events](#5-synthetic-events)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is React?](#p1) |
+| <span id="i2"></span>2 | [What is JSX?](#p2) |
+| <span id="i3"></span>3 | [JSX vs HTML — Key Differences](#p3) |
+| <span id="i4"></span>4 | [React Fragments](#p4) |
+| <span id="i5"></span>5 | [Synthetic Events](#p5) |
 
 ### Pattern 2 — Components, Props & State (6–10)
-6. [Components in React](#6-components-in-react)
-7. [Functional vs Class Components](#7-functional-vs-class-components)
-8. [Props in React](#8-props-in-react)
-9. [State in React](#9-state-in-react)
-10. [State vs Props](#10-state-vs-props)
+
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Components in React](#p6) |
+| <span id="i7"></span>7 | [Functional vs Class Components](#p7) |
+| <span id="i8"></span>8 | [Props in React](#p8) |
+| <span id="i9"></span>9 | [State in React](#p9) |
+| <span id="i10"></span>10 | [State vs Props](#p10) |
 
 ### Pattern 3 — Data Flow & Forms (11–14)
-11. [Lifting State Up](#11-lifting-state-up)
-12. [Conditional Rendering](#12-conditional-rendering)
-13. [Controlled vs Uncontrolled Components](#13-controlled-vs-uncontrolled-components)
-14. [Form Handling in React](#14-form-handling-in-react)
+
+| # | Section |
+| --- | --- |
+| <span id="i11"></span>11 | [Lifting State Up](#p11) |
+| <span id="i12"></span>12 | [Conditional Rendering](#p12) |
+| <span id="i13"></span>13 | [Controlled vs Uncontrolled Components](#p13) |
+| <span id="i14"></span>14 | [Form Handling in React](#p14) |
 
 ### Pattern 4 — Hooks (15–23)
-15. [useState](#15-usestate)
-16. [useEffect](#16-useeffect)
-17. [Dependency Array](#17-dependency-array)
-18. [useMemo](#18-usememo)
-19. [useCallback](#19-usecallback)
-20. [useRef & useRef vs useState](#20-useref--useref-vs-usestate)
-21. [useReducer](#21-usereducer)
-22. [Rules of Hooks](#22-rules-of-hooks)
-23. [Custom Hooks](#23-custom-hooks)
+
+| # | Section |
+| --- | --- |
+| <span id="i15"></span>15 | [useState](#p15) |
+| <span id="i16"></span>16 | [useEffect](#p16) |
+| <span id="i17"></span>17 | [Dependency Array](#p17) |
+| <span id="i18"></span>18 | [useMemo](#p18) |
+| <span id="i19"></span>19 | [useCallback](#p19) |
+| <span id="i20"></span>20 | [useRef & useRef vs useState](#p20) |
+| <span id="i21"></span>21 | [useReducer](#p21) |
+| <span id="i22"></span>22 | [Rules of Hooks](#p22) |
+| <span id="i23"></span>23 | [Custom Hooks](#p23) |
 
 ### Pattern 5 — Virtual DOM, Reconciliation & Rendering (24–28)
-24. [Virtual DOM](#24-virtual-dom)
-25. [Reconciliation](#25-reconciliation)
-26. [Keys in React Lists](#26-keys-in-react-lists)
-27. [CSR vs SSR vs SSG & Hydration](#27-csr-vs-ssr-vs-ssg--hydration)
-28. [React Fiber](#28-react-fiber)
+
+| # | Section |
+| --- | --- |
+| <span id="i24"></span>24 | [Virtual DOM](#p24) |
+| <span id="i25"></span>25 | [Reconciliation](#p25) |
+| <span id="i26"></span>26 | [Keys in React Lists](#p26) |
+| <span id="i27"></span>27 | [CSR vs SSR vs SSG & Hydration](#p27) |
+| <span id="i28"></span>28 | [React Fiber](#p28) |
 
 ### Pattern 6 — Context API (29–31)
-29. [Context API](#29-context-api)
-30. [useContext Hook](#30-usecontext-hook)
-31. [Prop Drilling](#31-prop-drilling)
+
+| # | Section |
+| --- | --- |
+| <span id="i29"></span>29 | [Context API](#p29) |
+| <span id="i30"></span>30 | [useContext Hook](#p30) |
+| <span id="i31"></span>31 | [Prop Drilling](#p31) |
 
 ### Pattern 7 — React Router (32–35)
-32. [React Router Basics](#32-react-router-basics)
-33. [Dynamic Routes — useParams](#33-dynamic-routes--useparams)
-34. [Navigation — useNavigate & useLocation](#34-navigation--usenavigate--uselocation)
-35. [Protected Routes](#35-protected-routes)
+
+| # | Section |
+| --- | --- |
+| <span id="i32"></span>32 | [React Router Basics](#p32) |
+| <span id="i33"></span>33 | [Dynamic Routes — useParams](#p33) |
+| <span id="i34"></span>34 | [Navigation — useNavigate & useLocation](#p34) |
+| <span id="i35"></span>35 | [Protected Routes](#p35) |
 
 ### Pattern 8 — API Integration (36–39)
-36. [Fetching Data with useEffect](#36-fetching-data-with-useeffect)
-37. [Axios vs fetch in React](#37-axios-vs-fetch-in-react)
-38. [TanStack Query (React Query)](#38-tanstack-query-react-query)
-39. [Loading, Error & Empty States](#39-loading-error--empty-states)
+
+| # | Section |
+| --- | --- |
+| <span id="i36"></span>36 | [Fetching Data with useEffect](#p36) |
+| <span id="i37"></span>37 | [Axios vs fetch in React](#p37) |
+| <span id="i38"></span>38 | [TanStack Query (React Query)](#p38) |
+| <span id="i39"></span>39 | [Loading, Error & Empty States](#p39) |
 
 ### Pattern 9 — Performance Optimization (40–44)
-40. [React.memo](#40-reactmemo)
-41. [Code Splitting & Lazy Loading](#41-code-splitting--lazy-loading)
-42. [Suspense](#42-suspense)
-43. [useTransition & useDeferredValue](#43-usetransition--usedeferredvalue)
-44. [React 18 Automatic Batching](#44-react-18-automatic-batching)
+
+| # | Section |
+| --- | --- |
+| <span id="i40"></span>40 | [React.memo](#p40) |
+| <span id="i41"></span>41 | [Code Splitting & Lazy Loading](#p41) |
+| <span id="i42"></span>42 | [Suspense](#p42) |
+| <span id="i43"></span>43 | [useTransition & useDeferredValue](#p43) |
+| <span id="i44"></span>44 | [React 18 Automatic Batching](#p44) |
 
 ### Pattern 10 — Lifecycle Methods (45–46)
-45. [Class Lifecycle Methods](#45-class-lifecycle-methods)
-46. [useEffect as Lifecycle Replacement](#46-useeffect-as-lifecycle-replacement)
+
+| # | Section |
+| --- | --- |
+| <span id="i45"></span>45 | [Class Lifecycle Methods](#p45) |
+| <span id="i46"></span>46 | [useEffect as Lifecycle Replacement](#p46) |
 
 ### Pattern 11 — Redux Basics (47–49)
-47. [Redux — Store, Action, Reducer](#47-redux--store-action-reducer)
-48. [Redux Toolkit (RTK)](#48-redux-toolkit-rtk)
-49. [Redux vs Context API](#49-redux-vs-context-api)
+
+| # | Section |
+| --- | --- |
+| <span id="i47"></span>47 | [Redux — Store, Action, Reducer](#p47) |
+| <span id="i48"></span>48 | [Redux Toolkit (RTK)](#p48) |
+| <span id="i49"></span>49 | [Redux vs Context API](#p49) |
 
 ### Pattern 12 — Error Handling & Design Patterns (50)
-50. [Error Boundaries & Design Patterns](#50-error-boundaries--design-patterns)
+
+| # | Section |
+| --- | --- |
+| <span id="i50"></span>50 | [Error Boundaries & Design Patterns](#p50) |
 
 ---
-
 # Pattern 1 — React Fundamentals & JSX
+
+<a id="p1"></a>
 
 ## 1. What is React?
 
@@ -131,6 +171,11 @@ function TransactionRow({ amount, status }) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What is JSX?
 
 ### Theory
@@ -152,6 +197,11 @@ const btn = React.createElement("button", { className: "primary", onClick: pay }
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. JSX vs HTML — Key Differences
 
@@ -184,6 +234,11 @@ const btn = React.createElement("button", { className: "primary", onClick: pay }
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. React Fragments
 
@@ -225,6 +280,11 @@ items.map((item) => (
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Synthetic Events
 
 ### Theory
@@ -258,6 +318,11 @@ function SearchInput() {
 
 # Pattern 2 — Components, Props & State
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Components in React
 
 ### Theory
@@ -286,6 +351,11 @@ function UserCard({ user }) {
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Functional vs Class Components
 
@@ -323,6 +393,11 @@ class Counter extends React.Component {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Props in React
 
 ### Theory
@@ -350,6 +425,11 @@ function Button({ label, variant = "primary", disabled = false, onClick, ...rest
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. State in React
 
@@ -380,6 +460,11 @@ function Cart() {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. State vs Props
 
@@ -414,6 +499,11 @@ function TemperatureConverter() {
 
 # Pattern 3 — Data Flow & Forms
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Lifting State Up
 
 ### Theory
@@ -441,6 +531,11 @@ function App() {
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Conditional Rendering
 
@@ -477,6 +572,11 @@ function UserProfile({ userId }) {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Controlled vs Uncontrolled Components
 
 ### Theory
@@ -510,6 +610,11 @@ function UncontrolledInput() {
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Form Handling in React
 
@@ -556,6 +661,11 @@ function LoginForm({ onSubmit }) {
 
 # Pattern 4 — Hooks
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. useState
 
 ### Theory
@@ -577,6 +687,11 @@ setCount((prev) => prev + 1);
 ```
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ## 16. useEffect
 
@@ -603,6 +718,11 @@ useEffect(() => {
 ```
 
 ---
+
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
 
 ## 17. Dependency Array
 
@@ -632,6 +752,11 @@ useEffect(() => { fetchData(userId); }, [userId]);
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ## 18. useMemo
 
 ### Theory
@@ -659,6 +784,11 @@ function ProductList({ products, filter, sortBy }) {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. useCallback
 
@@ -689,6 +819,11 @@ function Table({ items }) {
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. useRef & useRef vs useState
 
@@ -722,6 +857,11 @@ function AutoFocusInput() {
 
 ---
 
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
+
 ## 21. useReducer
 
 ### Theory
@@ -754,6 +894,11 @@ function Cart() {
 
 ---
 
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
+
 ## 22. Rules of Hooks
 
 ### Theory
@@ -782,6 +927,11 @@ useEffect(() => {
 ```
 
 ---
+
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
 
 ## 23. Custom Hooks
 
@@ -818,6 +968,11 @@ function SearchPage() {
 
 # Pattern 5 — Virtual DOM, Reconciliation & Rendering
 
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
+
 ## 24. Virtual DOM
 
 ### Theory
@@ -851,6 +1006,11 @@ function TodoList({ todos }) {
 
 ---
 
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
+
 ## 25. Reconciliation
 
 ### Theory
@@ -875,6 +1035,11 @@ Rules: different element **types** → tear down and rebuild. Same type → upda
 
 ---
 
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
+
 ## 26. Keys in React Lists
 
 ### Theory
@@ -898,6 +1063,11 @@ Index as key causes bugs with reorder, insert, or delete.
 ```
 
 ---
+
+
+<p><a href="#i26">Back to index</a></p>
+
+<a id="p27"></a>
 
 ## 27. CSR vs SSR vs SSG & Hydration
 
@@ -934,6 +1104,11 @@ export async function getStaticProps() {
 
 ---
 
+
+<p><a href="#i27">Back to index</a></p>
+
+<a id="p28"></a>
+
 ## 28. React Fiber
 
 ### Theory
@@ -964,6 +1139,11 @@ function handleSearch(query) {
 ---
 
 # Pattern 6 — Context API
+
+
+<p><a href="#i28">Back to index</a></p>
+
+<a id="p29"></a>
 
 ## 29. Context API
 
@@ -1002,6 +1182,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i29">Back to index</a></p>
+
+<a id="p30"></a>
+
 ## 30. useContext Hook
 
 ### Theory
@@ -1028,6 +1213,11 @@ function ThemedButton() {
 ```
 
 ---
+
+
+<p><a href="#i30">Back to index</a></p>
+
+<a id="p31"></a>
 
 ## 31. Prop Drilling
 
@@ -1062,6 +1252,11 @@ Solutions: Context API, component composition (children), state management (Redu
 ---
 
 # Pattern 7 — React Router
+
+
+<p><a href="#i31">Back to index</a></p>
+
+<a id="p32"></a>
 
 ## 32. React Router Basics
 
@@ -1101,6 +1296,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i32">Back to index</a></p>
+
+<a id="p33"></a>
+
 ## 33. Dynamic Routes — useParams
 
 ### Theory
@@ -1128,6 +1328,11 @@ function ProductDetail() {
 ```
 
 ---
+
+
+<p><a href="#i33">Back to index</a></p>
+
+<a id="p34"></a>
 
 ## 34. Navigation — useNavigate & useLocation
 
@@ -1164,6 +1369,11 @@ function ProductFilters() {
 
 ---
 
+
+<p><a href="#i34">Back to index</a></p>
+
+<a id="p35"></a>
+
 ## 35. Protected Routes
 
 ### Theory
@@ -1192,6 +1402,11 @@ function ProtectedRoute({ children }) {
 ---
 
 # Pattern 8 — API Integration
+
+
+<p><a href="#i35">Back to index</a></p>
+
+<a id="p36"></a>
 
 ## 36. Fetching Data with useEffect
 
@@ -1225,6 +1440,11 @@ function UserProfile({ userId }) {
 ```
 
 ---
+
+
+<p><a href="#i36">Back to index</a></p>
+
+<a id="p37"></a>
 
 ## 37. Axios vs fetch in React
 
@@ -1264,6 +1484,11 @@ api.interceptors.response.use(
 
 ---
 
+
+<p><a href="#i37">Back to index</a></p>
+
+<a id="p38"></a>
+
 ## 38. TanStack Query (React Query)
 
 ### Theory
@@ -1302,6 +1527,11 @@ function ProductList() {
 
 ---
 
+
+<p><a href="#i38">Back to index</a></p>
+
+<a id="p39"></a>
+
 ## 39. Loading, Error & Empty States
 
 ### Theory
@@ -1337,6 +1567,11 @@ function DataView({ query }) {
 
 # Pattern 9 — Performance Optimization
 
+
+<p><a href="#i39">Back to index</a></p>
+
+<a id="p40"></a>
+
 ## 40. React.memo
 
 ### Theory
@@ -1358,6 +1593,11 @@ const ExpensiveChart = React.memo(function ExpensiveChart({ data, onPointClick }
 ```
 
 ---
+
+
+<p><a href="#i40">Back to index</a></p>
+
+<a id="p41"></a>
 
 ## 41. Code Splitting & Lazy Loading
 
@@ -1391,6 +1631,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i41">Back to index</a></p>
+
+<a id="p42"></a>
+
 ## 42. Suspense
 
 ### Theory
@@ -1412,6 +1657,11 @@ React 18+: Suspense for data fetching with frameworks like Next.js and Relay.
 ```
 
 ---
+
+
+<p><a href="#i42">Back to index</a></p>
+
+<a id="p43"></a>
 
 ## 43. useTransition & useDeferredValue
 
@@ -1450,6 +1700,11 @@ function SearchResults({ query }) {
 
 ---
 
+
+<p><a href="#i43">Back to index</a></p>
+
+<a id="p44"></a>
+
 ## 44. React 18 Automatic Batching
 
 ### Theory
@@ -1481,6 +1736,11 @@ fetch("/api").then(() => {
 ---
 
 # Pattern 10 — Lifecycle Methods
+
+
+<p><a href="#i44">Back to index</a></p>
+
+<a id="p45"></a>
 
 ## 45. Class Lifecycle Methods
 
@@ -1514,6 +1774,11 @@ class UserList extends React.Component {
 
 ---
 
+
+<p><a href="#i45">Back to index</a></p>
+
+<a id="p46"></a>
+
 ## 46. useEffect as Lifecycle Replacement
 
 ### Theory
@@ -1546,6 +1811,11 @@ function ChatRoom({ roomId }) {
 ---
 
 # Pattern 11 — Redux Basics
+
+
+<p><a href="#i46">Back to index</a></p>
+
+<a id="p47"></a>
 
 ## 47. Redux — Store, Action, Reducer
 
@@ -1584,6 +1854,11 @@ const items = store.getState().cart.items;
 
 ---
 
+
+<p><a href="#i47">Back to index</a></p>
+
+<a id="p48"></a>
+
 ## 48. Redux Toolkit (RTK)
 
 ### Theory
@@ -1618,6 +1893,11 @@ const store = configureStore({ reducer: { cart: cartSlice.reducer } });
 
 ---
 
+
+<p><a href="#i48">Back to index</a></p>
+
+<a id="p49"></a>
+
 ## 49. Redux vs Context API
 
 ### Theory
@@ -1648,6 +1928,11 @@ dispatch(addItem(product));
 ---
 
 # Pattern 12 — Error Handling & Design Patterns
+
+
+<p><a href="#i49">Back to index</a></p>
+
+<a id="p50"></a>
 
 ## 50. Error Boundaries & Design Patterns
 
@@ -1746,3 +2031,6 @@ function useAuth() {
 ---
 
 *50 questions. 12 patterns. Master the patterns and random interview questions become predictable.*
+
+
+<p><a href="#i50">Back to index</a></p>

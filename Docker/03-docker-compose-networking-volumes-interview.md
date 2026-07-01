@@ -9,25 +9,31 @@ level: "Mid level"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Docker Compose?](#1-what-is-docker-compose)
-2. [docker-compose.yml structure](#2-explain-docker-composeyml-structure)
-3. [Docker networking types](#3-what-are-docker-networking-types)
-4. [Bridge network](#4-what-is-bridge-network)
-5. [Container-to-container communication](#5-how-do-containers-communicate)
-6. [Port mapping](#6-what-is-port-mapping)
-7. [What are Docker volumes?](#7-what-are-docker-volumes)
-8. [Volumes vs bind mounts](#8-volumes-vs-bind-mounts)
-9. [Named volumes](#9-what-are-named-volumes)
-10. [docker compose up vs run](#10-docker-compose-up-vs-docker-run)
-11. [depends_on and healthchecks](#11-depends_on-and-healthchecks)
-12. [Environment variables in Compose](#12-environment-variables-in-compose)
-13. [Multiple services example](#13-mern-stack-docker-compose-example)
-14. [Docker network commands](#14-useful-docker-network-commands)
-15. [Persist MongoDB data](#15-how-to-persist-mongodb-data-in-docker)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Docker Compose?](#p1) |
+| <span id="i2"></span>2 | [docker-compose.yml structure](#p2) |
+| <span id="i3"></span>3 | [Docker networking types](#p3) |
+| <span id="i4"></span>4 | [Bridge network](#p4) |
+| <span id="i5"></span>5 | [Container-to-container communication](#p5) |
+| <span id="i6"></span>6 | [Port mapping](#p6) |
+| <span id="i7"></span>7 | [What are Docker volumes?](#p7) |
+| <span id="i8"></span>8 | [Volumes vs bind mounts](#p8) |
+| <span id="i9"></span>9 | [Named volumes](#p9) |
+| <span id="i10"></span>10 | [docker compose up vs run](#p10) |
+| <span id="i11"></span>11 | [depends_on and healthchecks](#p11) |
+| <span id="i12"></span>12 | [Environment variables in Compose](#p12) |
+| <span id="i13"></span>13 | [Multiple services example](#p13) |
+| <span id="i14"></span>14 | [Docker network commands](#p14) |
+| <span id="i15"></span>15 | [Persist MongoDB data](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Docker Compose?
 
@@ -49,6 +55,11 @@ docker compose ps
 > Docker Compose orchestrates multiple containers from a YAML file — ideal for local MERN dev with API, MongoDB, and Redis together.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Explain docker-compose.yml structure
 
@@ -93,6 +104,11 @@ networks:
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What are Docker networking types?
 
 ### Theory
@@ -109,6 +125,11 @@ networks:
 > Bridge is default for isolated containers on one machine; host removes network isolation; overlay connects containers across hosts in clusters.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. What is bridge network?
 
@@ -130,6 +151,11 @@ docker run -d --network mern-net --name api mern-api:1.0
 > Bridge networks connect containers on the same host with internal DNS — Compose creates a default bridge network per project.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. How do containers communicate?
 
@@ -160,6 +186,11 @@ services:
 > On a shared Docker network, containers reach each other by service name — use `mongo` not `localhost` from inside another container.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What is port mapping?
 
@@ -192,6 +223,11 @@ docker run -p 127.0.0.1:5000:5000 mern-api  # bind localhost only
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What are Docker volumes?
 
 ### Theory
@@ -212,6 +248,11 @@ docker volume inspect mongo-data
 > Volumes store persistent data managed by Docker — essential for databases so data isn't lost when containers are recreated.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Volumes vs bind mounts?
 
@@ -244,6 +285,11 @@ services:
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What are named volumes?
 
 ### Theory
@@ -275,6 +321,11 @@ docker volume ls | grep mongo
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. docker compose up vs docker run?
 
 ### Theory
@@ -297,6 +348,11 @@ docker compose down -v          # stop + remove volumes (⚠️ deletes DB)
 > `compose up` starts the whole defined stack with networking and volumes; `docker run` starts one container — Compose is for multi-service apps.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. depends_on and healthchecks?
 
@@ -329,6 +385,11 @@ services:
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. Environment variables in Compose?
 
 ### Theory
@@ -358,6 +419,11 @@ JWT_SECRET=super-secret
 > Use `env_file` for secrets and `environment` for overrides — Compose reads `.env` for variable substitution in the YAML itself.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. MERN stack Docker Compose example
 
@@ -421,6 +487,11 @@ curl http://localhost:5000/api/health
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. Useful Docker network commands
 
 ### Real Example
@@ -439,6 +510,11 @@ docker network rm custom-net
 > Use `network ls/inspect` to debug connectivity; create custom networks to isolate environments or connect containers manually.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. How to persist MongoDB data in Docker?
 
@@ -472,3 +548,6 @@ docker compose down      # keeps volumes
 ---
 
 **Next:** [04-docker-production-security-interview.md](./04-docker-production-security-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

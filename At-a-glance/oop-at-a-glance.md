@@ -24,19 +24,25 @@ Quick reference for **JavaScript OOP** interviews — focused on the **four pill
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Four pillars overview](#1-four-pillars-overview)
-2. [Encapsulation](#2-encapsulation)
-3. [Abstraction](#3-abstraction)
-4. [Inheritance](#4-inheritance)
-5. [Polymorphism](#5-polymorphism)
-6. [All four pillars — one example](#6-all-four-pillars--one-example)
-7. [Prototype chain (under the hood)](#7-prototype-chain-under-the-hood)
-8. [Composition vs inheritance](#8-composition-vs-inheritance)
-9. [Quick revision](#9-quick-revision)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Four pillars overview](#p1) |
+| <span id="i2"></span>2 | [Encapsulation](#p2) |
+| <span id="i3"></span>3 | [Abstraction](#p3) |
+| <span id="i4"></span>4 | [Inheritance](#p4) |
+| <span id="i5"></span>5 | [Polymorphism](#p5) |
+| <span id="i6"></span>6 | [All four pillars — one example](#p6) |
+| <span id="i7"></span>7 | [Prototype chain (under the hood)](#p7) |
+| <span id="i8"></span>8 | [Composition vs inheritance](#p8) |
+| <span id="i9"></span>9 | [Quick revision](#p9) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Four pillars overview
 
@@ -52,6 +58,11 @@ Quick reference for **JavaScript OOP** interviews — focused on the **four pill
 > In JavaScript, encapsulation uses private fields or closures, inheritance uses the prototype chain via `extends`, polymorphism is method overriding or duck typing on a shared interface, and abstraction is a simple public API hiding implementation details. I prefer composition over deep inheritance in React and modern JS.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Encapsulation
 
@@ -156,6 +167,11 @@ export function getBalance() {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Abstraction
 
 **Definition:** Expose a **simple interface**; hide complex implementation. Caller uses _what_, not _how_.
@@ -251,6 +267,11 @@ You usually use **both together**.
 > Abstraction is a simple public surface over complex logic — like `payment.charge(amount)` hiding Stripe API calls, retries, and idempotency keys. Encapsulation protects state; abstraction reduces cognitive load.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Inheritance
 
@@ -357,6 +378,11 @@ dog.speak(); // "Rex barks"
 > Inheritance in JS is prototype delegation — child instances link to parent `prototype`. I use `extends` for an IS-A relationship (`Dog` is an `Animal`). For HAS-A (car has engine), use composition instead.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Polymorphism
 
@@ -484,6 +510,11 @@ checkout("wallet", 50); // "Wallet debited $50"
 > Polymorphism lets me call `shape.area()` without checking `instanceof`. JavaScript uses prototype overriding in classes or duck typing on a shared method name. Strategy objects are polymorphism without inheritance.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. All four pillars — one example
 
@@ -619,6 +650,11 @@ notifyAll(
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Prototype chain (under the hood)
 
 ```
@@ -648,6 +684,11 @@ d.hasOwnProperty("name"); // on instance
 > `class` is sugar over prototypes. `new` links the instance to `Constructor.prototype`. `instanceof` walks that chain.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Composition vs inheritance
 
@@ -683,6 +724,11 @@ new Car(new ElectricEngine()).start(); // "Silent start"
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Quick revision
 
 | Pillar            | Remember                    | JS tool                         |
@@ -707,3 +753,6 @@ new Car(new ElectricEngine()).start(); // "Silent start"
 ---
 
 _Deep dives: [OOP/01-javascript-oop-interview-guide.md](../OOP/01-javascript-oop-interview-guide.md) · [OOP/02-class-vs-function-oop-problems.md](../OOP/02-class-vs-function-oop-problems.md) · [OOP/INTERVIEW-QUESTIONS.md](../OOP/INTERVIEW-QUESTIONS.md)_
+
+
+<p><a href="#i9">Back to index</a></p>

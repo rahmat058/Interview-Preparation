@@ -14,17 +14,22 @@ format: "Consolidated Q&A"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Architecture (1–8)](#architecture-18)
-2. [Server & Client (9–14)](#server--client-914)
-3. [Caching & Data (15–22)](#caching--data-1522)
-4. [Routing, Auth & Deploy (23–28)](#routing-auth--deploy-2328)
-5. [Next 16 & Migration (29–32)](#next-16--migration-2932)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Architecture (1–8)](#p1) |
+| <span id="i2"></span>2 | [Server & Client (9–14)](#p2) |
+| <span id="i3"></span>3 | [Caching & Data (15–22)](#p3) |
+| <span id="i4"></span>4 | [Routing, Auth & Deploy (23–28)](#p4) |
+| <span id="i5"></span>5 | [Next 16 & Migration (29–32)](#p5) |
 
 ---
-
 ## Architecture (1–8)
+
+<a id="p1"></a>
 
 ### 1. Why Next.js over Vite SPA?
 
@@ -32,11 +37,21 @@ format: "Consolidated Q&A"
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ### 2. App Router vs Pages Router?
 
 **Interview Answer:** App Router for all new work — Server Components, nested layouts, Cache Components. Pages Router for legacy; migrate incrementally.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ### 3. `layout.tsx` vs `page.tsx` vs `template.tsx`?
 
@@ -44,11 +59,21 @@ format: "Consolidated Q&A"
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ### 4. Rendering: static, dynamic, PPR?
 
 **Interview Answer:** Static/cached shell via `"use cache"`; dynamic holes stream per request. PPR = fast shell + streamed personalized parts.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ### 5. File conventions quick map?
 
@@ -56,17 +81,32 @@ format: "Consolidated Q&A"
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ### 6. Route groups — why?
 
 **Interview Answer:** `(marketing)` vs `(app)` — different layouts and auth boundaries without `/marketing` in the URL.
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ### 7. Parallel routes `@modal`?
 
 **Interview Answer:** Render multiple pages in one layout — modal slot over list for shareable URLs with soft navigation UX.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ### 8. Intercepting routes?
 
@@ -76,11 +116,21 @@ format: "Consolidated Q&A"
 
 ## Server & Client (9–14)
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ### 9. Server Component default — what can it do?
 
 **Interview Answer:** `async/await`, DB/API on server, no client bundle for logic — no hooks, no `onClick`.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ### 10. When `"use client"`?
 
@@ -88,11 +138,21 @@ format: "Consolidated Q&A"
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ### 11. Children pattern?
 
 **Interview Answer:** Server page passes server-rendered children into client shell — modal chrome is client, heavy content stays server.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ### 12. Serialization across boundary?
 
@@ -100,11 +160,21 @@ format: "Consolidated Q&A"
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ### 13. Server Actions vs Route Handlers?
 
 **Interview Answer:** Actions for UI mutations (forms). Route Handlers for webhooks, mobile REST, custom HTTP.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ### 14. Context in App Router?
 
@@ -114,11 +184,21 @@ format: "Consolidated Q&A"
 
 ## Caching & Data (15–22)
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ### 15. Is `fetch` cached by default in Next 16?
 
 **Interview Answer:** **No** — dynamic at request time. Opt in with `"use cache"`.
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ### 16. What is `"use cache"`?
 
@@ -137,11 +217,21 @@ export async function ProductList() {
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ### 17. `cacheLife` vs `cacheTag`?
 
 **Interview Answer:** `cacheLife` = how long stale is OK. `cacheTag` = name for invalidation.
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ### 18. `revalidateTag` vs `updateTag`?
 
@@ -149,11 +239,21 @@ export async function ProductList() {
 
 ---
 
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
+
 ### 19. `revalidatePath` vs tags?
 
 **Interview Answer:** Path invalidates URL subtree. Tags invalidate data used across many routes — prefer tags at scale.
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ### 20. Avoid fetch waterfalls?
 
@@ -161,11 +261,21 @@ export async function ProductList() {
 
 ---
 
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
+
 ### 21. `loading.tsx` vs Suspense?
 
 **Interview Answer:** `loading.tsx` = whole route segment. Inline Suspense = granular skeletons on one page.
 
 ---
+
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
 
 ### 22. Async `params`, `cookies()`, `headers()`?
 
@@ -185,11 +295,21 @@ export default async function Page({
 
 ## Routing, Auth & Deploy (23–28)
 
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
+
 ### 23. What is `proxy.ts`?
 
 **Interview Answer:** Renamed middleware — network boundary for redirects, rewrites, coarse cookie checks. No heavy DB in proxy.
 
 ---
+
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
 
 ### 24. Protected routes pattern?
 
@@ -197,11 +317,21 @@ export default async function Page({
 
 ---
 
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
+
 ### 25. Where to store session?
 
 **Interview Answer:** httpOnly secure cookie — never JWT in `localStorage`. OAuth token exchange only on server.
 
 ---
+
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
 
 ### 26. `generateMetadata`?
 
@@ -209,11 +339,21 @@ export default async function Page({
 
 ---
 
+
+<p><a href="#i26">Back to index</a></p>
+
+<a id="p27"></a>
+
 ### 27. `NEXT_PUBLIC_` env vars?
 
 **Interview Answer:** Only prefix exposed to browser bundle — secrets stay server-only.
 
 ---
+
+
+<p><a href="#i27">Back to index</a></p>
+
+<a id="p28"></a>
 
 ### 28. Docker / production deploy?
 
@@ -223,11 +363,21 @@ export default async function Page({
 
 ## Next 16 & Migration (29–32)
 
+
+<p><a href="#i28">Back to index</a></p>
+
+<a id="p29"></a>
+
 ### 29. Turbopack?
 
 **Interview Answer:** Default bundler in 16 — faster dev and CI. `--webpack` fallback if plugin incompatible.
 
 ---
+
+
+<p><a href="#i29">Back to index</a></p>
+
+<a id="p30"></a>
 
 ### 30. Edge vs Node runtime?
 
@@ -235,11 +385,21 @@ export default async function Page({
 
 ---
 
+
+<p><a href="#i30">Back to index</a></p>
+
+<a id="p31"></a>
+
 ### 31. Migrate 15 → 16 checklist?
 
 **Interview Answer:** Codemod → await request APIs → `middleware` → `proxy` → `cacheComponents: true` → `revalidateTag(tag, profile)` → E2E auth/checkout.
 
 ---
+
+
+<p><a href="#i31">Back to index</a></p>
+
+<a id="p32"></a>
 
 ### 32. When NOT Next.js?
 
@@ -261,3 +421,6 @@ Turbopack default · standalone Docker
 ---
 
 _Deep dives: [NEXT/01-senior-mid-level-nextjs-16-interview-guide.md](../NEXT/01-senior-mid-level-nextjs-16-interview-guide.md) · [NEXT/02-nextjs-16-cache-components-interview.md](../NEXT/02-nextjs-16-cache-components-interview.md) · [React/22-nextjs-scenario-based-interview.md](../React/22-nextjs-scenario-based-interview.md)_
+
+
+<p><a href="#i32">Back to index</a></p>

@@ -12,22 +12,28 @@ Covers **App Router architecture**, **`proxy.ts`** (Next.js 16 network boundary)
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [App Router mental model](#1-app-router-mental-model)
-2. [Layouts and nested routing](#2-layouts-and-nested-routing)
-3. [Route groups `(folder)`](#3-route-groups-folder)
-4. [Dynamic and catch-all segments](#4-dynamic-and-catch-all-segments)
-5. [Parallel routes `@slot`](#5-parallel-routes-slot)
-6. [Intercepting routes `(.)` `(..)`](#6-intercepting-routes--)
-7. [`proxy.ts` — network boundary](#7-proxyts--network-boundary)
-8. [Proxy vs Server Component auth](#8-proxy-vs-server-component-auth)
-9. [Protected routes pattern](#9-protected-routes-pattern)
-10. [OAuth / session cookies](#10-oauth--session-cookies)
-11. [Internationalization (i18n) routing](#11-internationalization-i18n-routing)
-12. [Senior scenario: multi-tenant SaaS](#12-senior-scenario-multi-tenant-saas)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [App Router mental model](#p1) |
+| <span id="i2"></span>2 | [Layouts and nested routing](#p2) |
+| <span id="i3"></span>3 | [Route groups `(folder)`](#p3) |
+| <span id="i4"></span>4 | [Dynamic and catch-all segments](#p4) |
+| <span id="i5"></span>5 | [Parallel routes `@slot`](#p5) |
+| <span id="i6"></span>6 | [Intercepting routes `(.)` `(..)`](#p6) |
+| <span id="i7"></span>7 | [`proxy.ts` — network boundary](#p7) |
+| <span id="i8"></span>8 | [Proxy vs Server Component auth](#p8) |
+| <span id="i9"></span>9 | [Protected routes pattern](#p9) |
+| <span id="i10"></span>10 | [OAuth / session cookies](#p10) |
+| <span id="i11"></span>11 | [Internationalization (i18n) routing](#p11) |
+| <span id="i12"></span>12 | [Senior scenario: multi-tenant SaaS](#p12) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. App Router mental model
 
@@ -54,6 +60,11 @@ app/
 > App Router maps URLs to folders — layouts compose shared chrome, pages own route-specific data. I use nested layouts for dashboard shells that don't remount on every sub-route.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Layouts and nested routing
 
@@ -99,6 +110,11 @@ export default async function DashboardLayout({
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Route groups `(folder)`
 
 Folders in parentheses **don't affect the URL** — organize code and apply different layouts.
@@ -119,6 +135,11 @@ app/
 > Route groups separate marketing vs app shells without `/marketing` in the URL — clean for auth boundaries and different layouts.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Dynamic and catch-all segments
 
@@ -145,6 +166,11 @@ export default async function DocPage({
 > Dynamic segments are Promises in Next 16 — I await `params` and validate IDs server-side, returning `notFound()` for invalid slugs.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Parallel routes `@slot`
 
@@ -184,6 +210,11 @@ export default function Layout({
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Intercepting routes `(.)` `(..)`
 
 | Prefix     | Intercepts    |
@@ -199,6 +230,11 @@ Use case: click photo thumbnail → modal; direct URL → full page.
 > Intercepting routes improve UX for soft navigation — shareable URLs with modal experience on client navigation and full page on hard refresh.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. `proxy.ts` — network boundary
 
@@ -255,6 +291,11 @@ export const config = {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Proxy vs Server Component auth
 
 | Layer                 | Checks                               | Cost                         |
@@ -268,6 +309,11 @@ export const config = {
 > Defense in depth: proxy for coarse "has session cookie", Server Component for real authorization before data fetch, Server Action for mutation checks. Never trust client-sent user IDs.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Protected routes pattern
 
@@ -301,6 +347,11 @@ if (session.role !== "admin") redirect("/unauthorized");
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. OAuth / session cookies
 
 ### Secure session pattern
@@ -333,6 +384,11 @@ export async function GET(request: Request) {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Internationalization (i18n) routing
 
 ### Pattern: `[locale]` segment
@@ -362,6 +418,11 @@ export function proxy(request: NextRequest) {
 > I use a `[locale]` dynamic segment or proxy-based redirect, load dictionaries server-side in layout, and set `hreflang` in metadata for SEO.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Senior scenario: multi-tenant SaaS
 
@@ -398,3 +459,6 @@ Parallel + intercepting = modal UX
 ---
 
 _Related: [01-senior-mid-level-nextjs-16-interview-guide.md](./01-senior-mid-level-nextjs-16-interview-guide.md)_
+
+
+<p><a href="#i12">Back to index</a></p>

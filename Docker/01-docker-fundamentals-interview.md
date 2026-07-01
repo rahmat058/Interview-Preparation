@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Docker?](#1-what-is-docker)
-2. [Containers vs Virtual Machines](#2-what-is-the-difference-between-containers-and-virtual-machines)
-3. [What is a Docker image?](#3-what-is-a-docker-image)
-4. [What is a Docker container?](#4-what-is-a-docker-container)
-5. [Docker architecture](#5-explain-docker-architecture)
-6. [Image vs container](#6-what-is-the-difference-between-image-and-container)
-7. [Docker Engine](#7-what-is-docker-engine)
-8. [Container lifecycle](#8-what-is-the-container-lifecycle)
-9. [Docker Hub and registries](#9-what-is-docker-hub-and-container-registry)
-10. [Why use Docker?](#10-why-use-docker)
-11. [docker run explained](#11-explain-docker-run-command)
-12. [docker exec vs docker attach](#12-what-is-the-difference-between-docker-exec-and-docker-attach)
-13. [Container isolation](#13-how-does-docker-isolate-containers)
-14. [Namespaces and cgroups](#14-what-are-namespaces-and-cgroups)
-15. [Docker limitations](#15-what-are-limitations-of-docker)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Docker?](#p1) |
+| <span id="i2"></span>2 | [Containers vs Virtual Machines](#p2) |
+| <span id="i3"></span>3 | [What is a Docker image?](#p3) |
+| <span id="i4"></span>4 | [What is a Docker container?](#p4) |
+| <span id="i5"></span>5 | [Docker architecture](#p5) |
+| <span id="i6"></span>6 | [Image vs container](#p6) |
+| <span id="i7"></span>7 | [Docker Engine](#p7) |
+| <span id="i8"></span>8 | [Container lifecycle](#p8) |
+| <span id="i9"></span>9 | [Docker Hub and registries](#p9) |
+| <span id="i10"></span>10 | [Why use Docker?](#p10) |
+| <span id="i11"></span>11 | [docker run explained](#p11) |
+| <span id="i12"></span>12 | [docker exec vs docker attach](#p12) |
+| <span id="i13"></span>13 | [Container isolation](#p13) |
+| <span id="i14"></span>14 | [Namespaces and cgroups](#p14) |
+| <span id="i15"></span>15 | [Docker limitations](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Docker?
 
@@ -50,6 +56,11 @@ docker run -d --name mern-mongo -v mongo-data:/data/db mongo:7
 > Docker packages applications and dependencies into containers that run consistently on any machine with Docker Engine — solving "works on my machine" problems.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What is the difference between Containers and Virtual Machines?
 
@@ -82,6 +93,11 @@ Docker:  App → Container → Docker Engine → Host OS → Hardware
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is a Docker image?
 
 ### Theory
@@ -110,6 +126,11 @@ node:20-alpine layers (simplified):
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is a Docker container?
 
 ### Theory
@@ -131,6 +152,11 @@ docker rm api
 > A container is a runnable instance of an image — isolated processes with a writable layer that is discarded when the container is removed (unless data is in volumes).
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Explain Docker architecture
 
@@ -156,6 +182,11 @@ docker CLI  →  Docker Daemon  →  containerd  →  runc  →  Container
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. What is the difference between image and container?
 
 ### Theory
@@ -180,6 +211,11 @@ docker run -d --name api2 mern-api:1.0  # same image, two containers
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is Docker Engine?
 
 ### Theory
@@ -191,6 +227,11 @@ docker run -d --name api2 mern-api:1.0  # same image, two containers
 > Docker Engine is the daemon plus CLI that builds images and runs containers on the host machine.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What is the container lifecycle?
 
@@ -223,6 +264,11 @@ docker run -d --restart unless-stopped --name api mern-api:1.0
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What is Docker Hub and container registry?
 
 ### Theory
@@ -243,6 +289,11 @@ docker pull rahmat058/mern-api:1.0
 > A container registry hosts images — tag with `registry/user/image:tag`, push after build, pull in CI/CD or production deploys.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Why use Docker?
 
@@ -266,6 +317,11 @@ With Docker:    docker compose up → identical stack for all developers
 > Docker ensures consistent environments, isolates dependencies, speeds onboarding, and is the standard packaging format for cloud deployment and orchestration.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Explain docker run command
 
@@ -302,6 +358,11 @@ docker run -d \
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What is the difference between docker exec and docker attach?
 
 ### Theory
@@ -330,6 +391,11 @@ docker logs -f mern-api
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. How does Docker isolate containers?
 
 ### Theory
@@ -341,6 +407,11 @@ Linux kernel features: **namespaces** (PID, network, mount, UTS, IPC, user) and 
 > Docker uses Linux namespaces for isolation (separate PIDs, networks, filesystems) and cgroups to limit CPU and memory per container.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. What are namespaces and cgroups?
 
@@ -363,6 +434,11 @@ docker run -d --name api --memory=512m --cpus=0.5 mern-api:1.0
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. What are limitations of Docker?
 
 ### Theory
@@ -380,3 +456,6 @@ docker run -d --name api --memory=512m --cpus=0.5 mern-api:1.0
 ---
 
 **Next:** [02-dockerfile-image-interview.md](./02-dockerfile-image-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

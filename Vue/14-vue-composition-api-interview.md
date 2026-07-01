@@ -12,16 +12,21 @@ Round focused on **Vue 3 Composition API**, **reactivity**, **auth patterns**, a
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [script setup vs setup()](#script-setup)
-2. [Reactivity Utilities](#reactivity-utilities)
-3. [Composables Architecture](#composables)
-4. [Auth with Pinia + Router](#auth)
-5. [Context vs Pinia Performance](#context-vs-pinia)
-6. [Vue 3.5+ Features](#vue-35)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [script setup vs setup()](#p1) |
+| <span id="i2"></span>2 | [Reactivity Utilities](#p2) |
+| <span id="i3"></span>3 | [Composables Architecture](#p3) |
+| <span id="i4"></span>4 | [Auth with Pinia + Router](#p4) |
+| <span id="i5"></span>5 | [Context vs Pinia Performance](#p5) |
+| <span id="i6"></span>6 | [Vue 3.5+ Features](#p6) |
 
 ---
+<a id="p1"></a>
 
 ## script setup
 
@@ -38,6 +43,11 @@ const emit = defineEmits(["save"]);
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## Reactivity Utilities
 
 ```javascript
@@ -50,6 +60,11 @@ triggerRef(state); // force update for shallowRef
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## Composables
 
@@ -69,6 +84,11 @@ export function useAuth() {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## Auth with Pinia + Router
 
@@ -96,6 +116,11 @@ export const useAuthStore = defineStore("auth", () => {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## Context vs Pinia Performance
 
 | | provide/inject | Pinia |
@@ -107,6 +132,11 @@ export const useAuthStore = defineStore("auth", () => {
 > Don't put frequently changing data in provide/inject — use Pinia with selectors.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## Vue 3.5+
 
@@ -132,3 +162,6 @@ const { count } = props;
 | shallowRef | Large objects — manual triggerRef |
 | Auth | Pinia store + router.beforeEach guard |
 | Performance | Pinia over provide for hot state |
+
+
+<p><a href="#i6">Back to index</a></p>

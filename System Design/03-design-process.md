@@ -19,17 +19,23 @@ Fundamentals tell you **what** to optimize. Components tell you **what to draw**
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Understand Requirements](#1-understand-requirements)
-2. [Design High-Level Architecture](#2-design-high-level-architecture)
-3. [Consider Trade-offs](#3-consider-trade-offs)
-4. [Plan for Security](#4-plan-for-security)
-5. [Monitor & Scale](#5-monitor--scale)
-6. [Full Walkthrough — URL Shortener (bit.ly style)](#6-full-walkthrough--url-shortener-bitly-style)
-7. [Quick Revision Cheat Sheet](#7-quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Understand Requirements](#p1) |
+| <span id="i2"></span>2 | [Design High-Level Architecture](#p2) |
+| <span id="i3"></span>3 | [Consider Trade-offs](#p3) |
+| <span id="i4"></span>4 | [Plan for Security](#p4) |
+| <span id="i5"></span>5 | [Monitor & Scale](#p5) |
+| <span id="i6"></span>6 | [Full Walkthrough — URL Shortener (bit.ly style)](#p6) |
+| <span id="i7"></span>7 | [Quick Revision Cheat Sheet](#p7) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Understand Requirements
 
@@ -96,6 +102,11 @@ Non-functional:
 > I start by separating functional from non-functional requirements, asking about scale, read/write ratio, latency, availability, and data size — then I scope the MVP so the design matches the actual problem.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Design High-Level Architecture
 
@@ -190,6 +201,11 @@ POST /tweets { text }
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Consider Trade-offs
 
 ### Theory
@@ -256,6 +272,11 @@ async function purchase(sku, userId) {
 > Every design choice has a cost — I articulate consistency vs availability, sync vs async, and SQL vs NoSQL based on whether the business prioritizes correctness, uptime, or speed.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Plan for Security
 
@@ -329,6 +350,11 @@ app.get("/api/records/:id", authenticate, async (req, res) => {
 > I bake in authn/authz at the API layer, encrypt data in transit and at rest, validate all inputs, rate-limit public endpoints, and audit access to sensitive resources — especially preventing IDOR and injection.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Monitor & Scale
 
@@ -422,6 +448,11 @@ k6 / Locust simulate 500K concurrent viewers
 > I define SLOs, instrument metrics/logs/traces, alert on error rate and latency regressions, auto-scale stateless tiers on CPU/RPS, and load-test before expected traffic spikes.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Full Walkthrough — URL Shortener (bit.ly style)
 
@@ -567,6 +598,11 @@ Alerts:
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Quick Revision Cheat Sheet
 
 | Step                | Key question              | Deliverable                      |
@@ -607,3 +643,6 @@ Most people make System Design look complicated. It isn't.
 3. **This file** — how to design end to end
 
 Pair with diagrams in [../Advanced Topic/](../Advanced%20Topic/) for visual revision.
+
+
+<p><a href="#i7">Back to index</a></p>

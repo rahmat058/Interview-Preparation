@@ -19,21 +19,27 @@ Lead and senior rounds ask: **"How would you upgrade a production app to Next.js
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Next.js 16 headline changes](#1-nextjs-16-headline-changes)
-2. [Prerequisites & upgrade command](#2-prerequisites--upgrade-command)
-3. [Async request APIs](#3-async-request-apis)
-4. [`middleware.ts` → `proxy.ts`](#4-middlewarets--proxyts)
-5. [Caching model migration](#5-caching-model-migration)
-6. [`revalidateTag` signature change](#6-revalidatetag-signature-change)
-7. [Turbopack as default](#7-turbopack-as-default)
-8. [`next lint` removal](#8-next-lint-removal)
-9. [Removed / deprecated APIs](#9-removed--deprecated-apis)
-10. [Rollout strategy for production](#10-rollout-strategy-for-production)
-11. [Interview scenario: lead the upgrade](#11-interview-scenario-lead-the-upgrade)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Next.js 16 headline changes](#p1) |
+| <span id="i2"></span>2 | [Prerequisites & upgrade command](#p2) |
+| <span id="i3"></span>3 | [Async request APIs](#p3) |
+| <span id="i4"></span>4 | [`middleware.ts` → `proxy.ts`](#p4) |
+| <span id="i5"></span>5 | [Caching model migration](#p5) |
+| <span id="i6"></span>6 | [`revalidateTag` signature change](#p6) |
+| <span id="i7"></span>7 | [Turbopack as default](#p7) |
+| <span id="i8"></span>8 | [`next lint` removal](#p8) |
+| <span id="i9"></span>9 | [Removed / deprecated APIs](#p9) |
+| <span id="i10"></span>10 | [Rollout strategy for production](#p10) |
+| <span id="i11"></span>11 | [Interview scenario: lead the upgrade](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Next.js 16 headline changes
 
@@ -53,6 +59,11 @@ Lead and senior rounds ask: **"How would you upgrade a production app to Next.js
 > Next 16 is the explicit caching release — dynamic by default, opt-in `"use cache"`, plus async request APIs and proxy rename. I treat it as a mental model migration, not just a version bump.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Prerequisites & upgrade command
 
@@ -79,6 +90,11 @@ npm install next@latest react@latest react-dom@latest
 > I run the official codemod in a branch, fix TypeScript errors from async APIs, then run E2E on critical flows before staging.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Async request APIs
 
@@ -118,6 +134,11 @@ const hdrs = await headers();
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. `middleware.ts` → `proxy.ts`
 
 ### Migration
@@ -140,6 +161,11 @@ const hdrs = await headers();
 > Rename file and export — behavior stays similar but the name reflects "network boundary." I audit matchers so we don't run proxy on static assets unnecessarily.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Caching model migration
 
@@ -188,6 +214,11 @@ export async function getCatalog() {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. `revalidateTag` signature change
 
 ### Before
@@ -209,6 +240,11 @@ Single-argument form → **TypeScript error** in Next 16.
 > Grep for `revalidateTag(` and add the cache profile second argument — usually `'max'`. Miss this and CI fails on types, which is good.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Turbopack as default
 
@@ -232,6 +268,11 @@ Single-argument form → **TypeScript error** in Next 16.
 > CI switches to Turbopack first — if a plugin blocks us, `--webpack` is a temporary bridge with a ticket to remove it.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. `next lint` removal
 
@@ -260,6 +301,11 @@ Codemod migrates scripts to ESLint or Biome directly.
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Removed / deprecated APIs
 
 | Removed / changed         | Replacement       |
@@ -276,6 +322,11 @@ Codemod migrates scripts to ESLint or Biome directly.
 > I read the official upgrade guide and grep for deprecated APIs — `unstable_cache`, sync params, single-arg `revalidateTag`, AMP config.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Rollout strategy for production
 
@@ -302,6 +353,11 @@ Codemod migrates scripts to ESLint or Biome directly.
 > I never big-bang production — staging first, canary if available, monitor error rate and LCP for 48 hours. Rollback is pinned Next 15 + webpack build script kept for one sprint.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Interview scenario: lead the upgrade
 
@@ -342,3 +398,6 @@ _"You have 200 routes on Next 15, 4 engineers, 2-week sprint. Plan the Next 16 u
 ---
 
 _Related: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache-components-interview.md)_
+
+
+<p><a href="#i11">Back to index</a></p>

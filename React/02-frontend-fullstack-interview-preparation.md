@@ -12,17 +12,51 @@ Modern frontend interviews now span **React internals**, **advanced JavaScript**
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-- [React JS](#react-js)
-- [Advanced JavaScript](#advanced-javascript)
-- [C++](#c)
-- [DSA Questions](#dsa-questions)
-- [Quick Revision Cheat Sheet](#quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [How does React decide whether a component should re-render?](#p1) |
+| <span id="i2"></span>2 | [Explain React Fiber Architecture](#p2) |
+| <span id="i3"></span>3 | [Difference between Server Components and Client Components](#p3) |
+| <span id="i4"></span>4 | [How would you optimize a React application with thousands of rows?](#p4) |
+| <span id="i5"></span>5 | [Explain React's rendering lifecycle from state update to DOM update](#p5) |
+| <span id="i6"></span>6 | [When should you avoid Context API?](#p6) |
+| <span id="i7"></span>7 | [Difference between `useMemo`, `useCallback`, and `React.memo`](#p7) |
+| <span id="i8"></span>8 | [How do you handle race conditions in API calls?](#p8) |
+| <span id="i9"></span>9 | [Explain code splitting and lazy loading](#p9) |
+| <span id="i10"></span>10 | [What happens internally when a state update is triggered?](#p10) |
+| <span id="i11"></span>11 | [How would you design a reusable component library?](#p11) |
+| <span id="i1"></span>1 | [Implement your own version of `Promise.all()`](#p1) |
+| <span id="i2"></span>2 | [What are `WeakMap` and `WeakSet`?](#p2) |
+| <span id="i3"></span>3 | [Explain event delegation with a practical example](#p3) |
+| <span id="i4"></span>4 | [Difference between Deep Copy and Shallow Copy](#p4) |
+| <span id="i5"></span>5 | [How does garbage collection work in JavaScript?](#p5) |
+| <span id="i6"></span>6 | [Explain lexical scope and closure in detail](#p6) |
+| <span id="i7"></span>7 | [What is the difference between synchronous and asynchronous iteration?](#p7) |
+| <span id="i8"></span>8 | [Polyfill for `Array.map()`](#p8) |
+| <span id="i9"></span>9 | [Polyfill for `Function.bind()`](#p9) |
+| <span id="i10"></span>10 | [Explain currying and function composition](#p10) |
+| <span id="i11"></span>11 | [What happens behind the scenes when `async/await` executes?](#p11) |
+| <span id="i1"></span>1 | [What are Smart Pointers?](#p1) |
+| <span id="i2"></span>2 | [Difference between `unique_ptr` and `shared_ptr`](#p2) |
+| <span id="i3"></span>3 | [Explain move semantics](#p3) |
+| <span id="i4"></span>4 | [What is RAII?](#p4) |
+| <span id="i5"></span>5 | [Difference between `vector` and `list`](#p5) |
+| <span id="i6"></span>6 | [What happens during object construction and destruction?](#p6) |
+| <span id="i7"></span>7 | [Explain copy constructor and move constructor](#p7) |
+| <span id="i8"></span>8 | [How does virtual table (vtable) work?](#p8) |
+| <span id="i1"></span>1 | [Find the First Non-Repeating Character in a string](#p1) |
+| <span id="i2"></span>2 | [Two Sum Problem](#p2) |
+| <span id="i3"></span>3 | [Debounce and Throttle implementation](#p3) |
+| <span id="i4"></span>4 | [Flatten a Nested Array](#p4) |
 
 ---
-
 # React JS
+
+<a id="p1"></a>
 
 ## 1. How does React decide whether a component should re-render?
 
@@ -88,6 +122,11 @@ function Counter() {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Explain React Fiber Architecture
 
 ### Theory
@@ -151,6 +190,11 @@ function Counter() {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Difference between Server Components and Client Components
 
 ### Theory
@@ -206,6 +250,11 @@ export default function ClientCounter({ initialCount }) {
 > Server Components run on the server, never ship their logic to the client, and can access backend resources directly. Client Components handle interactivity. The boundary is `"use client"` — pass serializable props from server to client, never import server components into client files.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. How would you optimize a React application with thousands of rows?
 
@@ -284,6 +333,11 @@ const filtered = useMemo(
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Explain React's rendering lifecycle from state update to DOM update
 
 ### Full flow
@@ -346,6 +400,11 @@ function Demo() {
 | `getSnapshotBeforeUpdate` | `useLayoutEffect`       |
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. When should you avoid Context API?
 
@@ -412,6 +471,11 @@ function AppProvider({ children }) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Difference between `useMemo`, `useCallback`, and `React.memo`
 
 ### Theory
@@ -465,6 +529,11 @@ return <RegularChild onClick={fn} />; // RegularChild always re-renders anyway
 > `useMemo` caches values, `useCallback` caches functions, `React.memo` skips component re-renders. Use them when profiling shows a problem — not preemptively. They have their own memory and comparison cost.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. How do you handle race conditions in API calls?
 
@@ -550,6 +619,11 @@ function useLatestFetch(url) {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Explain code splitting and lazy loading
 
 ### Theory
@@ -614,6 +688,11 @@ const Admin = lazy(() => import(/* webpackChunkName: "admin" */ "./Admin"));
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. What happens internally when a state update is triggered?
 
 ### Step-by-step internals
@@ -665,6 +744,11 @@ setFlag(true); // separate render
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. How would you design a reusable component library?
 
@@ -769,6 +853,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 # Advanced JavaScript
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p1"></a>
+
 ## 1. Implement your own version of `Promise.all()`
 
 ### Theory
@@ -818,6 +907,11 @@ promiseAll([Promise.resolve(1), Promise.reject("error")]).catch(console.log); //
 - Order of results matches input order, not completion order
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What are `WeakMap` and `WeakSet`?
 
@@ -889,6 +983,11 @@ function deepTraverse(obj) {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Explain event delegation with a practical example
 
 ### Theory
@@ -948,6 +1047,11 @@ menu.appendChild(newItem);
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Difference between Deep Copy and Shallow Copy
 
 ### Theory
@@ -1004,6 +1108,11 @@ function deepClone(value, seen = new WeakMap()) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. How does garbage collection work in JavaScript?
 
 ### Theory
@@ -1057,6 +1166,11 @@ element.addEventListener("click", handler);
 ### WeakMap/WeakSet help avoid leaks by not preventing GC of keys.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Explain lexical scope and closure in detail
 
@@ -1154,6 +1268,11 @@ for (var i = 0; i < 3; i++) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is the difference between synchronous and asynchronous iteration?
 
 ### Synchronous iteration
@@ -1228,6 +1347,11 @@ for await (const item of paginatedFetch) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Polyfill for `Array.map()`
 
 ```javascript
@@ -1265,6 +1389,11 @@ console.log([1, , 3].myMap((x) => x * 2)); // [2, empty, 6] — sparse handled
 - Don't mutate original array
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Polyfill for `Function.bind()`
 
@@ -1309,6 +1438,11 @@ console.log(p.name); // "Rahul"
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Explain currying and function composition
 
@@ -1389,6 +1523,11 @@ logInfo("App started");
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What happens behind the scenes when `async/await` executes?
 
@@ -1473,6 +1612,11 @@ async function risky() {
 
 # C++
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p1"></a>
+
 ## 1. What are Smart Pointers?
 
 ### Theory
@@ -1500,6 +1644,11 @@ void demo() {
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Difference between `unique_ptr` and `shared_ptr`
 
@@ -1545,6 +1694,11 @@ auto sp2 = sp1; // ref count = 2
 | Factory returns ownership       | `unique_ptr` |
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Explain move semantics
 
@@ -1616,6 +1770,11 @@ public:
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is RAII?
 
 ### Theory
@@ -1659,6 +1818,11 @@ void readConfig() {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Difference between `vector` and `list`
 
 | Feature               | `std::vector`           | `std::list`                  |
@@ -1688,6 +1852,11 @@ lst.insert(it, 99);          // O(1), no invalidation of other iterators
 > In practice, `vector` wins most of the time due to cache locality — even insert-in-middle can be faster on vector for small/medium sizes.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What happens during object construction and destruction?
 
@@ -1747,6 +1916,11 @@ delete ptr; // calls Derived::~Derived then Base::~Base
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Explain copy constructor and move constructor
 
@@ -1810,6 +1984,11 @@ class NonCopyable {
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. How does virtual table (vtable) work?
 
@@ -1875,6 +2054,11 @@ public:
 ---
 
 # DSA Questions
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p1"></a>
 
 ## 1. Find the First Non-Repeating Character in a string
 
@@ -1948,6 +2132,11 @@ char firstNonRepeating(const std::string& s) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Two Sum Problem
 
 ### Theory
@@ -2011,6 +2200,11 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Debounce and Throttle implementation
 
@@ -2090,6 +2284,11 @@ function debounce(fn, delay, { leading = false, trailing = true } = {}) {
 | **Throttle** | Scroll, mouse move, button spam prevention |
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Flatten a Nested Array
 
@@ -2238,3 +2437,6 @@ std::vector<int> flatten(const std::vector<std::vector<int>>& nested) {
 ---
 
 _Practice explaining trade-offs aloud. Senior interviews reward depth, judgment, and real-world context — not just memorized answers._
+
+
+<p><a href="#i4">Back to index</a></p>

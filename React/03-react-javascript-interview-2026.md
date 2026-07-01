@@ -15,48 +15,54 @@ Each topic follows this structure:
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Promise.all polyfill](#1-implement-promiseall-polyfill)
-2. [Promise.any polyfill](#2-implement-promiseany-polyfill)
-3. [Array.prototype.reduce polyfill](#3-implement-arrayprototypereduce-polyfill)
-4. [Lodash flatten](#4-implement-lodashs-flatten-method)
-5. [Auto-retry for promises](#5-implement-auto-retry-for-promises)
-6. [Throttle promises by batching](#6-throttle-promises-by-batching)
-7. [Debouncing](#7-debouncing-implementation)
-8. [Throttling](#8-throttling-implementation)
-9. [N async tasks in series](#9-execute-n-callback-based-async-tasks-in-series)
-10. [Output prediction snippets](#10-output-prediction-for-tricky-javascript-snippets)
-11. [Object vs Map](#11-object-vs-map-differences-in-javascript)
-12. [PATCH vs PUT](#12-difference-between-patch-and-put)
-13. [Debounce vs Throttle](#13-what-is-the-difference-between-debounce-and-throttle)
-14. [JavaScript Engine](#14-how-does-the-javascript-engine-work)
-15. [Event Loop & Microtask Queue](#15-what-is-the-event-loop-and-how-does-the-microtask-queue-work)
-16. [Virtual DOM](#16-explain-virtual-dom-and-its-comparison-mechanism)
-17. [React keys](#17-why-do-keys-matter-in-react-and-how-do-they-improve-performance)
-18. [useState internals](#18-explain-how-usestate-works-internally)
-19. [Basic useState implementation](#19-implement-a-basic-version-of-usestate)
-20. [React Portals](#20-what-are-react-portals-how-are-modals-mounted-using-them)
-21. [Error Boundaries](#21-what-are-error-boundaries-in-react)
-22. [Memoization in React](#22-how-does-memoization-work-in-react)
-23. [SSR vs CSR](#23-ssr-vs-csr-with-examples-and-use-cases)
-24. [Module Federation](#24-what-is-module-federation)
-25. [Micro-Frontend Architecture](#25-what-is-micro-frontend-architecture)
-26. [SSR for SEO](#26-server-side-rendering-techniques-to-improve-seo)
-27. [tabIndex & tab order](#27-how-to-control-tab-order-in-dom-explain-tabindex)
-28. [Event Capturing & Bubbling](#28-what-is-event-capturing-and-bubbling)
-29. [Override toString on String.prototype](#29-how-to-override-tostring-on-stringprototype)
-30. [Memory leaks in React](#30-what-are-memory-leaks-in-react-and-how-to-detect-them)
-31. [Measure React performance](#31-how-to-measure-performance-in-a-react-application)
-32. [OAuth](#32-what-is-oauth-and-how-does-it-work)
-33. [SSO](#33-how-does-sso-work)
-34. [REST API methods](#34-what-are-rest-api-methods-and-their-differences)
-35. [Functional Programming](#35-principles-of-functional-programming)
-36. [Microservices](#36-what-are-microservices)
-37. [Build a tool like CRA](#37-how-would-you-build-a-tool-like-create-react-app)
-38. [Reusable UI components](#38-how-do-you-structure-reusable-ui-components-in-react)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Promise.all polyfill](#p1) |
+| <span id="i2"></span>2 | [Promise.any polyfill](#p2) |
+| <span id="i3"></span>3 | [Array.prototype.reduce polyfill](#p3) |
+| <span id="i4"></span>4 | [Lodash flatten](#p4) |
+| <span id="i5"></span>5 | [Auto-retry for promises](#p5) |
+| <span id="i6"></span>6 | [Throttle promises by batching](#p6) |
+| <span id="i7"></span>7 | [Debouncing](#p7) |
+| <span id="i8"></span>8 | [Throttling](#p8) |
+| <span id="i9"></span>9 | [N async tasks in series](#p9) |
+| <span id="i10"></span>10 | [Output prediction snippets](#p10) |
+| <span id="i11"></span>11 | [Object vs Map](#p11) |
+| <span id="i12"></span>12 | [PATCH vs PUT](#p12) |
+| <span id="i13"></span>13 | [Debounce vs Throttle](#p13) |
+| <span id="i14"></span>14 | [JavaScript Engine](#p14) |
+| <span id="i15"></span>15 | [Event Loop & Microtask Queue](#p15) |
+| <span id="i16"></span>16 | [Virtual DOM](#p16) |
+| <span id="i17"></span>17 | [React keys](#p17) |
+| <span id="i18"></span>18 | [useState internals](#p18) |
+| <span id="i19"></span>19 | [Basic useState implementation](#p19) |
+| <span id="i20"></span>20 | [React Portals](#p20) |
+| <span id="i21"></span>21 | [Error Boundaries](#p21) |
+| <span id="i22"></span>22 | [Memoization in React](#p22) |
+| <span id="i23"></span>23 | [SSR vs CSR](#p23) |
+| <span id="i24"></span>24 | [Module Federation](#p24) |
+| <span id="i25"></span>25 | [Micro-Frontend Architecture](#p25) |
+| <span id="i26"></span>26 | [SSR for SEO](#p26) |
+| <span id="i27"></span>27 | [tabIndex & tab order](#p27) |
+| <span id="i28"></span>28 | [Event Capturing & Bubbling](#p28) |
+| <span id="i29"></span>29 | [Override toString on String.prototype](#p29) |
+| <span id="i30"></span>30 | [Memory leaks in React](#p30) |
+| <span id="i31"></span>31 | [Measure React performance](#p31) |
+| <span id="i32"></span>32 | [OAuth](#p32) |
+| <span id="i33"></span>33 | [SSO](#p33) |
+| <span id="i34"></span>34 | [REST API methods](#p34) |
+| <span id="i35"></span>35 | [Functional Programming](#p35) |
+| <span id="i36"></span>36 | [Microservices](#p36) |
+| <span id="i37"></span>37 | [Build a tool like CRA](#p37) |
+| <span id="i38"></span>38 | [Reusable UI components](#p38) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Implement Promise.all polyfill
 
@@ -114,6 +120,11 @@ async function loadCheckoutPage(userId) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Implement Promise.any polyfill
 
 ### Theory
@@ -168,6 +179,11 @@ async function loadProductImage(productId) {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Implement Array.prototype.reduce polyfill
 
@@ -229,6 +245,11 @@ const total = order.myReduce((sum, item) => sum + item.price * item.qty, 0);
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Implement Lodash's flatten method
 
 ### Theory
@@ -276,6 +297,11 @@ const searchableItems = flattenDeep(menu);
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Implement auto-retry for promises
 
@@ -329,6 +355,11 @@ async function checkPaymentStatus(orderId) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Throttle promises by batching
 
 ### Theory
@@ -380,6 +411,11 @@ async function notifyUsers(userIds, message) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Debouncing implementation
 
 ### Theory
@@ -421,6 +457,11 @@ document.getElementById("search").addEventListener("input", (e) => {
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Throttling implementation
 
@@ -464,6 +505,11 @@ window.addEventListener("scroll", trackScrollDepth);
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Execute N callback-based async tasks in series
 
@@ -526,6 +572,11 @@ function runSeriesPromises(tasks) {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Output prediction for tricky JavaScript snippets
 
@@ -738,6 +789,11 @@ console.log(null === undefined);
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Object vs Map differences in JavaScript
 
 ### Theory
@@ -781,6 +837,11 @@ function trackRequest(requestObj) {
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Difference between PATCH and PUT
 
@@ -834,6 +895,11 @@ await fetch("/api/users/42", {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. What is the difference between debounce and throttle?
 
 ### Theory
@@ -864,6 +930,11 @@ User scrolling a feed:
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. How does the JavaScript Engine work?
 
@@ -903,6 +974,11 @@ add("hello", "world"); // still works, but function may re-optimize
 **Takeaway for interviews:** Write consistent types in hot loops. Avoid mixing types in functions called millions of times.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. What is the Event Loop and how does the Microtask Queue work?
 
@@ -947,6 +1023,11 @@ console.log("2: sync");
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Explain Virtual DOM and its comparison mechanism
 
 ### Theory
@@ -983,6 +1064,11 @@ The **Virtual DOM** is a lightweight JavaScript representation of the real DOM t
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Why do keys matter in React and how do they improve performance?
 
 ### Theory
@@ -1016,6 +1102,11 @@ Without stable keys, React falls back to index-based matching, which breaks when
 ```
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ## 18. Explain how useState works internally
 
@@ -1056,6 +1147,11 @@ function Counter() {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Implement a basic version of useState
 
@@ -1109,6 +1205,11 @@ render();
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. What are React Portals? How are modals mounted using them?
 
@@ -1182,6 +1283,11 @@ function ProductPage() {
 ```
 
 ---
+
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
 
 ## 21. What are Error Boundaries in React?
 
@@ -1258,6 +1364,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
+
 ## 22. How does memoization work in React?
 
 ### Theory
@@ -1316,6 +1427,11 @@ function OrderList({ orders }) {
 
 ---
 
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
+
 ## 23. SSR vs CSR with examples and use-cases
 
 ### Theory
@@ -1359,6 +1475,11 @@ export default function RestaurantPage({ restaurants }) {
 ```
 
 ---
+
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
 
 ## 24. What is Module Federation?
 
@@ -1404,6 +1525,11 @@ const CheckoutWidget = React.lazy(() => import("checkout/CheckoutWidget"));
 
 ---
 
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
+
 ## 25. What is Micro-Frontend Architecture?
 
 ### Theory
@@ -1437,6 +1563,11 @@ Zomato-style micro-frontend architecture:
 ```
 
 ---
+
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
 
 ## 26. Server-Side Rendering techniques to improve SEO
 
@@ -1498,6 +1629,11 @@ function RestaurantPage({ restaurant }) {
 ```
 
 ---
+
+
+<p><a href="#i26">Back to index</a></p>
+
+<a id="p27"></a>
 
 ## 27. How to control tab order in DOM (explain tabIndex)
 
@@ -1566,6 +1702,11 @@ function CheckoutModal({ isOpen, onClose }) {
 
 ---
 
+
+<p><a href="#i27">Back to index</a></p>
+
+<a id="p28"></a>
+
 ## 28. What is Event Capturing and Bubbling
 
 ### Theory
@@ -1621,6 +1762,11 @@ document.getElementById("menu").addEventListener("click", (e) => {
 
 ---
 
+
+<p><a href="#i28">Back to index</a></p>
+
+<a id="p29"></a>
+
 ## 29. How to override toString on String.prototype
 
 ### Theory
@@ -1665,6 +1811,11 @@ class DisplayString {
 ```
 
 ---
+
+
+<p><a href="#i29">Back to index</a></p>
+
+<a id="p30"></a>
 
 ## 30. What are memory leaks in React and how to detect them?
 
@@ -1721,6 +1872,11 @@ function LiveOrderTracker({ orderId }) {
 
 ---
 
+
+<p><a href="#i30">Back to index</a></p>
+
+<a id="p31"></a>
+
 ## 31. How to measure performance in a React application?
 
 ### Theory
@@ -1771,6 +1927,11 @@ onCLS((metric) => analytics.track("CLS", metric));
 
 ---
 
+
+<p><a href="#i31">Back to index</a></p>
+
+<a id="p32"></a>
+
 ## 32. What is OAuth and how does it work?
 
 ### Theory
@@ -1819,6 +1980,11 @@ Common flows:
 
 ---
 
+
+<p><a href="#i32">Back to index</a></p>
+
+<a id="p33"></a>
+
 ## 33. How does SSO work?
 
 ### Theory
@@ -1857,6 +2023,11 @@ Frontend's role:
 ```
 
 ---
+
+
+<p><a href="#i33">Back to index</a></p>
+
+<a id="p34"></a>
 
 ## 34. What are REST API methods and their differences?
 
@@ -1910,6 +2081,11 @@ await fetch("/api/cart/items/5", { method: "DELETE" });
 
 ---
 
+
+<p><a href="#i34">Back to index</a></p>
+
+<a id="p35"></a>
+
 ## 35. Principles of Functional Programming
 
 ### Theory
@@ -1959,6 +2135,11 @@ setOrders((prev) => [...prev, newOrder]); // immutable update
 
 ---
 
+
+<p><a href="#i35">Back to index</a></p>
+
+<a id="p36"></a>
+
 ## 36. What are microservices?
 
 ### Theory
@@ -1998,6 +2179,11 @@ Food delivery platform microservices:
 Frontend impact: BFF (Backend for Frontend) aggregates multiple microservice calls into one API tailored for the UI.
 
 ---
+
+
+<p><a href="#i36">Back to index</a></p>
+
+<a id="p37"></a>
 
 ## 37. How would you build a tool like Create React App?
 
@@ -2076,6 +2262,11 @@ template/
 Modern alternative: Use **Vite** instead of Webpack for faster dev experience (what most CRA successors do).
 
 ---
+
+
+<p><a href="#i37">Back to index</a></p>
+
+<a id="p38"></a>
 
 ## 38. How do you structure reusable UI components in React?
 
@@ -2205,3 +2396,6 @@ Modal.Footer = ({ children }) => (
 ---
 
 _Master the "why" behind each answer. In 2026 interviews, depth and real-world judgment matter more than memorized syntax._
+
+
+<p><a href="#i38">Back to index</a></p>

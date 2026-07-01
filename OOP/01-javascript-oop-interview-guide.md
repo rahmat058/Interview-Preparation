@@ -11,24 +11,30 @@ JavaScript is **multi-paradigm** — OOP is built on **prototypes**, not classic
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Four pillars of OOP in JavaScript](#1-four-pillars-of-oop-in-javascript)
-2. [Objects as the foundation](#2-objects-as-the-foundation)
-3. [Constructor functions](#3-constructor-functions)
-4. [Prototype & prototype chain](#4-prototype--prototype-chain)
-5. [What `new` does — step by step](#5-what-new-does--step-by-step)
-6. [ES6 classes](#6-es6-classes)
-7. [Inheritance — extends & super](#7-inheritance--extends--super)
-8. [Encapsulation patterns](#8-encapsulation-patterns)
-9. [Polymorphism](#9-polymorphism)
-10. [Abstraction](#10-abstraction)
-11. [Composition vs inheritance](#11-composition-vs-inheritance)
-12. [Design patterns](#12-design-patterns)
-13. [SOLID in JavaScript](#13-solid-in-javascript)
-14. [Common interview traps](#14-common-interview-traps)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Four pillars of OOP in JavaScript](#p1) |
+| <span id="i2"></span>2 | [Objects as the foundation](#p2) |
+| <span id="i3"></span>3 | [Constructor functions](#p3) |
+| <span id="i4"></span>4 | [Prototype & prototype chain](#p4) |
+| <span id="i5"></span>5 | [What `new` does — step by step](#p5) |
+| <span id="i6"></span>6 | [ES6 classes](#p6) |
+| <span id="i7"></span>7 | [Inheritance — extends & super](#p7) |
+| <span id="i8"></span>8 | [Encapsulation patterns](#p8) |
+| <span id="i9"></span>9 | [Polymorphism](#p9) |
+| <span id="i10"></span>10 | [Abstraction](#p10) |
+| <span id="i11"></span>11 | [Composition vs inheritance](#p11) |
+| <span id="i12"></span>12 | [Design patterns](#p12) |
+| <span id="i13"></span>13 | [SOLID in JavaScript](#p13) |
+| <span id="i14"></span>14 | [Common interview traps](#p14) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Four pillars of OOP in JavaScript
 
@@ -44,6 +50,11 @@ JavaScript is **multi-paradigm** — OOP is built on **prototypes**, not classic
 > JS OOP is prototype-based. Classes are syntax sugar. I use encapsulation via private fields or modules, inheritance sparingly (prefer composition), and polymorphism through shared method contracts.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Objects as the foundation
 
@@ -62,6 +73,11 @@ user.greet(); // "Hi, I'm Alice"
 **Method shorthand** and **`this`** — `this` depends on **how** the function is called, not where it's defined.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Constructor functions
 
@@ -88,6 +104,11 @@ alice.greet(); // "Hi, I'm Alice"
 - Always call with `new` (or use class syntax)
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Prototype & prototype chain
 
@@ -143,6 +164,11 @@ Object.getPrototypeOf(f) === Foo.prototype; // true
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What `new` does — step by step
 
 **Interview answer — memorize this:**
@@ -168,6 +194,11 @@ const car = myNew(Car, "Sedan");
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. ES6 classes
 
@@ -199,6 +230,11 @@ Employee.createIntern("Bob");
 **Hoisting:** Class declarations are hoisted but in **TDZ** until defined (unlike function declarations).
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Inheritance — extends & super
 
@@ -260,6 +296,11 @@ acc.getBalance(); // 100
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Encapsulation patterns
 
 ### Pattern 1 — Private fields (modern)
@@ -314,6 +355,11 @@ class SecretHolder {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Polymorphism
 
 **Same interface, different implementations** — caller doesn't need to know concrete type.
@@ -355,6 +401,11 @@ function renderDrawable(item) {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Abstraction
 
 JavaScript has no `interface` keyword — use **TypeScript** or document contracts.
@@ -387,6 +438,11 @@ class PayPalProcessor extends PaymentProcessor {
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Composition vs inheritance
 
@@ -458,6 +514,11 @@ new TimestampedProduct("Mug").createdAt; // Date
 **React tie-in:** Hooks + composition replaced class inheritance for most UI logic.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Design patterns
 
@@ -538,6 +599,11 @@ new Checkout(stripe).pay(99);
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. SOLID in JavaScript
 
 | Principle                   | Meaning                                     | JS example                                         |
@@ -563,6 +629,11 @@ class OrderService {
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Common interview traps
 
@@ -640,3 +711,6 @@ class MyClass {}
 | Observer pattern           | [vanila-js/08 #30 EventEmitter](../Javascript/vanila-js/08-top-30-javascript-interview-problems.md) |
 | Functional vs OOP state    | `Projects/vanilla-js/02-catalog-spa` store                                                          |
 | Class vs function problems | [02-class-vs-function-oop-problems.md](./02-class-vs-function-oop-problems.md)                      |
+
+
+<p><a href="#i14">Back to index</a></p>

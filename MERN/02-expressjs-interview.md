@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Express.js?](#1-what-is-expressjs)
-2. [Features of Express.js](#2-what-are-the-features-of-expressjs)
-3. [Use of app.use()](#3-what-is-the-use-of-appuse)
-4. [Middleware in Express.js](#4-what-is-middleware-in-expressjs)
-5. [app.use() vs app.METHOD()](#5-what-is-the-difference-between-appuse-and-appmethod)
-6. [Error handling](#6-how-do-you-handle-errors-in-express)
-7. [Use of next()](#7-what-is-the-use-of-next-in-middleware)
-8. [Routing](#8-what-is-routing-in-expressjs)
-9. [404 errors](#9-how-do-you-handle-404-errors)
-10. [Parse JSON](#10-how-do-you-parse-json-data-in-express)
-11. [CORS in Express](#11-what-is-cors-and-how-to-enable-it-in-express)
-12. [package.json purpose](#12-what-is-the-purpose-of-packagejson)
-13. [Static files](#13-how-to-serve-static-files-in-express)
-14. [res.send() vs res.json()](#14-what-is-the-difference-between-ressend-and-resjson)
-15. [Authentication in Express](#15-how-do-you-implement-authentication-in-express)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Express.js?](#p1) |
+| <span id="i2"></span>2 | [Features of Express.js](#p2) |
+| <span id="i3"></span>3 | [Use of app.use()](#p3) |
+| <span id="i4"></span>4 | [Middleware in Express.js](#p4) |
+| <span id="i5"></span>5 | [app.use() vs app.METHOD()](#p5) |
+| <span id="i6"></span>6 | [Error handling](#p6) |
+| <span id="i7"></span>7 | [Use of next()](#p7) |
+| <span id="i8"></span>8 | [Routing](#p8) |
+| <span id="i9"></span>9 | [404 errors](#p9) |
+| <span id="i10"></span>10 | [Parse JSON](#p10) |
+| <span id="i11"></span>11 | [CORS in Express](#p11) |
+| <span id="i12"></span>12 | [package.json purpose](#p12) |
+| <span id="i13"></span>13 | [Static files](#p13) |
+| <span id="i14"></span>14 | [res.send() vs res.json()](#p14) |
+| <span id="i15"></span>15 | [Authentication in Express](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Express.js?
 
@@ -53,6 +59,11 @@ app.listen(5000, () => console.log("Server on :5000"));
 > Express is a lightweight Node.js framework for HTTP APIs — it handles routing and middleware composition with minimal boilerplate.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What are the features of Express.js?
 
@@ -82,6 +93,11 @@ app.use(express.json());
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is the use of app.use()?
 
 ### Theory
@@ -101,6 +117,11 @@ app.use(express.static("public")); // static assets
 > `app.use` registers middleware for all or prefixed routes — order matters; body parsers and auth usually come before route handlers.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. What is middleware in Express.js?
 
@@ -136,6 +157,11 @@ app.get("/api/profile", authMiddleware, (req, res) => {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What is the difference between app.use() and app.METHOD()?
 
 ### Theory
@@ -159,6 +185,11 @@ app.post("/api/users", createUser); // only POST
 > `app.use` mounts middleware for any HTTP method on a path prefix; `app.METHOD` binds a handler to a specific verb and route.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. How do you handle errors in Express?
 
@@ -198,6 +229,11 @@ app.use((err, req, res, next) => {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is the use of next() in middleware?
 
 ### Theory
@@ -220,6 +256,11 @@ function requireAdmin(req, res, next) {
 > `next()` advances the middleware chain; omit it and the request hangs — use `next(err)` for centralized error handling.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What is routing in Express.js?
 
@@ -255,6 +296,11 @@ app.use("/api/products", require("./routes/products"));
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. How do you handle 404 errors?
 
 ### Theory
@@ -279,6 +325,11 @@ app.use((req, res, next) => {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. How do you parse JSON data in Express?
 
 ### Theory
@@ -302,6 +353,11 @@ app.post("/api/items", (req, res) => {
 > Use `express.json()` globally before routes so `req.body` contains parsed JSON — set a size limit for large payloads.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What is CORS and how to enable it in Express?
 
@@ -337,6 +393,11 @@ app.use((req, res, next) => {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What is the purpose of package.json?
 
 ### Theory
@@ -368,6 +429,11 @@ app.use((req, res, next) => {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. How to serve static files in Express?
 
 ### Theory
@@ -395,6 +461,11 @@ app.get("*", (req, res) => {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. What is the difference between res.send() and res.json()?
 
 ### Theory
@@ -418,6 +489,11 @@ res.status(201).json({ id: 1 }); // status + JSON
 > For REST APIs prefer `res.json()` — it always sets JSON content-type; `res.send()` is more generic for HTML or mixed types.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. How do you implement authentication in Express?
 
@@ -455,3 +531,6 @@ app.post("/api/auth/login", async (req, res) => {
 ---
 
 **Next:** [03-reactjs-interview.md](./03-reactjs-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

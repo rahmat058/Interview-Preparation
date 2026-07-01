@@ -11,15 +11,20 @@ Topics mirroring enterprise Vue interviews: **Pinia vs Vuex**, **TypeScript**, *
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Pinia vs Vuex](#pinia-vs-vuex)
-2. [Pinia Setup Store vs Options Store](#store-styles)
-3. [TypeScript with Vue 3](#typescript)
-4. [TanStack Vue Query](#vue-query)
-5. [When to Use What](#decision-guide)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Pinia vs Vuex](#p1) |
+| <span id="i2"></span>2 | [Pinia Setup Store vs Options Store](#p2) |
+| <span id="i3"></span>3 | [TypeScript with Vue 3](#p3) |
+| <span id="i4"></span>4 | [TanStack Vue Query](#p4) |
+| <span id="i5"></span>5 | [When to Use What](#p5) |
 
 ---
+<a id="p1"></a>
 
 ## Pinia vs Vuex
 
@@ -45,6 +50,11 @@ actions: { addItem(item) { this.items.push(item); } },
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## Store Styles
 
 ```javascript
@@ -65,6 +75,11 @@ export const useCartStore = defineStore("cart", () => {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## TypeScript
 
@@ -95,6 +110,11 @@ export const useUserStore = defineStore("user", () => {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## Vue Query
 
 ```javascript
@@ -122,6 +142,11 @@ const { mutate: addToCart } = useMutation({
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## Decision Guide
 
 | Need | Tool |
@@ -134,3 +159,6 @@ const { mutate: addToCart } = useMutation({
 
 ### One-Line Interview Answer
 > Server state in Vue Query, client global state in Pinia, local UI in component refs — never duplicate API data in Pinia.
+
+
+<p><a href="#i5">Back to index</a></p>

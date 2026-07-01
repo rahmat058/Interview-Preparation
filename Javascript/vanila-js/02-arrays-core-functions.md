@@ -9,20 +9,26 @@ level: 'Intermediate to Senior'
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Mutating vs non-mutating](#1-mutating-vs-non-mutating)
-2. [Creation & spread](#2-creation--spread)
-3. [Iteration methods (HOFs)](#3-iteration-methods-hofs)
-4. [Search & membership](#4-search--membership)
-5. [Transform & reshape](#5-transform--reshape)
-6. [`sort` pitfalls](#6-sort-pitfalls)
-7. [Immutability patterns](#7-immutability-patterns)
-8. [Grouping & indexing](#8-grouping--indexing)
-9. [Sparse arrays & holes](#9-sparse-arrays--holes)
-10. [Senior scenarios](#10-senior-scenarios)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Mutating vs non-mutating](#p1) |
+| <span id="i2"></span>2 | [Creation & spread](#p2) |
+| <span id="i3"></span>3 | [Iteration methods (HOFs)](#p3) |
+| <span id="i4"></span>4 | [Search & membership](#p4) |
+| <span id="i5"></span>5 | [Transform & reshape](#p5) |
+| <span id="i6"></span>6 | [`sort` pitfalls](#p6) |
+| <span id="i7"></span>7 | [Immutability patterns](#p7) |
+| <span id="i8"></span>8 | [Grouping & indexing](#p8) |
+| <span id="i9"></span>9 | [Sparse arrays & holes](#p9) |
+| <span id="i10"></span>10 | [Senior scenarios](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Mutating vs non-mutating
 
@@ -50,6 +56,11 @@ const sorted2 = nums.toSorted((a, b) => a - b);
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Creation & spread
 
 ```javascript
@@ -63,6 +74,11 @@ const withNew = [...arr.slice(0, 2), 'inserted', ...arr.slice(2)];
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Iteration methods (HOFs)
 
@@ -92,6 +108,11 @@ cart.forEach((item) => analytics.track('view', item.id));
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Search & membership
 
 ```javascript
@@ -116,6 +137,11 @@ arr.at(-2); // 20
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Transform & reshape
 
@@ -161,6 +187,11 @@ function paginate(rows, page, pageSize) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. `sort` pitfalls
 
 **Default sort converts to strings:**
@@ -183,6 +214,11 @@ names.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 > Always pass a comparator for numbers and dates. Copy the array first if you must preserve original order in state.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Immutability patterns
 
@@ -211,6 +247,11 @@ const move = (list, from, to) => {
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Grouping & indexing
 
@@ -247,6 +288,11 @@ const byId2 = products.reduce((map, p) => ({ ...map, [p.id]: p }), {});
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Sparse arrays & holes
 
 ```javascript
@@ -266,6 +312,11 @@ Array.from({ length: 3 }, () => 1); // [1, 1, 1]
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Senior scenarios
 
@@ -311,6 +362,11 @@ function flattenTree(nodes) {
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Additional array built-ins
 
@@ -377,3 +433,6 @@ for (const [i, val] of ['a', 'b'].entries()) {
 | Immutable replace   | `with` / `toSpliced` (ES2023)   |
 | Type check          | `Array.isArray`                 |
 | Build from length   | `Array.from`                    |
+
+
+<p><a href="#i11">Back to index</a></p>

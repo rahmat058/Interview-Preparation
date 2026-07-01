@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Node.js?](#1-what-is-nodejs)
-2. [Features of Node.js](#2-what-are-the-features-of-nodejs)
-3. [Node.js vs JavaScript](#3-what-is-the-difference-between-nodejs-and-javascript)
-4. [Event Loop in Node.js](#4-what-is-the-event-loop-in-nodejs)
-5. [Non-blocking I/O](#5-what-is-non-blocking-io)
-6. [package.json in Node](#6-what-is-the-use-of-packagejson)
-7. [require() vs import](#7-what-is-the-difference-between-require-and-import)
-8. [Concurrency in Node.js](#8-how-does-nodejs-handle-concurrency)
-9. [Streams in Node.js](#9-what-are-streams-in-nodejs)
-10. [fs module](#10-what-is-the-use-of-fs-module)
-11. [process.nextTick() vs setImmediate()](#11-what-is-the-difference-between-processnexttick-and-setimmediate)
-12. [Buffers in Node.js](#12-what-are-buffers-in-nodejs)
-13. [Error handling in Node.js](#13-how-do-you-handle-errors-in-nodejs)
-14. [Clustering in Node.js](#14-what-is-clustering-in-nodejs)
-15. [Environment variables](#15-what-is-environment-variable-in-nodejs)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Node.js?](#p1) |
+| <span id="i2"></span>2 | [Features of Node.js](#p2) |
+| <span id="i3"></span>3 | [Node.js vs JavaScript](#p3) |
+| <span id="i4"></span>4 | [Event Loop in Node.js](#p4) |
+| <span id="i5"></span>5 | [Non-blocking I/O](#p5) |
+| <span id="i6"></span>6 | [package.json in Node](#p6) |
+| <span id="i7"></span>7 | [require() vs import](#p7) |
+| <span id="i8"></span>8 | [Concurrency in Node.js](#p8) |
+| <span id="i9"></span>9 | [Streams in Node.js](#p9) |
+| <span id="i10"></span>10 | [fs module](#p10) |
+| <span id="i11"></span>11 | [process.nextTick() vs setImmediate()](#p11) |
+| <span id="i12"></span>12 | [Buffers in Node.js](#p12) |
+| <span id="i13"></span>13 | [Error handling in Node.js](#p13) |
+| <span id="i14"></span>14 | [Clustering in Node.js](#p14) |
+| <span id="i15"></span>15 | [Environment variables](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Node.js?
 
@@ -55,6 +61,11 @@ http
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What are the features of Node.js?
 
 ### Theory
@@ -71,6 +82,11 @@ http
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is the difference between Node.js and JavaScript?
 
 ### Theory
@@ -86,6 +102,11 @@ http
 > JavaScript is the language; Node.js is the runtime that executes JS on the server with APIs like `fs` and `http` instead of the DOM.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. What is the event loop in Node.js?
 
@@ -126,6 +147,11 @@ console.log("5");
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What is non-blocking I/O?
 
 ### Theory
@@ -153,6 +179,11 @@ console.log("End"); // prints before file read completes
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. What is the use of package.json?
 
 ### Theory
@@ -175,6 +206,11 @@ Same as Express — defines dependencies, scripts (`start`, `dev`), `type: modul
 > `package.json` manages dependencies and npm scripts — the project manifest for every Node MERN backend.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. What is the difference between require() and import?
 
@@ -202,6 +238,11 @@ import express from "express";
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. How does Node.js handle concurrency?
 
 ### Theory
@@ -223,6 +264,11 @@ app.get("/api/users", async (req, res) => {
 > Node handles many concurrent I/O operations on one thread via the event loop — for CPU-bound tasks use worker threads or cluster mode.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. What are streams in Node.js?
 
@@ -247,6 +293,11 @@ app.get("/download/report", (req, res) => {
 > Streams read/write data in chunks — use `pipe()` for large file uploads/downloads instead of buffering entire files in memory.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is the use of fs module?
 
@@ -275,6 +326,11 @@ const exists = await fs
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. What is the difference between process.nextTick() and setImmediate()?
 
 ### Theory
@@ -299,6 +355,11 @@ console.log("sync");
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What are Buffers in Node.js?
 
 ### Theory
@@ -321,6 +382,11 @@ fs.createReadStream("logo.png").pipe(res);
 > Buffers represent binary data in Node — used for file I/O, crypto, and handling uploads before writing to disk or S3.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. How do you handle errors in Node.js?
 
@@ -356,6 +422,11 @@ async function main() {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. What is clustering in Node.js?
 
 ### Theory
@@ -385,6 +456,11 @@ if (cluster.isPrimary) {
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. What is environment variable in Node.js?
 
 ### Theory
@@ -410,3 +486,6 @@ if (!jwtSecret) throw new Error("JWT_SECRET required");
 ---
 
 **Next:** [05-mern-fullstack-interview.md](./05-mern-fullstack-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

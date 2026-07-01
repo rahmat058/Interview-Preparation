@@ -19,22 +19,28 @@ Senior frontend interviews expect you to connect **Next.js architecture** to **m
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Turbopack as default bundler](#1-turbopack-as-default-bundler)
-2. [Measuring: Lighthouse vs RUM](#2-measuring-lighthouse-vs-rum)
-3. [Core Web Vitals in Next.js](#3-core-web-vitals-in-nextjs)
-4. [Reducing JavaScript bundle size](#4-reducing-javascript-bundle-size)
-5. [`next/dynamic` and code splitting](#5-nextdynamic-and-code-splitting)
-6. [`next/image` optimization](#6-nextimage-optimization)
-7. [Font optimization (`next/font`)](#7-font-optimization-nextfont)
-8. [Layout deduplication & prefetching (Next 16)](#8-layout-deduplication--prefetching-next-16)
-9. [React Compiler (opt-in)](#9-react-compiler-opt-in)
-10. [Edge vs Node runtime trade-offs](#10-edge-vs-node-runtime-trade-offs)
-11. [Production deployment patterns](#11-production-deployment-patterns)
-12. [Senior scenario: LCP regression after migration](#12-senior-scenario-lcp-regression-after-migration)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Turbopack as default bundler](#p1) |
+| <span id="i2"></span>2 | [Measuring: Lighthouse vs RUM](#p2) |
+| <span id="i3"></span>3 | [Core Web Vitals in Next.js](#p3) |
+| <span id="i4"></span>4 | [Reducing JavaScript bundle size](#p4) |
+| <span id="i5"></span>5 | [`next/dynamic` and code splitting](#p5) |
+| <span id="i6"></span>6 | [`next/image` optimization](#p6) |
+| <span id="i7"></span>7 | [Font optimization (`next/font`)](#p7) |
+| <span id="i8"></span>8 | [Layout deduplication & prefetching (Next 16)](#p8) |
+| <span id="i9"></span>9 | [React Compiler (opt-in)](#p9) |
+| <span id="i10"></span>10 | [Edge vs Node runtime trade-offs](#p10) |
+| <span id="i11"></span>11 | [Production deployment patterns](#p11) |
+| <span id="i12"></span>12 | [Senior scenario: LCP regression after migration](#p12) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Turbopack as default bundler
 
@@ -65,6 +71,11 @@ Next.js 16 uses **Turbopack** for `next dev` and `next build` by default.
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Measuring: Lighthouse vs RUM
 
 | Tool                              | What it tells you                    |
@@ -78,6 +89,11 @@ Next.js 16 uses **Turbopack** for `next dev` and `next build` by default.
 > Lighthouse finds low-hanging fruit in dev; production decisions use RUM — p75 LCP and INP by route and device class.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Core Web Vitals in Next.js
 
@@ -107,6 +123,11 @@ import Image from "next/image";
 > LCP is usually hero image or largest text block — I server-render it, use `priority` on `next/image`, and avoid client-only rendering for above-the-fold content.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Reducing JavaScript bundle size
 
@@ -139,6 +160,11 @@ export default withBundleAnalyzer({
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. `next/dynamic` and code splitting
 
 ```tsx
@@ -165,6 +191,11 @@ export function AnalyticsSection() {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. `next/image` optimization
 
 ### Features
@@ -188,6 +219,11 @@ const nextConfig = {
 > `next/image` handles responsive sizes and modern formats — I always set width/height or `fill` with aspect container to prevent CLS.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Font optimization (`next/font`)
 
@@ -223,6 +259,11 @@ export default function RootLayout({
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Layout deduplication & prefetching (Next 16)
 
 ### Theory
@@ -237,6 +278,11 @@ Next.js 16 routing improvements:
 > Next 16 prefetch is smarter — less duplicate layout JS on hover. I still use `<Link prefetch={false}>` for rarely visited admin routes to save bandwidth.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. React Compiler (opt-in)
 
@@ -266,6 +312,11 @@ const nextConfig = {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Edge vs Node runtime trade-offs
 
 ```ts
@@ -287,6 +338,11 @@ export async function GET() {
 > Edge for geo redirects and auth cookie parsing; Node for DB-heavy Route Handlers and Server Actions with ORMs.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Production deployment patterns
 
@@ -313,6 +369,11 @@ See [Docker/nextjs/README.md](../Docker/nextjs/README.md)
 > Production is `standalone` in Docker or Vercel with env secrets outside the image. I separate static asset CDN caching from dynamic HTML caching strategy.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Senior scenario: LCP regression after migration
 
@@ -347,3 +408,6 @@ Measure RUM, not just Lighthouse
 ---
 
 _Related: [04-nextjs-16-data-fetching-streaming-interview.md](./04-nextjs-16-data-fetching-streaming-interview.md) · [Docker/nextjs](../Docker/nextjs/)_
+
+
+<p><a href="#i12">Back to index</a></p>

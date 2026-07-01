@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is MongoDB?](#1-what-is-mongodb)
-2. [Features of MongoDB](#2-what-are-the-features-of-mongodb)
-3. [SQL vs NoSQL](#3-what-is-the-difference-between-sql-and-nosql)
-4. [Document in MongoDB](#4-what-is-a-document-in-mongodb)
-5. [Collection in MongoDB](#5-what-is-a-collection-in-mongodb)
-6. [insertOne vs insertMany](#6-what-is-the-difference-between-insertone-and-insertmany)
-7. [ObjectId](#7-what-is-objectid)
-8. [find vs findOne](#8-what-is-the-difference-between-find-and-findone)
-9. [Indexes](#9-what-are-indexes-in-mongodb)
-10. [Aggregation](#10-what-is-aggregation-in-mongodb)
-11. [$match vs $filter](#11-what-is-the-difference-between-match-and-filter)
-12. [Normalization vs Denormalization](#12-what-is-normalization-and-denormalization)
-13. [Sharding](#13-what-is-sharding-in-mongodb)
-14. [Replication](#14-what-is-replication-in-mongodb)
-15. [Transactions](#15-how-does-mongodb-handle-transactions)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is MongoDB?](#p1) |
+| <span id="i2"></span>2 | [Features of MongoDB](#p2) |
+| <span id="i3"></span>3 | [SQL vs NoSQL](#p3) |
+| <span id="i4"></span>4 | [Document in MongoDB](#p4) |
+| <span id="i5"></span>5 | [Collection in MongoDB](#p5) |
+| <span id="i6"></span>6 | [insertOne vs insertMany](#p6) |
+| <span id="i7"></span>7 | [ObjectId](#p7) |
+| <span id="i8"></span>8 | [find vs findOne](#p8) |
+| <span id="i9"></span>9 | [Indexes](#p9) |
+| <span id="i10"></span>10 | [Aggregation](#p10) |
+| <span id="i11"></span>11 | [$match vs $filter](#p11) |
+| <span id="i12"></span>12 | [Normalization vs Denormalization](#p12) |
+| <span id="i13"></span>13 | [Sharding](#p13) |
+| <span id="i14"></span>14 | [Replication](#p14) |
+| <span id="i15"></span>15 | [Transactions](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is MongoDB?
 
@@ -55,6 +61,11 @@ module.exports = mongoose.model("User", userSchema);
 > MongoDB is a NoSQL document database storing flexible JSON-like documents in collections, ideal for rapid iteration and hierarchical data in MERN apps.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What are the features of MongoDB?
 
@@ -85,6 +96,11 @@ await db.collection("products").insertOne({
 > Key features are schema flexibility, horizontal scaling via sharding, replication for HA, powerful aggregation pipeline, and rich indexing — well suited for MERN backends.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. What is the difference between SQL and NoSQL?
 
@@ -119,6 +135,11 @@ SELECT u.name, o.total FROM users u JOIN orders o ON u.id = o.user_id;
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is a document in MongoDB?
 
 ### Theory
@@ -144,6 +165,11 @@ A **document** is the basic unit of data — a BSON object with field-value pair
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What is a collection in MongoDB?
 
 ### Theory
@@ -167,6 +193,11 @@ const Product = mongoose.model('Product', productSchema);
 > A collection is a namespace holding related documents — similar to a table but schema-flexible across documents.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What is the difference between insertOne() and insertMany()?
 
@@ -197,6 +228,11 @@ await db.collection("users").insertMany(
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is ObjectId?
 
 ### Theory
@@ -221,6 +257,11 @@ await db
 > ObjectId is a 12-byte unique identifier often used as `_id`, embedding a timestamp — useful for sorting and distributed ID generation.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What is the difference between find() and findOne()?
 
@@ -252,6 +293,11 @@ const user = await db.collection("users").findOne({ email: "rahul@kpmg.com" });
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What are indexes in MongoDB?
 
 ### Theory
@@ -280,6 +326,11 @@ console.log(plan.executionStats.totalDocsExamined); // should be low
 > Indexes are B-tree structures that avoid full collection scans — create compound indexes matching your query filter and sort patterns.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is aggregation in MongoDB?
 
@@ -313,6 +364,11 @@ const result = await db
 > Aggregation is a multi-stage pipeline for transforming and summarizing data — `$match` filters early, `$group` aggregates, `$lookup` joins collections.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What is the difference between $match and $filter?
 
@@ -352,6 +408,11 @@ db.orders.aggregate([
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What is normalization and denormalization?
 
 ### Theory
@@ -383,6 +444,11 @@ db.orders.aggregate([
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. What is sharding in MongoDB?
 
 ### Theory
@@ -402,6 +468,11 @@ sh.shardCollection("ecommerce.orders", { userId: 1, createdAt: 1 });
 > Sharding distributes data across clusters by a shard key for horizontal scale — choose a high-cardinality key that spreads writes evenly.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. What is replication in MongoDB?
 
@@ -423,6 +494,11 @@ const client = new MongoClient(uri, {
 > Replication copies data from primary to secondaries for high availability and read scaling — replica sets failover automatically when the primary dies.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. How does MongoDB handle transactions?
 
@@ -460,3 +536,6 @@ try {
 ---
 
 **Next:** [02-expressjs-interview.md](./02-expressjs-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

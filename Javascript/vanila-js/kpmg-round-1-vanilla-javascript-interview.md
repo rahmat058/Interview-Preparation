@@ -18,26 +18,36 @@ round: 'Round 1 — Vanilla JavaScript (60 mins)'
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### JavaScript Fundamentals
 
-1. [Type Coercion](#1-type-coercion)
-2. [Hoisting & TDZ](#2-hoisting--temporal-dead-zone-tdz)
-3. [Event Loop](#3-event-loop)
-4. [Prototype Inheritance](#4-prototype-inheritance)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Type Coercion](#p1) |
+| <span id="i2"></span>2 | [Hoisting & TDZ](#p2) |
+| <span id="i3"></span>3 | [Event Loop](#p3) |
+| <span id="i4"></span>4 | [Prototype Inheritance](#p4) |
 
 ### Output-Based Questions
 
-5. [Output Question Bank](#5-output-based--edge-case-questions)
+| # | Section |
+| --- | --- |
+| <span id="i5"></span>5 | [Output Question Bank](#p5) |
 
 ### DSA
 
-6. [Sliding Window — Longest Substring Without Repeating Characters](#6-dsa-sliding-window)
-
-7. [Quick Revision Cheat Sheet](#7-quick-revision-cheat-sheet)
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Sliding Window — Longest Substring Without Repeating Characters](#p6) |
+| <span id="i7"></span>7 | [Quick Revision Cheat Sheet](#p7) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Type Coercion
 
@@ -85,6 +95,11 @@ console.log(Object.is(NaN, NaN)); // true (NaN !== NaN normally)
 > JavaScript coerces types implicitly with `==` and operators like `+`. I always use `===` for comparisons and explicit `Number()` / `String()` when converting, because implicit coercion causes subtle bugs in conditions and arithmetic.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Hoisting & Temporal Dead Zone (TDZ)
 
@@ -156,6 +171,11 @@ bar(); // ? → 10 (var foo hoisted inside bar as undefined; !undefined is true)
 > `var` and function declarations are hoisted; `let` and `const` are hoisted but sit in the TDZ until their line runs. That's why `let` in loops creates a new binding per iteration and `var` does not.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Event Loop
 
@@ -231,6 +251,11 @@ console.log('C');
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Prototype Inheritance
 
 ### Theory
@@ -295,6 +320,11 @@ console.log(d.hasOwnProperty('speak')); // false (on prototype)
 > JavaScript uses prototypal inheritance — objects delegate to their prototype chain. `class` extends sets up that chain; `new` creates an object whose `[[Prototype]]` links to the constructor's `prototype`.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Output-Based & Edge-Case Questions
 
@@ -383,6 +413,11 @@ console.log(map.size); // 2 — different object references
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. DSA — Sliding Window
 
 ### Theory
@@ -459,6 +494,11 @@ console.log(maxSumSubarray([2, 1, 5, 1, 3, 2], 3)); // 9 (5+1+3)
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Quick Revision Cheat Sheet
 
 | Topic          | Remember                                           |
@@ -472,3 +512,6 @@ console.log(maxSumSubarray([2, 1, 5, 1, 3, 2], 3)); // 9 (5+1+3)
 ---
 
 **Next round:** [KPMG Round 2 — React](../React/23-kpmg-frontend-interview.md)
+
+
+<p><a href="#i7">Back to index</a></p>

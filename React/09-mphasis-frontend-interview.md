@@ -12,25 +12,32 @@ Questions from a recent Mphasis Frontend Developer interview — covering **Java
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Technical Interview
 
-1. [What is Hoisting?](#1-what-is-hoisting)
-2. [What is the Event Loop?](#2-what-is-the-event-loop)
-3. [Normal Functions vs Arrow Functions](#3-difference-between-normal-functions-and-arrow-functions)
-4. [What is a Promise?](#4-what-is-a-promise)
-5. [Promise.all() vs Promise.allSettled()](#5-difference-between-promiseall-and-promiseallsettled)
-6. [What is the Virtual DOM?](#6-what-is-the-virtual-dom)
-7. [React application performance](#7-how-do-you-ensure-the-performance-of-a-react-application)
-8. [Redux Workflow](#8-explain-the-redux-workflow)
-9. [Advantages of Redux](#9-what-are-the-advantages-of-redux)
-10. [Snapshot Testing](#10-what-is-snapshot-testing)
-11. [First non-repeated character (coding)](#11-coding-find-the-first-non-repeated-character)
-12. [Error Boundary](#12-what-is-an-error-boundary)
-13. [Scenario: 3 API calls with partial errors](#13-scenario-based-3-api-calls-fast-load-partial-errors)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Hoisting?](#p1) |
+| <span id="i2"></span>2 | [What is the Event Loop?](#p2) |
+| <span id="i3"></span>3 | [Normal Functions vs Arrow Functions](#p3) |
+| <span id="i4"></span>4 | [What is a Promise?](#p4) |
+| <span id="i5"></span>5 | [Promise.all() vs Promise.allSettled()](#p5) |
+| <span id="i6"></span>6 | [What is the Virtual DOM?](#p6) |
+| <span id="i7"></span>7 | [React application performance](#p7) |
+| <span id="i8"></span>8 | [Redux Workflow](#p8) |
+| <span id="i9"></span>9 | [Advantages of Redux](#p9) |
+| <span id="i10"></span>10 | [Snapshot Testing](#p10) |
+| <span id="i11"></span>11 | [First non-repeated character (coding)](#p11) |
+| <span id="i12"></span>12 | [Error Boundary](#p12) |
+| <span id="i13"></span>13 | [Scenario: 3 API calls with partial errors](#p13) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Hoisting?
 
@@ -84,6 +91,11 @@ function getTotal() {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What is the Event Loop?
 
 ### Theory
@@ -130,6 +142,11 @@ function ProfilePage() {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Difference between Normal Functions and Arrow Functions
 
@@ -204,6 +221,11 @@ function OrderList({ orders }) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is a Promise?
 
 ### Theory
@@ -260,6 +282,11 @@ async function loadProfile(id) {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Difference between Promise.all() and Promise.allSettled()
 
@@ -335,6 +362,11 @@ async function loadDashboard(userId) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. What is the Virtual DOM?
 
 ### Theory
@@ -381,6 +413,11 @@ function OrderStatus({ order }) {
 - **Keys** help match list items efficiently across re-renders
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. How do you ensure the performance of a React application?
 
@@ -460,6 +497,11 @@ import { Profiler } from "react";
 | Component render  | < 16ms (60fps)   |
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Explain the Redux Workflow
 
@@ -573,6 +615,11 @@ useSelector reads new state → component re-renders
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What are the advantages of Redux?
 
 ### Theory
@@ -629,6 +676,11 @@ function Sidebar() {
 **Modern note for interview:** Mention Redux Toolkit + TanStack Query together — Redux for client state, Query for server state.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is Snapshot Testing?
 
@@ -715,6 +767,11 @@ it("calls onSelect when clicked", async () => {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Coding: Find the first non-repeated character
 
 ### Theory
@@ -792,6 +849,11 @@ firstNonRepeatedNoSpaces("I love coding"); // "I" (still first unique)
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. What is an Error Boundary?
 
@@ -872,6 +934,11 @@ function DashboardPage() {
 ```
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. Scenario-Based: 3 API calls, fast load, partial errors
 
@@ -1152,3 +1219,6 @@ Dashboard Page
 ---
 
 _Mphasis interviews test fundamentals deeply and expect you to connect them to real architecture — especially partial failure handling. Practice explaining the 3-API scenario out loud with the parallel + independent error pattern._
+
+
+<p><a href="#i13">Back to index</a></p>

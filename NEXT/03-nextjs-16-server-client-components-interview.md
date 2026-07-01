@@ -12,21 +12,27 @@ level: "Mid-Level to Senior (4–5+ years)"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is a Server Component?](#1-what-is-a-server-component)
-2. [What is a Client Component?](#2-what-is-a-client-component)
-3. [The children pattern (server wraps client)](#3-the-children-pattern-server-wraps-client)
-4. [Import rules between server and client](#4-import-rules-between-server-and-client)
-5. [Serialization constraints](#5-serialization-constraints)
-6. [Context providers in App Router](#6-context-providers-in-app-router)
-7. [Third-party libraries: server vs client](#7-third-party-libraries-server-vs-client)
-8. [Fetching in Server vs Client Components](#8-fetching-in-server-vs-client-components)
-9. [Security: secrets and data leaks](#9-security-secrets-and-data-leaks)
-10. [Testing Server vs Client Components](#10-testing-server-vs-client-components)
-11. [Senior scenario: dashboard with widgets](#11-senior-scenario-dashboard-with-widgets)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is a Server Component?](#p1) |
+| <span id="i2"></span>2 | [What is a Client Component?](#p2) |
+| <span id="i3"></span>3 | [The children pattern (server wraps client)](#p3) |
+| <span id="i4"></span>4 | [Import rules between server and client](#p4) |
+| <span id="i5"></span>5 | [Serialization constraints](#p5) |
+| <span id="i6"></span>6 | [Context providers in App Router](#p6) |
+| <span id="i7"></span>7 | [Third-party libraries: server vs client](#p7) |
+| <span id="i8"></span>8 | [Fetching in Server vs Client Components](#p8) |
+| <span id="i9"></span>9 | [Security: secrets and data leaks](#p9) |
+| <span id="i10"></span>10 | [Testing Server vs Client Components](#p10) |
+| <span id="i11"></span>11 | [Senior scenario: dashboard with widgets](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is a Server Component?
 
@@ -66,6 +72,11 @@ export default async function UsersPage() {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What is a Client Component?
 
 ### Theory
@@ -90,6 +101,11 @@ export function Counter() {
 > Client Components are for interactivity. The mistake at senior level isn't using them — it's using them at the root so the entire tree ships to the client.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. The children pattern (server wraps client)
 
@@ -139,6 +155,11 @@ export default function Page() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Import rules between server and client
 
 | Import direction | Allowed?                                   |
@@ -155,6 +176,11 @@ export default function Page() {
 > Client files cannot import Server Components — that's how secrets leak into bundles. Shared pure functions live in `lib/` with no `next/headers` or DB imports.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Serialization constraints
 
@@ -184,6 +210,11 @@ export default function Page() {
 > Props crossing the server/client boundary are JSON-serializable. I map DB entities to DTOs on the server before passing them down.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Context providers in App Router
 
@@ -226,6 +257,11 @@ export default function RootLayout({
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Third-party libraries: server vs client
 
 | Library type                  | Where                   |
@@ -252,6 +288,11 @@ const Chart = dynamic(() => import("./chart"), {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Fetching in Server vs Client Components
 
 |                 | Server Component                 | Client Component        |
@@ -274,6 +315,11 @@ export default async function Page() {
 > Default fetch is on the server with parallel awaits and Suspense boundaries — client fetch is for user-driven search after hydration or realtime polling.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Security: secrets and data leaks
 
@@ -302,6 +348,11 @@ return <Profile name={user.name} avatar={user.avatarUrl} />;
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Testing Server vs Client Components
 
 | Type           | Tooling                                                                     |
@@ -315,6 +366,11 @@ return <Profile name={user.name} avatar={user.avatarUrl} />;
 > I unit-test pure functions and integration-test Server Components via request-level tests. Client interactions use RTL. I don't over-mock RSC — I test behavior at the HTTP boundary.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Senior scenario: dashboard with widgets
 
@@ -356,3 +412,6 @@ layout.tsx (server)
 ---
 
 _Related: [04-nextjs-16-data-fetching-streaming-interview.md](./04-nextjs-16-data-fetching-streaming-interview.md)_
+
+
+<p><a href="#i11">Back to index</a></p>

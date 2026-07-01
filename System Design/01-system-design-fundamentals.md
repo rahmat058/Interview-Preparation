@@ -21,17 +21,23 @@ You only need to understand the fundamentals first. Once you do, system design s
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is System Design?](#1-what-is-system-design)
-2. [Scalability](#2-scalability)
-3. [Reliability](#3-reliability)
-4. [Availability](#4-availability)
-5. [Performance](#5-performance)
-6. [How the Four Pillars Work Together](#6-how-the-four-pillars-work-together)
-7. [Quick Revision Cheat Sheet](#7-quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is System Design?](#p1) |
+| <span id="i2"></span>2 | [Scalability](#p2) |
+| <span id="i3"></span>3 | [Reliability](#p3) |
+| <span id="i4"></span>4 | [Availability](#p4) |
+| <span id="i5"></span>5 | [Performance](#p5) |
+| <span id="i6"></span>6 | [How the Four Pillars Work Together](#p6) |
+| <span id="i7"></span>7 | [Quick Revision Cheat Sheet](#p7) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is System Design?
 
@@ -92,6 +98,11 @@ You don't need every detail on day one. You need a **clear problem** and **major
 > System design is architecting software so it meets functional requirements while staying scalable, reliable, available, and fast — with explicit trade-offs on cost and complexity.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Scalability
 
@@ -159,6 +170,11 @@ User opens app
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Reliability
 
 ### Theory
@@ -225,6 +241,11 @@ async function createPayment({ userId, amount, idempotencyKey }) {
 > Reliability means the system behaves correctly even when components fail — using redundancy, idempotent APIs, retries with backoff, and clear failure handling so errors don't become data corruption.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Availability
 
@@ -302,6 +323,11 @@ Search slow → serve cached popular products
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Performance
 
 ### Theory
@@ -374,6 +400,11 @@ p50: 45ms  |  p95: 120ms  |  p99: 280ms  |  RPS: 12,000
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. How the Four Pillars Work Together
 
 No pillar exists in isolation. Interviewers love "what breaks first?" questions.
@@ -402,6 +433,11 @@ graph LR
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Quick Revision Cheat Sheet
 
 | Topic             | One line                                                      |
@@ -425,3 +461,6 @@ System Design =
 ---
 
 **Next:** [02-core-components.md](./02-core-components.md) — Client, application server, database, cache, load balancer, message queue, and external services.
+
+
+<p><a href="#i7">Back to index</a></p>

@@ -21,21 +21,27 @@ Methods not covered in the array/string/object guides — **globals**, **Math**,
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Global functions](#1-global-functions)
-2. [Number & parsing](#2-number--parsing)
-3. [Math](#3-math)
-4. [JSON](#4-json)
-5. [Date](#5-date)
-6. [Set built-ins](#6-set-built-ins)
-7. [Map built-ins](#7-map-built-ins)
-8. [Promise combinators](#8-promise-combinators)
-9. [Array static methods (extra)](#9-array-static-methods-extra)
-10. [String static methods](#10-string-static-methods)
-11. [Object static methods (extra)](#11-object-static-methods-extra)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Global functions](#p1) |
+| <span id="i2"></span>2 | [Number & parsing](#p2) |
+| <span id="i3"></span>3 | [Math](#p3) |
+| <span id="i4"></span>4 | [JSON](#p4) |
+| <span id="i5"></span>5 | [Date](#p5) |
+| <span id="i6"></span>6 | [Set built-ins](#p6) |
+| <span id="i7"></span>7 | [Map built-ins](#p7) |
+| <span id="i8"></span>8 | [Promise combinators](#p8) |
+| <span id="i9"></span>9 | [Array static methods (extra)](#p9) |
+| <span id="i10"></span>10 | [String static methods](#p10) |
+| <span id="i11"></span>11 | [Object static methods (extra)](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Global functions
 
@@ -64,6 +70,11 @@ encodeURIComponent('a b&c'); // 'a%20b%26c'
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Number & parsing
 
@@ -94,6 +105,11 @@ Number.EPSILON; // smallest float diff
 > `toFixed` returns a string for display. For money, store cents as integers or use a decimal library — never rely on float equality.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Math
 
@@ -131,6 +147,11 @@ clamp(15, 1, 10); // 10
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. JSON
 
@@ -173,6 +194,11 @@ JSON.parse('{"joined":"2024-01-15"}', (key, value) => {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Date
 
 | Method                                      | Output                |
@@ -198,6 +224,11 @@ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(d);
 **Interview trap:** `new Date('2024-08-03')` may parse as UTC midnight — timezone bugs in production.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Set built-ins
 
@@ -231,6 +262,11 @@ const intersection = new Set([...a].filter((x) => b.has(x)))
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Map built-ins
 
 ```javascript
@@ -260,6 +296,11 @@ new Map([['a', 1], ['b', 2]])
 **vs plain object:** Map preserves insertion order, has `.size`, no prototype pollution, any key type.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Promise combinators
 
@@ -297,6 +338,11 @@ function withTimeout(promise, ms) {
 > `Promise.all` fails fast on first rejection. Use `allSettled` when you need every result; `race` for timeouts or first-wins.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Array static methods (extra)
 
@@ -340,6 +386,11 @@ arr.toSpliced(1, 1, 'x', 'y'); // [1, 'x', 'y', 3]
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. String static methods
 
 | Static                          | Example         |
@@ -369,6 +420,11 @@ String.raw`line1\nline2`; // 'line1\\nline2' — no escape processing
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Object static methods (extra)
 
@@ -416,3 +472,6 @@ const clone = Object.create(
 | **Set/Map** | `add`, `has`, `get`, `set`, `size`                                                             |
 | **Promise** | `all`, `allSettled`, `race`                                                                    |
 | **Math**    | `floor`, `ceil`, `round`, `min`, `max`, `random`                                               |
+
+
+<p><a href="#i11">Back to index</a></p>

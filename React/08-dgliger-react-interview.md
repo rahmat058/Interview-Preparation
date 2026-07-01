@@ -12,21 +12,27 @@ Questions from a recent DGLiger ReactJS Developer interview — testing **fundam
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is Web Accessibility?](#1-what-is-web-accessibility)
-2. [position: relative, absolute, fixed, static](#2-difference-between-position-relative-absolute-fixed-and-static)
-3. [Flexbox vs Grid](#3-flexbox-vs-grid--key-differences)
-4. [JavaScript code execution](#4-how-does-javascript-code-execution-work)
-5. [undefined vs not defined](#5-difference-between-undefined-and-not-defined)
-6. [Hoisting in JavaScript](#6-what-is-hoisting-in-javascript)
-7. [Temporal Dead Zone (TDZ)](#7-what-is-temporal-dead-zone-tdz)
-8. [Higher Order Component (HOC)](#8-what-is-higher-order-component-hoc-give-example)
-9. [map, filter, and reduce](#9-explain-map-filter-and-reduce-with-examples)
-10. [Traffic light system in React](#10-build-a-traffic-light-system-in-react)
-11. [Output-based tricky JS questions](#11-output-based-tricky-js-questions-bonus)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is Web Accessibility?](#p1) |
+| <span id="i2"></span>2 | [position: relative, absolute, fixed, static](#p2) |
+| <span id="i3"></span>3 | [Flexbox vs Grid](#p3) |
+| <span id="i4"></span>4 | [JavaScript code execution](#p4) |
+| <span id="i5"></span>5 | [undefined vs not defined](#p5) |
+| <span id="i6"></span>6 | [Hoisting in JavaScript](#p6) |
+| <span id="i7"></span>7 | [Temporal Dead Zone (TDZ)](#p7) |
+| <span id="i8"></span>8 | [Higher Order Component (HOC)](#p8) |
+| <span id="i9"></span>9 | [map, filter, and reduce](#p9) |
+| <span id="i10"></span>10 | [Traffic light system in React](#p10) |
+| <span id="i11"></span>11 | [Output-based tricky JS questions](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Web Accessibility?
 
@@ -141,6 +147,11 @@ npm install -D eslint-plugin-jsx-a11y @axe-core/react
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Difference between position: relative, absolute, fixed, and static
 
 ### Theory
@@ -235,6 +246,11 @@ Document flow with absolute:
 **Bonus — `position: sticky`:** Acts as relative until scroll threshold, then fixed within its container. Great for table headers and section nav.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Flexbox vs Grid — key differences
 
@@ -354,6 +370,11 @@ Both are CSS layout systems, but they solve different problems:
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. How does JavaScript code execution work?
 
 ### Theory
@@ -439,6 +460,11 @@ console.log("1b");
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Difference between undefined and not defined
 
 ### Theory
@@ -507,6 +533,11 @@ const city = user?.address?.city; // undefined if any part missing, no error
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. What is Hoisting in JavaScript?
 
 ### Theory
@@ -572,6 +603,11 @@ getPrice(); // logs undefined, returns 200
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. What is Temporal Dead Zone (TDZ)?
 
@@ -644,6 +680,11 @@ function initSafe() {
 > TDZ is the time between entering a block and the `let`/`const` declaration line. The variable is hoisted but uninitialized — accessing it throws ReferenceError. `var` has no TDZ; it's initialized as undefined. TDZ helps catch use-before-declare bugs.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What is Higher Order Component (HOC)? Give example
 
@@ -747,6 +788,11 @@ function Dashboard() {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Explain map, filter, and reduce with examples
 
 ### Theory
@@ -838,6 +884,11 @@ function MenuList({ items }) {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Build a traffic light system in React
 
@@ -1059,6 +1110,11 @@ function TrafficLightMachine() {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Output-based tricky JS questions (Bonus)
 
 ### Theory
@@ -1196,3 +1252,6 @@ console.log(obj.arrow()); // undefined
 ---
 
 _DGLiger interviews balance concept clarity with hands-on coding. Practice the traffic light problem live, explain your cleanup logic, and connect JS fundamentals to React patterns._
+
+
+<p><a href="#i11">Back to index</a></p>

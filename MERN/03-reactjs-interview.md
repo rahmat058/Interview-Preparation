@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is React?](#1-what-is-react)
-2. [Features of React](#2-what-are-the-features-of-react)
-3. [What is JSX?](#3-what-is-jsx)
-4. [Components in React](#4-what-are-components-in-react)
-5. [Functional vs Class Components](#5-what-is-the-difference-between-functional-and-class-components)
-6. [Props in React](#6-what-are-props-in-react)
-7. [State in React](#7-what-is-state-in-react)
-8. [State vs Props](#8-what-is-the-difference-between-state-and-props)
-9. [React Router](#9-what-is-react-router)
-10. [Hooks in React](#10-what-are-hooks-in-react)
-11. [Most Used React Hooks](#11-what-are-the-most-used-react-hooks)
-12. [Virtual DOM](#12-what-is-the-virtual-dom)
-13. [Controlled vs Uncontrolled Components](#13-what-is-the-difference-between-controlled-and-uncontrolled-components)
-14. [How useEffect Works](#14-how-does-useeffect-work)
-15. [Context in React](#15-what-is-context-in-react)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is React?](#p1) |
+| <span id="i2"></span>2 | [Features of React](#p2) |
+| <span id="i3"></span>3 | [What is JSX?](#p3) |
+| <span id="i4"></span>4 | [Components in React](#p4) |
+| <span id="i5"></span>5 | [Functional vs Class Components](#p5) |
+| <span id="i6"></span>6 | [Props in React](#p6) |
+| <span id="i7"></span>7 | [State in React](#p7) |
+| <span id="i8"></span>8 | [State vs Props](#p8) |
+| <span id="i9"></span>9 | [React Router](#p9) |
+| <span id="i10"></span>10 | [Hooks in React](#p10) |
+| <span id="i11"></span>11 | [Most Used React Hooks](#p11) |
+| <span id="i12"></span>12 | [Virtual DOM](#p12) |
+| <span id="i13"></span>13 | [Controlled vs Uncontrolled Components](#p13) |
+| <span id="i14"></span>14 | [How useEffect Works](#p14) |
+| <span id="i15"></span>15 | [Context in React](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is React?
 
@@ -54,6 +60,11 @@ function ProductCard({ name, price }) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What are the features of React?
 
 ### Theory
@@ -70,6 +81,11 @@ function ProductCard({ name, price }) {
 > Key features: components, Virtual DOM diffing, unidirectional data flow, hooks, and a rich ecosystem for MERN frontends.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. What is JSX?
 
@@ -98,6 +114,11 @@ const el = React.createElement(
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What are components in React?
 
 ### Theory
@@ -123,6 +144,11 @@ function App() {
 > Components are reusable UI building blocks — compose small focused components into pages.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. What is the difference between functional and class components?
 
@@ -150,6 +176,11 @@ function Counter() {
 > Functional components with hooks replaced classes for new code — simpler syntax, same capabilities, better optimization with React 18+.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What are props in React?
 
@@ -179,6 +210,11 @@ function UserBadge({ name, role, avatarUrl }) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What is state in React?
 
 ### Theory
@@ -207,6 +243,11 @@ function SearchBox() {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. What is the difference between state and props?
 
 ### Theory
@@ -222,6 +263,11 @@ function SearchBox() {
 > Props are external read-only inputs; state is internal and drives interactivity — lift state up when siblings need to share it.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. What is React Router?
 
@@ -262,6 +308,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. What are Hooks in React?
 
 ### Theory
@@ -273,6 +324,11 @@ function App() {
 > Hooks add state and lifecycle to functional components — call them only at the top level of React functions.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What are the most used React Hooks?
 
@@ -313,6 +369,11 @@ function OrdersPage() {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What is the Virtual DOM?
 
 ### Theory
@@ -324,6 +385,11 @@ The **Virtual DOM** is a lightweight JS tree mirroring the real DOM. On state ch
 > Virtual DOM is an in-memory UI representation — React diffs it against the previous version and patches only changed nodes for performance.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. What is the difference between controlled and uncontrolled components?
 
@@ -362,6 +428,11 @@ function UncontrolledInput() {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. How does useEffect work?
 
 ### Theory
@@ -393,6 +464,11 @@ useEffect(() => {
 > `useEffect` runs side effects after render — use the dependency array to control when it re-runs and return cleanup for subscriptions and abort controllers.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. What is context in React?
 
@@ -431,3 +507,6 @@ export const useAuth = () => useContext(AuthContext);
 ---
 
 **Next:** [04-nodejs-interview.md](./04-nodejs-interview.md) · Deep dive: [React folder](../React/)
+
+
+<p><a href="#i15">Back to index</a></p>

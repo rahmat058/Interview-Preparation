@@ -24,46 +24,60 @@ Practical Next.js questions for **mid-level** and **senior frontend/full-stack**
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Architecture & Rendering
 
-1. [Why Next.js over CRA or Vite SPA?](#1-why-nextjs-over-cra-or-vite-spa)
-2. [App Router vs Pages Router](#2-app-router-vs-pages-router)
-3. [Rendering models: static, dynamic, PPR](#3-rendering-models-static-dynamic-ppr)
-4. [CSR vs SSR vs SSG in Next.js 16](#4-csr-vs-ssr-vs-ssg-in-nextjs-16)
-5. [File-based routing conventions](#5-file-based-routing-conventions)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Why Next.js over CRA or Vite SPA?](#p1) |
+| <span id="i2"></span>2 | [App Router vs Pages Router](#p2) |
+| <span id="i3"></span>3 | [Rendering models: static, dynamic, PPR](#p3) |
+| <span id="i4"></span>4 | [CSR vs SSR vs SSG in Next.js 16](#p4) |
+| <span id="i5"></span>5 | [File-based routing conventions](#p5) |
 
 ### Server & Client Model
 
-6. [Server Components vs Client Components](#6-server-components-vs-client-components)
-7. [When to add `"use client"`](#7-when-to-add-use-client)
-8. [Passing data from Server to Client Components](#8-passing-data-from-server-to-client-components)
-9. [Server Actions overview](#9-server-actions-overview)
-10. [Route Handlers vs Server Actions](#10-route-handlers-vs-server-actions)
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Server Components vs Client Components](#p6) |
+| <span id="i7"></span>7 | [When to add `"use client"`](#p7) |
+| <span id="i8"></span>8 | [Passing data from Server to Client Components](#p8) |
+| <span id="i9"></span>9 | [Server Actions overview](#p9) |
+| <span id="i10"></span>10 | [Route Handlers vs Server Actions](#p10) |
 
 ### Caching & Data (Next.js 16)
 
-11. [Dynamic by default in Next.js 16](#11-dynamic-by-default-in-nextjs-16)
-12. [Cache Components at a high level](#12-cache-components-at-a-high-level)
-13. [`revalidateTag` vs `updateTag`](#13-revalidatetag-vs-updatetag)
+| # | Section |
+| --- | --- |
+| <span id="i11"></span>11 | [Dynamic by default in Next.js 16](#p11) |
+| <span id="i12"></span>12 | [Cache Components at a high level](#p12) |
+| <span id="i13"></span>13 | [`revalidateTag` vs `updateTag`](#p13) |
 
 ### Routing, Auth & Infra
 
-14. [`proxy.ts` (formerly middleware)](#14-proxyts-formerly-middleware)
-15. [Authentication patterns in App Router](#15-authentication-patterns-in-app-router)
-16. [Metadata API & SEO](#16-metadata-api--seo)
-17. [Environment variables: server vs client](#17-environment-variables-server-vs-client)
+| # | Section |
+| --- | --- |
+| <span id="i14"></span>14 | [`proxy.ts` (formerly middleware)](#p14) |
+| <span id="i15"></span>15 | [Authentication patterns in App Router](#p15) |
+| <span id="i16"></span>16 | [Metadata API & SEO](#p16) |
+| <span id="i17"></span>17 | [Environment variables: server vs client](#p17) |
 
 ### Performance & Production
 
-18. [Turbopack in Next.js 16](#18-turbopack-in-nextjs-16)
-19. [Deployment: standalone, Docker, edge](#19-deployment-standalone-docker-edge)
-20. [When would you not choose Next.js?](#20-when-would-you-not-choose-nextjs)
+| # | Section |
+| --- | --- |
+| <span id="i18"></span>18 | [Turbopack in Next.js 16](#p18) |
+| <span id="i19"></span>19 | [Deployment: standalone, Docker, edge](#p19) |
+| <span id="i20"></span>20 | [When would you not choose Next.js?](#p20) |
 
 ---
-
 ## Architecture & Rendering
+
+<a id="p1"></a>
 
 ### 1. Why Next.js over CRA or Vite SPA?
 
@@ -99,6 +113,11 @@ E-commerce product listing: Next.js Server Component fetches catalog on the serv
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ### 2. App Router vs Pages Router
 
 **What they test:** Migration experience and whether you know **which router to use in 2026**.
@@ -119,6 +138,11 @@ E-commerce product listing: Next.js Server Component fetches catalog on the serv
 > New projects should use App Router — Server Components, layouts, and Cache Components are the investment path. Pages Router is fine for legacy apps; I'd migrate incrementally with route groups, not a big-bang rewrite. In interviews I explain the mental shift: pages default to client thinking; app defaults to server thinking.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ### 3. Rendering models: static, dynamic, PPR
 
@@ -162,6 +186,11 @@ export default async function ProductPage({
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ### 4. CSR vs SSR vs SSG in Next.js 16
 
 **What they test:** Mapping business requirements to rendering — still asked even in RSC era.
@@ -178,6 +207,11 @@ export default async function ProductPage({
 > I don't think in Pages Router terms anymore — I ask "can this segment be cached, for how long, and how do I invalidate it?" Public blog posts get `"use cache"` with tags; account settings stay fully dynamic; charts and editors are Client Components with CSR after hydration.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ### 5. File-based routing conventions
 
@@ -203,6 +237,11 @@ export default async function ProductPage({
 
 ## Server & Client Model
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ### 6. Server Components vs Client Components
 
 **Theory**
@@ -220,6 +259,11 @@ export default async function ProductPage({
 > Server Components are the default — they access DB and secrets directly and don't bloat the bundle. Client Components are for interactivity: clicks, forms, subscriptions, browser APIs. Senior mistake: marking the whole tree `"use client"` and losing RSC benefits.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ### 7. When to add `"use client"`
 
@@ -241,6 +285,11 @@ export default async function ProductPage({
 > I push `"use client"` to the leaves — a `AddToCartButton` client island inside a server `ProductCard`, not a client wrapper around the entire page.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ### 8. Passing data from Server to Client Components
 
@@ -281,6 +330,11 @@ export default async function Page() {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ### 9. Server Actions overview
 
 **Theory**
@@ -308,6 +362,11 @@ export async function updateProfile(formData: FormData) {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ### 10. Route Handlers vs Server Actions
 
 | Use Route Handler (`route.ts`)    | Use Server Action                          |
@@ -325,6 +384,11 @@ export async function updateProfile(formData: FormData) {
 
 ## Caching & Data (Next.js 16)
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ### 11. Dynamic by default in Next.js 16
 
 **What they test:** Understanding the **biggest mental model shift** from Next 13–15.
@@ -339,6 +403,11 @@ export async function updateProfile(formData: FormData) {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ### 12. Cache Components at a high level
 
 See deep dive: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache-components-interview.md)
@@ -348,6 +417,11 @@ See deep dive: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache
 > Cache Components let me cache pages, layouts, or async functions with `"use cache"`, `cacheLife` for TTL, and `cacheTag` for targeted invalidation — it's explicit PPR for production.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ### 13. `revalidateTag` vs `updateTag`
 
@@ -363,6 +437,11 @@ See deep dive: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache
 ---
 
 ## Routing, Auth & Infra
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ### 14. `proxy.ts` (formerly middleware)
 
@@ -397,6 +476,11 @@ export const config = {
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ### 15. Authentication patterns in App Router
 
 **Patterns**
@@ -419,6 +503,11 @@ export const config = {
 > I never put access tokens in Client Components. Session lives in httpOnly cookies, I read it server-side, and proxy only handles coarse redirects. RBAC checks happen where data is fetched.
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ### 16. Metadata API & SEO
 
@@ -447,6 +536,11 @@ export async function generateMetadata({
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ### 17. Environment variables: server vs client
 
 | Prefix         | Exposed to browser | Use for                         |
@@ -462,6 +556,11 @@ export async function generateMetadata({
 
 ## Performance & Production
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ### 18. Turbopack in Next.js 16
 
 **Theory**
@@ -475,6 +574,11 @@ export async function generateMetadata({
 > Turbopack is default in 16 — I'd only fall back to webpack for an incompatible custom plugin. For teams, the win is CI build time and dev feedback loops.
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ### 19. Deployment: standalone, Docker, edge
 
@@ -496,6 +600,11 @@ const nextConfig = {
 > Production Docker uses `output: 'standalone'` — copies only needed `node_modules`. I run Node for full APIs; edge is for latency-sensitive, IO-light handlers only.
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ### 20. When would you not choose Next.js?
 
@@ -528,3 +637,6 @@ const nextConfig = {
 ---
 
 _Next: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache-components-interview.md) for caching deep dive._
+
+
+<p><a href="#i20">Back to index</a></p>

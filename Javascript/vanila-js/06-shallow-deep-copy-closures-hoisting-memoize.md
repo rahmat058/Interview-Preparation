@@ -20,31 +20,44 @@ Core JavaScript fundamentals that appear in **every** mid/senior interview — o
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Copying
 
-1. [Shallow copy](#1-shallow-copy)
-2. [Deep copy](#2-deep-copy)
-3. [Shallow vs deep — comparison table](#3-shallow-vs-deep--comparison-table)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Shallow copy](#p1) |
+| <span id="i2"></span>2 | [Deep copy](#p2) |
+| <span id="i3"></span>3 | [Shallow vs deep — comparison table](#p3) |
 
 ### Patterns
 
-4. [Memoize](#4-memoize)
-5. [Hoisting & TDZ](#5-hoisting--temporal-dead-zone-tdz)
-6. [Closures](#6-closures)
+| # | Section |
+| --- | --- |
+| <span id="i4"></span>4 | [Memoize](#p4) |
+| <span id="i5"></span>5 | [Hoisting & TDZ](#p5) |
+| <span id="i6"></span>6 | [Closures](#p6) |
 
 ### Output problems (with answers)
 
-7. [Hoisting output questions](#7-hoisting-output-questions)
-8. [Closure output questions](#8-closure-output-questions)
-9. [Copy-related output questions](#9-copy-related-output-questions)
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Hoisting output questions](#p7) |
+| <span id="i8"></span>8 | [Closure output questions](#p8) |
+| <span id="i9"></span>9 | [Copy-related output questions](#p9) |
 
 ### Interview pack
 
-10. [One-line answers cheat sheet](#10-one-line-answers-cheat-sheet)
+| # | Section |
+| --- | --- |
+| <span id="i10"></span>10 | [One-line answers cheat sheet](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Shallow copy
 
@@ -106,6 +119,11 @@ console.log(user.address.city); // 'LA' — nested SHARED
 - Redux/React state updates at a known depth (spread each level you change)
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Deep copy
 
@@ -188,6 +206,11 @@ Production code often uses battle-tested libraries or **Immer** for immutable up
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Shallow vs deep — comparison table
 
 | Technique                      | Depth   | Mutates original nested? | Date/Map/Fn        |
@@ -220,6 +243,11 @@ const nextState = {
 > I don't deep-clone entire Redux state — I shallow-copy each level on the path that changes. Full deep clone is for duplicating unknown nested API payloads.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Memoize
 
@@ -296,6 +324,11 @@ const fetchUser = memoizeWithResolver(
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Hoisting & Temporal Dead Zone (TDZ)
 
 **Hoisting:** JS engine registers declarations in scope **before** execution runs line-by-line. **Initialization** timing differs by declaration type.
@@ -341,6 +374,11 @@ console.log(i); // 3 — var is function-scoped, not block-scoped
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Closures
 
@@ -424,6 +462,11 @@ function debounce(fn, wait) {
 Closures keep outer variables alive. Attaching closures to DOM nodes that outlive the data can leak memory — null out references or use WeakMap for caches.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Hoisting output questions
 
@@ -527,6 +570,11 @@ for (let i = 0; i < 3; i++) {
 </details>
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Closure output questions
 
@@ -676,6 +724,11 @@ Second call hits cache. `cache` object is closed over by returned function.
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Copy-related output questions
 
 ### Problem 10
@@ -765,6 +818,11 @@ True deep copy for plain nested data.
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. One-line answers cheat sheet
 
 | Topic            | Interview answer                                                           |
@@ -788,3 +846,6 @@ True deep copy for plain nested data.
 | Hoisting / coercion | [kpmg-round-1-vanilla-javascript-interview.md](./kpmg-round-1-vanilla-javascript-interview.md) |
 | Memoized selectors  | `Projects/09-shopping-cart` — `cartSelectors.ts`                                               |
 | Closure in store    | `Projects/vanilla-js/02-catalog-spa` — `createStore` subscribers                               |
+
+
+<p><a href="#i10">Back to index</a></p>

@@ -11,30 +11,36 @@ React gets you into the interview. **JavaScript decides whether you clear it.** 
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Closure](#1-what-is-closure)
-2. [Event Loop](#2-how-does-the-javascript-event-loop-work)
-3. [Microtasks vs Macrotasks](#3-microtasks-and-macrotasks)
-4. [Hoisting](#4-what-is-hoisting)
-5. [Temporal Dead Zone (TDZ)](#5-temporal-dead-zone-tdz)
-6. [var, let, const](#6-var-let-and-const)
-7. [== vs ===](#7--vs-)
-8. [call(), apply(), bind()](#8-call-apply-bind)
-9. [call/apply/bind with Arrow Functions?](#9-can-call-apply-bind-be-used-with-arrow-functions)
-10. [Normal vs Arrow Functions](#10-normal-functions-vs-arrow-functions)
-11. [Debouncing and Throttling](#11-debouncing-and-throttling)
-12. [Currying — sum(1)(2)(3)](#12-currying--implement-sum123)
-13. [Prototypes and Prototype Chain](#13-prototypes-and-prototype-chain)
-14. [Event Bubbling and Capturing](#14-event-bubbling-and-capturing)
-15. [Garbage Collection](#15-garbage-collection)
-16. [Deep Copy vs Shallow Copy](#16-deep-copy-vs-shallow-copy)
-17. [async/await and Promises](#17-asyncawait-and-promises)
-18. [map(), filter(), reduce()](#18-map-filter-reduce)
-19. [Flatten nested array](#19-flatten-nested-array)
-20. [Output-based questions](#20-output-based-javascript-questions)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Closure](#p1) |
+| <span id="i2"></span>2 | [Event Loop](#p2) |
+| <span id="i3"></span>3 | [Microtasks vs Macrotasks](#p3) |
+| <span id="i4"></span>4 | [Hoisting](#p4) |
+| <span id="i5"></span>5 | [Temporal Dead Zone (TDZ)](#p5) |
+| <span id="i6"></span>6 | [var, let, const](#p6) |
+| <span id="i7"></span>7 | [== vs ===](#p7) |
+| <span id="i8"></span>8 | [call(), apply(), bind()](#p8) |
+| <span id="i9"></span>9 | [call/apply/bind with Arrow Functions?](#p9) |
+| <span id="i10"></span>10 | [Normal vs Arrow Functions](#p10) |
+| <span id="i11"></span>11 | [Debouncing and Throttling](#p11) |
+| <span id="i12"></span>12 | [Currying — sum(1)(2)(3)](#p12) |
+| <span id="i13"></span>13 | [Prototypes and Prototype Chain](#p13) |
+| <span id="i14"></span>14 | [Event Bubbling and Capturing](#p14) |
+| <span id="i15"></span>15 | [Garbage Collection](#p15) |
+| <span id="i16"></span>16 | [Deep Copy vs Shallow Copy](#p16) |
+| <span id="i17"></span>17 | [async/await and Promises](#p17) |
+| <span id="i18"></span>18 | [map(), filter(), reduce()](#p18) |
+| <span id="i19"></span>19 | [Flatten nested array](#p19) |
+| <span id="i20"></span>20 | [Output-based questions](#p20) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is Closure?
 
@@ -91,6 +97,11 @@ function useDebounce(callback, delay) {
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. How does the JavaScript Event Loop work?
 
 ### Theory
@@ -145,6 +156,11 @@ function processPayments(transactions) {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Microtasks and Macrotasks
 
 ### Theory
@@ -188,6 +204,11 @@ function poison() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is Hoisting?
 
 ### Theory
@@ -229,6 +250,11 @@ function getPrice() {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Temporal Dead Zone (TDZ)
 
 ### Theory
@@ -257,6 +283,11 @@ typeof undeclaredVar; // "undefined" — safe
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. var, let, and const
 
@@ -292,6 +323,11 @@ for (var j = 0; j < 3; j++) {
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. == vs ===
 
@@ -334,6 +370,11 @@ function validateAmount(input) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. call(), apply(), bind()
 
 ### Theory
@@ -375,6 +416,11 @@ Math.max.call(null, ...nums); // 8
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Can call(), apply(), bind() be used with Arrow Functions?
 
 ### Theory
@@ -415,6 +461,11 @@ this.handleClick = () => { ... };               // arrow — this already correc
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Normal Functions vs Arrow Functions
 
 ### Theory
@@ -453,6 +504,11 @@ const paymentService = {
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Debouncing and Throttling
 
@@ -498,6 +554,11 @@ const trackScroll = throttle(() => analytics.track("scroll"), 200);
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Currying — Implement sum(1)(2)(3)
 
@@ -564,6 +625,11 @@ credApi("/users/me").then((r) => r.json());
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Prototypes and Prototype Chain
 
 ### Theory
@@ -618,6 +684,11 @@ dog.breathe(); // "breathing" — inherited
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. Event Bubbling and Capturing
 
 ### Theory
@@ -662,6 +733,11 @@ document.addEventListener("click", logAllClicks, { capture: true });
 ```
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Garbage Collection
 
@@ -711,6 +787,11 @@ function attach(el, data) { domData.set(el, data); }
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Deep Copy vs Shallow Copy
 
 ### Theory
@@ -757,6 +838,11 @@ setOrder((prev) => ({
 ```
 
 ---
+
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
 
 ## 17. async/await and Promises
 
@@ -813,6 +899,11 @@ console.log("D");
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ## 18. map(), filter(), reduce()
 
 ### Theory
@@ -862,6 +953,11 @@ const byType = transactions.reduce((groups, t) => {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Flatten Nested Array
 
@@ -914,6 +1010,11 @@ const searchable = flatten(categories);
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. Output-based JavaScript Questions
 
@@ -1124,3 +1225,6 @@ console.log(multiply(3)(4));
 ---
 
 *Senior React interviews are won on JavaScript depth. Know the concept, explain it in 30 seconds, prove it with one example.*
+
+
+<p><a href="#i20">Back to index</a></p>

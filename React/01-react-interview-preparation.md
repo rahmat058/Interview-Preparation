@@ -12,16 +12,38 @@ This guide covers questions commonly asked in senior frontend interviews — wit
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-- [Round 1 — Technical](#round-1--technical)
-- [Round 2 — Advanced Technical / System Design](#round-2--advanced-technical--system-design)
-- [Round 3 — Managerial / Behavioral](#round-3--managerial--behavioral)
-- [Quick Revision Cheat Sheet](#quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is the difference between `var`, `let`, and `const`?](#p1) |
+| <span id="i2"></span>2 | [Explain closures with a practical example](#p2) |
+| <span id="i3"></span>3 | [Build a custom React hook for data fetching](#p3) |
+| <span id="i4"></span>4 | [How does React reconciliation work?](#p4) |
+| <span id="i5"></span>5 | [Why are keys important in React lists?](#p5) |
+| <span id="i1"></span>1 | [How would you design a scalable frontend architecture for a large-scale application?](#p1) |
+| <span id="i2"></span>2 | [Explain React Server Components and their advantages](#p2) |
+| <span id="i3"></span>3 | [How would you implement infinite scrolling efficiently?](#p3) |
+| <span id="i4"></span>4 | [What techniques would you use to improve Core Web Vitals?](#p4) |
+| <span id="i5"></span>5 | [How do you manage state in large React applications?](#p5) |
+| <span id="i6"></span>6 | [Explain frontend caching strategies](#p6) |
+| <span id="i1"></span>1 | [HTTP caching](#p1) |
+| <span id="i2"></span>2 | [CDN caching](#p2) |
+| <span id="i3"></span>3 | [Application-level (React Query)](#p3) |
+| <span id="i4"></span>4 | [Service Worker (PWA)](#p4) |
+| <span id="i5"></span>5 | [Local storage / IndexedDB](#p5) |
+| <span id="i7"></span>7 | [How would you design a frontend system serving millions of users daily?](#p7) |
+| <span id="i1"></span>1 | [Tell us about a challenging project you worked on](#p1) |
+| <span id="i2"></span>2 | [How did you handle a critical production issue?](#p2) |
+| <span id="i3"></span>3 | [Describe a disagreement within your team and how you resolved it](#p3) |
+| <span id="i4"></span>4 | [How do you mentor junior developers and review code?](#p4) |
 
 ---
-
 # Round 1 — Technical
+
+<a id="p1"></a>
 
 ## 1. What is the difference between `var`, `let`, and `const`?
 
@@ -81,6 +103,11 @@ for (let j = 0; j < 3; j++) {
 > Use `const` by default, `let` when reassignment is needed, and avoid `var` in modern code. `let`/`const` give block scope and prevent hoisting bugs. `const` ensures the reference doesn't change, which makes code easier to reason about in large codebases.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Explain closures with a practical example
 
@@ -170,6 +197,11 @@ const handleSearch = debounce((query) => {
 > A closure is a function plus its surrounding lexical environment. The inner function retains access to outer variables after the outer function returns. I use closures for encapsulation, debouncing, memoization, and custom hooks in React.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Build a custom React hook for data fetching
 
@@ -294,6 +326,11 @@ function RestaurantList() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. How does React reconciliation work?
 
 ### Theory
@@ -357,6 +394,11 @@ function App({ showList }) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Why are keys important in React lists?
 
 ### Theory
@@ -412,6 +454,11 @@ function TodoItem({ item }) {
 ---
 
 # Round 2 — Advanced Technical / System Design
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p1"></a>
 
 ## 1. How would you design a scalable frontend architecture for a large-scale application?
 
@@ -489,6 +536,11 @@ src/
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Explain React Server Components and their advantages
 
 ### Theory
@@ -564,6 +616,11 @@ export default function RestaurantList({ initialData }) {
 - Tooling still evolving; debugging across boundaries
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. How would you implement infinite scrolling efficiently?
 
@@ -686,6 +743,11 @@ function VirtualList({ items }) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What techniques would you use to improve Core Web Vitals?
 
 ### Theory — The three Core Web Vitals
@@ -777,6 +839,11 @@ Ship RUM data to Datadog, Sentry, or Google Analytics 4. Set **performance budge
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. How do you manage state in large React applications?
 
 ### Theory — State categories
@@ -858,6 +925,11 @@ export const useCartStore = create<CartStore>()(
 > I classify state first: server state goes to TanStack Query, URL state to the router, form state to React Hook Form, and only truly global client state to Zustand or Redux. This avoids over-centralizing and keeps each layer doing one job well.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Explain frontend caching strategies
 
@@ -954,6 +1026,11 @@ workbox.routing.registerRoute(
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. How would you design a frontend system serving millions of users daily?
 
 ### Theory — Full-system view
@@ -1044,6 +1121,11 @@ Keep answers **60–90 seconds**. Quantify impact where possible.
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p1"></a>
+
 ## 1. Tell us about a challenging project you worked on
 
 ### Framework
@@ -1067,6 +1149,11 @@ Keep answers **60–90 seconds**. Quantify impact where possible.
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. How did you handle a critical production issue?
 
 ### What interviewers assess
@@ -1088,6 +1175,11 @@ Keep answers **60–90 seconds**. Quantify impact where possible.
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Describe a disagreement within your team and how you resolved it
 
 ### What interviewers assess
@@ -1107,6 +1199,11 @@ Keep answers **60–90 seconds**. Quantify impact where possible.
 > **R:** The team chose React Query for server state and kept Redux only for complex client workflows. We updated our architecture decision record (ADR) so future teams had clear guidance.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. How do you mentor junior developers and review code?
 
@@ -1157,3 +1254,6 @@ Keep answers **60–90 seconds**. Quantify impact where possible.
 ---
 
 _Good luck with your interview. Practice explaining trade-offs out loud — senior interviews reward judgment, not just syntax._
+
+
+<p><a href="#i4">Back to index</a></p>

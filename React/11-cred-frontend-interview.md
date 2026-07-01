@@ -16,46 +16,60 @@ CRED runs **5 rounds** across separate days — testing **vanilla JS depth**, **
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Round 1 — Technical (90 mins)
 
-1. [Projects deep dive](#1-projects-deep-dive)
-2. [Event bubbling vs event delegation](#2-event-bubbling-vs-event-delegation)
-3. [defer vs async — HTML parsing](#3-defer-vs-async-which-blocks-html-parsing)
-4. [Why CSS blocks rendering](#4-why-does-css-block-rendering)
-5. [Debounce from scratch (cancellable)](#5-write-a-debounce-function-cancellable)
-6. [Closure memory leak + fix](#6-closure-memory-leak-and-fix)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Projects deep dive](#p1) |
+| <span id="i2"></span>2 | [Event bubbling vs event delegation](#p2) |
+| <span id="i3"></span>3 | [defer vs async — HTML parsing](#p3) |
+| <span id="i4"></span>4 | [Why CSS blocks rendering](#p4) |
+| <span id="i5"></span>5 | [Debounce from scratch (cancellable)](#p5) |
+| <span id="i6"></span>6 | [Closure memory leak + fix](#p6) |
 
 ### Round 2 — Machine Coding + JS Deep Dive (90 mins)
 
-7. [Live search box — vanilla JS](#7-live-search-box-vanilla-javascript)
-8. [React reconciliation — what updates](#8-react-reconciliation-what-to-update)
-9. [50 components, one context — re-renders](#9-50-components-one-context-re-renders)
-10. [Event loop — microtasks vs macrotasks](#10-event-loop-microtasks-vs-macrotasks)
-11. [Next.js SSR vs CSR vs ISR — real trade-offs](#11-nextjs-ssr-vs-csr-vs-isr)
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Live search box — vanilla JS](#p7) |
+| <span id="i8"></span>8 | [React reconciliation — what updates](#p8) |
+| <span id="i9"></span>9 | [50 components, one context — re-renders](#p9) |
+| <span id="i10"></span>10 | [Event loop — microtasks vs macrotasks](#p10) |
+| <span id="i11"></span>11 | [Next.js SSR vs CSR vs ISR — real trade-offs](#p11) |
 
 ### Round 3 — Machine Coding in React (90 mins)
 
-12. [Multi-field form — PAN, Aadhaar, validations](#12-multi-field-form-pan-aadhaar)
-13. [10+ fields — unnecessary re-renders](#13-optimize-10-fields-re-renders)
-14. [Single state object vs individual useState](#14-single-state-vs-individual-usestate)
-15. [Dependent fields — state structure](#15-dependent-field-state-structure)
+| # | Section |
+| --- | --- |
+| <span id="i12"></span>12 | [Multi-field form — PAN, Aadhaar, validations](#p12) |
+| <span id="i13"></span>13 | [10+ fields — unnecessary re-renders](#p13) |
+| <span id="i14"></span>14 | [Single state object vs individual useState](#p14) |
+| <span id="i15"></span>15 | [Dependent fields — state structure](#p15) |
 
 ### Round 4 — Cultural Fit (60 mins)
 
-16. [Technical weaknesses + growth plan](#16-technical-weaknesses)
-17. [Approaching an unfamiliar codebase](#17-unfamiliar-codebase)
-18. [A decision you regretted](#18-decision-you-regretted)
+| # | Section |
+| --- | --- |
+| <span id="i16"></span>16 | [Technical weaknesses + growth plan](#p16) |
+| <span id="i17"></span>17 | [Approaching an unfamiliar codebase](#p17) |
+| <span id="i18"></span>18 | [A decision you regretted](#p18) |
 
 ### Meta
 
-19. [Why CRED specifically](#19-why-cred-specifically)
-20. [Round-by-round prep strategy](#20-round-by-round-prep-strategy)
+| # | Section |
+| --- | --- |
+| <span id="i19"></span>19 | [Why CRED specifically](#p19) |
+| <span id="i20"></span>20 | [Round-by-round prep strategy](#p20) |
 
 ---
-
 # Round 1 — Technical (90 mins)
+
+<a id="p1"></a>
 
 ## 1. Projects deep dive
 
@@ -95,6 +109,11 @@ Use **STAR** for features but add a **technical decision layer**: alternatives c
 | Monolith vs micro-frontend   | Simpler                   | Team scaling          | Only if you led the decision |
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Event bubbling vs event delegation
 
@@ -161,6 +180,11 @@ transactionList.addEventListener("click", (e) => {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. defer vs async — which blocks HTML parsing?
 
 ### Theory
@@ -222,6 +246,11 @@ Timeline — no attribute:
 > Neither defer nor async blocks HTML parsing during download — both fetch in parallel. Plain `<script>` without attributes blocks parsing. `async` executes as soon as it's downloaded, which can interrupt parsing. `defer` waits until HTML parsing completes, then runs in order before DOMContentLoaded. Use defer for app scripts, async for independent third-party scripts.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Why does CSS block rendering?
 
@@ -290,6 +319,11 @@ If CSS hasn't loaded, the browser would show unstyled content (**FOUC** — Flas
 > CSS blocks rendering because the browser needs the CSSOM to build the render tree — it won't paint until it knows how elements are styled, preventing FOUC. JS doesn't block rendering the same way, but synchronous scripts block HTML parsing which indirectly delays DOM/CSSOM. Optimize with critical inline CSS, preload, and media queries for non-critical styles.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Write a debounce function (cancellable)
 
@@ -377,6 +411,11 @@ function debounce<T extends (...args: Parameters<T>) => void>(
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Closure memory leak and fix
 
 ### Theory
@@ -457,6 +496,11 @@ function startPolling(userId) {
 ---
 
 # Round 2 — Machine Coding + JS Deep Dive (90 mins)
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Live search box — vanilla JavaScript
 
@@ -642,6 +686,11 @@ new LiveSearch(document.getElementById("search-root"));
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. React reconciliation — what to update?
 
 ### Theory
@@ -695,6 +744,11 @@ function Counter() {
 > Reconciliation diffs old and new trees. Same element type updates props in place. Different type replaces the subtree. Keys identify list items for efficient moves. React skips re-renders when state/props are unchanged (Object.is). Commit phase applies only the DOM mutations the diff marks.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. 50 components, one context — re-renders
 
@@ -760,6 +814,11 @@ const theme = useStore((s) => s.theme); // only re-renders when theme changes
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Event loop — microtasks vs macrotasks
 
 ### Theory
@@ -816,6 +875,11 @@ console.log("E");
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Next.js SSR vs CSR vs ISR
 
 ### Theory — real trade-offs, not definitions
@@ -869,6 +933,11 @@ export async function getStaticProps() {
 ---
 
 # Round 3 — Machine Coding in React (90 mins)
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Multi-field form — PAN, Aadhaar
 
@@ -1015,6 +1084,11 @@ function KYCForm() {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Optimize 10+ fields — re-renders
 
 ### Theory
@@ -1088,6 +1162,11 @@ function OptimizedKYCForm() {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. Single state object vs individual useState
 
 ### Theory
@@ -1146,6 +1225,11 @@ const [form, dispatch] = useReducer(formReducer, INITIAL);
 **Interview recommendation:** useReducer or React Hook Form for 10+ fields with cross-validation.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Dependent field state structure
 
@@ -1230,6 +1314,11 @@ function BankDetails() {
 
 # Round 4 — Cultural Fit (60 mins)
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Technical weaknesses
 
 ### Theory
@@ -1253,6 +1342,11 @@ CRED's Tech Lead **opens with feedback from all 3 previous rounds** and asks whe
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Unfamiliar codebase
 
 ### Theory
@@ -1270,6 +1364,11 @@ They want your **onboarding process** — how you become productive without brea
 > **Tools:** Source graph / IDE find references, git blame for context, React DevTools for component tree, Redux DevTools if applicable.
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ## 18. A decision you regretted
 
@@ -1291,6 +1390,11 @@ Tests **humility, learning, and judgment**. Structure: decision → why it seeme
 
 ---
 
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
+
 ## 19. Why CRED specifically
 
 ### Theory
@@ -1309,6 +1413,11 @@ Generic "fintech is growing" answers fail. CRED wants **specific motivation** �
 > I'm drawn to CRED because you're solving trust and design in Indian fintech — not just transactions. The KYC flows, payment reliability, and premium UX at scale are exactly the problems I want to work on. I've used CRED as a user and noticed how much attention goes into micro-interactions and error states — that's the engineering culture I want.
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. Round-by-round prep strategy
 
@@ -1359,3 +1468,6 @@ CRED spreads rounds across **different days**. Use the gap to fix what went wron
 ---
 
 _CRED wants depth. Know why, not just what. Vanilla JS is non-negotiable for Round 2. State design is the whole test in Round 3. Use days between rounds to fix exactly what they told you went wrong._
+
+
+<p><a href="#i20">Back to index</a></p>

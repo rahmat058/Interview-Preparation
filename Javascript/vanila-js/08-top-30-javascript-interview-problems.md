@@ -258,7 +258,7 @@ function wordFrequency(sentence) {
 // '{[()]}' → true
 ```
 
-See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5--valid-parentheses--most-common)
+See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#valid-parentheses)
 
 <p><a href="#i9">Back to index</a></p>
 
@@ -270,7 +270,7 @@ See full solution in [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p5-
 // [1,3,5] + [2,4,6] → [1,2,3,4,5,6]
 ```
 
-See [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#p1--merge-two-sorted-arrays)
+See [07-sorting-stack-queue.md](./07-sorting-stack-queue.md#merge-two-sorted-arrays)
 
 <p><a href="#i10">Back to index</a></p>
 

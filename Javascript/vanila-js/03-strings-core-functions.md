@@ -11,20 +11,26 @@ Strings are **immutable** in JavaScript — methods return new strings.
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Immutability](#1-immutability)
-2. [Access & length](#2-access--length)
-3. [Search methods](#3-search-methods)
-4. [Extract: slice, substring, substr](#4-extract-slice-substring-substr)
-5. [Transform](#5-transform)
-6. [Trim & pad](#6-trim--pad)
-7. [Split & join](#7-split--join)
-8. [Template literals](#8-template-literals)
-9. [Regex essentials](#9-regex-essentials)
-10. [Senior scenarios](#10-senior-scenarios)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Immutability](#p1) |
+| <span id="i2"></span>2 | [Access & length](#p2) |
+| <span id="i3"></span>3 | [Search methods](#p3) |
+| <span id="i4"></span>4 | [Extract: slice, substring, substr](#p4) |
+| <span id="i5"></span>5 | [Transform](#p5) |
+| <span id="i6"></span>6 | [Trim & pad](#p6) |
+| <span id="i7"></span>7 | [Split & join](#p7) |
+| <span id="i8"></span>8 | [Template literals](#p8) |
+| <span id="i9"></span>9 | [Regex essentials](#p9) |
+| <span id="i10"></span>10 | [Senior scenarios](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Immutability
 
@@ -39,6 +45,11 @@ s = s.toUpperCase(); // must reassign — returns new string 'HELLO'
 > Strings are primitives and immutable. Every "change" creates a new string — important for performance when building large text (use array + `join`).
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Access & length
 
@@ -60,6 +71,11 @@ s.codePointAt(0); // 104
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Search methods
 
@@ -86,6 +102,11 @@ email.toLowerCase().includes('USER'.toLowerCase());
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Extract: slice, substring, substr
 
 ```javascript
@@ -105,6 +126,11 @@ s.substr(6, 5); // 'world' — deprecated, avoid in new code
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Transform
 
 ```javascript
@@ -120,6 +146,11 @@ s.substr(6, 5); // 'world' — deprecated, avoid in new code
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Trim & pad
 
@@ -137,6 +168,11 @@ String(orderId).padStart(6, '0'); // '000042'
 ```
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Split & join
 
@@ -173,6 +209,11 @@ const result2 = chunks.reduce((acc, c) => acc + c, '');
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Template literals
 
 ```javascript
@@ -205,6 +246,11 @@ const text = highlight`Search results for ${query}`;
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Regex essentials
 
 ```javascript
@@ -224,6 +270,11 @@ const slug = '  Hello World!  '
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Senior scenarios
 
@@ -283,6 +334,11 @@ new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date());
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Additional string built-ins
 
 ### `repeat`
@@ -341,3 +397,6 @@ String.raw`C:\new\folder`; // 'C:\\new\\folder'
 | Locale sort         | `localeCompare`                        |
 | Char codes          | `charCodeAt`, `codePointAt`            |
 | Static constructors | `String.fromCharCode`, `fromCodePoint` |
+
+
+<p><a href="#i11">Back to index</a></p>

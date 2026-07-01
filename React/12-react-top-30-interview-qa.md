@@ -14,50 +14,60 @@ Organized: **Basic → Intermediate → Advanced**
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Basic (1–10)
 
-1. [What is React?](#1-what-is-react)
-2. [What is JSX?](#2-what-is-jsx)
-3. [Components in React](#3-components-in-react)
-4. [Functional vs Class Components](#4-functional-vs-class-components)
-5. [Props in React](#5-props-in-react)
-6. [State in React](#6-state-in-react)
-7. [State vs Props](#7-state-vs-props)
-8. [Virtual DOM](#8-virtual-dom)
-9. [React Router](#9-react-router)
-10. [Conditional Rendering](#10-conditional-rendering)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is React?](#p1) |
+| <span id="i2"></span>2 | [What is JSX?](#p2) |
+| <span id="i3"></span>3 | [Components in React](#p3) |
+| <span id="i4"></span>4 | [Functional vs Class Components](#p4) |
+| <span id="i5"></span>5 | [Props in React](#p5) |
+| <span id="i6"></span>6 | [State in React](#p6) |
+| <span id="i7"></span>7 | [State vs Props](#p7) |
+| <span id="i8"></span>8 | [Virtual DOM](#p8) |
+| <span id="i9"></span>9 | [React Router](#p9) |
+| <span id="i10"></span>10 | [Conditional Rendering](#p10) |
 
 ### Intermediate (11–20)
 
-11. [useEffect Hook](#11-useeffect-hook)
-12. [Dependency Array](#12-dependency-array)
-13. [useState Hook](#13-usestate-hook)
-14. [useContext Hook](#14-usecontext-hook)
-15. [Context API](#15-context-api)
-16. [Custom Hooks](#16-custom-hooks)
-17. [Keys in React Lists](#17-keys-in-react-lists)
-18. [React.memo](#18-reactmemo)
-19. [useRef Hook](#19-useref-hook)
-20. [useRef vs useState](#20-useref-vs-usestate)
+| # | Section |
+| --- | --- |
+| <span id="i11"></span>11 | [useEffect Hook](#p11) |
+| <span id="i12"></span>12 | [Dependency Array](#p12) |
+| <span id="i13"></span>13 | [useState Hook](#p13) |
+| <span id="i14"></span>14 | [useContext Hook](#p14) |
+| <span id="i15"></span>15 | [Context API](#p15) |
+| <span id="i16"></span>16 | [Custom Hooks](#p16) |
+| <span id="i17"></span>17 | [Keys in React Lists](#p17) |
+| <span id="i18"></span>18 | [React.memo](#p18) |
+| <span id="i19"></span>19 | [useRef Hook](#p19) |
+| <span id="i20"></span>20 | [useRef vs useState](#p20) |
 
 ### Advanced (21–30)
 
-21. [Code Splitting](#21-code-splitting)
-22. [Lazy Loading](#22-lazy-loading)
-23. [Suspense](#23-suspense)
-24. [Error Boundaries](#24-error-boundaries)
-25. [Controlled vs Uncontrolled Components](#25-controlled-vs-uncontrolled-components)
-26. [Higher Order Components (HOC)](#26-higher-order-components-hoc)
-27. [Prop Drilling](#27-prop-drilling)
-28. [Reconciliation](#28-reconciliation)
-29. [Strict Mode](#29-strict-mode)
-30. [Best Practices in React](#30-best-practices-in-react)
+| # | Section |
+| --- | --- |
+| <span id="i21"></span>21 | [Code Splitting](#p21) |
+| <span id="i22"></span>22 | [Lazy Loading](#p22) |
+| <span id="i23"></span>23 | [Suspense](#p23) |
+| <span id="i24"></span>24 | [Error Boundaries](#p24) |
+| <span id="i25"></span>25 | [Controlled vs Uncontrolled Components](#p25) |
+| <span id="i26"></span>26 | [Higher Order Components (HOC)](#p26) |
+| <span id="i27"></span>27 | [Prop Drilling](#p27) |
+| <span id="i28"></span>28 | [Reconciliation](#p28) |
+| <span id="i29"></span>29 | [Strict Mode](#p29) |
+| <span id="i30"></span>30 | [Best Practices in React](#p30) |
 
 ---
-
 # Basic
+
+<a id="p1"></a>
 
 ## 1. What is React?
 
@@ -89,6 +99,11 @@ function Welcome({ name }) {
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. What is JSX?
 
@@ -130,6 +145,11 @@ const element = React.createElement(
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Components in React
 
 ### Theory
@@ -164,6 +184,11 @@ function App() {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Functional vs Class Components
 
@@ -207,6 +232,11 @@ class Counter extends React.Component {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Props in React
 
 ### Theory
@@ -246,6 +276,11 @@ function ProductCard({ name, price, onAddToCart }) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. State in React
 
 ### Theory
@@ -282,6 +317,11 @@ function SearchBar() {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. State vs Props
 
 ### Theory
@@ -308,6 +348,11 @@ function Counter({ initialCount }) {
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Virtual DOM
 
@@ -338,6 +383,11 @@ This is faster than rewriting the entire page.
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. React Router
 
@@ -380,6 +430,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Conditional Rendering
 
 ### Theory
@@ -414,6 +469,11 @@ function OrderStatus({ order }) {
 ---
 
 # Intermediate
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. useEffect Hook
 
@@ -451,6 +511,11 @@ function UserProfile({ userId }) {
 ```
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Dependency Array
 
@@ -492,6 +557,11 @@ useEffect(() => {
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. useState Hook
 
 ### Theory
@@ -517,6 +587,11 @@ function Cart() {
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. useContext Hook
 
@@ -557,6 +632,11 @@ function Header() {
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. Context API
 
 ### Theory
@@ -585,6 +665,11 @@ function AuthProvider({ children }) {
 ```
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ## 16. Custom Hooks
 
@@ -630,6 +715,11 @@ function ProductPage() {
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Keys in React Lists
 
 ### Theory
@@ -663,6 +753,11 @@ function ProductPage() {
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ## 18. React.memo
 
 ### Theory
@@ -695,6 +790,11 @@ const ProductRow = React.memo(function ProductRow({ product, onSelect }) {
 
 ---
 
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
+
 ## 19. useRef Hook
 
 ### Theory
@@ -720,6 +820,11 @@ function SearchInput() {
 ```
 
 ---
+
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
 
 ## 20. useRef vs useState
 
@@ -763,6 +868,11 @@ function Timer() {
 
 # Advanced
 
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
+
 ## 21. Code Splitting
 
 ### Theory
@@ -791,6 +901,11 @@ const Settings = lazy(() => import("./pages/Settings"));
 ```
 
 ---
+
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
 
 ## 22. Lazy Loading
 
@@ -824,6 +939,11 @@ function App() {
 
 ---
 
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
+
 ## 23. Suspense
 
 ### Theory
@@ -853,6 +973,11 @@ function App() {
 ```
 
 ---
+
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
 
 ## 24. Error Boundaries
 
@@ -902,6 +1027,11 @@ class ErrorBoundary extends React.Component {
 
 ---
 
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
+
 ## 25. Controlled vs Uncontrolled Components
 
 ### Theory
@@ -936,6 +1066,11 @@ function LoginFormUncontrolled() {
 
 ---
 
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
+
 ## 26. Higher Order Components (HOC)
 
 ### Theory
@@ -964,6 +1099,11 @@ export default withAuth(Dashboard);
 
 ---
 
+
+<p><a href="#i26">Back to index</a></p>
+
+<a id="p27"></a>
+
 ## 27. Prop Drilling
 
 ### Theory
@@ -989,6 +1129,11 @@ One-to-two levels of drilling is fine and explicit.
 
 ---
 
+
+<p><a href="#i27">Back to index</a></p>
+
+<a id="p28"></a>
+
 ## 28. Reconciliation
 
 ### Theory
@@ -1011,6 +1156,11 @@ Two phases: **Render** (interruptible) → **Commit** (sync DOM update).
 ```
 
 ---
+
+
+<p><a href="#i28">Back to index</a></p>
+
+<a id="p29"></a>
 
 ## 29. Strict Mode
 
@@ -1046,6 +1196,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```
 
 ---
+
+
+<p><a href="#i29">Back to index</a></p>
+
+<a id="p30"></a>
 
 ## 30. Best Practices in React
 
@@ -1142,3 +1297,6 @@ Use this **3-step pattern** for any React question:
 ---
 
 _Don't memorize paragraphs. Understand the concept, then explain it simply with one example. That is what interviewers remember._
+
+
+<p><a href="#i30">Back to index</a></p>

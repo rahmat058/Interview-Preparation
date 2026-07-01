@@ -9,25 +9,31 @@ level: "All levels"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [REST API](#1-what-is-rest-api)
-2. [RESTful architecture](#2-what-is-restful-architecture)
-3. [JWT](#3-what-is-jwt)
-4. [Authentication vs Authorization](#4-what-is-authentication-vs-authorization)
-5. [Postman](#5-what-is-postman-used-for)
-6. [Git and GitHub](#6-what-is-git-and-github)
-7. [MVC architecture](#7-what-is-mvc-architecture)
-8. [Environment variable](#8-what-is-environment-variable)
-9. [CORS](#9-what-is-cors)
-10. [Rate limiting](#10-what-is-rate-limiting)
-11. [API versioning](#11-what-is-api-versioning)
-12. [CI/CD](#12-what-is-cicd)
-13. [Docker](#13-what-is-docker)
-14. [WebSocket](#14-what-is-websocket)
-15. [Redis](#15-what-is-redis-and-why-use-it)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [REST API](#p1) |
+| <span id="i2"></span>2 | [RESTful architecture](#p2) |
+| <span id="i3"></span>3 | [JWT](#p3) |
+| <span id="i4"></span>4 | [Authentication vs Authorization](#p4) |
+| <span id="i5"></span>5 | [Postman](#p5) |
+| <span id="i6"></span>6 | [Git and GitHub](#p6) |
+| <span id="i7"></span>7 | [MVC architecture](#p7) |
+| <span id="i8"></span>8 | [Environment variable](#p8) |
+| <span id="i9"></span>9 | [CORS](#p9) |
+| <span id="i10"></span>10 | [Rate limiting](#p10) |
+| <span id="i11"></span>11 | [API versioning](#p11) |
+| <span id="i12"></span>12 | [CI/CD](#p12) |
+| <span id="i13"></span>13 | [Docker](#p13) |
+| <span id="i14"></span>14 | [WebSocket](#p14) |
+| <span id="i15"></span>15 | [Redis](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is REST API?
 
@@ -57,6 +63,11 @@ DELETE /api/users/42
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What is RESTful architecture?
 
 ### Theory
@@ -68,6 +79,11 @@ Principles: **stateless**, **client-server**, **cacheable**, **uniform interface
 > RESTful APIs are stateless, use standard HTTP semantics, return appropriate status codes, and treat everything as resources identifiable by URLs.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. What is JWT?
 
@@ -89,6 +105,11 @@ const payload = jwt.verify(token, SECRET);
 > JWT is a signed token encoding claims — stateless auth for MERN APIs; verify signature server-side on every protected request.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. What is authentication vs authorization?
 
@@ -115,6 +136,11 @@ if (user.role !== "admin") return res.status(403).json({ error: "Forbidden" });
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What is Postman used for?
 
 ### Theory
@@ -127,6 +153,11 @@ if (user.role !== "admin") return res.status(403).json({ error: "Forbidden" });
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. What is Git and GitHub?
 
 ### Theory
@@ -138,6 +169,11 @@ if (user.role !== "admin") return res.status(403).json({ error: "Forbidden" });
 > Git tracks code history locally; GitHub hosts remotes and enables collaboration via branches and pull requests.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. What is MVC architecture?
 
@@ -160,6 +196,11 @@ Routes     → userRoutes.js (HTTP mapping)
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. What is environment variable?
 
 ### Theory
@@ -172,6 +213,11 @@ Config values outside code — `process.env.PORT`, `MONGO_URI`, `JWT_SECRET`.
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What is CORS?
 
 ### Theory
@@ -183,6 +229,11 @@ Browser security blocking cross-origin reads unless server allows via headers.
 > CORS restricts cross-origin browser requests — fix on Express server with `Access-Control-Allow-Origin`, not in React.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is rate limiting?
 
@@ -208,6 +259,11 @@ app.use("/api/", limiter);
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. What is API versioning?
 
 ### Theory
@@ -219,6 +275,11 @@ app.use("/api/", limiter);
 > Version APIs in the URL or header so you can ship breaking changes without breaking existing React clients.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. What is CI/CD?
 
@@ -245,6 +306,11 @@ jobs:
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. What is Docker?
 
 ### Theory
@@ -269,6 +335,11 @@ CMD ["node", "index.js"]
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. What is WebSocket?
 
 ### Theory
@@ -280,6 +351,11 @@ CMD ["node", "index.js"]
 > WebSockets enable real-time bidirectional communication — use Socket.io in MERN for chat, notifications, live dashboards.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. What is Redis and why use it?
 
@@ -306,3 +382,6 @@ res.json(products);
 ---
 
 **Next:** [07-javascript-interview.md](./07-javascript-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

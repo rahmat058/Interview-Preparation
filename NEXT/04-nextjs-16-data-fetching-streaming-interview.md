@@ -20,21 +20,27 @@ Senior Next.js interviews often present a **slow dashboard** or **waterfall page
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Data fetching in Server Components](#1-data-fetching-in-server-components)
-2. [Parallel vs sequential fetching](#2-parallel-vs-sequential-fetching)
-3. [Streaming with Suspense](#3-streaming-with-suspense)
-4. [`loading.tsx` vs inline Suspense](#4-loadingtsx-vs-inline-suspense)
-5. [Error boundaries: `error.tsx`](#5-error-boundaries-errortsx)
-6. [Server Actions deep dive](#6-server-actions-deep-dive)
-7. [Route Handlers (`route.ts`)](#7-route-handlers-routets)
-8. [Async `params` and `searchParams`](#8-async-params-and-searchparams)
-9. [Async `cookies()` and `headers()`](#9-async-cookies-and-headers)
-10. [Colocation vs data layer](#10-colocation-vs-data-layer)
-11. [Senior scenario: fix a waterfall page](#11-senior-scenario-fix-a-waterfall-page)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Data fetching in Server Components](#p1) |
+| <span id="i2"></span>2 | [Parallel vs sequential fetching](#p2) |
+| <span id="i3"></span>3 | [Streaming with Suspense](#p3) |
+| <span id="i4"></span>4 | [`loading.tsx` vs inline Suspense](#p4) |
+| <span id="i5"></span>5 | [Error boundaries: `error.tsx`](#p5) |
+| <span id="i6"></span>6 | [Server Actions deep dive](#p6) |
+| <span id="i7"></span>7 | [Route Handlers (`route.ts`)](#p7) |
+| <span id="i8"></span>8 | [Async `params` and `searchParams`](#p8) |
+| <span id="i9"></span>9 | [Async `cookies()` and `headers()`](#p9) |
+| <span id="i10"></span>10 | [Colocation vs data layer](#p10) |
+| <span id="i11"></span>11 | [Senior scenario: fix a waterfall page](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Data fetching in Server Components
 
@@ -63,6 +69,11 @@ export default async function PostsPage() {
 > I colocate fetch with the component that needs the data. In Next 16 I explicitly cache stable reads — dynamic fetch is the default.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Parallel vs sequential fetching
 
@@ -103,6 +114,11 @@ const permissions = await getPermissions(user.id); // needs user.id
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Streaming with Suspense
 
 ### Theory
@@ -142,6 +158,11 @@ export default function DashboardPage() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. `loading.tsx` vs inline Suspense
 
 |                 | `loading.tsx`           | Inline `<Suspense>`          |
@@ -162,6 +183,11 @@ export default function Loading() {
 > `loading.tsx` for route-level spinners; inline Suspense when one page has fast and slow regions with different skeletons.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Error boundaries: `error.tsx`
 
@@ -194,6 +220,11 @@ export default function Error({
 > `error.tsx` is segment-scoped — a failing orders widget doesn't crash the whole dashboard if boundaries are split with Suspense + nested error files.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Server Actions deep dive
 
@@ -238,6 +269,11 @@ export function AddToCartForm({ productId }: { productId: string }) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Route Handlers (`route.ts`)
 
 ```tsx
@@ -271,6 +307,11 @@ export async function POST(request: Request) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Async `params` and `searchParams`
 
 ### Breaking change (Next.js 15+ / 16)
@@ -299,6 +340,11 @@ export default async function ProductPage({
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Async `cookies()` and `headers()`
 
 ```tsx
@@ -321,6 +367,11 @@ export default async function Page() {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Colocation vs data layer
 
 | Approach                              | When                                             |
@@ -334,6 +385,11 @@ export default async function Page() {
 > I start colocated, extract to `lib/data` when the same query appears in three places. Client-side React Query is for after-hydration interactivity — not a replacement for server fetch on public pages.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Senior scenario: fix a waterfall page
 
@@ -368,3 +424,6 @@ fetch = dynamic by default in Next 16
 ---
 
 _Related: [02-nextjs-16-cache-components-interview.md](./02-nextjs-16-cache-components-interview.md)_
+
+
+<p><a href="#i11">Back to index</a></p>

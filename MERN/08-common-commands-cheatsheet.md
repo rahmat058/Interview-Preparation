@@ -11,15 +11,20 @@ Quick reference for daily MERN development and interviews.
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [MongoDB Commands](#mongodb-commands)
-2. [Express / Node Commands](#express--node-commands)
-3. [React Commands](#react-commands)
-4. [Git Commands](#git-commands)
-5. [MERN Full-Stack Quick Start](#mern-full-stack-quick-start)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [MongoDB Commands](#p1) |
+| <span id="i2"></span>2 | [Express / Node Commands](#p2) |
+| <span id="i3"></span>3 | [React Commands](#p3) |
+| <span id="i4"></span>4 | [Git Commands](#p4) |
+| <span id="i5"></span>5 | [MERN Full-Stack Quick Start](#p5) |
 
 ---
+<a id="p1"></a>
 
 ## MongoDB Commands
 
@@ -84,6 +89,11 @@ db.users.drop()
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## Express / Node Commands
 
 ### Project setup
@@ -140,6 +150,11 @@ CLIENT_URL=http://localhost:3000
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## React Commands
 
 ### Create & run
@@ -182,6 +197,11 @@ npm test
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## Git Commands
 
@@ -237,6 +257,11 @@ git push origin v1.0.0
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## MERN Full-Stack Quick Start
 
 ```bash
@@ -291,3 +316,6 @@ cd client && npm run dev
 ---
 
 **Back to:** [MERN README](./README.md)
+
+
+<p><a href="#i5">Back to index</a></p>

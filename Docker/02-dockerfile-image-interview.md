@@ -9,25 +9,31 @@ level: "Mid level"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is a Dockerfile?](#1-what-is-a-dockerfile)
-2. [FROM instruction](#2-what-does-from-do)
-3. [RUN vs CMD vs ENTRYPOINT](#3-what-is-the-difference-between-run-cmd-and-entrypoint)
-4. [COPY vs ADD](#4-what-is-the-difference-between-copy-and-add)
-5. [WORKDIR and ENV](#5-what-are-workdir-and-env)
-6. [EXPOSE instruction](#6-what-does-expose-do)
-7. [Docker layers](#7-what-are-docker-layers)
-8. [Layer caching](#8-how-does-docker-layer-caching-work)
-9. [Multi-stage builds](#9-what-are-multi-stage-builds)
-10. [Optimize image size](#10-how-do-you-optimize-docker-image-size)
-11. [.dockerignore](#11-what-is-dockerignore)
-12. [USER instruction](#12-why-use-user-in-dockerfile)
-13. [HEALTHCHECK](#13-what-is-healthcheck)
-14. [ARG vs ENV](#14-what-is-the-difference-between-arg-and-env)
-15. [docker build explained](#15-explain-docker-build)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is a Dockerfile?](#p1) |
+| <span id="i2"></span>2 | [FROM instruction](#p2) |
+| <span id="i3"></span>3 | [RUN vs CMD vs ENTRYPOINT](#p3) |
+| <span id="i4"></span>4 | [COPY vs ADD](#p4) |
+| <span id="i5"></span>5 | [WORKDIR and ENV](#p5) |
+| <span id="i6"></span>6 | [EXPOSE instruction](#p6) |
+| <span id="i7"></span>7 | [Docker layers](#p7) |
+| <span id="i8"></span>8 | [Layer caching](#p8) |
+| <span id="i9"></span>9 | [Multi-stage builds](#p9) |
+| <span id="i10"></span>10 | [Optimize image size](#p10) |
+| <span id="i11"></span>11 | [.dockerignore](#p11) |
+| <span id="i12"></span>12 | [USER instruction](#p12) |
+| <span id="i13"></span>13 | [HEALTHCHECK](#p13) |
+| <span id="i14"></span>14 | [ARG vs ENV](#p14) |
+| <span id="i15"></span>15 | [docker build explained](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is a Dockerfile?
 
@@ -58,6 +64,11 @@ docker build -t mern-api:1.0 .
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. What does FROM do?
 
 ### Theory
@@ -83,6 +94,11 @@ FROM node:20-alpine AS production
 > `FROM` specifies the parent image every layer builds on — choose alpine or slim bases to reduce image size.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. What is the difference between RUN, CMD, and ENTRYPOINT?
 
@@ -116,6 +132,11 @@ CMD ["index.js"]
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is the difference between COPY and ADD?
 
 ### Theory
@@ -144,6 +165,11 @@ COPY . .
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. What are WORKDIR and ENV?
 
 ### Theory
@@ -164,6 +190,11 @@ ENV PORT=5000
 > `WORKDIR` sets the container working directory; `ENV` defines environment variables baked into the image and available to running containers.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. What does EXPOSE do?
 
@@ -186,6 +217,11 @@ docker run -p 5000:5000 mern-api:1.0   # host:container
 > `EXPOSE` is documentation for the intended port — actual publishing requires `-p` or Compose `ports` mapping.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. What are Docker layers?
 
@@ -213,6 +249,11 @@ docker history mern-api:1.0
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. How does Docker layer caching work?
 
 ### Theory
@@ -237,6 +278,11 @@ RUN npm ci
 > Docker caches layers when instructions and inputs are unchanged — copy dependency files and run `npm ci` before copying app source to speed rebuilds.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. What are multi-stage builds?
 
@@ -286,6 +332,11 @@ docker build -t mern-fullstack:1.0 .
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. How do you optimize Docker image size?
 
 ### Theory
@@ -319,6 +370,11 @@ docker images mern-api
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. What is .dockerignore?
 
 ### Theory
@@ -348,6 +404,11 @@ dist
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. Why use USER in Dockerfile?
 
 ### Theory
@@ -371,6 +432,11 @@ CMD ["node", "index.js"]
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. What is HEALTHCHECK?
 
 ### Theory
@@ -393,6 +459,11 @@ docker ps   # STATUS column: healthy / unhealthy
 > `HEALTHCHECK` defines how Docker probes container health — expose a `/health` endpoint and fail the check if the app is unresponsive.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. What is the difference between ARG and ENV?
 
@@ -427,6 +498,11 @@ docker build --build-arg NODE_VERSION=20 -t mern-api .
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. Explain docker build
 
 ### Theory
@@ -456,3 +532,6 @@ docker build --no-cache -t mern-api:1.0 .
 ---
 
 **Next:** [03-docker-compose-networking-volumes-interview.md](./03-docker-compose-networking-volumes-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

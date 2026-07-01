@@ -11,20 +11,26 @@ Common questions that test **concept clarity + coding approach** in Senior React
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Call, Apply, Bind + Polyfills](#1-call-apply-bind--difference--polyfill)
-2. [Flatten Array without Array.flat()](#2-flatten-array-without-arrayflat)
-3. [5 Divs in a Row without Flex](#3-inline-5-divs-without-flexmarginpadding)
-4. [Sum without a for Loop](#4-sum-of-numbers-without-a-for-loop)
-5. [Deep Copy vs Shallow Copy](#5-deep-copy-vs-shallow-copy)
-6. [Promise & Async/Await Output Puzzle](#6-promise--asyncawait-output-puzzle)
-7. [First Repeating Character](#7-first-repeating-character)
-8. [Stopwatch Implementation](#8-stopwatch-implementation)
-9. [To-Do List with Re-render Optimization](#9-to-do-list-vanilla-js--react)
-10. [Currying for Infinite Sum](#10-currying-for-infinite-sum)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Call, Apply, Bind + Polyfills](#p1) |
+| <span id="i2"></span>2 | [Flatten Array without Array.flat()](#p2) |
+| <span id="i3"></span>3 | [5 Divs in a Row without Flex](#p3) |
+| <span id="i4"></span>4 | [Sum without a for Loop](#p4) |
+| <span id="i5"></span>5 | [Deep Copy vs Shallow Copy](#p5) |
+| <span id="i6"></span>6 | [Promise & Async/Await Output Puzzle](#p6) |
+| <span id="i7"></span>7 | [First Repeating Character](#p7) |
+| <span id="i8"></span>8 | [Stopwatch Implementation](#p8) |
+| <span id="i9"></span>9 | [To-Do List with Re-render Optimization](#p9) |
+| <span id="i10"></span>10 | [Currying for Infinite Sum](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Call, Apply, Bind — Difference + Polyfill
 
@@ -116,6 +122,11 @@ sayHello("!!");                        // "Hey, Amit!!"
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Flatten Array without Array.flat()
 
 ### Theory
@@ -176,6 +187,11 @@ console.log(flatten(input));
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Inline 5 Divs without Flex/Margin/Padding
 
@@ -257,6 +273,11 @@ Watch for: **whitespace gaps** between inline-block elements (font-size zero hac
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Sum of Numbers without a for Loop
 
 ### Theory
@@ -298,6 +319,11 @@ console.log(sumArgs(10, 20, 30)); // 60
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Deep Copy vs Shallow Copy
 
@@ -361,6 +387,11 @@ setUser((prev) => ({
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Promise & Async/Await Output Puzzle
 
@@ -467,6 +498,11 @@ console.log(4);
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. First Repeating Character
 
 ### Theory
@@ -535,6 +571,11 @@ c → already in seen → return "c" ✅
 ```
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Stopwatch Implementation
 
@@ -666,6 +707,11 @@ function Stopwatch() {
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. To-Do List (Vanilla JS / React) — Optimize Re-renders
 
@@ -820,6 +866,11 @@ function TodoList() {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Currying for Infinite Sum
 
 ### Theory
@@ -946,3 +997,6 @@ sum(10)       → f, a=10
 ---
 
 *These 10 questions appear repeatedly in Senior React and Tech Lead rounds. Practice writing each from scratch in under 10 minutes.*
+
+
+<p><a href="#i10">Back to index</a></p>

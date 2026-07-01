@@ -12,19 +12,26 @@ Same interview patterns as frontend SDE roles — **browser fundamentals** plus 
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-### Round 1 — Core Web
-1. [CORS](#1-cors) · 2. [WebSockets](#2-websockets) · 3. [Long Polling vs WebSockets](#3-long-polling-vs-websockets)
-4. [Browser Storage](#4-browser-storage) · 5. [Event Loop](#5-event-loop)
+## Quick index
+
 
 ### Round 2 — Vue Machine Coding
-6. [Grid Toggle Component](#6-grid-toggle-component)
+
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Grid Toggle Component](#p6) |
 
 ### Round 3 — Culture Fit
-7. [Behavioral Questions](#7-behavioral-questions)
+
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Behavioral Questions](#p7) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. CORS
 
@@ -40,6 +47,11 @@ fetch("https://api.example.com/orders", {
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. WebSockets
 
@@ -64,6 +76,11 @@ export function useWebSocket(url) {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Long Polling vs WebSockets
 
 | | Long Polling | WebSocket |
@@ -73,6 +90,11 @@ export function useWebSocket(url) {
 | Use | Fallback | Live tracking |
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Browser Storage
 
@@ -87,6 +109,11 @@ export function useWebSocket(url) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Event Loop
 
 ```javascript
@@ -98,6 +125,11 @@ console.log("4");
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Grid Toggle Component
 
@@ -206,6 +238,11 @@ grid.value = grid.value.map(/* ... */);
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Behavioral Questions
 
 Use **STAR** method: Situation → Task → Action → Result.
@@ -225,3 +262,6 @@ Use **STAR** method: Situation → Task → Action → Result.
 | 1 | Event loop | Sync → micro → macro |
 | 2 | Grid toggle | ref 2D array, immutable map toggle |
 | 3 | Culture | STAR stories with metrics |
+
+
+<p><a href="#i7">Back to index</a></p>

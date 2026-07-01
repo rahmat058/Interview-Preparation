@@ -11,24 +11,37 @@ Vue 3 frontend combined with **JavaScript fundamentals**, **API integration**, a
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Vue Core
-1. [Composition API Deep Dive](#composition-api)
-2. [Pinia + API Layer](#pinia--api-layer)
-3. [Nuxt Fullstack Patterns](#nuxt-fullstack)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Composition API Deep Dive](#p1) |
+| <span id="i2"></span>2 | [Pinia + API Layer](#p2) |
+| <span id="i3"></span>3 | [Nuxt Fullstack Patterns](#p3) |
 
 ### JavaScript (Interview Essentials)
-4. [Closures & Event Loop](#javascript-essentials)
-5. [Async/Await & Promises](#async)
-6. [ES6+ Features](#es6)
+
+| # | Section |
+| --- | --- |
+| <span id="i4"></span>4 | [Closures & Event Loop](#p4) |
+| <span id="i5"></span>5 | [Async/Await & Promises](#p5) |
+| <span id="i6"></span>6 | [ES6+ Features](#p6) |
 
 ### System Design (Frontend)
-7. [Vue App Architecture](#architecture)
-8. [Auth Flow in Vue SPA](#auth)
-9. [Real-Time with WebSockets](#realtime)
+
+| # | Section |
+| --- | --- |
+| <span id="i7"></span>7 | [Vue App Architecture](#p7) |
+| <span id="i8"></span>8 | [Auth Flow in Vue SPA](#p8) |
+| <span id="i9"></span>9 | [Real-Time with WebSockets](#p9) |
 
 ---
+<a id="p1"></a>
 
 ## Composition API
 
@@ -47,6 +60,11 @@ const filtered = computed(() =>
 onMounted(() => store.fetchProducts());
 </script>
 ```
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## Pinia + API Layer
 
@@ -69,6 +87,11 @@ export const useProductStore = defineStore("products", () => {
 });
 ```
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## Nuxt Fullstack
 
 ```javascript
@@ -80,6 +103,11 @@ export default defineEventHandler(async () => {
 // pages/products.vue
 const { data: products } = await useFetch("/api/products");
 ```
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## JavaScript Essentials
 
@@ -94,6 +122,11 @@ Promise.resolve().then(() => console.log(3));
 console.log(4); // 1,4,3,2
 ```
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## Async
 
 ```javascript
@@ -105,9 +138,19 @@ async function loadDashboard() {
 }
 ```
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## ES6
 
 Spread, destructuring, optional chaining, nullish coalescing, modules, arrow functions.
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## Architecture
 
@@ -118,6 +161,11 @@ src/services/api.js
 src/stores/ (Pinia)
 ```
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## Auth
 
 ```javascript
@@ -126,6 +174,11 @@ router.beforeEach(async (to) => {
   if (to.meta.auth && !auth.token) return "/login";
 });
 ```
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## Realtime
 
@@ -142,3 +195,6 @@ const { data: orderStatus } = useWebSocket(`wss://api.example.com/orders/${id}`)
 | Vue fullstack | Vue/Nuxt frontend + REST/GraphQL + optional Nuxt server routes |
 | State | Pinia for client, useFetch/vue-query for server |
 | Auth | JWT in httpOnly cookie, router guards, Pinia auth store |
+
+
+<p><a href="#i9">Back to index</a></p>

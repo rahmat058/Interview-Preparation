@@ -23,29 +23,39 @@ At **5 years into frontend**, you might get asked: _"How do you flatten an array
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Part A — The Question They Still Ask
 
-1. [How Do You Flatten an Array?](#1-how-do-you-flatten-an-array)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [How Do You Flatten an Array?](#p1) |
 
 ### Part B — What Actually Matters at 5 YOE
 
-2. [Component Performance — LCP, CLS, INP](#2-component-performance--lcp-cls-inp)
-3. [State Management at Scale](#3-state-management-at-scale)
-4. [Async Data Handling — React Query & Caching](#4-async-data-handling--react-query--caching)
-5. [TypeScript in Large Codebases](#5-typescript-in-large-codebases)
-6. [Web Vitals & Production Monitoring](#6-web-vitals--production-monitoring)
-7. [Scalable, Maintainable Architecture](#7-scalable-maintainable-architecture)
-8. [Debugging Real-World Performance Issues](#8-debugging-real-world-performance-issues)
+| # | Section |
+| --- | --- |
+| <span id="i2"></span>2 | [Component Performance — LCP, CLS, INP](#p2) |
+| <span id="i3"></span>3 | [State Management at Scale](#p3) |
+| <span id="i4"></span>4 | [Async Data Handling — React Query & Caching](#p4) |
+| <span id="i5"></span>5 | [TypeScript in Large Codebases](#p5) |
+| <span id="i6"></span>6 | [Web Vitals & Production Monitoring](#p6) |
+| <span id="i7"></span>7 | [Scalable, Maintainable Architecture](#p7) |
+| <span id="i8"></span>8 | [Debugging Real-World Performance Issues](#p8) |
 
 ### Part C — Interview Strategy
 
-9. [Bridging Fundamentals and Real Engineering](#9-bridging-fundamentals-and-real-engineering)
+| # | Section |
+| --- | --- |
+| <span id="i9"></span>9 | [Bridging Fundamentals and Real Engineering](#p9) |
 
 ---
-
 # Part A — The Question They Still Ask
+
+<a id="p1"></a>
 
 ## 1. How Do You Flatten an Array?
 
@@ -180,6 +190,11 @@ function flattenCategories(nodes, result = []) {
 
 # Part B — What Actually Matters at 5 YOE
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Component Performance — LCP, CLS, INP
 
 ### Theory
@@ -289,6 +304,11 @@ function handleHeavyClick() {
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. State Management at Scale
 
@@ -409,6 +429,11 @@ function Modal() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Async Data Handling — React Query & Caching
 
 ### Theory
@@ -527,6 +552,11 @@ const results = useQueries({
 | Real-time order status | 0 (always stale) | WebSocket + invalidate |
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. TypeScript in Large Codebases
 
@@ -656,6 +686,11 @@ fetchOrders("abc"); // ❌ Type error — plain string not assignable
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Web Vitals & Production Monitoring
 
 ### Theory
@@ -765,6 +800,11 @@ function CheckoutPage() {
 | Error rate | > 1% spike      | Rollback, check Sentry                  |
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Scalable, Maintainable Architecture
 
@@ -890,6 +930,11 @@ export const productApi = {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Debugging Real-World Performance Issues
 
 ### Theory
@@ -1000,6 +1045,11 @@ Verify:   Lighthouse CI passed, RUM p75 LCP < 2.5s after 48h
 
 # Part C — Interview Strategy
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Bridging Fundamentals and Real Engineering
 
 ### The Disconnect Is Real
@@ -1070,3 +1120,6 @@ Their answers tell you if the team cares about what you've actually been doing f
 ---
 
 _Fundamentals get you through the screen. Real engineering skills — Web Vitals, state architecture, production debugging — get you the offer and the job. Prepare for both._
+
+
+<p><a href="#i9">Back to index</a></p>

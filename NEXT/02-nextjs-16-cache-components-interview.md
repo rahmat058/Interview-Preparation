@@ -14,22 +14,28 @@ Each section: **Theory** → **Pros & Cons** → **Real Example** → **Intervie
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Why implicit caching failed](#1-why-implicit-caching-failed)
-2. [Enabling Cache Components](#2-enabling-cache-components)
-3. [The `"use cache"` directive](#3-the-use-cache-directive)
-4. [`cacheLife()` — TTL profiles](#4-cachelife--ttl-profiles)
-5. [`cacheTag()` — tagging cached output](#5-cachetag--tagging-cached-output)
-6. [`revalidateTag(tag, profile)`](#6-revalidatetagtag-profile)
-7. [`updateTag()` — read-your-writes](#7-updatetag--read-your-writes)
-8. [`revalidatePath()` vs tag invalidation](#8-revalidatepath-vs-tag-invalidation)
-9. [PPR: static shell + dynamic holes](#9-ppr-static-shell--dynamic-holes)
-10. [Caching anti-patterns](#10-caching-anti-patterns)
-11. [Migration from `unstable_cache` / ISR](#11-migration-from-unstable_cache--isr)
-12. [Senior scenario: e-commerce catalog](#12-senior-scenario-e-commerce-catalog)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Why implicit caching failed](#p1) |
+| <span id="i2"></span>2 | [Enabling Cache Components](#p2) |
+| <span id="i3"></span>3 | [The `"use cache"` directive](#p3) |
+| <span id="i4"></span>4 | [`cacheLife()` — TTL profiles](#p4) |
+| <span id="i5"></span>5 | [`cacheTag()` — tagging cached output](#p5) |
+| <span id="i6"></span>6 | [`revalidateTag(tag, profile)`](#p6) |
+| <span id="i7"></span>7 | [`updateTag()` — read-your-writes](#p7) |
+| <span id="i8"></span>8 | [`revalidatePath()` vs tag invalidation](#p8) |
+| <span id="i9"></span>9 | [PPR: static shell + dynamic holes](#p9) |
+| <span id="i10"></span>10 | [Caching anti-patterns](#p10) |
+| <span id="i11"></span>11 | [Migration from `unstable_cache` / ISR](#p11) |
+| <span id="i12"></span>12 | [Senior scenario: e-commerce catalog](#p12) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Why implicit caching failed
 
@@ -50,6 +56,11 @@ In Next.js 13–15 App Router, `fetch()` in Server Components was cached by defa
 > Implicit caching taught bad habits — teams didn't know if data was live or stale. Next 16 makes caching a deliberate design choice with `"use cache"`, tags, and profiles — same mental model as Redis or CDN cache keys.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Enabling Cache Components
 
@@ -77,6 +88,11 @@ This activates:
 > I enable `cacheComponents` in config and migrate route-by-route. It's the foundation for PPR and explicit caching in Next 16 — not an experimental flag anymore.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. The `"use cache"` directive
 
@@ -129,6 +145,11 @@ export async function CachedProductGrid({ category }: { category: string }) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. `cacheLife()` — TTL profiles
 
 ### Theory
@@ -157,6 +178,11 @@ Built-in profiles (conceptual): `seconds`, `minutes`, `hours`, `days`, `weeks`, 
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. `cacheTag()` — tagging cached output
 
 ### Theory
@@ -179,6 +205,11 @@ export async function getUserProfile(userId: string) {
 > Tags are my cache keys at the domain level — `products`, `product-123`, `category-shoes`. When an admin updates one SKU I invalidate `product-123`, not the whole site.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. `revalidateTag(tag, profile)`
 
@@ -208,6 +239,11 @@ export async function publishPost(postId: string) {
 > `revalidateTag` with a profile is eventual consistency — fine for catalog updates. I always pass the profile argument; the single-arg form is a migration footgun in Next 16.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. `updateTag()` — read-your-writes
 
@@ -239,6 +275,11 @@ export async function saveUserSettings(formData: FormData) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. `revalidatePath()` vs tag invalidation
 
 ### Theory
@@ -262,6 +303,11 @@ export async function deleteComment() {
 > I prefer tags when one entity appears on list + detail + search pages. `revalidatePath` is a hammer — fine for small apps, risky at scale.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. PPR: static shell + dynamic holes
 
@@ -303,6 +349,11 @@ export default function RootLayout({
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Caching anti-patterns
 
 | Anti-pattern                             | Why it's bad           | Fix                                     |
@@ -318,6 +369,11 @@ export default function RootLayout({
 > The worst bug is caching personalized data without user-scoped keys — I audit cache keys in code review the same way I audit SQL queries.
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Migration from `unstable_cache` / ISR
 
@@ -335,6 +391,11 @@ export default function RootLayout({
 > I run the Next 16 codemod, enable `cacheComponents`, replace `unstable_cache` with `"use cache"`, and fix `revalidateTag` call sites — then verify with integration tests on publish flows.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Senior scenario: e-commerce catalog
 
@@ -372,3 +433,6 @@ Never cache auth/session without user-scoped keys
 ---
 
 _Related: [04-nextjs-16-data-fetching-streaming-interview.md](./04-nextjs-16-data-fetching-streaming-interview.md)_
+
+
+<p><a href="#i12">Back to index</a></p>

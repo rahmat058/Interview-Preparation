@@ -9,25 +9,31 @@ level: "Mid to Senior"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Docker security best practices](#1-docker-security-best-practices)
-2. [Running as root risk](#2-why-is-running-containers-as-root-risky)
-3. [Secrets in Docker](#3-how-do-you-handle-secrets-in-docker)
-4. [Image scanning](#4-what-is-container-image-scanning)
-5. [Docker in CI/CD](#5-how-is-docker-used-in-cicd)
-6. [GitHub Actions with Docker](#6-github-actions-docker-example)
-7. [Docker vs Kubernetes](#7-docker-vs-kubernetes)
-8. [What is container orchestration?](#8-what-is-container-orchestration)
-9. [Docker Swarm basics](#9-what-is-docker-swarm)
-10. [Immutable infrastructure](#10-what-is-immutable-infrastructure)
-11. [Blue-green deployment](#11-blue-green-deployment-with-docker)
-12. [Resource limits](#12-how-do-you-set-resource-limits)
-13. [Logging and monitoring](#13-how-do-you-handle-logging-in-docker)
-14. [Production Dockerfile checklist](#14-production-dockerfile-checklist)
-15. [Common Docker interview scenarios](#15-common-docker-interview-scenarios)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Docker security best practices](#p1) |
+| <span id="i2"></span>2 | [Running as root risk](#p2) |
+| <span id="i3"></span>3 | [Secrets in Docker](#p3) |
+| <span id="i4"></span>4 | [Image scanning](#p4) |
+| <span id="i5"></span>5 | [Docker in CI/CD](#p5) |
+| <span id="i6"></span>6 | [GitHub Actions with Docker](#p6) |
+| <span id="i7"></span>7 | [Docker vs Kubernetes](#p7) |
+| <span id="i8"></span>8 | [What is container orchestration?](#p8) |
+| <span id="i9"></span>9 | [Docker Swarm basics](#p9) |
+| <span id="i10"></span>10 | [Immutable infrastructure](#p10) |
+| <span id="i11"></span>11 | [Blue-green deployment](#p11) |
+| <span id="i12"></span>12 | [Resource limits](#p12) |
+| <span id="i13"></span>13 | [Logging and monitoring](#p13) |
+| <span id="i14"></span>14 | [Production Dockerfile checklist](#p14) |
+| <span id="i15"></span>15 | [Common Docker interview scenarios](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Docker security best practices
 
@@ -62,6 +68,11 @@ docker scan mern-api:1.0    # Snyk / Docker Scout
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Why is running containers as root risky?
 
 ### Theory
@@ -83,6 +94,11 @@ docker run --user 1001:1001 mern-api
 > Container root can escape to host root via kernel bugs or misconfiguration — always run application processes as an unprivileged user.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. How do you handle secrets in Docker?
 
@@ -123,6 +139,11 @@ const secret = fs.readFileSync(process.env.JWT_SECRET_FILE, "utf8").trim();
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. What is container image scanning?
 
 ### Theory
@@ -147,6 +168,11 @@ trivy image --exit-code 1 --severity HIGH,CRITICAL mern-api:1.0
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. How is Docker used in CI/CD?
 
 ### Theory
@@ -162,6 +188,11 @@ Benefits: identical test environment, reproducible builds, fast rollbacks (previ
 > CI builds and tests Docker images, pushes to a registry, and CD deploys tagged images — same artifact from dev through production.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. GitHub Actions Docker example
 
@@ -201,6 +232,11 @@ jobs:
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Docker vs Kubernetes?
 
 ### Theory
@@ -221,6 +257,11 @@ jobs:
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. What is container orchestration?
 
 ### Theory
@@ -234,6 +275,11 @@ Examples: **Kubernetes**, **Docker Swarm**, **AWS ECS**, **Nomad**.
 > Orchestration automates running containers at scale — health checks, rolling updates, service discovery, and load balancing across machines.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. What is Docker Swarm?
 
@@ -256,6 +302,11 @@ docker service ls
 > Docker Swarm is built-in clustering for Docker — simpler than Kubernetes but less feature-rich; most enterprises choose K8s for orchestration.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is immutable infrastructure?
 
@@ -281,6 +332,11 @@ docker run -d --name mern-api rahmat058/mern-api:v1
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Blue-green deployment with Docker?
 
 ### Theory
@@ -302,6 +358,11 @@ docker stop api-blue
 > Run new version alongside old, verify green, switch load balancer traffic, then retire blue — zero-downtime with instant rollback.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. How do you set resource limits?
 
@@ -328,6 +389,11 @@ docker run -d --memory=512m --cpus=0.5 mern-api:1.0
 > Set `--memory` and `--cpus` on `docker run` or `deploy.resources` in Compose to prevent one container from starving the host.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. How do you handle logging in Docker?
 
@@ -363,6 +429,11 @@ docker logs -f --tail 100 mern-api
 > Apps should log to stdout; Docker collects logs — configure log rotation and forward to ELK/Loki/CloudWatch in production.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Production Dockerfile checklist
 
@@ -404,6 +475,11 @@ CMD ["node", "index.js"]
 > Production Dockerfiles use multi-stage alpine builds, non-root user, health checks, no secrets, and minimal layers — scan before deploy.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Common Docker interview scenarios
 
@@ -448,3 +524,6 @@ docker run -it mern-api sh    # debug interactively
 ---
 
 **Next:** [05-docker-commands-cheatsheet.md](./05-docker-commands-cheatsheet.md)
+
+
+<p><a href="#i15">Back to index</a></p>

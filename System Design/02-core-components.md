@@ -22,19 +22,25 @@ Each section maps to diagrams in [`../Advanced Topic/`](../Advanced%20Topic/) wh
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Client](#1-client)
-2. [Application Server](#2-application-server)
-3. [Database](#3-database)
-4. [Cache](#4-cache)
-5. [Load Balancer](#5-load-balancer)
-6. [Message Queue](#6-message-queue)
-7. [External Services](#7-external-services)
-8. [Full Stack Example — Ride Hailing App](#8-full-stack-example--ride-hailing-app)
-9. [Quick Revision Cheat Sheet](#9-quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Client](#p1) |
+| <span id="i2"></span>2 | [Application Server](#p2) |
+| <span id="i3"></span>3 | [Database](#p3) |
+| <span id="i4"></span>4 | [Cache](#p4) |
+| <span id="i5"></span>5 | [Load Balancer](#p5) |
+| <span id="i6"></span>6 | [Message Queue](#p6) |
+| <span id="i7"></span>7 | [External Services](#p7) |
+| <span id="i8"></span>8 | [Full Stack Example — Ride Hailing App](#p8) |
+| <span id="i9"></span>9 | [Quick Revision Cheat Sheet](#p9) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Client
 
@@ -93,6 +99,11 @@ function sendMessage(text) {
 > The client is the user-facing layer — it renders the experience, calls backend APIs, manages local state, and implements resilience patterns like optimistic UI, caching, and retries.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Application Server
 
@@ -165,6 +176,11 @@ async function createOrder(req, res) {
 > The application server executes business logic — validating requests, orchestrating data access, and publishing events — and should be stateless so you can scale it horizontally behind a load balancer.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Database
 
@@ -244,6 +260,11 @@ With index on (user_id, created_at): O(log n) — 5ms
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Cache
 
 ### Theory
@@ -310,6 +331,11 @@ async function updatePrice(sku, newPrice) {
 > Cache keeps hot data in fast memory (Redis/CDN) to cut latency and database load — use cache-aside with TTLs and explicit invalidation on writes for data that changes.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Load Balancer
 
@@ -385,6 +411,11 @@ server {
 > A load balancer spreads traffic across healthy server instances for scale and fault tolerance — use L7 routing when you need path-based rules and health checks to drop failed nodes automatically.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Message Queue
 
@@ -475,6 +506,11 @@ kafka.subscribe("ride.requested", async (event) => {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. External Services
 
 ### Theory
@@ -554,6 +590,11 @@ async function handleStripeWebhook(req, res) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Full Stack Example — Ride Hailing App
 
 How all seven components connect (Uber / Ola style):
@@ -622,6 +663,11 @@ graph TB
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Quick Revision Cheat Sheet
 
 | Component              | Role                          | Example product                 |
@@ -637,3 +683,6 @@ graph TB
 ---
 
 **Next:** [03-design-process.md](./03-design-process.md) — requirements, high-level architecture, trade-offs, security, and monitoring.
+
+
+<p><a href="#i9">Back to index</a></p>

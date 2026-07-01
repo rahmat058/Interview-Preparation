@@ -14,43 +14,56 @@ Questions from a **Senior React Developer** interview at Altimetrik — spanning
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### 1st Round — Technical Interview
-1. [Closure](#1-closure)
-2. [Event Loop](#2-event-loop)
-3. [Debouncing and Throttling](#3-debouncing-and-throttling)
-4. [Web Accessibility & Semantic Elements](#4-web-accessibility-and-semantic-elements)
-5. [Flexbox vs Grid](#5-flexbox-vs-grid)
-6. [Find Missing Numbers in Array](#6-find-missing-numbers-in-array)
-7. [CSR vs SSR](#7-csr-vs-ssr)
-8. [call(), apply(), bind()](#8-call-apply-bind)
-9. [Star Rating Component (1–10)](#9-star-rating-component-110)
-10. [Deep Copy vs Shallow Copy](#10-deep-copy-vs-shallow-copy)
-11. [Redux Workflow](#11-redux-workflow)
-12. [React Architecture](#12-react-architecture)
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Closure](#p1) |
+| <span id="i2"></span>2 | [Event Loop](#p2) |
+| <span id="i3"></span>3 | [Debouncing and Throttling](#p3) |
+| <span id="i4"></span>4 | [Web Accessibility & Semantic Elements](#p4) |
+| <span id="i5"></span>5 | [Flexbox vs Grid](#p5) |
+| <span id="i6"></span>6 | [Find Missing Numbers in Array](#p6) |
+| <span id="i7"></span>7 | [CSR vs SSR](#p7) |
+| <span id="i8"></span>8 | [call(), apply(), bind()](#p8) |
+| <span id="i9"></span>9 | [Star Rating Component (1–10)](#p9) |
+| <span id="i10"></span>10 | [Deep Copy vs Shallow Copy](#p10) |
+| <span id="i11"></span>11 | [Redux Workflow](#p11) |
+| <span id="i12"></span>12 | [React Architecture](#p12) |
 
 ### 2nd Round — Advanced JavaScript
-13. [Objects in JavaScript](#13-objects-in-javascript)
-14. [Types of Objects & How to Define Them](#14-types-of-objects--how-to-define-them)
-15. [Normal vs Arrow Functions](#15-normal-vs-arrow-functions)
-16. [const vs let — When to Use Which](#16-const-vs-let)
-17. [Spread vs Rest Operator](#17-spread-vs-rest-operator)
-18. [async/await](#18-asyncawait)
-19. [CSS Specificity](#19-css-specificity)
-20. [display: none vs visibility: hidden](#20-display-none-vs-visibility-hidden)
+
+| # | Section |
+| --- | --- |
+| <span id="i13"></span>13 | [Objects in JavaScript](#p13) |
+| <span id="i14"></span>14 | [Types of Objects & How to Define Them](#p14) |
+| <span id="i15"></span>15 | [Normal vs Arrow Functions](#p15) |
+| <span id="i16"></span>16 | [const vs let — When to Use Which](#p16) |
+| <span id="i17"></span>17 | [Spread vs Rest Operator](#p17) |
+| <span id="i18"></span>18 | [async/await](#p18) |
+| <span id="i19"></span>19 | [CSS Specificity](#p19) |
+| <span id="i20"></span>20 | [display: none vs visibility: hidden](#p20) |
 
 ### Client Round — React Internals
-21. [Hooks inside conditions?](#21-can-we-use-hooks-inside-conditions)
-22. [useEffect vs useMemo — execution order](#22-useeffect-vs-usememo-execution-order)
-23. [Render Phase vs Commit Phase](#23-render-phase-vs-commit-phase)
-24. [Garbage Collection](#24-garbage-collection)
-25. [Batching in React](#25-batching-in-react)
-26. [Flatten Array without built-in methods](#26-flatten-array-without-built-in-methods)
+
+| # | Section |
+| --- | --- |
+| <span id="i21"></span>21 | [Hooks inside conditions?](#p21) |
+| <span id="i22"></span>22 | [useEffect vs useMemo — execution order](#p22) |
+| <span id="i23"></span>23 | [Render Phase vs Commit Phase](#p23) |
+| <span id="i24"></span>24 | [Garbage Collection](#p24) |
+| <span id="i25"></span>25 | [Batching in React](#p25) |
+| <span id="i26"></span>26 | [Flatten Array without built-in methods](#p26) |
 
 ---
-
 # 1st Round — Technical Interview
+
+<a id="p1"></a>
 
 ## 1. Closure
 
@@ -89,6 +102,11 @@ console.log(counter.getCount()); // 11
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Event Loop
 
 ### Theory
@@ -110,6 +128,11 @@ console.log("2");
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Debouncing and Throttling
 
@@ -148,6 +171,11 @@ function throttle(fn, limit) {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Web Accessibility and Semantic Elements
 
@@ -199,6 +227,11 @@ WCAG principles: **Perceivable, Operable, Understandable, Robust**.
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Flexbox vs Grid
 
 ### Theory
@@ -233,6 +266,11 @@ WCAG principles: **Perceivable, Operable, Understandable, Robust**.
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Find Missing Numbers in Array
 
@@ -286,6 +324,11 @@ console.log(findMissingNumbersLoop([1, 2, 3, 5, 7])); // [4, 6]
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. CSR vs SSR
 
 ### Theory
@@ -322,6 +365,11 @@ export default function Page({ products }) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. call(), apply(), bind()
 
 ### Theory
@@ -351,6 +399,11 @@ formatINR(299); // "₹299"
 ```
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Star Rating Component (1–10)
 
@@ -469,6 +522,11 @@ function createStarRating(container, max = 10, onRate) {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Deep Copy vs Shallow Copy
 
 ### Theory
@@ -498,6 +556,11 @@ console.log(original.user.name); // "Amit" — unchanged
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. Redux Workflow
 
@@ -553,6 +616,11 @@ Click "Add" → dispatch(addItem(product))
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. React Architecture
 
 ### Theory
@@ -607,6 +675,11 @@ src/
 
 # 2nd Round — Advanced JavaScript
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Objects in JavaScript
 
 ### Theory
@@ -634,6 +707,11 @@ typeof user;  // "object"
 ```
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Types of Objects & How to Define Them
 
@@ -694,6 +772,11 @@ cache.set({ id: 1 }, { data: "..." });
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. Normal vs Arrow Functions
 
 ### Theory
@@ -720,6 +803,11 @@ const service = {
 ```
 
 ---
+
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
 
 ## 16. const vs let
 
@@ -749,6 +837,11 @@ for (let i = 0; i < 3; i++) {   // block-scoped loop var
 ```
 
 ---
+
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
 
 ## 17. Spread vs Rest Operator
 
@@ -783,6 +876,11 @@ setUser((prev) => ({ ...prev, name: "New Name" }));
 
 ---
 
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
+
 ## 18. async/await
 
 ### Theory
@@ -811,6 +909,11 @@ async function loadDashboard(userId) {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. CSS Specificity
 
@@ -857,6 +960,11 @@ p { color: black; }
 
 ---
 
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
+
 ## 20. display: none vs visibility: hidden
 
 ### Theory
@@ -894,6 +1002,11 @@ p { color: black; }
 ---
 
 # Client Round — React Internals
+
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
 
 ## 21. Can We Use Hooks inside Conditions?
 
@@ -942,6 +1055,11 @@ function Dashboard({ isLoggedIn }) {
 
 ---
 
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
+
 ## 22. useEffect vs useMemo — Execution Order
 
 ### Theory
@@ -988,6 +1106,11 @@ function Demo({ id }) {
 
 ---
 
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
+
 ## 23. Render Phase vs Commit Phase
 
 ### Theory
@@ -1025,6 +1148,11 @@ useEffect fires (passive)
 
 ---
 
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
+
 ## 24. Garbage Collection
 
 ### Theory
@@ -1054,6 +1182,11 @@ useEffect(() => {
 ```
 
 ---
+
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
 
 ## 25. Batching in React
 
@@ -1098,6 +1231,11 @@ setB(2);                  // separate render
 ```
 
 ---
+
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
 
 ## 26. Flatten Array without Built-in Methods
 
@@ -1189,3 +1327,6 @@ function flattenIterative(arr) {
 ---
 
 *Altimetrik tests breadth across 3 rounds — JS, CSS, live coding, and React internals. The client round especially probes whether you understand how React works under the hood.*
+
+
+<p><a href="#i26">Back to index</a></p>

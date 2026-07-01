@@ -11,20 +11,25 @@ Quick reference for interviews and MERN development with Docker.
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Image Commands](#image-commands)
-2. [Container Commands](#container-commands)
-3. [Volume Commands](#volume-commands)
-4. [Network Commands](#network-commands)
-5. [Dockerfile & Build](#dockerfile--build)
-6. [Docker Compose](#docker-compose)
-7. [Logs & Debugging](#logs--debugging)
-8. [Cleanup Commands](#cleanup-commands)
-9. [Registry Commands](#registry-commands)
-10. [MERN Quick Start](#mern-quick-start-with-docker)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Image Commands](#p1) |
+| <span id="i2"></span>2 | [Container Commands](#p2) |
+| <span id="i3"></span>3 | [Volume Commands](#p3) |
+| <span id="i4"></span>4 | [Network Commands](#p4) |
+| <span id="i5"></span>5 | [Dockerfile & Build](#p5) |
+| <span id="i6"></span>6 | [Docker Compose](#p6) |
+| <span id="i7"></span>7 | [Logs & Debugging](#p7) |
+| <span id="i8"></span>8 | [Cleanup Commands](#p8) |
+| <span id="i9"></span>9 | [Registry Commands](#p9) |
+| <span id="i10"></span>10 | [MERN Quick Start](#p10) |
 
 ---
+<a id="p1"></a>
 
 ## Image Commands
 
@@ -51,6 +56,11 @@ docker image prune -a                  # all unused
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## Container Commands
 
@@ -87,6 +97,11 @@ docker container prune                           # remove stopped containers
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## Volume Commands
 
 ```bash
@@ -112,6 +127,11 @@ docker run -d \
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## Network Commands
 
 ```bash
@@ -129,6 +149,11 @@ docker run -d --network mern-net --name mongo mongo:7
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## Dockerfile & Build
 
@@ -161,6 +186,11 @@ CMD ["node", "index.js"]
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## Docker Compose
 
@@ -218,6 +248,11 @@ volumes:
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## Logs & Debugging
 
 ```bash
@@ -246,6 +281,11 @@ docker events
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## Cleanup Commands
 
 ```bash
@@ -271,6 +311,11 @@ docker system df
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## Registry Commands
 
 ```bash
@@ -288,6 +333,11 @@ docker push 123456.dkr.ecr.region.amazonaws.com/mern-api:1.0
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## MERN Quick Start with Docker
 
@@ -360,3 +410,6 @@ docker run -d \
 ---
 
 **Back to:** [Docker README](./README.md)
+
+
+<p><a href="#i10">Back to index</a></p>

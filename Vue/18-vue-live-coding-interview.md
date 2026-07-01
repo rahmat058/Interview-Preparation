@@ -12,17 +12,23 @@ Live coding patterns commonly asked in Vue interviews — **counter**, **useFetc
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Auto Increment/Decrement Counter](#1-counter)
-2. [Custom useFetch Composable](#2-usefetch-composable)
-3. [Join/Merge Objects from List](#3-merge-objects)
-4. [watch vs watchEffect vs computed](#4-watch-vs-watcheffect)
-5. [Provide / Inject](#5-provide--inject)
-6. [Why Composables?](#6-why-composables)
-7. [Debouncing in Vue](#7-debouncing)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Auto Increment/Decrement Counter](#p1) |
+| <span id="i2"></span>2 | [Custom useFetch Composable](#p2) |
+| <span id="i3"></span>3 | [Join/Merge Objects from List](#p3) |
+| <span id="i4"></span>4 | [watch vs watchEffect vs computed](#p4) |
+| <span id="i5"></span>5 | [Provide / Inject](#p5) |
+| <span id="i6"></span>6 | [Why Composables?](#p6) |
+| <span id="i7"></span>7 | [Debouncing in Vue](#p7) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Counter
 
@@ -74,6 +80,11 @@ const { count, increment, decrement, reset } = useCounter(0, { min: 0, max: 10 }
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. useFetch Composable
 
@@ -134,6 +145,11 @@ const { data: user, loading, error, refetch } = useFetch(
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Merge Objects
 
 ```javascript
@@ -181,6 +197,11 @@ const mergedConfig = computed(() =>
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. watch vs watchEffect vs computed
 
 | | computed | watch | watchEffect |
@@ -192,6 +213,11 @@ const mergedConfig = computed(() =>
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Provide / Inject
 
 ```javascript
@@ -202,11 +228,21 @@ const auth = inject(AuthKey);
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Why Composables?
 
 > Reuse stateful logic across components — Vue's answer to React custom hooks. Explicit, typed, no mixin conflicts.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Debouncing
 
@@ -245,3 +281,6 @@ const { data } = useFetch(computed(() =>
 | Merge | reduce + spread / deepMerge |
 | Debounce | useDebounce composable |
 | Share state | provide/inject or Pinia |
+
+
+<p><a href="#i7">Back to index</a></p>

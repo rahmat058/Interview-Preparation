@@ -14,31 +14,21 @@ Organized: **Basic → Intermediate → Advanced**
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-### Basic (1–10)
-1. [What is Vue.js?](#1-what-is-vuejs) · 2. [Vue 2 vs Vue 3](#2-vue-2-vs-vue-3) · 3. [Single File Components](#3-single-file-components)
-4. [Props & Emits](#4-props--emits) · 5. [v-model](#5-v-model) · 6. [ref vs reactive](#6-ref-vs-reactive)
-7. [Computed Properties](#7-computed-properties) · 8. [v-if vs v-show](#8-v-if-vs-v-show)
-9. [Vue Router Basics](#9-vue-router-basics) · 10. [Conditional Rendering](#10-conditional-rendering)
+## Quick index
+
 
 ### Intermediate (11–20)
-11. [watch vs watchEffect](#11-watch-vs-watcheffect) · 12. [Lifecycle Hooks](#12-lifecycle-hooks)
-13. [Slots](#13-slots) · 14. [Provide / Inject](#14-provide--inject) · 15. [Composables](#15-composables)
-16. [Keys in v-for](#16-keys-in-v-for) · 17. [Pinia Basics](#17-pinia-basics)
-18. [Dynamic Components](#18-dynamic-components) · 19. [Template Refs](#19-template-refs)
-20. [nextTick](#20-nexttick)
 
-### Advanced (21–30)
-21. [Reactivity Internals](#21-reactivity-internals) · 22. [Teleport](#22-teleport)
-23. [Suspense](#23-suspense) · 24. [Custom Directives](#24-custom-directives)
-25. [Keep-alive](#25-keep-alive) · 26. [Vuex vs Pinia](#26-vuex-vs-pinia)
-27. [Nuxt.js SSR](#27-nuxtjs-ssr) · 28. [Performance — v-memo](#28-performance--v-memo)
-29. [TypeScript with Vue](#29-typescript-with-vue) · 30. [Vue Best Practices](#30-vue-best-practices)
+| # | Section |
+| --- | --- |
+| <span id="i20"></span>20 | [nextTick](#p20) |
 
 ---
-
 # Basic
+
+<a id="p1"></a>
 
 ## 1. What is Vue.js?
 
@@ -59,6 +49,11 @@ const message = ref("Hello Vue");
 
 ---
 
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
+
 ## 2. Vue 2 vs Vue 3
 
 ### Theory
@@ -68,6 +63,11 @@ Vue 3: Proxy reactivity, Composition API, better TS, smaller bundle, Pinia over 
 > Vue 3 uses Proxy instead of defineProperty — supports dynamic keys, Composition API, and tree-shaking.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Single File Components
 
@@ -87,6 +87,11 @@ defineProps({ title: String });
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Props & Emits
 
 ### Theory
@@ -104,6 +109,11 @@ const emit = defineEmits(["submit"]);
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. v-model
 
@@ -125,6 +135,11 @@ Two-way binding — `:modelValue` + `@update:modelValue`. Can use multiple v-mod
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. ref vs reactive
 
 ### Theory
@@ -142,6 +157,11 @@ state.items.push(item);
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Computed Properties
 
 ### Theory
@@ -158,6 +178,11 @@ const fullName = computed(() => `${firstName.value} ${lastName.value}`);
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. v-if vs v-show
 
 ### Theory
@@ -167,6 +192,11 @@ const fullName = computed(() => `${firstName.value} ${lastName.value}`);
 > v-if for infrequent toggles or lazy load. v-show for frequent visibility toggles — stays in DOM.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Vue Router Basics
 
@@ -182,6 +212,11 @@ const router = createRouter({ history: createWebHistory(), routes });
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Conditional Rendering
 
@@ -201,6 +236,11 @@ const router = createRouter({ history: createWebHistory(), routes });
 
 # Intermediate
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. watch vs watchEffect
 
 ### One-Line Interview Answer
@@ -213,6 +253,11 @@ watchEffect(() => { document.title = user.value?.name ?? "App"; });
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. Lifecycle Hooks
 
 ### One-Line Interview Answer
@@ -224,6 +269,11 @@ onUnmounted(() => { window.removeEventListener("resize", handleResize); });
 ```
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. Slots
 
@@ -242,12 +292,22 @@ Default slot, named slots (`#header`), scoped slots (child passes data to slot).
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. Provide / Inject
 
 ### One-Line Interview Answer
 > provide/inject shares data from ancestor to descendant without prop drilling — use Symbol keys in large apps.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. Composables
 
@@ -264,6 +324,11 @@ export function useCounter(initial = 0) {
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Keys in v-for
 
 ### One-Line Interview Answer
@@ -275,12 +340,22 @@ export function useCounter(initial = 0) {
 
 ---
 
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
+
 ## 17. Pinia Basics
 
 ### One-Line Interview Answer
 > Pinia: defineStore with state, getters, actions. No mutations. useCartStore() in components.
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ## 18. Dynamic Components
 
@@ -292,6 +367,11 @@ export function useCounter(initial = 0) {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Template Refs
 
@@ -308,6 +388,11 @@ onMounted(() => inputRef.value.focus());
 
 ---
 
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
+
 ## 20. nextTick
 
 ### Theory
@@ -323,12 +408,22 @@ console.log(el.value.textContent); // updated DOM
 
 # Advanced
 
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
+
 ## 21. Reactivity Internals
 
 ### One-Line Interview Answer
 > Vue 3 uses Proxy to trap get/set. track() collects deps on get, trigger() notifies on set. ref wraps value in object with .value getter/setter.
 
 ---
+
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
 
 ## 22. Teleport
 
@@ -342,6 +437,11 @@ Render content elsewhere in DOM — modals, toasts to `<body>`.
 ```
 
 ---
+
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
 
 ## 23. Suspense
 
@@ -357,6 +457,11 @@ Show fallback while async setup or async components resolve.
 
 ---
 
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
+
 ## 24. Custom Directives
 
 ```javascript
@@ -367,6 +472,11 @@ app.directive("focus", {
 ```
 
 ---
+
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
 
 ## 25. Keep-alive
 
@@ -380,6 +490,11 @@ Cache inactive component instances — preserve state in tab switches.
 ```
 
 ---
+
+
+<p><a href="#i25">Back to index</a></p>
+
+<a id="p26"></a>
 
 ## 26. Vuex vs Pinia
 
@@ -395,12 +510,22 @@ Cache inactive component instances — preserve state in tab switches.
 
 ---
 
+
+<p><a href="#i26">Back to index</a></p>
+
+<a id="p27"></a>
+
 ## 27. Nuxt.js SSR
 
 ### One-Line Interview Answer
 > Nuxt adds SSR, file routing, and useFetch for Vue — pages/ directory auto-routes, server-side data fetch hydrates on client.
 
 ---
+
+
+<p><a href="#i27">Back to index</a></p>
+
+<a id="p28"></a>
 
 ## 28. Performance — v-memo
 
@@ -411,6 +536,11 @@ Cache inactive component instances — preserve state in tab switches.
 ```
 
 ---
+
+
+<p><a href="#i28">Back to index</a></p>
+
+<a id="p29"></a>
 
 ## 29. TypeScript with Vue
 
@@ -423,6 +553,11 @@ const emit = defineEmits<{ submit: [id: string] }>();
 ```
 
 ---
+
+
+<p><a href="#i29">Back to index</a></p>
+
+<a id="p30"></a>
 
 ## 30. Vue Best Practices
 
@@ -449,3 +584,6 @@ const emit = defineEmits<{ submit: [id: string] }>();
 | 17 | Pinia | defineStore, no mutations |
 | 26 | Pinia vs Vuex | Pinia for Vue 3 |
 | 15 | Composables | Reusable setup logic |
+
+
+<p><a href="#i30">Back to index</a></p>

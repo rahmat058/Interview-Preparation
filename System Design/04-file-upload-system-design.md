@@ -27,21 +27,27 @@ round: "Round 3 — Frontend System Design + Performance (90 mins)"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Clarify Requirements](#1-clarify-requirements)
-2. [High-Level Architecture](#2-high-level-architecture)
-3. [Chunking Strategy](#3-chunking-strategy)
-4. [Pause, Resume & Progress](#4-pause-resume--progress-tracking)
-5. [Retry & Error Handling](#5-retry--error-handling)
-6. [Frontend Implementation](#6-frontend-implementation)
-7. [Backend API Design](#7-backend-api-design)
-8. [Performance & Scalability](#8-performance--scalability)
-9. [Security Considerations](#9-security-considerations)
-10. [What to Draw in the Interview](#10-what-to-draw-in-the-interview)
-11. [Quick Revision Cheat Sheet](#11-quick-revision-cheat-sheet)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Clarify Requirements](#p1) |
+| <span id="i2"></span>2 | [High-Level Architecture](#p2) |
+| <span id="i3"></span>3 | [Chunking Strategy](#p3) |
+| <span id="i4"></span>4 | [Pause, Resume & Progress](#p4) |
+| <span id="i5"></span>5 | [Retry & Error Handling](#p5) |
+| <span id="i6"></span>6 | [Frontend Implementation](#p6) |
+| <span id="i7"></span>7 | [Backend API Design](#p7) |
+| <span id="i8"></span>8 | [Performance & Scalability](#p8) |
+| <span id="i9"></span>9 | [Security Considerations](#p9) |
+| <span id="i10"></span>10 | [What to Draw in the Interview](#p10) |
+| <span id="i11"></span>11 | [Quick Revision Cheat Sheet](#p11) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Clarify Requirements
 
@@ -77,6 +83,11 @@ round: "Round 3 — Frontend System Design + Performance (90 mins)"
 > I'd clarify max file size, concurrent upload limits, whether resume must survive browser close, and if uploads go direct-to-S3 or through the app server — those drive chunk size, storage API, and state persistence.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. High-Level Architecture
 
@@ -125,6 +136,11 @@ graph TB
 > Clients talk to an Upload Manager that chunks files, uploads parts directly to object storage via presigned URLs, persists state in IndexedDB, and calls a completion API so the server assembles metadata and verifies integrity.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Chunking Strategy
 
@@ -186,6 +202,11 @@ async function fileFingerprint(file: File): Promise<string> {
 > I'd use 5–10 MB chunks with 3–6 parallel uploads, slicing via `File.slice()` so we never hold the full file in memory, and fingerprint files for resume keys.
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Pause, Resume & Progress Tracking
 
@@ -293,6 +314,11 @@ class UploadManager {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. Retry & Error Handling
 
 ### Theory
@@ -345,6 +371,11 @@ Server: if uploadId already completed → return same fileId (idempotent)
 > I retry transient failures with exponential backoff, never blindly retry 4xx, re-upload only failed chunks, and make the complete endpoint idempotent so duplicate calls don't create duplicate files.
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Frontend Implementation
 
@@ -424,6 +455,11 @@ export function UploadItem({ job, onPause, onResume }: UploadItemProps) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Backend API Design
 
 ### Endpoints
@@ -481,6 +517,11 @@ export function UploadItem({ job, onPause, onResume }: UploadItemProps) {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Performance & Scalability
 
 ### Frontend performance
@@ -517,6 +558,11 @@ Progress updates: throttle UI to 100ms (don't setState per chunk)
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Security Considerations
 
 | Risk                | Mitigation                                                  |
@@ -543,6 +589,11 @@ const url = await s3.getSignedUrl("putObject", {
 > Authenticate init and complete, use short-lived presigned URLs scoped to one part, enforce size and type server-side, scan files after upload, and never trust client-supplied paths or names.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What to Draw in the Interview
 
@@ -572,6 +623,11 @@ const url = await s3.getSignedUrl("putObject", {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Quick Revision Cheat Sheet
 
 | Topic        | Key point                                        |
@@ -587,3 +643,6 @@ const url = await s3.getSignedUrl("putObject", {
 ---
 
 **Back to:** [KPMG React Round](../React/23-kpmg-frontend-interview.md) · [KPMG JS Round](../Javascript/kpmg-round-1-vanilla-javascript-interview.md)
+
+
+<p><a href="#i11">Back to index</a></p>

@@ -12,35 +12,41 @@ A complete reference for **25 essential frontend concepts** every developer shou
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Pagination](#1-pagination)
-2. [Infinite Scroll](#2-infinite-scroll)
-3. [Debouncing](#3-debouncing)
-4. [WebSocket](#4-websocket)
-5. [REST vs GraphQL APIs](#5-rest-vs-graphql-apis)
-6. [Local Storage vs Cookies](#6-local-storage-vs-cookies)
-7. [Authentication vs Authorization](#7-authentication-vs-authorization)
-8. [Redux](#8-redux)
-9. [Lazy Loading](#9-lazy-loading)
-10. [Code Splitting](#10-code-splitting)
-11. [Bundle Size Optimization](#11-bundle-size-optimization)
-12. [Tree Shaking](#12-tree-shaking)
-13. [Memoization (useMemo, useCallback)](#13-memoization-usememo-usecallback)
-14. [Caching (Client + Server)](#14-caching-client--server)
-15. [CSR vs SSR vs SSG vs ISR](#15-csr-vs-ssr-vs-ssg-vs-isr)
-16. [Core Web Vitals (LCP, INP, CLS)](#16-core-web-vitals-lcp-inp-cls)
-17. [Cross Browser Compatibility](#17-cross-browser-compatibility)
-18. [Optimistic UI Updates](#18-optimistic-ui-updates)
-19. [Suspense (React)](#19-suspense-react)
-20. [Image Optimization (WebP, AVIF)](#20-image-optimization-webp-avif)
-21. [Accessibility (a11y)](#21-accessibility-a11y)
-22. [Webpack](#22-webpack)
-23. [Micro-frontend Architecture](#23-micro-frontend-architecture)
-24. [Testing — RTL, Jest, Playwright](#24-testing--rtl-jest-playwright)
-25. [Polyfills & Babel](#25-polyfills--babel)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Pagination](#p1) |
+| <span id="i2"></span>2 | [Infinite Scroll](#p2) |
+| <span id="i3"></span>3 | [Debouncing](#p3) |
+| <span id="i4"></span>4 | [WebSocket](#p4) |
+| <span id="i5"></span>5 | [REST vs GraphQL APIs](#p5) |
+| <span id="i6"></span>6 | [Local Storage vs Cookies](#p6) |
+| <span id="i7"></span>7 | [Authentication vs Authorization](#p7) |
+| <span id="i8"></span>8 | [Redux](#p8) |
+| <span id="i9"></span>9 | [Lazy Loading](#p9) |
+| <span id="i10"></span>10 | [Code Splitting](#p10) |
+| <span id="i11"></span>11 | [Bundle Size Optimization](#p11) |
+| <span id="i12"></span>12 | [Tree Shaking](#p12) |
+| <span id="i13"></span>13 | [Memoization (useMemo, useCallback)](#p13) |
+| <span id="i14"></span>14 | [Caching (Client + Server)](#p14) |
+| <span id="i15"></span>15 | [CSR vs SSR vs SSG vs ISR](#p15) |
+| <span id="i16"></span>16 | [Core Web Vitals (LCP, INP, CLS)](#p16) |
+| <span id="i17"></span>17 | [Cross Browser Compatibility](#p17) |
+| <span id="i18"></span>18 | [Optimistic UI Updates](#p18) |
+| <span id="i19"></span>19 | [Suspense (React)](#p19) |
+| <span id="i20"></span>20 | [Image Optimization (WebP, AVIF)](#p20) |
+| <span id="i21"></span>21 | [Accessibility (a11y)](#p21) |
+| <span id="i22"></span>22 | [Webpack](#p22) |
+| <span id="i23"></span>23 | [Micro-frontend Architecture](#p23) |
+| <span id="i24"></span>24 | [Testing — RTL, Jest, Playwright](#p24) |
+| <span id="i25"></span>25 | [Polyfills & Babel](#p25) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Pagination
 
@@ -105,6 +111,11 @@ GET /api/orders?cursor=eyJpZCI6MTAwfQ&limit=20
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Infinite Scroll
 
@@ -173,6 +184,11 @@ function Feed() {
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Debouncing
 
 ### Theory
@@ -221,6 +237,11 @@ function useDebounce<T>(value: T, delay: number): T {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. WebSocket
 
@@ -300,6 +321,11 @@ function connectWebSocket(url, { maxRetries = 5 } = {}) {
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. REST vs GraphQL APIs
 
 ### Theory
@@ -359,6 +385,11 @@ const { data } = await fetch("/graphql", {
 - **GraphQL:** Mobile apps (bandwidth), complex dashboards, many clients with different data needs
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. Local Storage vs Cookies
 
@@ -421,6 +452,11 @@ function useLocalStorage<T>(key: string, initial: T) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Authentication vs Authorization
 
 ### Theory
@@ -477,6 +513,11 @@ function AdminPanel() {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Redux
 
 ### Theory
@@ -529,6 +570,11 @@ function CartBadge() {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Lazy Loading
 
 ### Theory
@@ -574,6 +620,11 @@ function App() {
 ```
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Code Splitting
 
@@ -631,6 +682,11 @@ optimization: {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Bundle Size Optimization
 
 ### Theory
@@ -684,6 +740,11 @@ import { format } from "date-fns";
 | Remove unused dependencies             | Varies                          |
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. Tree Shaking
 
@@ -742,6 +803,11 @@ import debounce from "lodash-es/debounce";
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Memoization (useMemo, useCallback)
 
 ### Theory
@@ -792,6 +858,11 @@ const MemoRow = React.memo(function MemoRow({ row, onEdit }) {
 **Rule:** Profile first → optimize hot paths only.
 
 ---
+
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
 
 ## 14. Caching (Client + Server)
 
@@ -884,6 +955,11 @@ self.addEventListener("fetch", (event) => {
 
 ---
 
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
+
 ## 15. CSR vs SSR vs SSG vs ISR
 
 ### Theory
@@ -943,6 +1019,11 @@ Decision tree:
 
 ---
 
+
+<p><a href="#i15">Back to index</a></p>
+
+<a id="p16"></a>
+
 ## 16. Core Web Vitals (LCP, INP, CLS)
 
 ### Theory
@@ -993,6 +1074,11 @@ startTransition(() => setFilteredProducts(heavyFilter(allProducts)));
 ```
 
 ---
+
+
+<p><a href="#i16">Back to index</a></p>
+
+<a id="p17"></a>
 
 ## 17. Cross Browser Compatibility
 
@@ -1053,6 +1139,11 @@ if ("IntersectionObserver" in window) {
 ```
 
 ---
+
+
+<p><a href="#i17">Back to index</a></p>
+
+<a id="p18"></a>
 
 ## 18. Optimistic UI Updates
 
@@ -1116,6 +1207,11 @@ function LikeButton({ postId, initialLiked, initialCount }) {
 ```
 
 ---
+
+
+<p><a href="#i18">Back to index</a></p>
+
+<a id="p19"></a>
 
 ## 19. Suspense (React)
 
@@ -1188,6 +1284,11 @@ function Page() {
 
 ---
 
+
+<p><a href="#i19">Back to index</a></p>
+
+<a id="p20"></a>
+
 ## 20. Image Optimization (WebP, AVIF)
 
 ### Theory
@@ -1259,6 +1360,11 @@ import Image from "next/image";
 
 ---
 
+
+<p><a href="#i20">Back to index</a></p>
+
+<a id="p21"></a>
+
 ## 21. Accessibility (a11y)
 
 ### Theory
@@ -1307,6 +1413,11 @@ Principles (**POUR**): Perceivable, Operable, Understandable, Robust.
 ```
 
 ---
+
+
+<p><a href="#i21">Back to index</a></p>
+
+<a id="p22"></a>
 
 ## 22. Webpack
 
@@ -1363,6 +1474,11 @@ module.exports = {
 
 ---
 
+
+<p><a href="#i22">Back to index</a></p>
+
+<a id="p23"></a>
+
 ## 23. Micro-frontend Architecture
 
 ### Theory
@@ -1406,6 +1522,11 @@ const CheckoutWidget = lazy(() => import("checkout/CheckoutWidget"));
 ```
 
 ---
+
+
+<p><a href="#i23">Back to index</a></p>
+
+<a id="p24"></a>
 
 ## 24. Testing — RTL, Jest, Playwright
 
@@ -1482,6 +1603,11 @@ test("user can complete checkout", async ({ page }) => {
 ```
 
 ---
+
+
+<p><a href="#i24">Back to index</a></p>
+
+<a id="p25"></a>
 
 ## 25. Polyfills & Babel
 
@@ -1599,3 +1725,6 @@ if (!Promise.all) {
 ---
 
 _These 25 concepts cover the full frontend stack — from network layer to rendering, performance, testing, and architecture. Use this as a revision checklist before interviews._
+
+
+<p><a href="#i25">Back to index</a></p>

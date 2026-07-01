@@ -14,23 +14,29 @@ Each topic includes **Theory**, **Pros & Cons**, and a **Real-Life Example**.
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is the Event Loop?](#1-what-is-the-event-loop)
-2. [Find the second largest element in an array](#2-given-an-array-how-do-you-find-the-second-largest-element)
-3. [Debouncing and Throttling](#3-what-is-debouncing-and-throttling)
-4. [How do map() and bind() work?](#4-how-do-map-and-bind-methods-work)
-5. [What is Axios? How do you use it?](#5-what-is-axios-how-do-you-use-it)
-6. [How do you connect routes in React?](#6-how-do-you-connect-routes-in-react)
-7. [Frontend security practices](#7-what-do-you-do-for-security-purposes-in-frontend-applications)
-8. [Hooks — useEffect, useCallback, useMemo](#8-what-are-hooks-explain-useeffect-usecallback-and-usememo)
-9. [Higher Order Component (HOC)](#9-what-is-a-higher-order-component-hoc)
-10. [What is Hoisting?](#10-what-is-hoisting)
-11. [What is Props Drilling?](#11-what-is-props-drilling)
-12. [What is Event Bubbling?](#12-what-is-event-bubbling)
-13. [Microtasks and Macrotasks](#13-what-are-microtasks-and-macrotasks)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is the Event Loop?](#p1) |
+| <span id="i2"></span>2 | [Find the second largest element in an array](#p2) |
+| <span id="i3"></span>3 | [Debouncing and Throttling](#p3) |
+| <span id="i4"></span>4 | [How do map() and bind() work?](#p4) |
+| <span id="i5"></span>5 | [What is Axios? How do you use it?](#p5) |
+| <span id="i6"></span>6 | [How do you connect routes in React?](#p6) |
+| <span id="i7"></span>7 | [Frontend security practices](#p7) |
+| <span id="i8"></span>8 | [Hooks — useEffect, useCallback, useMemo](#p8) |
+| <span id="i9"></span>9 | [Higher Order Component (HOC)](#p9) |
+| <span id="i10"></span>10 | [What is Hoisting?](#p10) |
+| <span id="i11"></span>11 | [What is Props Drilling?](#p11) |
+| <span id="i12"></span>12 | [What is Event Bubbling?](#p12) |
+| <span id="i13"></span>13 | [Microtasks and Macrotasks](#p13) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is the Event Loop?
 
@@ -104,6 +110,11 @@ function HeavyDashboard({ data }) {
 > The event loop manages JavaScript's single thread. Sync code runs first, then all microtasks (Promises), then one macrotask (setTimeout, I/O). This ordering explains async behavior and why blocking the main thread freezes the UI.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Given an array, how do you find the second largest element?
 
@@ -185,6 +196,11 @@ const runnerUp = findSecondLargest(scores); // 88
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. What is Debouncing and Throttling?
 
 ### Theory
@@ -258,6 +274,11 @@ function SearchBar() {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. How do map() and bind() methods work?
 
@@ -348,6 +369,11 @@ function OrderForm({ onSubmit }) {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. What is Axios? How do you use it?
 
@@ -473,6 +499,11 @@ function OrderHistory({ userId }) {
 ```
 
 ---
+
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
 
 ## 6. How do you connect routes in React?
 
@@ -619,6 +650,11 @@ function DashboardLayout() {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. What do you do for security purposes in frontend applications?
 
 ### Theory
@@ -736,6 +772,11 @@ npm audit fix
 > Frontend security is defense-in-depth: sanitize inputs against XSS, store tokens in httpOnly cookies not localStorage, never put secrets in env vars shipped to browser, use HTTPS, implement CSP headers, validate on both client and server, and run npm audit in CI. Frontend guards are for UX — backend always enforces authorization.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. What are Hooks? Explain useEffect, useCallback, and useMemo
 
@@ -855,6 +896,11 @@ useEffect(() => {
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. What is a Higher Order Component (HOC)?
 
 ### Theory
@@ -954,6 +1000,11 @@ function Dashboard() {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. What is Hoisting?
 
 ### Theory
@@ -1029,6 +1080,11 @@ function formatPrice(amount) {
 ```
 
 ---
+
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
 
 ## 11. What is Props Drilling?
 
@@ -1145,6 +1201,11 @@ function ThemeToggle() {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. What is Event Bubbling?
 
 ### Theory
@@ -1222,6 +1283,11 @@ function Modal({ onClose, children }) {
 ```
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. What are Microtasks and Macrotasks?
 
@@ -1357,3 +1423,6 @@ function processInChunks(items, chunkSize = 100) {
 ---
 
 _Tata Elxsi interviews test practical understanding across the full frontend stack. Practice explaining each concept with a real project example — that's what separates a prepared candidate from someone who only read definitions._
+
+
+<p><a href="#i13">Back to index</a></p>

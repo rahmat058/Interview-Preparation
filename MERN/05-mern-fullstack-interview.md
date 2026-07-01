@@ -9,25 +9,31 @@ level: "Mid level"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [What is the MERN stack?](#1-what-is-the-mern-stack)
-2. [Data flow in a MERN app](#2-how-does-data-flow-in-a-mern-app)
-3. [Connect React with Node/Express](#3-how-do-you-connect-react-with-nodeexpress)
-4. [Connect Express with MongoDB](#4-how-do-you-connect-express-with-mongodb)
-5. [Authentication in MERN](#5-how-do-you-handle-authentication-in-mern-stack)
-6. [Protected routes in React](#6-how-do-you-implement-protected-routes-in-react)
-7. [Store JWT in MERN app](#7-how-do-you-store-jwt-token-in-mern-app)
-8. [Handle CORS in MERN](#8-how-do-you-handle-cors-in-a-mern-app)
-9. [Deploy a MERN app](#9-how-do-you-deploy-a-mern-app)
-10. [MERN folder structure](#10-what-is-the-folder-structure-of-a-mern-project)
-11. [Form validation in MERN](#11-how-do-you-handle-form-validation-in-mern)
-12. [File upload in MERN](#12-how-do-you-upload-files-in-mern-stack)
-13. [Real-time data in MERN](#13-how-do-you-handle-real-time-data-in-mern)
-14. [Optimize MERN performance](#14-how-do-you-optimize-performance-in-mern-apps)
-15. [Test a MERN application](#15-how-do-you-test-a-mern-application)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [What is the MERN stack?](#p1) |
+| <span id="i2"></span>2 | [Data flow in a MERN app](#p2) |
+| <span id="i3"></span>3 | [Connect React with Node/Express](#p3) |
+| <span id="i4"></span>4 | [Connect Express with MongoDB](#p4) |
+| <span id="i5"></span>5 | [Authentication in MERN](#p5) |
+| <span id="i6"></span>6 | [Protected routes in React](#p6) |
+| <span id="i7"></span>7 | [Store JWT in MERN app](#p7) |
+| <span id="i8"></span>8 | [Handle CORS in MERN](#p8) |
+| <span id="i9"></span>9 | [Deploy a MERN app](#p9) |
+| <span id="i10"></span>10 | [MERN folder structure](#p10) |
+| <span id="i11"></span>11 | [Form validation in MERN](#p11) |
+| <span id="i12"></span>12 | [File upload in MERN](#p12) |
+| <span id="i13"></span>13 | [Real-time data in MERN](#p13) |
+| <span id="i14"></span>14 | [Optimize MERN performance](#p14) |
+| <span id="i15"></span>15 | [Test a MERN application](#p15) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. What is the MERN stack?
 
@@ -46,6 +52,11 @@ level: "Mid level"
 > MERN is MongoDB, Express, React, and Node — JavaScript end-to-end for building full-stack web applications.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. How does data flow in a MERN app?
 
@@ -80,6 +91,11 @@ app.get('/api/products', async (req, res) => {
 > User interacts with React → API call to Express → Mongoose reads/writes MongoDB → JSON flows back to update React state and UI.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. How do you connect React with Node/Express?
 
@@ -116,6 +132,11 @@ api.interceptors.request.use((config) => {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. How do you connect Express with MongoDB?
 
 ### Theory
@@ -146,6 +167,11 @@ const Product = mongoose.model('Product', productSchema);
 
 ---
 
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
+
 ## 5. How do you handle authentication in MERN stack?
 
 ### Theory
@@ -172,6 +198,11 @@ const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. How do you implement protected routes in React?
 
 ### Real Example
@@ -196,6 +227,11 @@ function ProtectedRoute({ children }) {
 > Wrap private routes in a component that checks auth context — redirect to login if no valid user or token.
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. How do you store JWT token in MERN app?
 
@@ -225,6 +261,11 @@ res.cookie('token', token, {
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. How do you handle CORS in a MERN app?
 
 ### Real Example
@@ -248,6 +289,11 @@ axios.get('/api/profile', { withCredentials: true });
 > Configure `cors` on Express with the React origin and `credentials: true` when using cookies — CORS is a server header, not fixable from React alone.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. How do you deploy a MERN app?
 
@@ -273,6 +319,11 @@ MongoDB → Atlas cluster (IP whitelist / VPC)
 > Deploy React to a static host, Express to a Node host, MongoDB to Atlas — set env vars, enable HTTPS, and configure CORS for production domains.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. What is the folder structure of a MERN project?
 
@@ -306,6 +357,11 @@ mern-app/
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. How do you handle form validation in MERN?
 
 ### Real Example
@@ -327,6 +383,11 @@ if (error) return res.status(400).json({ error: error.details[0].message });
 > Validate on client for UX and always validate on server for security — use Zod/Joi in Express and React Hook Form on the frontend.
 
 ---
+
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
 
 ## 12. How do you upload files in MERN stack?
 
@@ -357,6 +418,11 @@ await axios.post('/api/upload', formData, {
 > Use `multer` or presigned S3 URLs on the server, `FormData` on React — validate file type/size server-side and store in cloud storage for production.
 
 ---
+
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
 
 ## 13. How do you handle real-time data in MERN?
 
@@ -390,6 +456,11 @@ useEffect(() => {
 
 ---
 
+
+<p><a href="#i13">Back to index</a></p>
+
+<a id="p14"></a>
+
 ## 14. How do you optimize performance in MERN apps?
 
 ### Theory
@@ -406,6 +477,11 @@ useEffect(() => {
 > Index MongoDB queries, paginate APIs, cache with React Query, lazy-load routes, enable gzip, and use CDN for static assets.
 
 ---
+
+
+<p><a href="#i14">Back to index</a></p>
+
+<a id="p15"></a>
 
 ## 15. How do you test a MERN application?
 
@@ -433,3 +509,6 @@ expect(await screen.findByText(/welcome/i)).toBeInTheDocument();
 ---
 
 **Related:** [File upload system design](../System%20Design/04-file-upload-system-design.md) · [KPMG interview](../React/23-kpmg-frontend-interview.md)
+
+
+<p><a href="#i15">Back to index</a></p>

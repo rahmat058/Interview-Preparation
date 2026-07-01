@@ -9,20 +9,26 @@ level: 'Intermediate to Senior'
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
 
-1. [Object basics & literals](#1-object-basics--literals)
-2. [Property access & optional chaining](#2-property-access--optional-chaining)
-3. [Static methods: keys, values, entries](#3-static-methods-keys-values-entries)
-4. [Spread & assign](#4-spread--assign)
-5. [Destructuring](#5-destructuring)
-6. [Shallow vs deep copy](#6-shallow-vs-deep-copy)
-7. [Object vs Map vs Set](#7-object-vs-map-vs-set)
-8. [Descriptors & sealing](#8-descriptors--sealing)
-9. [Normalization pattern (Redux-style)](#9-normalization-pattern-redux-style)
-10. [Senior scenarios](#10-senior-scenarios)
+## Quick index
+
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Object basics & literals](#p1) |
+| <span id="i2"></span>2 | [Property access & optional chaining](#p2) |
+| <span id="i3"></span>3 | [Static methods: keys, values, entries](#p3) |
+| <span id="i4"></span>4 | [Spread & assign](#p4) |
+| <span id="i5"></span>5 | [Destructuring](#p5) |
+| <span id="i6"></span>6 | [Shallow vs deep copy](#p6) |
+| <span id="i7"></span>7 | [Object vs Map vs Set](#p7) |
+| <span id="i8"></span>8 | [Descriptors & sealing](#p8) |
+| <span id="i9"></span>9 | [Normalization pattern (Redux-style)](#p9) |
+| <span id="i10"></span>10 | [Senior scenarios](#p10) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Object basics & literals
 
@@ -48,6 +54,11 @@ const cart = {
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Property access & optional chaining
 
@@ -77,6 +88,11 @@ obj.a ?? 'default'; // 'default'
 ```
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Static methods: keys, values, entries
 
@@ -109,6 +125,11 @@ for (const [name, score] of Object.entries(scores)) {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. Spread & assign
 
 ```javascript
@@ -135,6 +156,11 @@ const nested = {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Destructuring
 
@@ -178,6 +204,11 @@ function renderRow({ name, salary, status = 'active' }) {
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Shallow vs deep copy
 
 ```javascript
@@ -204,6 +235,11 @@ const jsonCopy = JSON.parse(JSON.stringify(original));
 | `JSON.parse/stringify`   | Deep    | No                  |
 
 ---
+
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
 
 ## 7. Object vs Map vs Set
 
@@ -232,6 +268,11 @@ Cart line cache, memoization, DOM node → metadata — when keys aren't always 
 
 ---
 
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
+
 ## 8. Descriptors & sealing
 
 ```javascript
@@ -253,6 +294,11 @@ Object.preventExtensions(obj);
 > `freeze` is shallow. For immutable Redux state in dev, use Immer or never mutate — don't rely on `freeze` alone in production.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Normalization pattern (Redux-style)
 
@@ -286,6 +332,11 @@ const cart = {
 > Normalize relational data by id — arrays for lists, objects for lookups. Selectors join them at read time.
 
 ---
+
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
 
 ## 10. Senior scenarios
 
@@ -368,6 +419,11 @@ function safeParse(json, fallback = null) {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Additional object built-ins
 
 ### `Object.is` — SameValue equality
@@ -437,3 +493,6 @@ Object.hasOwn({}, 'toString'); // false — own only
 | Same-value check     | `Object.is`                                   |
 | Create with proto    | `Object.create`                               |
 | Property descriptors | `defineProperty`, `getOwnPropertyDescriptors` |
+
+
+<p><a href="#i11">Back to index</a></p>

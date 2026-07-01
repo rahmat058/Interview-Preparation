@@ -11,31 +11,42 @@ Frontend interviews often ask **sorting comparators**, **stack** (parentheses, u
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Sorting
 
-1. [Built-in `Array.sort`](#1-built-in-arraysort)
-2. [Bubble sort](#2-bubble-sort)
-3. [Selection sort](#3-selection-sort)
-4. [Insertion sort](#4-insertion-sort)
-5. [Merge sort](#5-merge-sort)
-6. [Quick sort](#6-quick-sort)
-7. [Sorting complexity cheat sheet](#7-sorting-complexity-cheat-sheet)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [Built-in `Array.sort`](#p1) |
+| <span id="i2"></span>2 | [Bubble sort](#p2) |
+| <span id="i3"></span>3 | [Selection sort](#p3) |
+| <span id="i4"></span>4 | [Insertion sort](#p4) |
+| <span id="i5"></span>5 | [Merge sort](#p5) |
+| <span id="i6"></span>6 | [Quick sort](#p6) |
+| <span id="i7"></span>7 | [Sorting complexity cheat sheet](#p7) |
 
 ### Stack & Queue
 
-8. [Stack implementation](#8-stack-implementation)
-9. [Queue implementation](#9-queue-implementation)
-10. [Deque / queue with two stacks](#10-deque--queue-from-two-stacks)
+| # | Section |
+| --- | --- |
+| <span id="i8"></span>8 | [Stack implementation](#p8) |
+| <span id="i9"></span>9 | [Queue implementation](#p9) |
+| <span id="i10"></span>10 | [Deque / queue with two stacks](#p10) |
 
 ### Problems
 
-11. [Sort problems](#11-sort-problems)
-12. [Stack problems](#12-stack-problems)
-13. [Queue problems](#13-queue-problems)
+| # | Section |
+| --- | --- |
+| <span id="i11"></span>11 | [Sort problems](#p11) |
+| <span id="i12"></span>12 | [Stack problems](#p12) |
+| <span id="i13"></span>13 | [Queue problems](#p13) |
 
 ---
+
+<a id="p1"></a>
 
 ## 1. Built-in `Array.sort`
 
@@ -59,6 +70,11 @@ const sorted = nums.toSorted((a, b) => a - b);
 ```
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Bubble sort
 
@@ -89,6 +105,11 @@ bubbleSort([5, 1, 4, 2, 8]); // [1, 2, 4, 5, 8]
 
 ---
 
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
+
 ## 3. Selection sort
 
 **Idea:** Find minimum in unsorted portion, swap to front.
@@ -110,6 +131,11 @@ function selectionSort(arr) {
 ```
 
 ---
+
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
 
 ## 4. Insertion sort
 
@@ -134,6 +160,11 @@ function insertionSort(arr) {
 ```
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Merge sort
 
@@ -166,6 +197,11 @@ mergeSort([38, 27, 43, 3]); // [3, 27, 38, 43]
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Quick sort
 
 **Idea:** Pick pivot, partition smaller/larger, recurse.
@@ -188,6 +224,11 @@ function quickSort(arr) {
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Sorting complexity cheat sheet
 
 | Algorithm    | Best       | Average    | Worst      | Space    | Stable       |
@@ -200,6 +241,11 @@ function quickSort(arr) {
 | `Array.sort` | O(n log n) | O(n log n) | O(n log n) | O(log n) | Yes (modern) |
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Stack implementation
 
@@ -241,6 +287,11 @@ stack.peek(); // 1
 **Array as stack:** `push` / `pop` — both O(1) amortized.
 
 ---
+
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
 
 ## 9. Queue implementation
 
@@ -305,6 +356,11 @@ class FastQueue {
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Deque / queue from two stacks
 
 **Interview classic:** Implement queue using two stacks.
@@ -338,7 +394,14 @@ class QueueTwoStacks {
 
 ---
 
+
+<p><a href="#i10">Back to index</a></p>
+
+<a id="p11"></a>
+
 ## 11. Sort problems
+
+<a id="merge-two-sorted-arrays"></a>
 
 ### P1 — Merge two sorted arrays
 
@@ -406,7 +469,14 @@ function sortEmployees(rows, sortBy, order = 'asc') {
 
 ---
 
+
+<p><a href="#i11">Back to index</a></p>
+
+<a id="p12"></a>
+
 ## 12. Stack problems
+
+<a id="valid-parentheses"></a>
 
 ### P5 — Valid parentheses ⭐ (most common)
 
@@ -517,6 +587,11 @@ dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]); // [1,1,4,2,1,1,0,0]
 
 ---
 
+
+<p><a href="#i12">Back to index</a></p>
+
+<a id="p13"></a>
+
 ## 13. Queue problems
 
 ### P9 — Implement stack using queues (variant)
@@ -595,3 +670,6 @@ function maxSlidingWindow(nums, k) {
 | ⭐        | Merge sort / quick sort explain complexity                             |
 
 **Repo link:** KPMG sliding window — [kpmg-round-1-vanilla-javascript-interview.md](./kpmg-round-1-vanilla-javascript-interview.md)
+
+
+<p><a href="#i13">Back to index</a></p>

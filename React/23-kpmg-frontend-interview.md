@@ -26,28 +26,35 @@ company: "KPMG"
 
 ---
 
-## Table of Contents
+<a id="quick-index"></a>
+
+## Quick index
+
 
 ### Round 2 — ReactJS
 
-1. [React Internals & Rendering Lifecycle](#1-react-internals--rendering-lifecycle)
-2. [Virtual DOM, Hydration, Reconciliation & Scheduling](#2-virtual-dom-hydration-reconciliation--scheduling)
-3. [Design: Virtualized Infinite Feed](#3-design--implement-a-virtualized-infinite-feed)
-4. [React vs Vue — Architecture & Performance](#4-react-vs-vue--architecture--performance-tradeoffs)
-5. [Intersection Observer & Rendering Optimizations](#5-intersection-observer--rendering-optimizations)
+| # | Section |
+| --- | --- |
+| <span id="i1"></span>1 | [React Internals & Rendering Lifecycle](#p1) |
+| <span id="i2"></span>2 | [Virtual DOM, Hydration, Reconciliation & Scheduling](#p2) |
+| <span id="i3"></span>3 | [Design: Virtualized Infinite Feed](#p3) |
+| <span id="i4"></span>4 | [React vs Vue — Architecture & Performance](#p4) |
+| <span id="i5"></span>5 | [Intersection Observer & Rendering Optimizations](#p5) |
 
 ### Round 4 — Hiring Manager
 
-6. [Largest Frontend Systems Built](#6-largest-frontend-systems-built)
-7. [Handling Complex Codebases](#7-handling-complex-codebases)
-8. [Team Collaboration & Conflict Resolution](#8-team-collaboration--conflict-resolution)
-9. [Engineering Quality & Ownership](#9-engineering-quality--ownership)
-
-10. [Quick Revision Cheat Sheet](#10-quick-revision-cheat-sheet)
+| # | Section |
+| --- | --- |
+| <span id="i6"></span>6 | [Largest Frontend Systems Built](#p6) |
+| <span id="i7"></span>7 | [Handling Complex Codebases](#p7) |
+| <span id="i8"></span>8 | [Team Collaboration & Conflict Resolution](#p8) |
+| <span id="i9"></span>9 | [Engineering Quality & Ownership](#p9) |
+| <span id="i10"></span>10 | [Quick Revision Cheat Sheet](#p10) |
 
 ---
-
 # Round 2 — ReactJS
+
+<a id="p1"></a>
 
 ## 1. React Internals & Rendering Lifecycle
 
@@ -120,6 +127,11 @@ function LiveOrderMap({ orderId }: { orderId: string }) {
 > React separates render (compute next UI, diff) from commit (apply DOM). Hooks map to lifecycle: mount/update/unmount via `useEffect`, layout reads via `useLayoutEffect`. Fiber makes rendering interruptible so urgent updates aren't blocked.
 
 ---
+
+
+<p><a href="#i1">Back to index</a></p>
+
+<a id="p2"></a>
 
 ## 2. Virtual DOM, Hydration, Reconciliation & Scheduling
 
@@ -204,6 +216,11 @@ function Good() {
 > Virtual DOM lets React diff and apply minimal DOM updates. Reconciliation uses element type and keys; hydration wires SSR HTML to client handlers and must match server output. React 18 schedules urgent vs transition updates separately.
 
 ---
+
+
+<p><a href="#i2">Back to index</a></p>
+
+<a id="p3"></a>
 
 ## 3. Design & Implement a Virtualized Infinite Feed
 
@@ -339,6 +356,11 @@ export function VirtualizedFeed() {
 
 ---
 
+
+<p><a href="#i3">Back to index</a></p>
+
+<a id="p4"></a>
+
 ## 4. React vs Vue — Architecture & Performance Tradeoffs
 
 ### Theory
@@ -397,6 +419,11 @@ const count = ref(0);
 > React rerenders components when state changes and relies on Virtual DOM diffing plus manual memoization for hot paths. Vue 3 tracks dependencies at compile/runtime for finer updates. I'd pick React for ecosystem and cross-platform; Vue for faster delivery with opinionated defaults — both perform well when lists are virtualized and state is colocated.
 
 ---
+
+
+<p><a href="#i4">Back to index</a></p>
+
+<a id="p5"></a>
 
 ## 5. Intersection Observer & Rendering Optimizations
 
@@ -478,6 +505,11 @@ Behavioral round — use **STAR** (Situation, Task, Action, Result). Keep answer
 
 ---
 
+
+<p><a href="#i5">Back to index</a></p>
+
+<a id="p6"></a>
+
 ## 6. Largest Frontend Systems Built
 
 ### What they're assessing
@@ -511,6 +543,11 @@ Result    — metrics (LCP, crash rate, delivery speed, revenue)
 
 ---
 
+
+<p><a href="#i6">Back to index</a></p>
+
+<a id="p7"></a>
+
 ## 7. Handling Complex Codebases
 
 ### What they're assessing
@@ -536,6 +573,11 @@ Navigation, refactoring courage, documentation, and pragmatism.
 > I understand complex codebases by mapping dependencies and hot paths first, then improve through small, tested slices — feature flags, typing, and clear ownership — not big-bang rewrites.
 
 ---
+
+
+<p><a href="#i7">Back to index</a></p>
+
+<a id="p8"></a>
 
 ## 8. Team Collaboration & Conflict Resolution
 
@@ -570,6 +612,11 @@ Result:    Decision in 3 days; team bought in; pattern documented for other squa
 
 ---
 
+
+<p><a href="#i8">Back to index</a></p>
+
+<a id="p9"></a>
+
 ## 9. Engineering Quality & Ownership
 
 ### What they're assessing
@@ -596,6 +643,11 @@ Testing, monitoring, on-call mindset, production responsibility.
 
 ---
 
+
+<p><a href="#i9">Back to index</a></p>
+
+<a id="p10"></a>
+
 ## 10. Quick Revision Cheat Sheet
 
 ### Round 2 — React
@@ -621,3 +673,6 @@ Testing, monitoring, on-call mindset, production responsibility.
 ---
 
 **Next:** [Round 3 — File Upload System Design](../System%20Design/04-file-upload-system-design.md)
+
+
+<p><a href="#i10">Back to index</a></p>
