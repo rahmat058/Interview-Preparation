@@ -2,7 +2,7 @@
 
 **Personal frontend & full-stack interview prep repository** — runnable React machine-coding apps, **vanilla JS projects**, markdown Q&A guides (React, Vue, **CSS**, Docker), and system design notes. Built to **run code locally**, **read architecture**, and **practice spoken interview answers**.
 
-![CartPulse — Shopping Cart](./Projects/Projects-Images/09-shoping-cart.png)
+![Interview Preparation](./Advanced Topic Images/Interview-Preparation.png)
 
 ---
 
