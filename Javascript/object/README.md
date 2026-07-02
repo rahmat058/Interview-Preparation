@@ -15,6 +15,7 @@ Structured object notes and practice, formatted to match the [array folder](../a
 - [Objects — Core Functions](../vanila-js/04-objects-core-functions.md) — interview traps, normalization, pick/omit, shallowEqual
 - [Shallow / Deep Copy](../vanila-js/06-shallow-deep-copy-closures-hoisting-memoize.md) — cloning, memoize, closures
 - [JavaScript Arrays](../array/) — parallel course folder for arrays
+- [JavaScript Strings](../string/) — parallel course folder for strings
 - [INTERVIEW-QUESTIONS.md](../vanila-js/INTERVIEW-QUESTIONS.md) — spoken Q&A for vanilla JS
 
 ## Study order

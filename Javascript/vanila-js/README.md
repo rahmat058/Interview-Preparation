@@ -20,6 +20,7 @@ Core **string**, **array**, and **object** APIs plus **higher-order functions** 
 
 - [JavaScript Arrays — Course folder](../array/) — course reference and 54 practice tasks
 - [JavaScript Objects — Course folder](../object/) — course reference and 48 practice tasks
+- [JavaScript Strings — Course folder](../string/) — course reference and 48 practice tasks
 - [KPMG Round 1 — Vanilla JS](./kpmg-round-1-vanilla-javascript-interview.md) — coercion, event loop, prototypes
 - [LeetCode HOF problems](../leetcode/) — `2634` filter, `2635` map transform, `2665` counter
 - [Vanilla JS projects](../../Projects/vanilla-js/) — store, CRUD, performance patterns in real apps
