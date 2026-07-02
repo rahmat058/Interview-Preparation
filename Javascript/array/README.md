@@ -12,6 +12,7 @@ Structured notes and practice from the **tapaScript Array Master Course**, forma
 
 ## Related in this repo
 
+- [JavaScript Objects](../object/) — parallel course folder for objects
 - [Arrays — Core Functions](../vanila-js/02-arrays-core-functions.md) — interview-focused mutating vs non-mutating, sort pitfalls, grouping
 - [Higher-Order Functions](../vanila-js/01-higher-order-functions.md) — implement `map` / `filter` / `reduce` from scratch
 - [INTERVIEW-QUESTIONS.md](../vanila-js/INTERVIEW-QUESTIONS.md) — 55 spoken Q&A for vanilla JS
